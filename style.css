@@ -1378,3 +1378,146 @@ footer {
 
     .story-intro h2 {
         font-size: 2.6
+       /* =========================================
+   NKETIA-MARFO — UNIVERSITY STYLE NAVIGATION
+========================================= */
+
+.site-header {
+    background: #111;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    position: relative;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 28px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Brand */
+
+.brand-block {
+    flex: 1;
+}
+
+.site-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+    margin: 0;
+    color: #fff;
+}
+
+.brand-block p {
+    margin: 6px 0 0;
+    font-size: 0.78rem;
+    letter-spacing: 1.2px;
+    color: #cfcfcf;
+}
+
+/* Navigation */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
+}
+
+.nav-link {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.8px;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+/* Gold line underneath */
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #b08d3c;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #d5b66a;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #d5b66a;
+}
+
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 800px) {
+
+    .header-content {
+        padding: 22px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .main-nav {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 18px 25px;
+    }
+
+    .nav-link {
+        font-size: 0.78rem;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONE
+========================================= */
+
+@media (max-width: 520px) {
+
+    .header-content {
+        padding: 20px 6%;
+    }
+
+    .site-name {
+        font-size: 1.55rem;
+    }
+
+    .brand-block p {
+        font-size: 0.68rem;
+        line-height: 1.5;
+    }
+
+    .main-nav {
+        gap: 14px 20px;
+    }
+
+    .nav-link {
+        font-size: 0.73rem;
+    }
+}
