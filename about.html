@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,52 +11,77 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+
         /* =========================================================
            NKETIA-MARFO — ABOUT PAGE
-           COLOURS:
+           
            Deep Indigo: #14213D
            Green:       #2E8B57
            Orange:      #F28C28
         ========================================================= */
 
         :root {
+
             --indigo: #14213D;
             --indigo-light: #1d3158;
+
             --green: #2E8B57;
             --green-light: #eaf5ef;
+
             --orange: #F28C28;
             --orange-light: #fff3e4;
+
             --cream: #f8f9f6;
             --white: #ffffff;
+
             --text: #20252d;
             --muted: #667085;
             --border: #e3e7e2;
+
         }
+
 
         * {
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
+
             margin: 0;
+
             background: var(--cream);
+
             color: var(--text);
-            font-family: Arial, Helvetica, sans-serif;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             line-height: 1.75;
+
         }
 
+
         img {
+
             max-width: 100%;
+
             display: block;
+
         }
+
 
         a {
             color: inherit;
         }
+
 
 
         /* =========================================================
@@ -62,82 +89,151 @@
         ========================================================= */
 
         header {
+
             background: var(--indigo);
+
             color: var(--white);
+
             padding: 28px 7%;
+
             border-bottom: 5px solid var(--green);
+
             position: relative;
+
             z-index: 10;
+
         }
+
 
         .header-inner {
+
             max-width: 1250px;
+
             margin: auto;
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
+
             gap: 40px;
+
         }
+
 
         .brand {
+
             text-decoration: none;
+
         }
+
 
         .brand h1 {
+
             margin: 0;
-            font-family: Georgia, "Times New Roman", serif;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             font-size: 1.85rem;
+
             letter-spacing: -0.5px;
+
             color: white;
+
         }
+
 
         .brand p {
+
             margin: 5px 0 0;
+
             color: #dbe5f2;
+
             font-size: 0.76rem;
+
             letter-spacing: 1.1px;
+
         }
+
 
         nav {
+
             display: flex;
+
             align-items: center;
+
             gap: 27px;
+
             flex-wrap: wrap;
+
         }
+
 
         nav a {
+
             position: relative;
+
             text-decoration: none;
+
             color: white;
+
             font-size: 0.82rem;
+
             letter-spacing: 0.5px;
+
             padding: 7px 0;
+
             transition: 0.3s ease;
+
         }
+
 
         nav a::after {
+
             content: "";
+
             position: absolute;
+
             left: 0;
+
             bottom: 0;
+
             width: 0;
+
             height: 2px;
+
             background: var(--orange);
+
             transition: width 0.3s ease;
+
         }
 
+
         nav a:hover {
+
             color: var(--orange);
+
         }
+
 
         nav a:hover::after,
         nav a.active::after {
+
             width: 100%;
+
         }
 
+
         nav a.active {
+
             color: var(--orange);
+
         }
+
 
 
         /* =========================================================
@@ -148,110 +244,234 @@
             overflow: hidden;
         }
 
+
         .section-label {
+
             display: inline-block;
+
             color: var(--green);
+
             font-size: 0.72rem;
+
             font-weight: bold;
+
             letter-spacing: 2px;
+
             text-transform: uppercase;
+
             margin-bottom: 13px;
+
         }
+
 
         h2 {
+
             margin: 0 0 20px;
-            font-family: Georgia, "Times New Roman", serif;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             color: var(--indigo);
-            font-size: clamp(2rem, 4vw, 3.6rem);
+
+            font-size:
+                clamp(2rem, 4vw, 3.6rem);
+
             line-height: 1.08;
+
             letter-spacing: -1px;
+
         }
 
+
         h3 {
-            font-family: Georgia, "Times New Roman", serif;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             color: var(--indigo);
+
         }
+
 
         p {
             color: #505866;
         }
 
 
+
         /* =========================================================
-           HERO / INTRO
+           HERO / INTRODUCTION
         ========================================================= */
 
         .about-hero {
+
             max-width: 1250px;
+
             margin: auto;
+
             padding: 100px 7% 90px;
+
             display: grid;
-            grid-template-columns: 1.05fr 0.95fr;
+
+            grid-template-columns:
+                1.05fr
+                0.95fr;
+
             align-items: center;
+
             gap: 70px;
+
         }
+
 
         .about-hero-text h2 {
-            font-size: clamp(2.6rem, 5vw, 4.8rem);
+
+            font-size:
+                clamp(2.6rem, 5vw, 4.8rem);
+
             max-width: 720px;
+
         }
+
 
         .about-hero-text h2 span {
+
             color: var(--green);
+
         }
+
 
         .about-hero-text p {
+
             max-width: 650px;
+
             font-size: 1.02rem;
+
         }
+
 
         .hero-intro {
+
             margin-top: 28px;
+
             padding-left: 20px;
+
             border-left: 4px solid var(--orange);
+
         }
 
 
-        /* Small photo arrangement */
+
+        /* =========================================================
+           LARGE SMALL-PHOTO ARRANGEMENT
+           — INCREASED FROM ORIGINAL SIZE
+        ========================================================= */
 
         .hero-photo-area {
+
             position: relative;
-            min-height: 360px;
+
+            min-height: 420px;
+
+            width: 100%;
+
         }
+
 
         .hero-photo {
+
             position: absolute;
+
             object-fit: cover;
-            border: 7px solid white;
-            box-shadow: 0 18px 40px rgba(20, 33, 61, 0.15);
+
+            box-shadow:
+                0 18px 40px
+                rgba(20, 33, 61, 0.15);
+
+            transition:
+                transform 0.35s ease;
+
         }
+
+
+        .hero-photo:hover {
+
+            transform:
+                translateY(-6px)
+                scale(1.03);
+
+        }
+
+
+        /* MAIN ROUND PHOTO */
 
         .hero-photo.one {
-            width: 145px;
-            height: 145px;
+
+            width: 205px;
+
+            height: 205px;
+
             border-radius: 50%;
+
             top: 0;
-            right: 120px;
-            outline: 4px solid var(--green);
+
+            right: 110px;
+
+            outline:
+                5px solid var(--green);
+
+            outline-offset: 4px;
+
         }
+
+
+        /* SQUARE PHOTO */
 
         .hero-photo.two {
-            width: 125px;
-            height: 125px;
-            border-radius: 12px;
+
+            width: 175px;
+
+            height: 175px;
+
+            border-radius: 16px;
+
             bottom: 35px;
+
             right: 0;
-            outline: 4px solid var(--orange);
+
+            outline:
+                5px solid var(--orange);
+
+            outline-offset: 4px;
+
         }
 
+
+        /* LOWER ROUND PHOTO */
+
         .hero-photo.three {
-            width: 110px;
-            height: 110px;
+
+            width: 155px;
+
+            height: 155px;
+
             border-radius: 50%;
+
             bottom: 0;
-            left: 45px;
-            outline: 4px solid var(--indigo);
+
+            left: 30px;
+
+            outline:
+                5px solid var(--indigo);
+
+            outline-offset: 4px;
+
         }
+
 
 
         /* =========================================================
@@ -259,38 +479,71 @@
         ========================================================= */
 
         .statement-band {
+
             background: var(--indigo);
+
             color: white;
+
             padding: 65px 7%;
+
             position: relative;
+
         }
+
 
         .statement-band::before {
+
             content: "";
+
             position: absolute;
+
             left: 7%;
+
             top: 0;
+
             width: 90px;
+
             height: 5px;
+
             background: var(--orange);
+
         }
+
 
         .statement-inner {
+
             max-width: 1050px;
+
             margin: auto;
+
         }
+
 
         .statement-inner p {
+
             margin: 0;
+
             color: #edf2f7;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(1.45rem, 3vw, 2.35rem);
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(1.45rem, 3vw, 2.35rem);
+
             line-height: 1.4;
+
         }
 
+
         .statement-inner strong {
+
             color: var(--orange);
+
         }
+
 
 
         /* =========================================================
@@ -298,132 +551,251 @@
         ========================================================= */
 
         .about-me-section {
+
             max-width: 1250px;
+
             margin: auto;
+
             padding: 100px 7%;
+
             display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
+
+            grid-template-columns:
+                0.8fr
+                1.2fr;
+
             align-items: center;
+
             gap: 80px;
+
         }
+
 
         .about-me-photo-area {
+
             position: relative;
+
             min-height: 330px;
+
         }
+
 
         .about-me-main-photo {
+
             width: 220px;
+
             height: 220px;
+
             object-fit: cover;
+
             border-radius: 50%;
+
             border: 8px solid white;
-            outline: 5px solid var(--green);
-            box-shadow: 0 18px 40px rgba(20, 33, 61, 0.14);
+
+            outline:
+                5px solid var(--green);
+
+            box-shadow:
+                0 18px 40px
+                rgba(20, 33, 61, 0.14);
+
             position: absolute;
+
             left: 45px;
+
             top: 20px;
+
         }
 
+
         .about-me-small-photo {
+
             width: 105px;
+
             height: 105px;
+
             object-fit: cover;
+
             border-radius: 10px;
+
             border: 6px solid white;
-            outline: 4px solid var(--orange);
+
+            outline:
+                4px solid var(--orange);
+
             position: absolute;
+
             right: 20px;
+
             bottom: 25px;
-            box-shadow: 0 12px 25px rgba(20, 33, 61, 0.15);
+
+            box-shadow:
+                0 12px 25px
+                rgba(20, 33, 61, 0.15);
+
         }
+
 
 
         /* =========================================================
-           STORY INTRO
+           MY STORY
         ========================================================= */
 
         .story-section {
+
             background: white;
+
             padding: 100px 7%;
+
         }
+
 
         .story-heading {
+
             max-width: 850px;
-            margin: 0 auto 70px;
+
+            margin:
+                0 auto
+                70px;
+
             text-align: center;
+
         }
 
+
         .story-heading p {
+
             max-width: 720px;
+
             margin: auto;
+
         }
+
+
+        .story-list {
+
+            max-width: 1050px;
+
+            margin: auto;
+
+        }
+
+
+        .story-point {
+
+            display: grid;
+
+            grid-template-columns:
+                75px
+                1fr
+                150px;
+
+            align-items: center;
+
+            gap: 35px;
+
+            padding: 45px 0;
+
+            border-top:
+                1px solid
+                var(--border);
+
+        }
+
+
+        .story-point:nth-child(even) {
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(234, 245, 239, 0.75),
+                    transparent
+                );
+
+        }
+
+
+        .story-number {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 1.65rem;
+
+            font-weight: bold;
+
+            color: var(--orange);
+
+        }
+
+
+        .story-content h3 {
+
+            margin: 0 0 10px;
+
+            font-size: 1.5rem;
+
+        }
+
+
+        .story-content p {
+
+            margin: 0;
+
+            max-width: 650px;
+
+        }
+
 
 
         /* =========================================================
-           STORY POINTS
+           STORY PHOTOS
+           
+           IMPORTANT:
+           No frame
+           No white border
+           No colored outline
+           
+           The photos now appear naturally.
         ========================================================= */
 
-        .story-list {
-            max-width: 1050px;
-            margin: auto;
-        }
-
-        .story-point {
-            display: grid;
-            grid-template-columns: 75px 1fr 150px;
-            align-items: center;
-            gap: 35px;
-            padding: 45px 0;
-            border-top: 1px solid var(--border);
-        }
-
-        .story-point:nth-child(even) {
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(234, 245, 239, 0.75),
-                transparent
-            );
-        }
-
-        .story-number {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 1.65rem;
-            font-weight: bold;
-            color: var(--orange);
-        }
-
-        .story-content h3 {
-            margin: 0 0 10px;
-            font-size: 1.5rem;
-        }
-
-        .story-content p {
-            margin: 0;
-            max-width: 650px;
-        }
-
         .story-photo {
-            width: 125px;
-            height: 125px;
+
+            width: 150px;
+
+            height: 150px;
+
             object-fit: cover;
+
             justify-self: center;
-            border: 6px solid white;
-            box-shadow: 0 12px 25px rgba(20, 33, 61, 0.12);
+
+            border: none;
+
+            outline: none;
+
+            box-shadow: none;
+
         }
 
-        /* Different frame shapes */
+
+        /* Alternating natural shapes */
 
         .story-point:nth-child(odd) .story-photo {
+
             border-radius: 50%;
-            outline: 4px solid var(--green);
+
         }
 
+
         .story-point:nth-child(even) .story-photo {
-            border-radius: 12px;
-            outline: 4px solid var(--orange);
+
+            border-radius: 14px;
+
         }
+
 
 
         /* =========================================================
@@ -431,30 +803,58 @@
         ========================================================= */
 
         .featured-story {
+
             background: var(--green-light);
+
             padding: 85px 7%;
+
         }
+
 
         .featured-inner {
+
             max-width: 1100px;
+
             margin: auto;
+
             display: grid;
-            grid-template-columns: 160px 1fr;
+
+            grid-template-columns:
+                160px
+                1fr;
+
             gap: 45px;
+
             align-items: center;
+
         }
+
 
         .featured-number {
-            font-family: Georgia, "Times New Roman", serif;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             font-size: 5rem;
+
             font-weight: bold;
+
             color: var(--green);
+
             opacity: 0.8;
+
         }
 
+
         .featured-inner h2 {
-            font-size: clamp(2rem, 4vw, 3.2rem);
+
+            font-size:
+                clamp(2rem, 4vw, 3.2rem);
+
         }
+
 
 
         /* =========================================================
@@ -462,54 +862,104 @@
         ========================================================= */
 
         .interests-section {
+
             max-width: 1250px;
+
             margin: auto;
+
             padding: 100px 7%;
+
         }
+
 
         .interests-heading {
+
             max-width: 700px;
+
             margin-bottom: 45px;
+
         }
+
 
         .interest-grid {
+
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
             gap: 20px;
+
         }
+
 
         .interest-card {
+
             background: white;
+
             padding: 30px 24px;
-            border-top: 4px solid var(--green);
-            box-shadow: 0 10px 30px rgba(20, 33, 61, 0.06);
-            transition: transform 0.3s ease;
+
+            border-top:
+                4px solid
+                var(--green);
+
+            box-shadow:
+                0 10px 30px
+                rgba(20, 33, 61, 0.06);
+
+            transition:
+                transform 0.3s ease;
+
         }
+
 
         .interest-card:nth-child(2) {
-            border-top-color: var(--orange);
+
+            border-top-color:
+                var(--orange);
+
         }
+
 
         .interest-card:nth-child(3) {
-            border-top-color: var(--indigo);
+
+            border-top-color:
+                var(--indigo);
+
         }
+
 
         .interest-card:nth-child(4) {
-            border-top-color: var(--green);
+
+            border-top-color:
+                var(--green);
+
         }
+
 
         .interest-card:hover {
-            transform: translateY(-6px);
+
+            transform:
+                translateY(-6px);
+
         }
+
 
         .interest-card h3 {
+
             margin-top: 0;
+
             font-size: 1.15rem;
+
         }
 
+
         .interest-card p {
+
             font-size: 0.9rem;
+
         }
+
 
 
         /* =========================================================
@@ -517,36 +967,69 @@
         ========================================================= */
 
         .interest-photo-section {
+
             background: var(--orange-light);
+
             padding: 75px 7%;
+
         }
+
 
         .interest-photo-inner {
+
             max-width: 1050px;
+
             margin: auto;
+
             display: flex;
+
             justify-content: center;
+
             align-items: center;
+
             gap: 35px;
+
         }
+
 
         .interest-photo-inner img {
+
             width: 145px;
+
             height: 145px;
+
             object-fit: cover;
+
             border: 7px solid white;
-            box-shadow: 0 15px 30px rgba(20, 33, 61, 0.14);
+
+            box-shadow:
+                0 15px 30px
+                rgba(20, 33, 61, 0.14);
+
         }
+
 
         .interest-photo-inner img:first-child {
+
             border-radius: 50%;
-            outline: 4px solid var(--green);
+
+            outline:
+                4px solid
+                var(--green);
+
         }
 
+
         .interest-photo-inner img:last-child {
+
             border-radius: 12px;
-            outline: 4px solid var(--indigo);
+
+            outline:
+                4px solid
+                var(--indigo);
+
         }
+
 
 
         /* =========================================================
@@ -554,60 +1037,119 @@
         ========================================================= */
 
         .thoughts-section {
+
             max-width: 1250px;
+
             margin: auto;
+
             padding: 100px 7%;
+
         }
+
 
         .thought-heading {
+
             max-width: 650px;
+
             margin-bottom: 45px;
+
         }
+
 
         .thought-grid {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 25px;
+
         }
+
 
         .thought-card {
+
             background: white;
+
             padding: 25px;
-            box-shadow: 0 10px 30px rgba(20, 33, 61, 0.06);
-            border-bottom: 4px solid var(--green);
+
+            box-shadow:
+                0 10px 30px
+                rgba(20, 33, 61, 0.06);
+
+            border-bottom:
+                4px solid
+                var(--green);
+
         }
+
 
         .thought-card:nth-child(2) {
-            border-bottom-color: var(--orange);
+
+            border-bottom-color:
+                var(--orange);
+
         }
+
 
         .thought-card:nth-child(3) {
-            border-bottom-color: var(--indigo);
+
+            border-bottom-color:
+                var(--indigo);
+
         }
+
 
         .thought-card img {
+
             width: 100px;
+
             height: 100px;
+
             object-fit: cover;
+
             margin-top: 20px;
+
             border: 5px solid white;
-            box-shadow: 0 8px 18px rgba(20, 33, 61, 0.12);
+
+            box-shadow:
+                0 8px 18px
+                rgba(20, 33, 61, 0.12);
+
         }
+
 
         .thought-card:nth-child(odd) img {
+
             border-radius: 50%;
-            outline: 3px solid var(--green);
+
+            outline:
+                3px solid
+                var(--green);
+
         }
+
 
         .thought-card:nth-child(even) img {
+
             border-radius: 10px;
-            outline: 3px solid var(--orange);
+
+            outline:
+                3px solid
+                var(--orange);
+
         }
 
+
         .thought-card h3 {
+
             margin-top: 0;
+
             font-size: 1.25rem;
+
         }
+
 
 
         /* =========================================================
@@ -615,25 +1157,45 @@
         ========================================================= */
 
         .journey-section {
+
             background: var(--indigo);
+
             color: white;
+
             padding: 85px 7%;
+
             text-align: center;
+
         }
+
 
         .journey-section h2 {
+
             color: white;
+
         }
 
+
         .journey-photo {
+
             width: 155px;
+
             height: 155px;
+
             object-fit: cover;
+
             margin: 30px auto 0;
+
             border: 7px solid white;
+
             border-radius: 50%;
-            outline: 5px solid var(--orange);
+
+            outline:
+                5px solid
+                var(--orange);
+
         }
+
 
 
         /* =========================================================
@@ -641,42 +1203,77 @@
         ========================================================= */
 
         .contact-section {
+
             max-width: 850px;
+
             margin: auto;
+
             padding: 110px 7%;
+
             text-align: center;
+
         }
+
 
         .contact-section h2 {
+
             margin-bottom: 15px;
+
         }
+
 
         .contact-section p {
+
             max-width: 650px;
-            margin: 10px auto;
+
+            margin:
+                10px auto;
+
         }
+
 
         .email {
+
             color: var(--indigo);
+
             font-weight: bold;
+
         }
+
 
         .contact-button {
+
             display: inline-block;
+
             margin-top: 25px;
-            padding: 14px 25px;
+
+            padding:
+                14px 25px;
+
             background: var(--orange);
+
             color: white;
+
             text-decoration: none;
+
             font-weight: bold;
+
             border-radius: 4px;
+
             transition: 0.3s ease;
+
         }
 
+
         .contact-button:hover {
+
             background: var(--green);
-            transform: translateY(-2px);
+
+            transform:
+                translateY(-2px);
+
         }
+
 
 
         /* =========================================================
@@ -684,32 +1281,61 @@
         ========================================================= */
 
         footer {
+
             background: var(--indigo);
+
             color: white;
+
             padding: 35px 7%;
-            border-top: 5px solid var(--green);
+
+            border-top:
+                5px solid
+                var(--green);
+
         }
+
 
         .footer-inner {
+
             max-width: 1250px;
+
             margin: auto;
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
             gap: 20px;
+
         }
+
 
         footer p {
+
             margin: 0;
+
             color: #dbe5f2;
+
             font-size: 0.85rem;
+
         }
 
+
         .footer-name {
+
             color: var(--orange);
-            font-family: Georgia, "Times New Roman", serif;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             font-size: 1.2rem;
+
         }
+
 
 
         /* =========================================================
@@ -718,46 +1344,82 @@
 
         @media (max-width: 950px) {
 
+
             .header-inner {
+
                 flex-direction: column;
+
                 align-items: flex-start;
+
                 gap: 20px;
+
             }
+
 
             nav {
-                gap: 18px 25px;
+
+                gap:
+                    18px 25px;
+
             }
+
 
             .about-hero {
+
                 grid-template-columns: 1fr;
+
                 gap: 30px;
+
             }
+
 
             .hero-photo-area {
-                max-width: 450px;
+
+                max-width: 500px;
+
                 width: 100%;
+
                 margin: auto;
+
             }
+
 
             .about-me-section {
+
                 grid-template-columns: 1fr;
+
                 gap: 30px;
+
             }
+
 
             .about-me-photo-area {
+
                 max-width: 400px;
+
                 width: 100%;
+
                 margin: auto;
+
             }
+
 
             .interest-grid {
-                grid-template-columns: repeat(2, 1fr);
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
             }
 
+
             .thought-grid {
+
                 grid-template-columns: 1fr;
+
             }
+
         }
+
 
 
         /* =========================================================
@@ -766,168 +1428,319 @@
 
         @media (max-width: 650px) {
 
+
             header {
-                padding: 22px 6%;
+
+                padding:
+                    22px 6%;
+
             }
+
 
             .brand h1 {
+
                 font-size: 1.55rem;
+
             }
+
 
             .brand p {
+
                 font-size: 0.67rem;
+
             }
+
 
             nav {
-                gap: 12px 18px;
+
+                gap:
+                    12px 18px;
+
             }
+
 
             nav a {
+
                 font-size: 0.72rem;
+
             }
+
 
             .about-hero {
-                padding: 70px 6% 65px;
+
+                padding:
+                    70px 6% 65px;
+
             }
+
 
             .about-hero-text h2 {
+
                 font-size: 2.55rem;
+
             }
+
+
+            /* Larger mobile photo arrangement */
 
             .hero-photo-area {
-                min-height: 280px;
+
+                min-height: 320px;
+
             }
+
 
             .hero-photo.one {
-                width: 115px;
-                height: 115px;
-                right: 80px;
+
+                width: 155px;
+
+                height: 155px;
+
+                right: 60px;
+
             }
+
 
             .hero-photo.two {
-                width: 100px;
-                height: 100px;
+
+                width: 130px;
+
+                height: 130px;
+
+                right: 0;
+
+                bottom: 25px;
+
             }
+
 
             .hero-photo.three {
-                width: 90px;
-                height: 90px;
-                left: 25px;
+
+                width: 115px;
+
+                height: 115px;
+
+                left: 15px;
+
+                bottom: 0;
+
             }
+
 
             .statement-band {
-                padding: 55px 6%;
+
+                padding:
+                    55px 6%;
+
             }
+
 
             .about-me-section {
-                padding: 70px 6%;
+
+                padding:
+                    70px 6%;
+
             }
+
 
             .about-me-photo-area {
+
                 min-height: 270px;
+
             }
+
 
             .about-me-main-photo {
+
                 width: 175px;
+
                 height: 175px;
+
                 left: 30px;
+
             }
+
 
             .about-me-small-photo {
+
                 width: 85px;
+
                 height: 85px;
+
             }
+
 
             .story-section {
-                padding: 70px 6%;
+
+                padding:
+                    70px 6%;
+
             }
+
 
             .story-heading {
+
                 margin-bottom: 40px;
+
             }
+
 
             .story-point {
-                grid-template-columns: 45px 1fr;
+
+                grid-template-columns:
+                    45px
+                    1fr;
+
                 gap: 18px;
-                padding: 32px 0;
+
+                padding:
+                    32px 0;
+
             }
+
 
             .story-number {
+
                 font-size: 1.2rem;
+
             }
+
 
             .story-content h3 {
+
                 font-size: 1.25rem;
+
             }
+
+
+            /* Story photos remain clean */
 
             .story-photo {
-                width: 90px;
-                height: 90px;
+
+                width: 120px;
+
+                height: 120px;
+
                 margin-top: 20px;
+
                 justify-self: start;
+
             }
+
 
             .featured-story {
-                padding: 65px 6%;
+
+                padding:
+                    65px 6%;
+
             }
+
 
             .featured-inner {
+
                 grid-template-columns: 1fr;
+
                 gap: 5px;
+
             }
+
 
             .featured-number {
+
                 font-size: 3.5rem;
+
             }
+
 
             .interests-section {
-                padding: 70px 6%;
+
+                padding:
+                    70px 6%;
+
             }
+
 
             .interest-grid {
+
                 grid-template-columns: 1fr;
+
             }
+
 
             .interest-photo-section {
-                padding: 55px 6%;
+
+                padding:
+                    55px 6%;
+
             }
+
 
             .interest-photo-inner {
+
                 gap: 18px;
+
             }
+
 
             .interest-photo-inner img {
+
                 width: 105px;
+
                 height: 105px;
+
             }
+
 
             .thoughts-section {
-                padding: 70px 6%;
+
+                padding:
+                    70px 6%;
+
             }
+
 
             .journey-section {
-                padding: 65px 6%;
+
+                padding:
+                    65px 6%;
+
             }
+
 
             .journey-photo {
+
                 width: 125px;
+
                 height: 125px;
+
             }
+
 
             .contact-section {
-                padding: 80px 6%;
+
+                padding:
+                    80px 6%;
+
             }
 
+
             .footer-inner {
+
                 flex-direction: column;
+
                 align-items: flex-start;
+
             }
+
         }
+
     </style>
+
 </head>
 
 
 <body>
+
 
 <!-- =========================================================
      HEADER
@@ -937,22 +1750,50 @@
 
     <div class="header-inner">
 
+
         <a href="index.html" class="brand">
-            <h1>Nketia-Marfo</h1>
-            <p>Thinking deeply. Creating freely. Sharing ideas.</p>
+
+            <h1>
+                Nketia-Marfo
+            </h1>
+
+            <p>
+                Thinking deeply. Creating freely. Sharing ideas.
+            </p>
+
         </a>
 
+
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-            <a href="blog.html">Blog</a>
-            <a href="student-voices.html">Student Voices</a>
-            <a href="contact.html">Contact</a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a
+                href="about.html"
+                class="active">
+                About
+            </a>
+
+            <a href="blog.html">
+                Blog
+            </a>
+
+            <a href="student-voices.html">
+                Student Voices
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
         </nav>
 
     </div>
 
 </header>
+
 
 
 <main>
@@ -964,9 +1805,13 @@
 
 <section class="about-hero">
 
+
     <div class="about-hero-text">
 
-        <span class="section-label">WELCOME</span>
+        <span class="section-label">
+            WELCOME
+        </span>
+
 
         <h2>
             Welcome to
@@ -974,11 +1819,13 @@
             of the Internet
         </h2>
 
+
         <p>
             Hello, I'm Nketia-Marfo. Welcome to my personal website —
             a space where I share ideas, stories, projects, experiences,
             and things I'm learning along the way.
         </p>
+
 
         <div class="hero-intro">
 
@@ -987,6 +1834,7 @@
                 society, creativity, and the opportunities available to
                 young people.
             </p>
+
 
             <p>
                 Here, I explore questions, share what I create, and document
@@ -998,17 +1846,25 @@
     </div>
 
 
+
+    <!-- =====================================================
+         LARGER ROUND / SQUARE PHOTO ARRANGEMENT
+    ===================================================== -->
+
     <div class="hero-photo-area">
+
 
         <img
             class="hero-photo one"
             src="file_0000000037bc8210ba33c13682e0591b.png"
             alt="Nketia-Marfo">
 
+
         <img
             class="hero-photo two"
             src="file_00000000782081f486b26a47a83586ad.png"
             alt="Nketia-Marfo">
+
 
         <img
             class="hero-photo three"
@@ -1031,7 +1887,9 @@
 
         <p>
             “I am interested in the space where
-            <strong>education, creativity, music, economics,</strong>
+            <strong>
+                education, creativity, music, economics,
+            </strong>
             and opportunity meet.”
         </p>
 
@@ -1047,12 +1905,15 @@
 
 <section class="about-me-section">
 
+
     <div class="about-me-photo-area">
+
 
         <img
             class="about-me-main-photo"
             src="IMG-20260124-WA0015.jpg"
             alt="Nketia-Marfo">
+
 
         <img
             class="about-me-small-photo"
@@ -1062,22 +1923,31 @@
     </div>
 
 
+
     <div>
 
-        <span class="section-label">ABOUT ME</span>
+        <span class="section-label">
+            ABOUT ME
+        </span>
 
-        <h2>A Little About Me</h2>
+
+        <h2>
+            A Little About Me
+        </h2>
+
 
         <p>
             I enjoy learning, asking questions, creating, and looking
             for connections between ideas that may seem unrelated.
         </p>
 
+
         <p>
             My interests include education and economics, while music
             and culture remain important parts of how I express myself
             and understand the world around me.
         </p>
+
 
         <p>
             This website is a place to keep growing, creating, and
@@ -1096,11 +1966,18 @@
 
 <section class="story-section">
 
+
     <div class="story-heading">
 
-        <span class="section-label">MY STORY</span>
+        <span class="section-label">
+            MY STORY
+        </span>
 
-        <h2>12 Things That Shape Who I Am</h2>
+
+        <h2>
+            12 Things That Shape Who I Am
+        </h2>
+
 
         <p>
             My journey has been shaped by learning, service, music,
@@ -1112,6 +1989,7 @@
     </div>
 
 
+
     <div class="story-list">
 
 
@@ -1119,11 +1997,16 @@
 
         <article class="story-point">
 
-            <div class="story-number">01</div>
+            <div class="story-number">
+                01
+            </div>
+
 
             <div class="story-content">
 
-                <h3>Academic Excellence</h3>
+                <h3>
+                    Academic Excellence
+                </h3>
 
                 <p>
                     I have always taken my education seriously. I challenge
@@ -1132,6 +2015,7 @@
                 </p>
 
             </div>
+
 
             <img
                 class="story-photo"
@@ -1146,11 +2030,16 @@
 
         <article class="story-point">
 
-            <div class="story-number">02</div>
+            <div class="story-number">
+                02
+            </div>
+
 
             <div class="story-content">
 
-                <h3>Earning Opportunities Through Merit</h3>
+                <h3>
+                    Earning Opportunities Through Merit
+                </h3>
 
                 <p>
                     My academic performance has opened doors for me.
@@ -1160,6 +2049,7 @@
                 </p>
 
             </div>
+
 
             <img
                 class="story-photo"
@@ -1174,11 +2064,16 @@
 
         <article class="story-point">
 
-            <div class="story-number">03</div>
+            <div class="story-number">
+                03
+            </div>
+
 
             <div class="story-content">
 
-                <h3>Intellectual Curiosity</h3>
+                <h3>
+                    Intellectual Curiosity
+                </h3>
 
                 <p>
                     I do not want to learn simply to complete an assignment
@@ -1188,6 +2083,7 @@
                 </p>
 
             </div>
+
 
             <img
                 class="story-photo"
@@ -1202,11 +2098,16 @@
 
         <article class="story-point">
 
-            <div class="story-number">04</div>
+            <div class="story-number">
+                04
+            </div>
+
 
             <div class="story-content">
 
-                <h3>Independent Learning</h3>
+                <h3>
+                    Independent Learning
+                </h3>
 
                 <p>
                     Some of the things I have learned have come from my own
@@ -1215,6 +2116,7 @@
                 </p>
 
             </div>
+
 
             <img
                 class="story-photo"
@@ -1229,11 +2131,16 @@
 
         <article class="story-point">
 
-            <div class="story-number">05</div>
+            <div class="story-number">
+                05
+            </div>
+
 
             <div class="story-content">
 
-                <h3>Teaching Others</h3>
+                <h3>
+                    Teaching Others
+                </h3>
 
                 <p>
                     I believe knowledge becomes more meaningful when it can
@@ -1244,6 +2151,7 @@
                 </p>
 
             </div>
+
 
             <img
                 class="story-photo"
@@ -1258,11 +2166,16 @@
 
         <article class="story-point">
 
-            <div class="story-number">06</div>
+            <div class="story-number">
+                06
+            </div>
+
 
             <div class="story-content">
 
-                <h3>Making a Measurable Difference</h3>
+                <h3>
+                    Making a Measurable Difference
+                </h3>
 
                 <p>
                     One experience that means a lot to me is the opportunity
@@ -1273,6 +2186,7 @@
                 </p>
 
             </div>
+
 
             <img
                 class="story-photo"
@@ -1287,11 +2201,16 @@
 
         <article class="story-point">
 
-            <div class="story-number">07</div>
+            <div class="story-number">
+                07
+            </div>
+
 
             <div class="story-content">
 
-                <h3>Leadership Through Music</h3>
+                <h3>
+                    Leadership Through Music
+                </h3>
 
                 <p>
                     Music has given me opportunities to lead as well as
@@ -1302,6 +2221,7 @@
                 </p>
 
             </div>
+
 
             <img
                 class="story-photo"
@@ -1316,11 +2236,16 @@
 
         <article class="story-point">
 
-            <div class="story-number">08</div>
+            <div class="story-number">
+                08
+            </div>
+
 
             <div class="story-content">
 
-                <h3>Music, Discipline, and Growth</h3>
+                <h3>
+                    Music, Discipline, and Growth
+                </h3>
 
                 <p>
                     As a pianist and singer, I have learned that ability
@@ -1330,6 +2255,7 @@
                 </p>
 
             </div>
+
 
             <img
                 class="story-photo"
@@ -1344,11 +2270,16 @@
 
         <article class="story-point">
 
-            <div class="story-number">09</div>
+            <div class="story-number">
+                09
+            </div>
+
 
             <div class="story-content">
 
-                <h3>A Commitment to Service</h3>
+                <h3>
+                    A Commitment to Service
+                </h3>
 
                 <p>
                     I want what I learn and what I can do to be useful to
@@ -1358,6 +2289,7 @@
                 </p>
 
             </div>
+
 
             <img
                 class="story-photo"
@@ -1372,11 +2304,16 @@
 
         <article class="story-point">
 
-            <div class="story-number">10</div>
+            <div class="story-number">
+                10
+            </div>
+
 
             <div class="story-content">
 
-                <h3>Taking Initiative</h3>
+                <h3>
+                    Taking Initiative
+                </h3>
 
                 <p>
                     When I see something that needs to be done, I try not
@@ -1386,6 +2323,7 @@
                 </p>
 
             </div>
+
 
             <img
                 class="story-photo"
@@ -1400,11 +2338,16 @@
 
         <article class="story-point">
 
-            <div class="story-number">11</div>
+            <div class="story-number">
+                11
+            </div>
+
 
             <div class="story-content">
 
-                <h3>Exploring Beyond One Field</h3>
+                <h3>
+                    Exploring Beyond One Field
+                </h3>
 
                 <p>
                     I do not see myself as belonging to only one area. My
@@ -1415,6 +2358,7 @@
                 </p>
 
             </div>
+
 
             <img
                 class="story-photo"
@@ -1429,11 +2373,16 @@
 
         <article class="story-point">
 
-            <div class="story-number">12</div>
+            <div class="story-number">
+                12
+            </div>
+
 
             <div class="story-content">
 
-                <h3>Looking Ahead</h3>
+                <h3>
+                    Looking Ahead
+                </h3>
 
                 <p>
                     I am still becoming the person I want to be. I carry
@@ -1447,12 +2396,14 @@
 
             </div>
 
+
             <img
                 class="story-photo"
                 src="IMG_20260319_160228_606.jpg"
                 alt="Nketia-Marfo">
 
         </article>
+
 
     </div>
 
@@ -1466,17 +2417,26 @@
 
 <section class="featured-story">
 
+
     <div class="featured-inner">
+
 
         <div class="featured-number">
             06
         </div>
 
+
         <div>
 
-            <span class="section-label">A MOMENT THAT MATTERS</span>
+            <span class="section-label">
+                A MOMENT THAT MATTERS
+            </span>
 
-            <h2>Small Efforts Can Create Real Change</h2>
+
+            <h2>
+                Small Efforts Can Create Real Change
+            </h2>
+
 
             <p>
                 Tutoring JHS 3 students taught me that impact does not
@@ -1499,11 +2459,18 @@
 
 <section class="interests-section">
 
+
     <div class="interests-heading">
 
-        <span class="section-label">MY INTERESTS</span>
+        <span class="section-label">
+            MY INTERESTS
+        </span>
 
-        <h2>What You'll Find Here</h2>
+
+        <h2>
+            What You'll Find Here
+        </h2>
+
 
         <p>
             This website brings together the subjects, questions,
@@ -1514,12 +2481,15 @@
     </div>
 
 
+
     <div class="interest-grid">
 
 
         <article class="interest-card">
 
-            <h3>📚 Education</h3>
+            <h3>
+                📚 Education
+            </h3>
 
             <p>
                 Thoughts about learning, education, skills,
@@ -1529,9 +2499,12 @@
         </article>
 
 
+
         <article class="interest-card">
 
-            <h3>📈 Economics & Society</h3>
+            <h3>
+                📈 Economics & Society
+            </h3>
 
             <p>
                 Exploring work, money, development, opportunity,
@@ -1541,9 +2514,12 @@
         </article>
 
 
+
         <article class="interest-card">
 
-            <h3>🎹 Music & Culture</h3>
+            <h3>
+                🎹 Music & Culture
+            </h3>
 
             <p>
                 Sharing my interest in music, creativity,
@@ -1553,9 +2529,12 @@
         </article>
 
 
+
         <article class="interest-card">
 
-            <h3>💡 Ideas & Opportunities</h3>
+            <h3>
+                💡 Ideas & Opportunities
+            </h3>
 
             <p>
                 Exploring ideas and possibilities that can turn
@@ -1563,6 +2542,7 @@
             </p>
 
         </article>
+
 
     </div>
 
@@ -1576,11 +2556,14 @@
 
 <section class="interest-photo-section">
 
+
     <div class="interest-photo-inner">
+
 
         <img
             src="IMG-20260124-WA0015.jpg"
             alt="Nketia-Marfo">
+
 
         <img
             src="IMG-20260614-WA0187.jpg"
@@ -1598,11 +2581,18 @@
 
 <section class="thoughts-section">
 
+
     <div class="thought-heading">
 
-        <span class="section-label">THOUGHTS</span>
+        <span class="section-label">
+            THOUGHTS
+        </span>
 
-        <h2>Latest Thoughts</h2>
+
+        <h2>
+            Latest Thoughts
+        </h2>
+
 
         <p>
             A few ideas I am exploring through writing,
@@ -1610,6 +2600,7 @@
         </p>
 
     </div>
+
 
 
     <div class="thought-grid">
@@ -1626,11 +2617,13 @@
                 skills, work, and opportunity.
             </p>
 
+
             <img
                 src="IMG_20260222_125912_662.jpg"
                 alt="Nketia-Marfo">
 
         </article>
+
 
 
         <article class="thought-card">
@@ -1644,11 +2637,13 @@
                 with meaningful opportunities.
             </p>
 
+
             <img
                 src="IMG-20260614-WA0191.jpg"
                 alt="Nketia-Marfo">
 
         </article>
+
 
 
         <article class="thought-card">
@@ -1662,11 +2657,13 @@
                 and the questions behind them.
             </p>
 
+
             <img
                 src="IMG_20260210_230240_251.jpg"
                 alt="Nketia-Marfo">
 
         </article>
+
 
     </div>
 
@@ -1680,9 +2677,16 @@
 
 <section class="journey-section">
 
-    <span class="section-label">MY JOURNEY</span>
 
-    <h2>Moments Along the Way</h2>
+    <span class="section-label">
+        MY JOURNEY
+    </span>
+
+
+    <h2>
+        Moments Along the Way
+    </h2>
+
 
     <img
         class="journey-photo"
@@ -1699,24 +2703,37 @@
 
 <section class="contact-section">
 
-    <span class="section-label">CONNECT</span>
 
-    <h2>Let's Connect</h2>
+    <span class="section-label">
+        CONNECT
+    </span>
+
+
+    <h2>
+        Let's Connect
+    </h2>
+
 
     <p>
         Have an idea, question, opportunity, or something interesting
         to discuss?
     </p>
 
+
     <p>
         Email me at:
-        <span class="email">nketiamarfo157@gmail.com</span>
+        <span class="email">
+            nketiamarfo157@gmail.com
+        </span>
     </p>
+
 
     <a
         class="contact-button"
         href="contact.html">
+
         Visit my Contact page →
+
     </a>
 
 </section>
@@ -1732,19 +2749,24 @@
 
 <footer>
 
+
     <div class="footer-inner">
+
 
         <div class="footer-name">
             Nketia-Marfo
         </div>
 
+
         <p>
             © 2026 Nketia-Marfo. All rights reserved.
         </p>
 
+
     </div>
 
 </footer>
+
 
 </body>
     </html>
