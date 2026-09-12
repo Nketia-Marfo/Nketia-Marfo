@@ -24,32 +24,35 @@ body {
    HEADER
    ===================================================== */
 
-.site-header {
+header {
     background: #111111;
     color: white;
-    padding: 35px 20px 25px;
+    text-align: center;
+    padding: 45px 20px 30px;
 }
 
-.header-content {
-    max-width: 1150px;
-    margin: auto;
-}
-
-.site-header h1 {
-    font-size: 38px;
+header h1 {
+    font-size: 44px;
     letter-spacing: 1px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
-.site-header p {
+header > p {
     color: #cccccc;
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 25px;
 }
 
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
 nav {
     display: flex;
-    gap: 28px;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
@@ -57,7 +60,7 @@ nav a {
     color: white;
     text-decoration: none;
     font-size: 16px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 nav a:hover {
@@ -70,194 +73,440 @@ nav a:hover {
    ===================================================== */
 
 main {
-    max-width: 1150px;
-    margin: auto;
+    width: 100%;
 }
 
 
 /* =====================================================
-   HERO SECTION
-   TEXT LEFT - IMAGE RIGHT
+   GENERAL ABOUT SECTIONS
    ===================================================== */
 
-.hero-section {
-    min-height: 600px;
+.about-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    min-height: 560px;
+
+    padding: 90px 50px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 70px;
-    padding: 80px 35px;
 }
 
-.hero-text {
+
+/* =====================================================
+   TEXT AREA
+   ===================================================== */
+
+.about-text {
     flex: 1;
 }
 
-.small-heading {
+.section-label {
+    display: inline-block;
+
     color: #9a741f;
+
     font-size: 13px;
     font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 14px;
 }
 
-.hero-text h2 {
-    font-size: 52px;
-    line-height: 1.15;
+.about-text h2 {
+    font-size: 43px;
+    line-height: 1.2;
+
     margin-bottom: 25px;
 }
 
-.hero-text p:not(.small-heading) {
-    font-size: 19px;
-    margin-bottom: 18px;
-    max-width: 650px;
-}
-
-.hero-image {
-    flex: 0 0 330px;
-    text-align: center;
-}
-
-.hero-image img {
-    width: 300px;
-    height: 380px;
-    object-fit: cover;
-    border-radius: 30px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
-}
-
-
-/* =====================================================
-   GENERAL CONTENT SECTIONS
-   ===================================================== */
-
-.content-section {
-    display: flex;
-    align-items: center;
-    gap: 70px;
-    min-height: 500px;
-    padding: 80px 35px;
-    border-top: 1px solid #dddddd;
-}
-
-.content-section.reverse {
-    flex-direction: row;
-}
-
-.text-side {
-    flex: 1;
-}
-
-.text-side h2 {
-    font-size: 38px;
-    line-height: 1.2;
-    margin-bottom: 22px;
-}
-
-.text-side p {
+.about-text p {
     font-size: 18px;
-    margin-bottom: 18px;
-}
 
-.image-side {
-    flex: 0 0 330px;
-    text-align: center;
+    max-width: 650px;
+
+    margin-bottom: 18px;
+
+    color: #444444;
 }
 
 
 /* =====================================================
-   ROUND / FRAMED PHOTOS
+   TOP SECTION
+   WRITING LEFT
+   SMALL PICTURES RIGHT
    ===================================================== */
 
-.image-side img {
-    width: 280px;
-    height: 280px;
+.top-section {
+    background: #ffffff;
+}
+
+.top-section .about-text {
+    order: 1;
+}
+
+
+/* Pictures on right */
+
+.small-photo-group {
+    order: 2;
+
+    width: 350px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.small-photo-group img {
+    width: 100%;
+    height: 145px;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.3s ease;
+}
+
+.small-photo-group img:hover {
+    transform: scale(1.03);
+}
+
+.small-photo-group img:last-child {
+    grid-column: 1 / 3;
+
+    height: 155px;
+}
+
+
+/* =====================================================
+   MIDDLE SECTION
+   PICTURE LEFT
+   WRITING RIGHT
+   ===================================================== */
+
+.middle-section {
+    background: #f0eee7;
+}
+
+.middle-section .round-photo {
+    order: 1;
+}
+
+.middle-section .about-text {
+    order: 2;
+}
+
+
+/* =====================================================
+   MAIN ROUND PHOTO
+   ===================================================== */
+
+.round-photo {
+    flex: 0 0 340px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.round-photo img {
+    width: 300px;
+    height: 300px;
+
     object-fit: cover;
 
     border-radius: 50%;
 
     padding: 8px;
+
     background: white;
 
-    border: 4px solid #d6a84f;
+    border: 5px solid #d6a84f;
 
     box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.16);
+        0 15px 35px rgba(0, 0, 0, 0.18);
 
     transition: transform 0.3s ease;
 }
 
-.image-side img:hover {
+.round-photo img:hover {
     transform: scale(1.04);
 }
 
 
 /* =====================================================
-   INTEREST LIST
+   INTERESTS SECTION
+   WRITING LEFT
+   ROUND PICTURES RIGHT
    ===================================================== */
 
-.interest-list {
-    list-style: none;
-    margin-top: 25px;
+.interests-section {
+    background: #ffffff;
 }
 
-.interest-list li {
-    font-size: 18px;
-    padding: 9px 0;
-    border-bottom: 1px solid #dddddd;
-}
-
-.interest-list li::before {
-    content: "✦";
-    color: #b88a25;
-    margin-right: 12px;
+.interests-section .about-text {
+    order: 1;
 }
 
 
 /* =====================================================
-   FINAL SECTION
+   ROUND PHOTO GROUP
    ===================================================== */
 
-.final-section {
-    display: flex;
-    align-items: center;
-    gap: 70px;
-    padding: 90px 35px;
-    border-top: 1px solid #dddddd;
+.round-photo-group {
+    order: 2;
+
+    width: 380px;
+    min-width: 380px;
+
+    height: 390px;
+
+    position: relative;
 }
 
-.final-section .text-side {
-    flex: 1;
+.round-photo-group img {
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    padding: 6px;
+
+    background: white;
+
+    border: 4px solid #d6a84f;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.18);
+
+    transition: transform 0.3s ease;
 }
 
-.final-section h2 {
-    font-size: 42px;
-    line-height: 1.2;
+.round-photo-group img:hover {
+    transform: scale(1.05);
+}
+
+.round-photo-group img:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+.round-photo-group img:nth-child(2) {
+    top: 125px;
+    right: 0;
+}
+
+.round-photo-group img:nth-child(3) {
+    bottom: 0;
+    left: 75px;
+}
+
+
+/* =====================================================
+   INTEREST ARTICLES
+   ===================================================== */
+
+.about-text article {
     margin-bottom: 20px;
 }
 
-.final-section p {
-    font-size: 18px;
-    margin-bottom: 25px;
+.about-text article h3 {
+    font-size: 21px;
+
+    margin-bottom: 5px;
+
+    color: #202020;
+}
+
+.about-text article p {
+    font-size: 16px;
+
+    margin-bottom: 0;
 }
 
 
 /* =====================================================
-   BUTTON
+   LATEST THOUGHTS
    ===================================================== */
 
-.button {
-    display: inline-block;
-    background: #111111;
-    color: white;
-    text-decoration: none;
-    padding: 13px 25px;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
+.thoughts-section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 90px 50px;
+
+    text-align: center;
 }
 
-.button:hover {
+.thoughts-section h2 {
+    font-size: 40px;
+
+    margin-bottom: 35px;
+}
+
+.thought-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.thought-grid article {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    text-align: left;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.07);
+
+    transition: transform 0.3s ease;
+}
+
+.thought-grid article:hover {
+    transform: translateY(-5px);
+}
+
+.thought-grid h3 {
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+
+.thought-grid p {
+    color: #555555;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   MORE PHOTOS
+   ===================================================== */
+
+.more-photos {
+    background: #111111;
+
+    color: white;
+
+    padding: 90px 30px;
+
+    text-align: center;
+}
+
+.more-photos h2 {
+    color: white;
+
+    font-size: 40px;
+
+    margin-bottom: 35px;
+}
+
+.photo-row {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.photo-row img {
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    transition: transform 0.3s ease;
+}
+
+.photo-row img:hover {
+    transform: scale(1.04);
+}
+
+
+/* =====================================================
+   CONTACT SECTION
+   ===================================================== */
+
+.contact-section {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 90px 30px;
+
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 18px;
+
+    color: #555555;
+
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   CONTACT BUTTON
+   ===================================================== */
+
+.contact-button {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    background: #111111;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 26px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.contact-button:hover {
     background: #b88a25;
 }
 
@@ -268,10 +517,12 @@ main {
 
 footer {
     background: #111111;
+
     color: #cccccc;
+
     text-align: center;
+
     padding: 30px 20px;
-    margin-top: 30px;
 }
 
 footer p {
@@ -280,71 +531,244 @@ footer p {
 
 
 /* =====================================================
-   MOBILE PHONE
+   TABLETS
    ===================================================== */
 
-@media (max-width: 750px) {
+@media (max-width: 850px) {
 
-    .site-header {
-        text-align: center;
+    .about-section {
+        gap: 40px;
+
+        padding: 70px 30px;
     }
 
-    .site-header h1 {
-        font-size: 32px;
+    .about-text h2 {
+        font-size: 35px;
+    }
+
+    .round-photo {
+        flex: 0 0 280px;
+    }
+
+    .round-photo img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .round-photo-group {
+        width: 320px;
+        min-width: 320px;
+    }
+
+    .round-photo-group img {
+        width: 175px;
+        height: 175px;
+    }
+
+    .photo-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .thought-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =====================================================
+   MOBILE PHONES
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 40px 15px 30px;
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    header > p {
+        font-size: 15px;
     }
 
     nav {
-        justify-content: center;
-        gap: 18px;
+        gap: 15px;
     }
 
-    .hero-section,
-    .content-section,
-    .content-section.reverse,
-    .final-section {
+    nav a {
+        font-size: 14px;
+    }
+
+
+    /* Stack sections on phone */
+
+    .about-section {
         flex-direction: column;
+
         text-align: center;
-        gap: 35px;
+
         padding: 60px 22px;
+
+        gap: 40px;
     }
 
-    .hero-text h2 {
-        font-size: 38px;
+
+    /* Keep mobile order natural */
+
+    .top-section .about-text,
+    .top-section .small-photo-group,
+    .middle-section .round-photo,
+    .middle-section .about-text,
+    .interests-section .about-text,
+    .interests-section .round-photo-group {
+        order: initial;
     }
 
-    .hero-text p:not(.small-heading) {
+
+    .about-text h2 {
+        font-size: 31px;
+    }
+
+    .about-text p {
         font-size: 17px;
     }
 
-    .hero-image,
-    .image-side {
-        flex: none;
+
+    /* Top pictures */
+
+    .small-photo-group {
         width: 100%;
+
+        max-width: 350px;
     }
 
-    .hero-image img {
-        width: 260px;
-        height: 330px;
+
+    /* Middle round picture */
+
+    .round-photo {
+        flex: none;
     }
 
-    .image-side img {
-        width: 240px;
-        height: 240px;
+    .round-photo img {
+        width: 250px;
+        height: 250px;
     }
 
-    .text-side h2,
-    .final-section h2 {
+
+    /* Later round pictures */
+
+    .round-photo-group {
+        width: 320px;
+
+        min-width: 0;
+
+        height: 350px;
+
+        margin: auto;
+    }
+
+    .round-photo-group img {
+        width: 175px;
+        height: 175px;
+    }
+
+
+    /* Thought cards */
+
+    .thought-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* More photos */
+
+    .photo-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =====================================================
+   SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+    header h1 {
         font-size: 30px;
     }
 
-    .text-side p,
-    .final-section p {
-        font-size: 17px;
+    nav {
+        gap: 10px;
     }
 
-    .interest-list {
-        text-align: left;
-        max-width: 400px;
-        margin: 25px auto;
+    nav a {
+        font-size: 13px;
+    }
+
+
+    .about-section {
+        padding: 50px 18px;
+    }
+
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+
+    .small-photo-group {
+        max-width: 300px;
+    }
+
+    .small-photo-group img {
+        height: 120px;
+    }
+
+    .small-photo-group img:last-child {
+        height: 130px;
+    }
+
+
+    .round-photo img {
+        width: 220px;
+        height: 220px;
+    }
+
+
+    .round-photo-group {
+        width: 285px;
+        height: 315px;
+    }
+
+    .round-photo-group img {
+        width: 155px;
+        height: 155px;
+    }
+
+    .round-photo-group img:nth-child(2) {
+        top: 105px;
+    }
+
+    .round-photo-group img:nth-child(3) {
+        left: 55px;
+    }
+
+
+    .photo-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    .thoughts-section,
+    .contact-section {
+        padding: 65px 20px;
     }
 }
