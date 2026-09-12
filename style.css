@@ -1,114 +1,350 @@
-/* Nketia-Marfo Personal Blog */
+/* =====================================================
+   NKETIA-MARFO PERSONAL WEBSITE
+   ===================================================== */
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f5;
+    color: #202020;
     line-height: 1.7;
-    background: #f7f8fa;
-    color: #222;
 }
 
-header {
-    background: #111827;
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.site-header {
+    background: #111111;
     color: white;
-    text-align: center;
-    padding: 45px 20px;
+    padding: 35px 20px 25px;
 }
 
-header h1 {
-    font-size: 42px;
-    margin-bottom: 8px;
+.header-content {
+    max-width: 1150px;
+    margin: auto;
 }
 
-header p {
-    font-size: 17px;
-    color: #d1d5db;
+.site-header h1 {
+    font-size: 38px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.site-header p {
+    color: #cccccc;
+    font-size: 16px;
     margin-bottom: 25px;
 }
 
 nav {
-    margin-top: 15px;
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 8px;
-    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #d6a84f;
 }
+
+
+/* =====================================================
+   MAIN
+   ===================================================== */
 
 main {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
+    max-width: 1150px;
+    margin: auto;
 }
 
-section {
-    background: white;
-    padding: 30px;
+
+/* =====================================================
+   HERO SECTION
+   TEXT LEFT - IMAGE RIGHT
+   ===================================================== */
+
+.hero-section {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    padding: 80px 35px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.small-heading {
+    color: #9a741f;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero-text h2 {
+    font-size: 52px;
+    line-height: 1.15;
     margin-bottom: 25px;
-    border-radius: 14px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
 }
 
-h2 {
-    color: #111827;
-    margin-bottom: 15px;
+.hero-text p:not(.small-heading) {
+    font-size: 19px;
+    margin-bottom: 18px;
+    max-width: 650px;
 }
 
-h3 {
-    margin-top: 20px;
-    margin-bottom: 8px;
-    color: #374151;
+.hero-image {
+    flex: 0 0 330px;
+    text-align: center;
 }
 
-p {
-    margin-bottom: 15px;
+.hero-image img {
+    width: 300px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
 }
 
-ul {
-    padding-left: 25px;
+
+/* =====================================================
+   GENERAL CONTENT SECTIONS
+   ===================================================== */
+
+.content-section {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    min-height: 500px;
+    padding: 80px 35px;
+    border-top: 1px solid #dddddd;
 }
 
-li {
-    margin-bottom: 8px;
+.content-section.reverse {
+    flex-direction: row;
 }
 
-article {
-    padding: 18px;
-    margin-top: 15px;
-    border-left: 4px solid #111827;
-    background: #f9fafb;
+.text-side {
+    flex: 1;
 }
+
+.text-side h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.text-side p {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.image-side {
+    flex: 0 0 330px;
+    text-align: center;
+}
+
+
+/* =====================================================
+   ROUND / FRAMED PHOTOS
+   ===================================================== */
+
+.image-side img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    padding: 8px;
+    background: white;
+
+    border: 4px solid #d6a84f;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.16);
+
+    transition: transform 0.3s ease;
+}
+
+.image-side img:hover {
+    transform: scale(1.04);
+}
+
+
+/* =====================================================
+   INTEREST LIST
+   ===================================================== */
+
+.interest-list {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.interest-list li {
+    font-size: 18px;
+    padding: 9px 0;
+    border-bottom: 1px solid #dddddd;
+}
+
+.interest-list li::before {
+    content: "✦";
+    color: #b88a25;
+    margin-right: 12px;
+}
+
+
+/* =====================================================
+   FINAL SECTION
+   ===================================================== */
+
+.final-section {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 90px 35px;
+    border-top: 1px solid #dddddd;
+}
+
+.final-section .text-side {
+    flex: 1;
+}
+
+.final-section h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.final-section p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   BUTTON
+   ===================================================== */
+
+.button {
+    display: inline-block;
+    background: #111111;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #b88a25;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
 
 footer {
+    background: #111111;
+    color: #cccccc;
     text-align: center;
-    background: #111827;
-    color: #d1d5db;
-    padding: 25px 15px;
-    margin-top: 40px;
+    padding: 30px 20px;
+    margin-top: 30px;
 }
 
-@media (max-width: 600px) {
-    header h1 {
+footer p {
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   MOBILE PHONE
+   ===================================================== */
+
+@media (max-width: 750px) {
+
+    .site-header {
+        text-align: center;
+    }
+
+    .site-header h1 {
         font-size: 32px;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 5px;
+    nav {
+        justify-content: center;
+        gap: 18px;
     }
 
-    section {
-        padding: 22px;
+    .hero-section,
+    .content-section,
+    .content-section.reverse,
+    .final-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+        padding: 60px 22px;
+    }
+
+    .hero-text h2 {
+        font-size: 38px;
+    }
+
+    .hero-text p:not(.small-heading) {
+        font-size: 17px;
+    }
+
+    .hero-image,
+    .image-side {
+        flex: none;
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 260px;
+        height: 330px;
+    }
+
+    .image-side img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .text-side h2,
+    .final-section h2 {
+        font-size: 30px;
+    }
+
+    .text-side p,
+    .final-section p {
+        font-size: 17px;
+    }
+
+    .interest-list {
+        text-align: left;
+        max-width: 400px;
+        margin: 25px auto;
     }
 }
