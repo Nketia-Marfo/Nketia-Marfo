@@ -1247,3 +1247,134 @@ footer {
     }
 
 }
+/* =========================================
+   MY STORY — 12 POINTS
+========================================= */
+
+.personal-story {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 7%;
+}
+
+.story-intro {
+    max-width: 760px;
+    margin-bottom: 70px;
+}
+
+.story-intro h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    margin: 15px 0 25px;
+}
+
+.story-intro p {
+    font-size: 1.08rem;
+    line-height: 1.8;
+    max-width: 700px;
+}
+
+
+/* Each story point */
+
+.story-point {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 30px;
+
+    padding: 65px 0;
+
+    border-top: 1px solid #d7d7d7;
+}
+
+.story-point:last-child {
+    border-bottom: 1px solid #d7d7d7;
+}
+
+
+/* Number */
+
+.story-number {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+
+    color: #b08d3c;
+
+    padding-top: 5px;
+}
+
+
+/* Text */
+
+.story-content {
+    max-width: 850px;
+}
+
+.story-content h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+
+    line-height: 1.15;
+
+    margin: 0 0 18px;
+}
+
+.story-content p {
+    max-width: 760px;
+
+    font-size: 1.05rem;
+
+    line-height: 1.85;
+
+    margin: 0 0 30px;
+}
+
+
+/* Small square photo */
+
+.story-photo {
+    display: block;
+
+    width: 125px;
+    height: 125px;
+
+    object-fit: cover;
+
+    border: 5px solid #ffffff;
+
+    outline: 1px solid #c8c8c8;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+    border-radius: 4px;
+}
+
+
+/* Subtle editorial variation */
+
+.story-point:nth-child(odd) .story-photo {
+    transform: rotate(-1deg);
+}
+
+.story-point:nth-child(even) .story-photo {
+    transform: rotate(1deg);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .personal-story {
+        padding: 80px 6%;
+    }
+
+    .story-intro {
+        margin-bottom: 45px;
+    }
+
+    .story-intro h2 {
+        font-size: 2.6
