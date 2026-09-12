@@ -7,640 +7,1744 @@
     <title>Nketia-Marfo | About</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================================================
+           NKETIA-MARFO — ABOUT PAGE
+           COLOURS:
+           Deep Indigo: #14213D
+           Green:       #2E8B57
+           Orange:      #F28C28
+        ========================================================= */
+
+        :root {
+            --indigo: #14213D;
+            --indigo-light: #1d3158;
+            --green: #2E8B57;
+            --green-light: #eaf5ef;
+            --orange: #F28C28;
+            --orange-light: #fff3e4;
+            --cream: #f8f9f6;
+            --white: #ffffff;
+            --text: #20252d;
+            --muted: #667085;
+            --border: #e3e7e2;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--cream);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.75;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+            background: var(--indigo);
+            color: var(--white);
+            padding: 28px 7%;
+            border-bottom: 5px solid var(--green);
+            position: relative;
+            z-index: 10;
+        }
+
+        .header-inner {
+            max-width: 1250px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .brand {
+            text-decoration: none;
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.85rem;
+            letter-spacing: -0.5px;
+            color: white;
+        }
+
+        .brand p {
+            margin: 5px 0 0;
+            color: #dbe5f2;
+            font-size: 0.76rem;
+            letter-spacing: 1.1px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 27px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            position: relative;
+            text-decoration: none;
+            color: white;
+            font-size: 0.82rem;
+            letter-spacing: 0.5px;
+            padding: 7px 0;
+            transition: 0.3s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: var(--orange);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--orange);
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        nav a.active {
+            color: var(--orange);
+        }
+
+
+        /* =========================================================
+           GENERAL
+        ========================================================= */
+
+        main {
+            overflow: hidden;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--green);
+            font-size: 0.72rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 13px;
+        }
+
+        h2 {
+            margin: 0 0 20px;
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--indigo);
+            font-size: clamp(2rem, 4vw, 3.6rem);
+            line-height: 1.08;
+            letter-spacing: -1px;
+        }
+
+        h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--indigo);
+        }
+
+        p {
+            color: #505866;
+        }
+
+
+        /* =========================================================
+           HERO / INTRO
+        ========================================================= */
+
+        .about-hero {
+            max-width: 1250px;
+            margin: auto;
+            padding: 100px 7% 90px;
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .about-hero-text h2 {
+            font-size: clamp(2.6rem, 5vw, 4.8rem);
+            max-width: 720px;
+        }
+
+        .about-hero-text h2 span {
+            color: var(--green);
+        }
+
+        .about-hero-text p {
+            max-width: 650px;
+            font-size: 1.02rem;
+        }
+
+        .hero-intro {
+            margin-top: 28px;
+            padding-left: 20px;
+            border-left: 4px solid var(--orange);
+        }
+
+
+        /* Small photo arrangement */
+
+        .hero-photo-area {
+            position: relative;
+            min-height: 360px;
+        }
+
+        .hero-photo {
+            position: absolute;
+            object-fit: cover;
+            border: 7px solid white;
+            box-shadow: 0 18px 40px rgba(20, 33, 61, 0.15);
+        }
+
+        .hero-photo.one {
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            top: 0;
+            right: 120px;
+            outline: 4px solid var(--green);
+        }
+
+        .hero-photo.two {
+            width: 125px;
+            height: 125px;
+            border-radius: 12px;
+            bottom: 35px;
+            right: 0;
+            outline: 4px solid var(--orange);
+        }
+
+        .hero-photo.three {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            bottom: 0;
+            left: 45px;
+            outline: 4px solid var(--indigo);
+        }
+
+
+        /* =========================================================
+           STATEMENT BAND
+        ========================================================= */
+
+        .statement-band {
+            background: var(--indigo);
+            color: white;
+            padding: 65px 7%;
+            position: relative;
+        }
+
+        .statement-band::before {
+            content: "";
+            position: absolute;
+            left: 7%;
+            top: 0;
+            width: 90px;
+            height: 5px;
+            background: var(--orange);
+        }
+
+        .statement-inner {
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .statement-inner p {
+            margin: 0;
+            color: #edf2f7;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.45rem, 3vw, 2.35rem);
+            line-height: 1.4;
+        }
+
+        .statement-inner strong {
+            color: var(--orange);
+        }
+
+
+        /* =========================================================
+           ABOUT ME
+        ========================================================= */
+
+        .about-me-section {
+            max-width: 1250px;
+            margin: auto;
+            padding: 100px 7%;
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            align-items: center;
+            gap: 80px;
+        }
+
+        .about-me-photo-area {
+            position: relative;
+            min-height: 330px;
+        }
+
+        .about-me-main-photo {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid white;
+            outline: 5px solid var(--green);
+            box-shadow: 0 18px 40px rgba(20, 33, 61, 0.14);
+            position: absolute;
+            left: 45px;
+            top: 20px;
+        }
+
+        .about-me-small-photo {
+            width: 105px;
+            height: 105px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 6px solid white;
+            outline: 4px solid var(--orange);
+            position: absolute;
+            right: 20px;
+            bottom: 25px;
+            box-shadow: 0 12px 25px rgba(20, 33, 61, 0.15);
+        }
+
+
+        /* =========================================================
+           STORY INTRO
+        ========================================================= */
+
+        .story-section {
+            background: white;
+            padding: 100px 7%;
+        }
+
+        .story-heading {
+            max-width: 850px;
+            margin: 0 auto 70px;
+            text-align: center;
+        }
+
+        .story-heading p {
+            max-width: 720px;
+            margin: auto;
+        }
+
+
+        /* =========================================================
+           STORY POINTS
+        ========================================================= */
+
+        .story-list {
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .story-point {
+            display: grid;
+            grid-template-columns: 75px 1fr 150px;
+            align-items: center;
+            gap: 35px;
+            padding: 45px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .story-point:nth-child(even) {
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(234, 245, 239, 0.75),
+                transparent
+            );
+        }
+
+        .story-number {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.65rem;
+            font-weight: bold;
+            color: var(--orange);
+        }
+
+        .story-content h3 {
+            margin: 0 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .story-content p {
+            margin: 0;
+            max-width: 650px;
+        }
+
+        .story-photo {
+            width: 125px;
+            height: 125px;
+            object-fit: cover;
+            justify-self: center;
+            border: 6px solid white;
+            box-shadow: 0 12px 25px rgba(20, 33, 61, 0.12);
+        }
+
+        /* Different frame shapes */
+
+        .story-point:nth-child(odd) .story-photo {
+            border-radius: 50%;
+            outline: 4px solid var(--green);
+        }
+
+        .story-point:nth-child(even) .story-photo {
+            border-radius: 12px;
+            outline: 4px solid var(--orange);
+        }
+
+
+        /* =========================================================
+           FEATURED STORY
+        ========================================================= */
+
+        .featured-story {
+            background: var(--green-light);
+            padding: 85px 7%;
+        }
+
+        .featured-inner {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .featured-number {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 5rem;
+            font-weight: bold;
+            color: var(--green);
+            opacity: 0.8;
+        }
+
+        .featured-inner h2 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+        }
+
+
+        /* =========================================================
+           INTERESTS
+        ========================================================= */
+
+        .interests-section {
+            max-width: 1250px;
+            margin: auto;
+            padding: 100px 7%;
+        }
+
+        .interests-heading {
+            max-width: 700px;
+            margin-bottom: 45px;
+        }
+
+        .interest-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .interest-card {
+            background: white;
+            padding: 30px 24px;
+            border-top: 4px solid var(--green);
+            box-shadow: 0 10px 30px rgba(20, 33, 61, 0.06);
+            transition: transform 0.3s ease;
+        }
+
+        .interest-card:nth-child(2) {
+            border-top-color: var(--orange);
+        }
+
+        .interest-card:nth-child(3) {
+            border-top-color: var(--indigo);
+        }
+
+        .interest-card:nth-child(4) {
+            border-top-color: var(--green);
+        }
+
+        .interest-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .interest-card h3 {
+            margin-top: 0;
+            font-size: 1.15rem;
+        }
+
+        .interest-card p {
+            font-size: 0.9rem;
+        }
+
+
+        /* =========================================================
+           INTEREST PHOTOS
+        ========================================================= */
+
+        .interest-photo-section {
+            background: var(--orange-light);
+            padding: 75px 7%;
+        }
+
+        .interest-photo-inner {
+            max-width: 1050px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .interest-photo-inner img {
+            width: 145px;
+            height: 145px;
+            object-fit: cover;
+            border: 7px solid white;
+            box-shadow: 0 15px 30px rgba(20, 33, 61, 0.14);
+        }
+
+        .interest-photo-inner img:first-child {
+            border-radius: 50%;
+            outline: 4px solid var(--green);
+        }
+
+        .interest-photo-inner img:last-child {
+            border-radius: 12px;
+            outline: 4px solid var(--indigo);
+        }
+
+
+        /* =========================================================
+           LATEST THOUGHTS
+        ========================================================= */
+
+        .thoughts-section {
+            max-width: 1250px;
+            margin: auto;
+            padding: 100px 7%;
+        }
+
+        .thought-heading {
+            max-width: 650px;
+            margin-bottom: 45px;
+        }
+
+        .thought-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .thought-card {
+            background: white;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(20, 33, 61, 0.06);
+            border-bottom: 4px solid var(--green);
+        }
+
+        .thought-card:nth-child(2) {
+            border-bottom-color: var(--orange);
+        }
+
+        .thought-card:nth-child(3) {
+            border-bottom-color: var(--indigo);
+        }
+
+        .thought-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-top: 20px;
+            border: 5px solid white;
+            box-shadow: 0 8px 18px rgba(20, 33, 61, 0.12);
+        }
+
+        .thought-card:nth-child(odd) img {
+            border-radius: 50%;
+            outline: 3px solid var(--green);
+        }
+
+        .thought-card:nth-child(even) img {
+            border-radius: 10px;
+            outline: 3px solid var(--orange);
+        }
+
+        .thought-card h3 {
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+
+
+        /* =========================================================
+           JOURNEY PHOTO
+        ========================================================= */
+
+        .journey-section {
+            background: var(--indigo);
+            color: white;
+            padding: 85px 7%;
+            text-align: center;
+        }
+
+        .journey-section h2 {
+            color: white;
+        }
+
+        .journey-photo {
+            width: 155px;
+            height: 155px;
+            object-fit: cover;
+            margin: 30px auto 0;
+            border: 7px solid white;
+            border-radius: 50%;
+            outline: 5px solid var(--orange);
+        }
+
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact-section {
+            max-width: 850px;
+            margin: auto;
+            padding: 110px 7%;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact-section p {
+            max-width: 650px;
+            margin: 10px auto;
+        }
+
+        .email {
+            color: var(--indigo);
+            font-weight: bold;
+        }
+
+        .contact-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 25px;
+            background: var(--orange);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background: var(--green);
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background: var(--indigo);
+            color: white;
+            padding: 35px 7%;
+            border-top: 5px solid var(--green);
+        }
+
+        .footer-inner {
+            max-width: 1250px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            color: #dbe5f2;
+            font-size: 0.85rem;
+        }
+
+        .footer-name {
+            color: var(--orange);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.2rem;
+        }
+
+
+        /* =========================================================
+           TABLET
+        ========================================================= */
+
+        @media (max-width: 950px) {
+
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            nav {
+                gap: 18px 25px;
+            }
+
+            .about-hero {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .hero-photo-area {
+                max-width: 450px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .about-me-section {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-me-photo-area {
+                max-width: 400px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .interest-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .thought-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 650px) {
+
+            header {
+                padding: 22px 6%;
+            }
+
+            .brand h1 {
+                font-size: 1.55rem;
+            }
+
+            .brand p {
+                font-size: 0.67rem;
+            }
+
+            nav {
+                gap: 12px 18px;
+            }
+
+            nav a {
+                font-size: 0.72rem;
+            }
+
+            .about-hero {
+                padding: 70px 6% 65px;
+            }
+
+            .about-hero-text h2 {
+                font-size: 2.55rem;
+            }
+
+            .hero-photo-area {
+                min-height: 280px;
+            }
+
+            .hero-photo.one {
+                width: 115px;
+                height: 115px;
+                right: 80px;
+            }
+
+            .hero-photo.two {
+                width: 100px;
+                height: 100px;
+            }
+
+            .hero-photo.three {
+                width: 90px;
+                height: 90px;
+                left: 25px;
+            }
+
+            .statement-band {
+                padding: 55px 6%;
+            }
+
+            .about-me-section {
+                padding: 70px 6%;
+            }
+
+            .about-me-photo-area {
+                min-height: 270px;
+            }
+
+            .about-me-main-photo {
+                width: 175px;
+                height: 175px;
+                left: 30px;
+            }
+
+            .about-me-small-photo {
+                width: 85px;
+                height: 85px;
+            }
+
+            .story-section {
+                padding: 70px 6%;
+            }
+
+            .story-heading {
+                margin-bottom: 40px;
+            }
+
+            .story-point {
+                grid-template-columns: 45px 1fr;
+                gap: 18px;
+                padding: 32px 0;
+            }
+
+            .story-number {
+                font-size: 1.2rem;
+            }
+
+            .story-content h3 {
+                font-size: 1.25rem;
+            }
+
+            .story-photo {
+                width: 90px;
+                height: 90px;
+                margin-top: 20px;
+                justify-self: start;
+            }
+
+            .featured-story {
+                padding: 65px 6%;
+            }
+
+            .featured-inner {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            .featured-number {
+                font-size: 3.5rem;
+            }
+
+            .interests-section {
+                padding: 70px 6%;
+            }
+
+            .interest-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .interest-photo-section {
+                padding: 55px 6%;
+            }
+
+            .interest-photo-inner {
+                gap: 18px;
+            }
+
+            .interest-photo-inner img {
+                width: 105px;
+                height: 105px;
+            }
+
+            .thoughts-section {
+                padding: 70px 6%;
+            }
+
+            .journey-section {
+                padding: 65px 6%;
+            }
+
+            .journey-photo {
+                width: 125px;
+                height: 125px;
+            }
+
+            .contact-section {
+                padding: 80px 6%;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
-    <header>
-        <h1>Nketia-Marfo</h1>
-        <p>Thinking deeply. Creating freely. Sharing ideas.</p>
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+    <div class="header-inner">
+
+        <a href="index.html" class="brand">
+            <h1>Nketia-Marfo</h1>
+            <p>Thinking deeply. Creating freely. Sharing ideas.</p>
+        </a>
 
         <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
-            <a href="blog.html">Blog</a> |
-            <a href="projects.html">Projects</a> |
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="student-voices.html">Student Voices</a>
             <a href="contact.html">Contact</a>
         </nav>
-    </header>
 
+    </div>
 
-    <main>
+</header>
 
-        <!-- =========================================
-             INTRODUCTION
-             WRITING LEFT - PICTURES RIGHT
-        ========================================== -->
 
-        <section class="about-section first-layout">
+<main>
 
-            <div class="about-text">
 
-                <span class="section-label">WELCOME</span>
+<!-- =========================================================
+     INTRODUCTION
+========================================================= -->
 
-                <h2>Welcome to My Corner of the Internet</h2>
+<section class="about-hero">
 
-                <p>
-                    Hello, I'm Nketia-Marfo. Welcome to my personal website —
-                    a space where I share ideas, stories, projects, experiences,
-                    and things I'm learning along the way.
-                </p>
+    <div class="about-hero-text">
 
-                <p>
-                    I am curious about education, economics, music, culture,
-                    society, creativity, and the opportunities available to
-                    young people.
-                </p>
+        <span class="section-label">WELCOME</span>
 
-                <p>
-                    Here, I explore questions, share what I create, and document
-                    ideas that matter to me.
-                </p>
+        <h2>
+            Welcome to
+            <span>My Corner</span>
+            of the Internet
+        </h2>
 
-            </div>
+        <p>
+            Hello, I'm Nketia-Marfo. Welcome to my personal website —
+            a space where I share ideas, stories, projects, experiences,
+            and things I'm learning along the way.
+        </p>
 
-
-            <div class="about-images">
-
-                <img src="file_0000000037bc8210ba33c13682e0591b.png"
-                     alt="Nketia-Marfo">
-
-                <img src="file_00000000782081f486b26a47a83586ad.png"
-                     alt="Nketia-Marfo">
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-             ABOUT ME
-             PICTURE LEFT - WRITING RIGHT
-        ========================================== -->
-
-        <section class="about-section middle-layout">
-
-            <div class="round-photo">
-
-                <img src="file_0000000099e471f48092d9c598859a2a.png"
-                     alt="Nketia-Marfo">
-
-            </div>
-
-
-            <div class="about-text">
-
-                <span class="section-label">ABOUT ME</span>
-
-                <h2>A Little About Me</h2>
-
-                <p>
-                    I enjoy learning, asking questions, creating, and looking
-                    for connections between ideas that may seem unrelated.
-                </p>
-
-                <p>
-                    My interests include education and economics, while music
-                    and culture remain important parts of how I express myself
-                    and understand the world around me.
-                </p>
-
-                <p>
-                    This website is a place to keep growing, creating, and
-                    sharing that journey.
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-             MY STORY
-             12 PERSONAL POINTS
-        ========================================== -->
-
-        <section class="personal-story">
-
-            <div class="story-intro">
-
-                <span class="section-label">MY STORY</span>
-
-                <h2>12 Things That Shape Who I Am</h2>
-
-                <p>
-                    My journey has been shaped by learning, service, music,
-                    leadership, curiosity, and the opportunities I have found
-                    along the way. These are some of the experiences and
-                    qualities that continue to shape me.
-                </p>
-
-            </div>
-
-
-
-            <!-- 01 -->
-
-            <article class="story-point">
-
-                <div class="story-number">01</div>
-
-                <div class="story-content">
-
-                    <h3>Academic Excellence</h3>
-
-                    <p>
-                        I have always taken my education seriously. I challenge
-                        myself to learn, grow, and make the most of every
-                        educational opportunity available to me.
-                    </p>
-
-                    <img class="story-photo"
-                         src="1784768722971.jpg"
-                         alt="Nketia-Marfo">
-
-                </div>
-
-            </article>
-
-
-
-            <!-- 02 -->
-
-            <article class="story-point">
-
-                <div class="story-number">02</div>
-
-                <div class="story-content">
-
-                    <h3>Earning Opportunities Through Merit</h3>
-
-                    <p>
-                        My academic performance has opened doors for me.
-                        Receiving a full scholarship based on my academic
-                        promise reminded me that dedication and hard work
-                        can create opportunities.
-                    </p>
-
-                    <img class="story-photo"
-                         src="IMG-20260308-WA0121.jpg"
-                         alt="Nketia-Marfo">
-
-                </div>
-
-            </article>
-
-
-
-            <!-- 03 -->
-
-            <article class="story-point">
-
-                <div class="story-number">03</div>
-
-                <div class="story-content">
-
-                    <h3>Intellectual Curiosity</h3>
-
-                    <p>
-                        I do not want to learn simply to complete an assignment
-                        or pass an examination. I enjoy asking questions,
-                        understanding ideas more deeply, and discovering how
-                        what I learn connects to the world around me.
-                    </p>
-
-                    <img class="story-photo"
-                         src="IMG-20260327-WA0071.jpg"
-                         alt="Nketia-Marfo">
-
-                </div>
-
-            </article>
-
-
-
-            <!-- 04 -->
-
-            <article class="story-point">
-
-                <div class="story-number">04</div>
-
-                <div class="story-content">
-
-                    <h3>Independent Learning</h3>
-
-                    <p>
-                        Some of the things I have learned have come from my own
-                        initiative. I enjoy exploring new skills and teaching
-                        myself beyond what I am formally required to learn.
-                    </p>
-
-                    <img class="story-photo"
-                         src="IMG-20260328-WA0182.jpg"
-                         alt="Nketia-Marfo">
-
-                </div>
-
-            </article>
-
-
-
-            <!-- 05 -->
-
-            <article class="story-point">
-
-                <div class="story-number">05</div>
-
-                <div class="story-content">
-
-                    <h3>Teaching Others</h3>
-
-                    <p>
-                        I believe knowledge becomes more meaningful when it can
-                        help someone else. I have supported younger students
-                        academically, helping them prepare for important
-                        examinations and encouraging them to believe in their
-                        own abilities.
-                    </p>
-
-                    <img class="story-photo"
-                         src="IMG-20260607-WA0126.jpg"
-                         alt="Nketia-Marfo">
-
-                </div>
-
-            </article>
-
-
-
-            <!-- 06 -->
-
-            <article class="story-point">
-
-                <div class="story-number">06</div>
-
-                <div class="story-content">
-
-                    <h3>Making a Measurable Difference</h3>
-
-                    <p>
-                        One experience that means a lot to me is the opportunity
-                        I had to tutor JHS 3 students. Seeing 22 students gain
-                        admission to senior high school showed me that even a
-                        small investment of time and knowledge can make a real
-                        difference in someone's future.
-                    </p>
-
-                    <img class="story-photo"
-                         src="IMG-20260614-WA0155.jpg"
-                         alt="Nketia-Marfo">
-
-                </div>
-
-            </article>
-
-
-
-            <!-- 07 -->
-
-            <article class="story-point">
-
-                <div class="story-number">07</div>
-
-                <div class="story-content">
-
-                    <h3>Leadership Through Music</h3>
-
-                    <p>
-                        Music has given me opportunities to lead as well as
-                        perform. Through my involvement in a youth choir of
-                        about 40 members, I learned to take responsibility,
-                        work with others, and help create something that is
-                        greater than any one person.
-                    </p>
-
-                    <img class="story-photo"
-                         src="IMG-20260802-WA0445.jpg"
-                         alt="Nketia-Marfo">
-
-                </div>
-
-            </article>
-
-
-
-            <!-- 08 -->
-
-            <article class="story-point">
-
-                <div class="story-number">08</div>
-
-                <div class="story-content">
-
-                    <h3>Music, Discipline, and Growth</h3>
-
-                    <p>
-                        As a pianist and singer, I have learned that ability
-                        grows through patience and consistent practice. My
-                        musical journey has taught me to keep improving,
-                        even when progress takes time.
-                    </p>
-
-                    <img class="story-photo"
-                         src="IMG_20260303_195951_662.jpg"
-                         alt="Nketia-Marfo">
-
-                </div>
-
-            </article>
-
-
-
-            <!-- 09 -->
-
-            <article class="story-point">
-
-                <div class="story-number">09</div>
-
-                <div class="story-content">
-
-                    <h3>A Commitment to Service</h3>
-
-                    <p>
-                        I want what I learn and what I can do to be useful to
-                        other people. Whether through teaching, music, or
-                        community involvement, I find purpose in using my
-                        abilities to support and encourage others.
-                    </p>
-
-                    <img class="story-photo"
-                         src="IMG_20260303_195951_718.jpg"
-                         alt="Nketia-Marfo">
-
-                </div>
-
-            </article>
-
-
-
-            <!-- 10 -->
-
-            <article class="story-point">
-
-                <div class="story-number">10</div>
-
-                <div class="story-content">
-
-                    <h3>Taking Initiative</h3>
-
-                    <p>
-                        When I see something that needs to be done, I try not
-                        to wait for someone else to take the first step. I have
-                        learned to recognize opportunities to contribute and
-                        to turn ideas into action.
-                    </p>
-
-                    <img class="story-photo"
-                         src="IMG_20260303_195952_089.jpg"
-                         alt="Nketia-Marfo">
-
-                </div>
-
-            </article>
-
-
-
-            <!-- 11 -->
-
-            <article class="story-point">
-
-                <div class="story-number">11</div>
-
-                <div class="story-content">
-
-                    <h3>Exploring Beyond One Field</h3>
-
-                    <p>
-                        I do not see myself as belonging to only one area. My
-                        experiences have allowed me to explore academics,
-                        music, teaching, leadership, creativity, and practical
-                        problem-solving. Each has given me a different way of
-                        understanding myself and the world around me.
-                    </p>
-
-                    <img class="story-photo"
-                         src="IMG_20260304_172957_144.jpg"
-                         alt="Nketia-Marfo">
-
-                </div>
-
-            </article>
-
-
-
-            <!-- 12 -->
-
-            <article class="story-point">
-
-                <div class="story-number">12</div>
-
-                <div class="story-content">
-
-                    <h3>Looking Ahead</h3>
-
-                    <p>
-                        I am still becoming the person I want to be. I carry
-                        with me a strong academic foundation, a love for
-                        learning, a commitment to service, a passion for music,
-                        and a desire to contribute meaningfully wherever I go.
-                        I see my future as an opportunity to keep learning,
-                        keep creating, and keep finding ways to make a
-                        difference.
-                    </p>
-
-                    <img class="story-photo"
-                         src="IMG_20260319_160228_606.jpg"
-                         alt="Nketia-Marfo">
-
-                </div>
-
-            </article>
-
-        </section>
-
-
-
-        <!-- =========================================
-             WHAT YOU'LL FIND HERE
-             WRITING LEFT - PICTURES RIGHT
-        ========================================== -->
-
-        <section class="about-section final-layout">
-
-            <div class="about-text">
-
-                <span class="section-label">MY INTERESTS</span>
-
-                <h2>What You'll Find Here</h2>
-
-                <article>
-                    <h3>📚 Education</h3>
-                    <p>
-                        Thoughts about learning, education, skills, and
-                        opportunities.
-                    </p>
-                </article>
-
-                <article>
-                    <h3>📈 Economics & Society</h3>
-                    <p>
-                        Exploring work, money, development, opportunity,
-                        and society.
-                    </p>
-                </article>
-
-                <article>
-                    <h3>🎹 Music & Culture</h3>
-                    <p>
-                        Sharing my interest in music, creativity, performance,
-                        and culture.
-                    </p>
-                </article>
-
-                <article>
-                    <h3>💡 Ideas & Opportunities</h3>
-                    <p>
-                        Exploring ideas and possibilities that can turn
-                        knowledge and creativity into something meaningful.
-                    </p>
-                </article>
-
-            </div>
-
-
-            <div class="round-photo photo-stack">
-
-                <img src="IMG-20260124-WA0015.jpg"
-                     alt="Nketia-Marfo">
-
-                <img src="IMG-20260614-WA0187.jpg"
-                     alt="Nketia-Marfo">
-
-                <img src="IMG-20260614-WA0191.jpg"
-                     alt="Nketia-Marfo">
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-             LATEST THOUGHTS
-        ========================================== -->
-
-        <section class="thoughts-section">
-
-            <span class="section-label">THOUGHTS</span>
-
-            <h2>Latest Thoughts</h2>
-
-            <div class="thought-grid">
-
-                <article>
-                    <h3>Why Education Should Create Opportunities</h3>
-                    <p>
-                        Exploring the relationship between education, skills,
-                        work, and opportunity.
-                    </p>
-                </article>
-
-                <article>
-                    <h3>Music, Creativity and the Economy</h3>
-                    <p>
-                        Thinking about how music and creativity can connect
-                        with meaningful opportunities.
-                    </p>
-                </article>
-
-                <article>
-                    <h3>The Questions Beneath the Surface</h3>
-                    <p>
-                        Exploring society, environmental issues, and the
-                        questions behind them.
-                    </p>
-                </article>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-             MORE PHOTOS
-        ========================================== -->
-
-        <section class="more-photos">
-
-            <span class="section-label">MY JOURNEY</span>
-
-            <h2>Moments Along the Way</h2>
-
-            <div class="photo-row">
-
-                <img src="IMG-20260628-WA0080.jpg"
-                     alt="Nketia-Marfo">
-
-                <img src="IMG_20260210_230240_251.jpg"
-                     alt="Nketia-Marfo">
-
-                <img src="IMG_20260222_125912_662.jpg"
-                     alt="Nketia-Marfo">
-
-                <img src="IMG_20260301_181413_373.jpg"
-                     alt="Nketia-Marfo">
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-             CONTACT
-        ========================================== -->
-
-        <section class="contact-section">
-
-            <span class="section-label">CONNECT</span>
-
-            <h2>Let's Connect</h2>
+        <div class="hero-intro">
 
             <p>
-                Have an idea, question, opportunity, or something interesting
-                to discuss?
+                I am curious about education, economics, music, culture,
+                society, creativity, and the opportunities available to
+                young people.
             </p>
 
             <p>
-                Email me at:
-                <strong>nketiamarfo157@gmail.com</strong>
+                Here, I explore questions, share what I create, and document
+                ideas that matter to me.
             </p>
 
-            <a class="contact-button" href="contact.html">
-                Visit my Contact page →
-            </a>
+        </div>
 
-        </section>
-
-    </main>
+    </div>
 
 
-    <footer>
-        <p>© 2026 Nketia-Marfo. All rights reserved.</p>
-    </footer>
+    <div class="hero-photo-area">
+
+        <img
+            class="hero-photo one"
+            src="file_0000000037bc8210ba33c13682e0591b.png"
+            alt="Nketia-Marfo">
+
+        <img
+            class="hero-photo two"
+            src="file_00000000782081f486b26a47a83586ad.png"
+            alt="Nketia-Marfo">
+
+        <img
+            class="hero-photo three"
+            src="file_0000000099e471f48092d9c598859a2a.png"
+            alt="Nketia-Marfo">
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     STATEMENT
+========================================================= -->
+
+<section class="statement-band">
+
+    <div class="statement-inner">
+
+        <p>
+            “I am interested in the space where
+            <strong>education, creativity, music, economics,</strong>
+            and opportunity meet.”
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT ME
+========================================================= -->
+
+<section class="about-me-section">
+
+    <div class="about-me-photo-area">
+
+        <img
+            class="about-me-main-photo"
+            src="IMG-20260124-WA0015.jpg"
+            alt="Nketia-Marfo">
+
+        <img
+            class="about-me-small-photo"
+            src="IMG-20260614-WA0187.jpg"
+            alt="Nketia-Marfo">
+
+    </div>
+
+
+    <div>
+
+        <span class="section-label">ABOUT ME</span>
+
+        <h2>A Little About Me</h2>
+
+        <p>
+            I enjoy learning, asking questions, creating, and looking
+            for connections between ideas that may seem unrelated.
+        </p>
+
+        <p>
+            My interests include education and economics, while music
+            and culture remain important parts of how I express myself
+            and understand the world around me.
+        </p>
+
+        <p>
+            This website is a place to keep growing, creating, and
+            sharing that journey.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MY STORY
+========================================================= -->
+
+<section class="story-section">
+
+    <div class="story-heading">
+
+        <span class="section-label">MY STORY</span>
+
+        <h2>12 Things That Shape Who I Am</h2>
+
+        <p>
+            My journey has been shaped by learning, service, music,
+            leadership, curiosity, and the opportunities I have found
+            along the way. These are some of the experiences and
+            qualities that continue to shape me.
+        </p>
+
+    </div>
+
+
+    <div class="story-list">
+
+
+        <!-- 01 -->
+
+        <article class="story-point">
+
+            <div class="story-number">01</div>
+
+            <div class="story-content">
+
+                <h3>Academic Excellence</h3>
+
+                <p>
+                    I have always taken my education seriously. I challenge
+                    myself to learn, grow, and make the most of every
+                    educational opportunity available to me.
+                </p>
+
+            </div>
+
+            <img
+                class="story-photo"
+                src="1784768722971.jpg"
+                alt="Nketia-Marfo">
+
+        </article>
+
+
+
+        <!-- 02 -->
+
+        <article class="story-point">
+
+            <div class="story-number">02</div>
+
+            <div class="story-content">
+
+                <h3>Earning Opportunities Through Merit</h3>
+
+                <p>
+                    My academic performance has opened doors for me.
+                    Receiving a full scholarship based on my academic
+                    promise reminded me that dedication and hard work
+                    can create opportunities.
+                </p>
+
+            </div>
+
+            <img
+                class="story-photo"
+                src="IMG-20260308-WA0121.jpg"
+                alt="Nketia-Marfo">
+
+        </article>
+
+
+
+        <!-- 03 -->
+
+        <article class="story-point">
+
+            <div class="story-number">03</div>
+
+            <div class="story-content">
+
+                <h3>Intellectual Curiosity</h3>
+
+                <p>
+                    I do not want to learn simply to complete an assignment
+                    or pass an examination. I enjoy asking questions,
+                    understanding ideas more deeply, and discovering how
+                    what I learn connects to the world around me.
+                </p>
+
+            </div>
+
+            <img
+                class="story-photo"
+                src="IMG-20260327-WA0071.jpg"
+                alt="Nketia-Marfo">
+
+        </article>
+
+
+
+        <!-- 04 -->
+
+        <article class="story-point">
+
+            <div class="story-number">04</div>
+
+            <div class="story-content">
+
+                <h3>Independent Learning</h3>
+
+                <p>
+                    Some of the things I have learned have come from my own
+                    initiative. I enjoy exploring new skills and teaching
+                    myself beyond what I am formally required to learn.
+                </p>
+
+            </div>
+
+            <img
+                class="story-photo"
+                src="IMG-20260328-WA0182.jpg"
+                alt="Nketia-Marfo">
+
+        </article>
+
+
+
+        <!-- 05 -->
+
+        <article class="story-point">
+
+            <div class="story-number">05</div>
+
+            <div class="story-content">
+
+                <h3>Teaching Others</h3>
+
+                <p>
+                    I believe knowledge becomes more meaningful when it can
+                    help someone else. I have supported younger students
+                    academically, helping them prepare for important
+                    examinations and encouraging them to believe in their
+                    own abilities.
+                </p>
+
+            </div>
+
+            <img
+                class="story-photo"
+                src="IMG-20260607-WA0126.jpg"
+                alt="Nketia-Marfo">
+
+        </article>
+
+
+
+        <!-- 06 -->
+
+        <article class="story-point">
+
+            <div class="story-number">06</div>
+
+            <div class="story-content">
+
+                <h3>Making a Measurable Difference</h3>
+
+                <p>
+                    One experience that means a lot to me is the opportunity
+                    I had to tutor JHS 3 students. Seeing 22 students gain
+                    admission to senior high school showed me that even a
+                    small investment of time and knowledge can make a real
+                    difference in someone's future.
+                </p>
+
+            </div>
+
+            <img
+                class="story-photo"
+                src="IMG-20260614-WA0155.jpg"
+                alt="Nketia-Marfo">
+
+        </article>
+
+
+
+        <!-- 07 -->
+
+        <article class="story-point">
+
+            <div class="story-number">07</div>
+
+            <div class="story-content">
+
+                <h3>Leadership Through Music</h3>
+
+                <p>
+                    Music has given me opportunities to lead as well as
+                    perform. Through my involvement in a youth choir of
+                    about 40 members, I learned to take responsibility,
+                    work with others, and help create something that is
+                    greater than any one person.
+                </p>
+
+            </div>
+
+            <img
+                class="story-photo"
+                src="IMG-20260802-WA0445.jpg"
+                alt="Nketia-Marfo">
+
+        </article>
+
+
+
+        <!-- 08 -->
+
+        <article class="story-point">
+
+            <div class="story-number">08</div>
+
+            <div class="story-content">
+
+                <h3>Music, Discipline, and Growth</h3>
+
+                <p>
+                    As a pianist and singer, I have learned that ability
+                    grows through patience and consistent practice. My
+                    musical journey has taught me to keep improving,
+                    even when progress takes time.
+                </p>
+
+            </div>
+
+            <img
+                class="story-photo"
+                src="IMG_20260303_195951_662.jpg"
+                alt="Nketia-Marfo">
+
+        </article>
+
+
+
+        <!-- 09 -->
+
+        <article class="story-point">
+
+            <div class="story-number">09</div>
+
+            <div class="story-content">
+
+                <h3>A Commitment to Service</h3>
+
+                <p>
+                    I want what I learn and what I can do to be useful to
+                    other people. Whether through teaching, music, or
+                    community involvement, I find purpose in using my
+                    abilities to support and encourage others.
+                </p>
+
+            </div>
+
+            <img
+                class="story-photo"
+                src="IMG_20260303_195951_718.jpg"
+                alt="Nketia-Marfo">
+
+        </article>
+
+
+
+        <!-- 10 -->
+
+        <article class="story-point">
+
+            <div class="story-number">10</div>
+
+            <div class="story-content">
+
+                <h3>Taking Initiative</h3>
+
+                <p>
+                    When I see something that needs to be done, I try not
+                    to wait for someone else to take the first step. I have
+                    learned to recognize opportunities to contribute and
+                    to turn ideas into action.
+                </p>
+
+            </div>
+
+            <img
+                class="story-photo"
+                src="IMG_20260303_195952_089.jpg"
+                alt="Nketia-Marfo">
+
+        </article>
+
+
+
+        <!-- 11 -->
+
+        <article class="story-point">
+
+            <div class="story-number">11</div>
+
+            <div class="story-content">
+
+                <h3>Exploring Beyond One Field</h3>
+
+                <p>
+                    I do not see myself as belonging to only one area. My
+                    experiences have allowed me to explore academics,
+                    music, teaching, leadership, creativity, and practical
+                    problem-solving. Each has given me a different way of
+                    understanding myself and the world around me.
+                </p>
+
+            </div>
+
+            <img
+                class="story-photo"
+                src="IMG_20260304_172957_144.jpg"
+                alt="Nketia-Marfo">
+
+        </article>
+
+
+
+        <!-- 12 -->
+
+        <article class="story-point">
+
+            <div class="story-number">12</div>
+
+            <div class="story-content">
+
+                <h3>Looking Ahead</h3>
+
+                <p>
+                    I am still becoming the person I want to be. I carry
+                    with me a strong academic foundation, a love for
+                    learning, a commitment to service, a passion for music,
+                    and a desire to contribute meaningfully wherever I go.
+                    I see my future as an opportunity to keep learning,
+                    keep creating, and keep finding ways to make a
+                    difference.
+                </p>
+
+            </div>
+
+            <img
+                class="story-photo"
+                src="IMG_20260319_160228_606.jpg"
+                alt="Nketia-Marfo">
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FEATURED STORY
+========================================================= -->
+
+<section class="featured-story">
+
+    <div class="featured-inner">
+
+        <div class="featured-number">
+            06
+        </div>
+
+        <div>
+
+            <span class="section-label">A MOMENT THAT MATTERS</span>
+
+            <h2>Small Efforts Can Create Real Change</h2>
+
+            <p>
+                Tutoring JHS 3 students taught me that impact does not
+                always begin with something large. Sometimes it begins
+                with sitting beside someone, explaining an idea, and
+                helping them believe they can move forward.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MY INTERESTS
+========================================================= -->
+
+<section class="interests-section">
+
+    <div class="interests-heading">
+
+        <span class="section-label">MY INTERESTS</span>
+
+        <h2>What You'll Find Here</h2>
+
+        <p>
+            This website brings together the subjects, questions,
+            creative interests, and opportunities that continue to
+            shape my thinking.
+        </p>
+
+    </div>
+
+
+    <div class="interest-grid">
+
+
+        <article class="interest-card">
+
+            <h3>📚 Education</h3>
+
+            <p>
+                Thoughts about learning, education, skills,
+                and opportunities.
+            </p>
+
+        </article>
+
+
+        <article class="interest-card">
+
+            <h3>📈 Economics & Society</h3>
+
+            <p>
+                Exploring work, money, development, opportunity,
+                and society.
+            </p>
+
+        </article>
+
+
+        <article class="interest-card">
+
+            <h3>🎹 Music & Culture</h3>
+
+            <p>
+                Sharing my interest in music, creativity,
+                performance, and culture.
+            </p>
+
+        </article>
+
+
+        <article class="interest-card">
+
+            <h3>💡 Ideas & Opportunities</h3>
+
+            <p>
+                Exploring ideas and possibilities that can turn
+                knowledge and creativity into something meaningful.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INTEREST PHOTOS
+========================================================= -->
+
+<section class="interest-photo-section">
+
+    <div class="interest-photo-inner">
+
+        <img
+            src="IMG-20260124-WA0015.jpg"
+            alt="Nketia-Marfo">
+
+        <img
+            src="IMG-20260614-WA0187.jpg"
+            alt="Nketia-Marfo">
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     LATEST THOUGHTS
+========================================================= -->
+
+<section class="thoughts-section">
+
+    <div class="thought-heading">
+
+        <span class="section-label">THOUGHTS</span>
+
+        <h2>Latest Thoughts</h2>
+
+        <p>
+            A few ideas I am exploring through writing,
+            observation, creativity, and curiosity.
+        </p>
+
+    </div>
+
+
+    <div class="thought-grid">
+
+
+        <article class="thought-card">
+
+            <h3>
+                Why Education Should Create Opportunities
+            </h3>
+
+            <p>
+                Exploring the relationship between education,
+                skills, work, and opportunity.
+            </p>
+
+            <img
+                src="IMG_20260222_125912_662.jpg"
+                alt="Nketia-Marfo">
+
+        </article>
+
+
+        <article class="thought-card">
+
+            <h3>
+                Music, Creativity and the Economy
+            </h3>
+
+            <p>
+                Thinking about how music and creativity can connect
+                with meaningful opportunities.
+            </p>
+
+            <img
+                src="IMG-20260614-WA0191.jpg"
+                alt="Nketia-Marfo">
+
+        </article>
+
+
+        <article class="thought-card">
+
+            <h3>
+                The Questions Beneath the Surface
+            </h3>
+
+            <p>
+                Exploring society, environmental issues,
+                and the questions behind them.
+            </p>
+
+            <img
+                src="IMG_20260210_230240_251.jpg"
+                alt="Nketia-Marfo">
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     JOURNEY
+========================================================= -->
+
+<section class="journey-section">
+
+    <span class="section-label">MY JOURNEY</span>
+
+    <h2>Moments Along the Way</h2>
+
+    <img
+        class="journey-photo"
+        src="IMG_20260301_181413_373.jpg"
+        alt="Nketia-Marfo">
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="contact-section">
+
+    <span class="section-label">CONNECT</span>
+
+    <h2>Let's Connect</h2>
+
+    <p>
+        Have an idea, question, opportunity, or something interesting
+        to discuss?
+    </p>
+
+    <p>
+        Email me at:
+        <span class="email">nketiamarfo157@gmail.com</span>
+    </p>
+
+    <a
+        class="contact-button"
+        href="contact.html">
+        Visit my Contact page →
+    </a>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-name">
+            Nketia-Marfo
+        </div>
+
+        <p>
+            © 2026 Nketia-Marfo. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
 
 </body>
-</html>
+    </html>
