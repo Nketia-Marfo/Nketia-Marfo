@@ -1,45 +1,59 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contact | Nketia-Marfo</title><meta name="description"
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Nketia-Marfo</title>
+
+<meta name="description"
 content="Contact Nketia-Marfo for ideas, conversations, opportunities, collaborations, music, creative services and projects.">
 
-<link rel="stylesheet" href="style.css"><style>
+<link rel="stylesheet" href="style.css">
+
+<style>
 
 /* =========================================================
-   NNETKIA-MARFO CONTACT PAGE
-   Colors:
-   Deep Blue + Red + Green + Yellow + Small Black
+   NKETIA-MARFO CONTACT PAGE
+   VISUAL SYSTEM
+   Red + Yellow + Deep Blue + Cyan + Magenta + Little Black
 ========================================================= */
 
 :root{
     --blue:#0B1F3A;
-    --blue-light:#163A63;
+    --blue-2:#163A63;
+
+    --cyan:#00AFC7;
+    --cyan-light:#DDF8FC;
 
     --red:#A61B29;
     --red-light:#D13A49;
 
-    --green:#176B45;
-    --green-light:#2E8B68;
-
     --yellow:#E6B91E;
     --yellow-light:#F5D65C;
+
+    --magenta:#A6266E;
+    --magenta-light:#F7E3EF;
 
     --black:#111111;
 
     --white:#FFFFFF;
     --off-white:#F7F8FA;
+    --cream:#FFFDF7;
 
     --silver:#B8BEC7;
     --silver-light:#E5E7EB;
 
     --text:#17202A;
     --muted:#5D6975;
+
+    --ring:rgba(11,31,58,.18);
 }
 
 
 /* =========================================================
-   GENERAL
+   RESET / GENERAL
 ========================================================= */
 
 *{
@@ -54,17 +68,30 @@ body{
     margin:0;
     background:var(--off-white);
     color:var(--text);
-}
 
-.contact-page p,
-.contact-page a,
-.contact-page span,
-.contact-page button{
     font-family:
         "Inter",
         "Segoe UI",
+        Roboto,
         Arial,
         Helvetica,
+        sans-serif;
+
+    font-size:16px;
+    line-height:1.7;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Roboto,
+        Arial,
         sans-serif;
 }
 
@@ -78,10 +105,6 @@ body{
         serif;
 }
 
-img{
-    max-width:100%;
-}
-
 
 /* =========================================================
    HEADER
@@ -89,56 +112,81 @@ img{
 
 .contact-header{
     background:var(--white);
+
     border-bottom:1px solid var(--silver-light);
+
     position:sticky;
     top:0;
+
     z-index:1000;
 }
 
 .contact-header-inner{
-    max-width:1250px;
+    max-width:1200px;
+
     margin:auto;
-    padding:18px 6%;
+
+    padding:16px 5%;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
 
-    gap:30px;
+    gap:25px;
 }
 
 .contact-brand{
     text-decoration:none;
-    color:var(--blue);
+    color:var(--cyan);
+
+    flex-shrink:0;
 }
 
 .contact-brand h1{
     margin:0;
-    font-size:1.75rem;
+
+    color:var(--cyan);
+
+    font-size:1.55rem;
+
+    line-height:1.1;
+
     letter-spacing:-.03em;
 }
 
 .contact-brand p{
     margin:4px 0 0;
+
     color:var(--muted);
-    font-size:.75rem;
+
+    font-size:.72rem;
+
+    line-height:1.4;
 }
+
+
+/* NAVIGATION */
 
 .contact-nav{
     display:flex;
+
     align-items:center;
-    justify-content:center;
+    justify-content:flex-end;
+
     flex-wrap:wrap;
-    gap:5px;
+
+    gap:3px;
 }
 
 .contact-nav a{
-    color:var(--blue);
+    color:var(--cyan);
+
     text-decoration:none;
 
-    padding:10px 13px;
+    padding:8px 11px;
 
-    font-size:.88rem;
+    font-size:.84rem;
+
     font-weight:800;
 
     transition:.25s ease;
@@ -149,8 +197,28 @@ img{
 }
 
 .contact-nav a.active{
-    background:var(--blue);
     color:var(--white);
+
+    background:var(--cyan);
+}
+
+
+/* =========================================================
+   GENERAL LABEL
+========================================================= */
+
+.contact-label{
+    margin:0 0 14px;
+
+    color:var(--cyan);
+
+    font-size:.68rem;
+
+    font-weight:900;
+
+    letter-spacing:.19em;
+
+    line-height:1.4;
 }
 
 
@@ -159,127 +227,132 @@ img{
 ========================================================= */
 
 .contact-hero{
-    max-width:1250px;
+    max-width:1200px;
+
     margin:auto;
 
-    padding:100px 6% 110px;
+    padding:82px 5% 88px;
 
     display:grid;
-    grid-template-columns:1.1fr .9fr;
+
+    grid-template-columns:1.05fr .95fr;
 
     align-items:center;
 
-    gap:80px;
-}
-
-.contact-label{
-    color:var(--green);
-
-    font-size:.72rem;
-    font-weight:900;
-
-    letter-spacing:.22em;
-
-    margin:0 0 20px;
+    gap:65px;
 }
 
 .contact-hero h2{
     color:var(--blue);
 
-    font-size:clamp(3.2rem,7vw,6.3rem);
+    font-size:clamp(2.8rem,5.2vw,5rem);
 
-    line-height:.92;
+    line-height:.98;
 
-    letter-spacing:-.05em;
+    letter-spacing:-.045em;
 
-    margin:0 0 30px;
+    margin:0 0 24px;
 
-    max-width:700px;
+    max-width:650px;
 }
 
 .contact-lead{
     color:var(--muted);
 
-    font-size:1.05rem;
+    font-size:1rem;
 
-    line-height:1.85;
+    line-height:1.8;
 
-    max-width:650px;
+    max-width:620px;
 
-    margin:0 0 12px;
+    margin:0 0 10px;
 }
+
+
+/* HERO BUTTONS */
 
 .contact-main-buttons{
     display:flex;
-    flex-wrap:wrap;
-    gap:12px;
 
-    margin-top:32px;
+    flex-wrap:wrap;
+
+    gap:11px;
+
+    margin-top:27px;
 }
 
 .contact-main-button{
     display:inline-block;
 
-    padding:15px 24px;
+    padding:13px 21px;
 
     background:var(--blue);
+
     color:var(--white);
 
     text-decoration:none;
 
-    font-weight:900;
+    font-size:.9rem;
+
+    font-weight:800;
 
     transition:.25s ease;
 }
 
 .contact-main-button:hover{
     background:var(--red);
-    transform:translateY(-3px);
+
+    transform:translateY(-2px);
 }
 
 .contact-main-button.whatsapp{
-    background:var(--green);
+    background:var(--green, #176B45);
 }
 
 .contact-main-button.whatsapp:hover{
-    background:var(--blue);
+    background:var(--cyan);
 }
 
 
 /* =========================================================
    HERO VISUAL
+   SQUARE + ROUND ONLY
 ========================================================= */
 
 .contact-visual{
     position:relative;
 
-    height:430px;
-
     width:100%;
-    max-width:470px;
+
+    max-width:430px;
+
+    height:390px;
 
     margin-left:auto;
 }
 
+
+/* Main square photograph */
+
 .contact-photo-frame{
     position:absolute;
 
-    width:275px;
-    height:350px;
+    width:260px;
+    height:260px;
 
-    right:50px;
-    top:20px;
+    right:55px;
+    top:45px;
 
     overflow:hidden;
 
-    border:10px solid var(--white);
+    background:var(--white);
+
+    border:1px solid var(--cyan);
 
     box-shadow:
-        0 25px 60px rgba(11,31,58,.18);
+        0 20px 45px rgba(11,31,58,.16);
 
-    transform:rotate(3deg);
-
-    background:var(--silver-light);
+    transform:rotate(2deg);
 
     z-index:3;
 }
@@ -289,18 +362,20 @@ img{
     height:100%;
 
     object-fit:cover;
-
-    display:block;
 }
+
+
+/* Decorative circles */
 
 .hero-shape{
     position:absolute;
+
     border-radius:50%;
 }
 
 .hero-blue{
-    width:190px;
-    height:190px;
+    width:165px;
+    height:165px;
 
     right:0;
     top:0;
@@ -309,22 +384,22 @@ img{
 }
 
 .hero-green{
-    width:135px;
-    height:135px;
+    width:115px;
+    height:115px;
 
     left:20px;
-    bottom:30px;
+    bottom:28px;
 
-    background:var(--green);
+    background:var(--cyan);
 
     z-index:4;
 }
 
 .hero-red{
-    width:95px;
-    height:95px;
+    width:82px;
+    height:82px;
 
-    right:0;
+    right:4px;
     bottom:0;
 
     background:var(--red);
@@ -333,11 +408,11 @@ img{
 }
 
 .hero-yellow{
-    width:55px;
-    height:55px;
+    width:46px;
+    height:46px;
 
-    left:5px;
-    top:55px;
+    left:12px;
+    top:48px;
 
     background:var(--yellow);
 
@@ -351,19 +426,22 @@ img{
 
 .direct-contact{
     background:var(--blue);
+
     color:var(--white);
 
-    padding:90px 6%;
+    padding:78px 5%;
 }
 
 .direct-contact-inner{
-    max-width:1250px;
+    max-width:1200px;
+
     margin:auto;
 }
 
 .direct-heading{
-    max-width:760px;
-    margin-bottom:45px;
+    max-width:720px;
+
+    margin-bottom:38px;
 }
 
 .direct-heading .contact-label{
@@ -371,66 +449,81 @@ img{
 }
 
 .direct-heading h2{
-    font-size:clamp(2.5rem,5vw,4.4rem);
+    color:var(--white);
+
+    font-size:clamp(2.35rem,4.5vw,4rem);
 
     line-height:1;
 
-    margin:0 0 20px;
+    margin:0 0 16px;
 }
 
 .direct-heading p{
     color:var(--silver-light);
 
-    line-height:1.8;
+    max-width:680px;
 
-    max-width:700px;
+    line-height:1.75;
+
+    margin:0;
 }
+
+
+/* CONTACT METHODS */
 
 .contact-method-grid{
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
 
-    gap:18px;
+    gap:16px;
 }
 
 .contact-method{
     display:block;
 
     text-decoration:none;
+
     color:var(--white);
 
-    padding:30px 25px;
+    padding:27px 23px;
 
-    border:1px solid rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.16);
 
-    background:rgba(255,255,255,.05);
+    background:rgba(255,255,255,.045);
 
     transition:.3s ease;
 }
 
 .contact-method:hover{
-    transform:translateY(-7px);
+    transform:translateY(-5px);
 
-    background:rgba(255,255,255,.09);
+    border-color:var(--cyan);
 
-    border-color:rgba(255,255,255,.3);
+    background:rgba(0,175,199,.09);
 }
 
+
+/* Circular / square icon */
+
 .method-icon{
-    width:64px;
-    height:64px;
+    width:58px;
+    height:58px;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
-    border-radius:17px;
-
-    margin-bottom:22px;
-
     overflow:hidden;
 
+    border-radius:50%;
+
+    margin-bottom:19px;
+
     background:var(--white);
+
+    border:1px solid var(--cyan);
 }
 
 .method-icon img{
@@ -438,17 +531,24 @@ img{
     height:100%;
 
     object-fit:cover;
-
-    display:block;
 }
 
 .method-icon.email{
-    background:var(--blue-light);
+    background:var(--cyan);
 
     color:var(--white);
 
-    font-size:1.7rem;
+    font-size:1.45rem;
+
     font-weight:900;
+}
+
+.method-icon.phone{
+    background:var(--red);
+
+    color:var(--white);
+
+    font-size:1.55rem;
 }
 
 .method-label{
@@ -458,13 +558,13 @@ img{
 
     text-transform:uppercase;
 
-    letter-spacing:.15em;
+    letter-spacing:.13em;
 
-    font-size:.68rem;
+    font-size:.65rem;
 
     font-weight:900;
 
-    margin-bottom:8px;
+    margin-bottom:6px;
 }
 
 .method-value{
@@ -472,11 +572,51 @@ img{
 
     color:var(--white);
 
-    font-size:1.05rem;
+    font-size:.98rem;
 
     font-weight:800;
 
     word-break:break-word;
+
+    line-height:1.5;
+}
+
+
+/* =========================================================
+   COLOR STRIP
+========================================================= */
+
+.brand-strip{
+    background:var(--yellow);
+
+    padding:15px 5%;
+}
+
+.brand-strip-inner{
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:19px;
+
+    flex-wrap:wrap;
+}
+
+.brand-strip span{
+    color:var(--black);
+
+    font-size:.67rem;
+
+    font-weight:900;
+
+    letter-spacing:.13em;
+
+    text-transform:uppercase;
 }
 
 
@@ -485,44 +625,50 @@ img{
 ========================================================= */
 
 .social-section{
-    max-width:1250px;
+    max-width:1200px;
+
     margin:auto;
 
-    padding:100px 6%;
+    padding:82px 5%;
 }
 
 .social-heading{
-    max-width:750px;
+    max-width:720px;
 
-    margin-bottom:50px;
+    margin-bottom:40px;
 }
 
 .social-heading .contact-label{
-    color:var(--red);
+    color:var(--magenta);
 }
 
 .social-heading h2{
     color:var(--blue);
 
-    font-size:clamp(2.6rem,5vw,4.7rem);
+    font-size:clamp(2.4rem,4.5vw,4.2rem);
 
     line-height:1;
 
-    margin:0 0 20px;
+    margin:0 0 17px;
 }
 
 .social-heading p{
     color:var(--muted);
 
-    line-height:1.8;
+    line-height:1.75;
+
+    margin:0;
 }
+
+
+/* SOCIAL CARDS */
 
 .social-grid{
     display:grid;
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:20px;
+    gap:16px;
 }
 
 .social-card{
@@ -530,13 +676,13 @@ img{
 
     align-items:center;
 
-    gap:20px;
+    gap:18px;
 
     position:relative;
 
-    min-height:145px;
+    min-height:125px;
 
-    padding:25px;
+    padding:22px;
 
     background:var(--white);
 
@@ -549,36 +695,21 @@ img{
     overflow:hidden;
 }
 
-.social-card::after{
-    content:"";
-
-    position:absolute;
-
-    width:90px;
-    height:90px;
-
-    right:-30px;
-    bottom:-40px;
-
-    border-radius:50%;
-
-    background:var(--yellow);
-
-    opacity:.12;
-}
-
 .social-card:hover{
-    transform:translateY(-7px);
+    transform:translateY(-5px);
+
+    border-color:var(--cyan);
 
     box-shadow:
-        0 22px 45px rgba(11,31,58,.12);
-
-    border-color:var(--yellow);
+        0 18px 35px rgba(11,31,58,.1);
 }
 
+
+/* Social image = square */
+
 .social-icon{
-    width:70px;
-    height:70px;
+    width:62px;
+    height:62px;
 
     flex-shrink:0;
 
@@ -587,13 +718,11 @@ img{
     align-items:center;
     justify-content:center;
 
-    border-radius:18px;
-
     overflow:hidden;
 
     background:var(--off-white);
 
-    border:1px solid var(--silver-light);
+    border:1px solid var(--magenta);
 }
 
 .social-icon img{
@@ -601,8 +730,6 @@ img{
     height:100%;
 
     object-fit:cover;
-
-    display:block;
 }
 
 .social-info{
@@ -612,17 +739,17 @@ img{
 .social-platform{
     display:block;
 
-    color:var(--green);
+    color:var(--magenta);
 
     text-transform:uppercase;
 
-    letter-spacing:.15em;
+    letter-spacing:.13em;
 
-    font-size:.66rem;
+    font-size:.61rem;
 
     font-weight:900;
 
-    margin-bottom:6px;
+    margin-bottom:4px;
 }
 
 .social-info h3{
@@ -634,15 +761,15 @@ img{
         Arial,
         sans-serif;
 
-    font-size:1.18rem;
+    font-size:1.08rem;
 
-    margin:0 0 6px;
+    margin:0 0 4px;
 }
 
 .social-info p{
     color:var(--muted);
 
-    font-size:.84rem;
+    font-size:.81rem;
 
     line-height:1.5;
 
@@ -652,252 +779,211 @@ img{
 .social-arrow{
     position:absolute;
 
-    right:20px;
-    top:18px;
+    right:17px;
+    top:14px;
 
     color:var(--red);
 
-    font-size:1.2rem;
-
-    z-index:2;
+    font-size:1.05rem;
 }
 
 
 /* =========================================================
-   SOCIAL BRAND STRIP
+   CONTACT THEMES
+   Instead of large photo gallery
 ========================================================= */
 
-.brand-strip{
-    background:var(--yellow);
+.contact-themes{
+    background:var(--cream);
 
-    padding:18px 6%;
-
-    overflow:hidden;
+    padding:85px 5%;
 }
 
-.brand-strip-inner{
-    max-width:1250px;
+.contact-themes-inner{
+    max-width:1200px;
 
-    margin:auto;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:28px;
-
-    flex-wrap:wrap;
-}
-
-.brand-strip span{
-    color:var(--black);
-
-    font-size:.72rem;
-
-    font-weight:1000;
-
-    letter-spacing:.16em;
-
-    text-transform:uppercase;
-}
-
-
-/* =========================================================
-   VISUAL IDENTITY
-========================================================= */
-
-.identity-section{
-    background:#EEF3F0;
-
-    padding:100px 6%;
-}
-
-.identity-inner{
-    max-width:1250px;
     margin:auto;
 }
 
-.identity-heading{
-    max-width:750px;
+.contact-themes-heading{
+    max-width:720px;
 
-    margin-bottom:50px;
+    margin-bottom:42px;
 }
 
-.identity-heading .contact-label{
+.contact-themes-heading .contact-label{
     color:var(--red);
 }
 
-.identity-heading h2{
+.contact-themes-heading h2{
     color:var(--blue);
 
-    font-size:clamp(2.5rem,5vw,4.5rem);
+    font-size:clamp(2.4rem,4.5vw,4.2rem);
 
     line-height:1;
 
-    margin:0 0 20px;
+    margin:0 0 17px;
 }
 
-.identity-heading p{
+.contact-themes-heading p{
     color:var(--muted);
 
-    line-height:1.8;
+    line-height:1.75;
+
+    margin:0;
 }
 
-.logo-grid{
+
+/* FOUR TOPICS */
+
+.theme-grid{
     display:grid;
 
-    grid-template-columns:repeat(5,1fr);
+    grid-template-columns:repeat(4,1fr);
 
     gap:18px;
 }
 
-.logo-card{
-    min-height:175px;
-
+.theme-card{
     background:var(--white);
 
     border:1px solid var(--silver-light);
 
-    display:flex;
+    padding:23px 20px 25px;
 
-    align-items:center;
-    justify-content:center;
-
-    padding:22px;
+    text-align:center;
 
     transition:.3s ease;
 }
 
-.logo-card:hover{
-    transform:translateY(-6px);
+.theme-card:hover{
+    transform:translateY(-5px);
 
     box-shadow:
-        0 18px 35px rgba(11,31,58,.1);
-
-    border-color:var(--yellow);
+        0 18px 35px rgba(11,31,58,.09);
 }
 
-.logo-card img{
+
+/* Colored top line */
+
+.theme-card:nth-child(1){
+    border-top:3px solid var(--red);
+}
+
+.theme-card:nth-child(2){
+    border-top:3px solid var(--yellow);
+}
+
+.theme-card:nth-child(3){
+    border-top:3px solid var(--cyan);
+}
+
+.theme-card:nth-child(4){
+    border-top:3px solid var(--magenta);
+}
+
+.theme-number{
     display:block;
 
-    width:100%;
-
-    height:125px;
-
-    object-fit:contain;
-}
-
-
-/* =========================================================
-   PERSONAL PHOTO GALLERY
-   EXACTLY 10 PHOTOS
-========================================================= */
-
-.personal-gallery{
-    max-width:1250px;
-
-    margin:auto;
-
-    padding:100px 6%;
-}
-
-.personal-gallery-heading{
-    max-width:750px;
-
-    margin-bottom:45px;
-}
-
-.personal-gallery-heading .contact-label{
-    color:var(--green);
-}
-
-.personal-gallery-heading h2{
-    color:var(--blue);
-
-    font-size:clamp(2.5rem,5vw,4.5rem);
-
-    line-height:1;
-
-    margin:0 0 20px;
-}
-
-.personal-gallery-heading p{
     color:var(--muted);
 
-    line-height:1.8;
+    font-size:.63rem;
+
+    font-weight:900;
+
+    letter-spacing:.15em;
+
+    margin-bottom:7px;
 }
 
-.photo-grid{
-    display:grid;
+.theme-card h3{
+    color:var(--blue);
 
-    grid-template-columns:repeat(5,1fr);
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
 
-    gap:15px;
+    font-size:1.05rem;
+
+    margin:0 0 10px;
 }
 
-.photo-card{
-    aspect-ratio:1/1;
+.theme-card p{
+    color:var(--muted);
+
+    font-size:.82rem;
+
+    line-height:1.6;
+
+    margin:0 0 18px;
+}
+
+
+/* ROUND IMAGE UNDER EACH WRITING */
+
+.theme-photo{
+    width:105px;
+    height:105px;
+
+    margin:0 auto;
+
+    border-radius:50%;
 
     overflow:hidden;
 
-    background:var(--white);
+    background:var(--off-white);
 
-    border:4px solid var(--white);
+    border:1px solid var(--cyan);
 
-    box-shadow:
-        0 10px 25px rgba(11,31,58,.08);
-
-    position:relative;
+    padding:3px;
 }
 
-.photo-card:nth-child(3n){
-    border-bottom-color:var(--red);
+.theme-card:nth-child(1) .theme-photo{
+    border-color:var(--red);
 }
 
-.photo-card:nth-child(3n+1){
-    border-bottom-color:var(--green);
+.theme-card:nth-child(2) .theme-photo{
+    border-color:var(--yellow);
 }
 
-.photo-card:nth-child(3n+2){
-    border-bottom-color:var(--yellow);
+.theme-card:nth-child(3) .theme-photo{
+    border-color:var(--cyan);
 }
 
-.photo-card img{
+.theme-card:nth-child(4) .theme-photo{
+    border-color:var(--magenta);
+}
+
+.theme-photo img{
     width:100%;
     height:100%;
 
+    border-radius:50%;
+
     object-fit:cover;
-
-    display:block;
-
-    transition:.5s ease;
-}
-
-.photo-card:hover img{
-    transform:scale(1.07);
 }
 
 
 /* =========================================================
-   SERVICES
+   WORK WITH ME
 ========================================================= */
 
 .contact-services{
     background:var(--white);
 
-    padding:100px 6%;
+    padding:85px 5%;
 
     display:grid;
 
     grid-template-columns:1fr 1fr;
 
-    gap:80px;
+    gap:65px;
 }
 
 .services-text{
-    max-width:620px;
+    max-width:600px;
 }
 
 .services-text .contact-label{
@@ -907,21 +993,26 @@ img{
 .services-text h2{
     color:var(--blue);
 
-    font-size:clamp(2.5rem,5vw,4.5rem);
+    font-size:clamp(2.4rem,4.5vw,4.2rem);
 
     line-height:1;
 
-    margin:0 0 25px;
+    margin:0 0 20px;
 }
 
 .services-text p{
     color:var(--muted);
 
-    line-height:1.8;
+    line-height:1.75;
+
+    margin:0 0 13px;
 }
 
+
+/* SERVICES LIST */
+
 .services-list{
-    border-top:2px solid var(--blue);
+    border-top:1px solid var(--blue);
 }
 
 .service-item{
@@ -929,11 +1020,11 @@ img{
 
     align-items:center;
 
-    gap:25px;
+    gap:22px;
 
-    padding:25px 0;
+    padding:22px 0;
 
-    border-bottom:1px solid var(--silver);
+    border-bottom:1px solid var(--silver-light);
 }
 
 .service-item-number{
@@ -944,17 +1035,23 @@ img{
         "Times New Roman",
         serif;
 
-    font-size:1.05rem;
+    font-size:1rem;
 
     font-weight:bold;
+
+    min-width:25px;
 }
 
 .service-item:nth-child(2) .service-item-number{
-    color:var(--green);
+    color:var(--cyan);
 }
 
 .service-item:nth-child(3) .service-item-number{
     color:var(--yellow);
+}
+
+.service-item:nth-child(4) .service-item-number{
+    color:var(--magenta);
 }
 
 .service-item h3{
@@ -968,7 +1065,7 @@ img{
         Arial,
         sans-serif;
 
-    font-size:1rem;
+    font-size:.98rem;
 }
 
 
@@ -981,7 +1078,7 @@ img{
 
     color:var(--white);
 
-    padding:90px 6%;
+    padding:78px 5%;
 
     position:relative;
 
@@ -993,17 +1090,17 @@ img{
 
     position:absolute;
 
-    width:250px;
-    height:250px;
+    width:190px;
+    height:190px;
 
     border-radius:50%;
 
-    background:var(--red);
+    background:var(--magenta);
 
-    right:-100px;
-    top:-120px;
+    right:-85px;
+    top:-95px;
 
-    opacity:.45;
+    opacity:.5;
 }
 
 .student-voices-section::after{
@@ -1011,31 +1108,30 @@ img{
 
     position:absolute;
 
-    width:120px;
-    height:120px;
+    width:90px;
+    height:90px;
 
     border-radius:50%;
 
     background:var(--yellow);
 
-    left:-50px;
-    bottom:-50px;
+    left:-40px;
+    bottom:-40px;
 
     opacity:.7;
 }
 
 .student-voices-inner{
-    max-width:1250px;
+    max-width:1200px;
 
     margin:auto;
 
     display:flex;
 
     align-items:center;
-
     justify-content:space-between;
 
-    gap:45px;
+    gap:40px;
 
     position:relative;
 
@@ -1043,25 +1139,29 @@ img{
 }
 
 .student-voices-text{
-    max-width:750px;
+    max-width:720px;
 }
 
 .student-voices-text .contact-label{
-    color:var(--yellow);
+    color:var(--cyan);
 }
 
 .student-voices-text h2{
-    font-size:clamp(2.5rem,5vw,4.6rem);
+    color:var(--white);
+
+    font-size:clamp(2.4rem,4.5vw,4.3rem);
 
     line-height:1;
 
-    margin:0 0 18px;
+    margin:0 0 16px;
 }
 
 .student-voices-text p{
     color:var(--silver-light);
 
-    line-height:1.8;
+    line-height:1.75;
+
+    margin:0;
 }
 
 .student-voices-button{
@@ -1069,7 +1169,7 @@ img{
 
     flex-shrink:0;
 
-    padding:17px 27px;
+    padding:14px 22px;
 
     background:var(--red);
 
@@ -1077,15 +1177,17 @@ img{
 
     text-decoration:none;
 
+    font-size:.88rem;
+
     font-weight:900;
 
     transition:.25s ease;
 }
 
 .student-voices-button:hover{
-    background:var(--green);
+    background:var(--cyan);
 
-    transform:translateY(-3px);
+    transform:translateY(-2px);
 }
 
 
@@ -1094,41 +1196,40 @@ img{
 ========================================================= */
 
 .contact-final{
-    max-width:1250px;
+    max-width:1200px;
 
     margin:auto;
 
-    padding:100px 6%;
+    padding:85px 5%;
 
     display:flex;
 
     align-items:center;
-
     justify-content:space-between;
 
-    gap:45px;
+    gap:40px;
 }
 
 .contact-final .contact-label{
-    color:var(--green);
+    color:var(--cyan);
 }
 
 .contact-final h2{
     color:var(--blue);
 
-    font-size:clamp(2.5rem,5vw,4.6rem);
+    font-size:clamp(2.4rem,4.5vw,4.3rem);
 
     line-height:1;
 
     margin:0;
 
-    max-width:750px;
+    max-width:720px;
 }
 
 .final-contact-button{
     flex-shrink:0;
 
-    padding:18px 28px;
+    padding:15px 24px;
 
     background:var(--red);
 
@@ -1136,15 +1237,17 @@ img{
 
     text-decoration:none;
 
+    font-size:.88rem;
+
     font-weight:900;
 
     transition:.25s ease;
 }
 
 .final-contact-button:hover{
-    background:var(--green);
+    background:var(--cyan);
 
-    transform:translateY(-3px);
+    transform:translateY(-2px);
 }
 
 
@@ -1157,13 +1260,13 @@ img{
 
     color:var(--white);
 
-    padding:75px 6% 25px;
+    padding:65px 5% 23px;
 
-    border-top:6px solid var(--yellow);
+    border-top:4px solid var(--yellow);
 }
 
 .footer-grid{
-    max-width:1250px;
+    max-width:1200px;
 
     margin:auto;
 
@@ -1171,13 +1274,15 @@ img{
 
     grid-template-columns:1.3fr 1fr 1fr;
 
-    gap:50px;
+    gap:45px;
 }
 
 .footer-brand h2{
-    margin:0 0 12px;
+    color:var(--cyan);
 
-    font-size:2rem;
+    margin:0 0 10px;
+
+    font-size:1.8rem;
 }
 
 .footer-brand p{
@@ -1185,19 +1290,21 @@ img{
 
     line-height:1.7;
 
-    max-width:420px;
+    max-width:400px;
+
+    margin:0;
 }
 
 .footer-column h3{
     color:var(--yellow);
 
-    font-size:.75rem;
+    font-size:.68rem;
 
-    letter-spacing:.16em;
+    letter-spacing:.15em;
 
     text-transform:uppercase;
 
-    margin:0 0 18px;
+    margin:0 0 15px;
 }
 
 .footer-column a{
@@ -1207,23 +1314,27 @@ img{
 
     text-decoration:none;
 
-    margin-bottom:11px;
+    margin-bottom:9px;
+
+    font-size:.84rem;
+
+    line-height:1.5;
 
     transition:.2s ease;
 }
 
 .footer-column a:hover{
-    color:var(--white);
+    color:var(--cyan);
 }
 
 .footer-bottom{
-    max-width:1250px;
+    max-width:1200px;
 
-    margin:45px auto 0;
+    margin:40px auto 0;
 
-    padding-top:22px;
+    padding-top:19px;
 
-    border-top:1px solid rgba(255,255,255,.15);
+    border-top:1px solid rgba(255,255,255,.14);
 }
 
 .footer-bottom p{
@@ -1231,12 +1342,12 @@ img{
 
     color:var(--silver);
 
-    font-size:.8rem;
+    font-size:.75rem;
 }
 
 
 /* =========================================================
-   MOBILE
+   TABLET
 ========================================================= */
 
 @media(max-width:1000px){
@@ -1256,29 +1367,25 @@ img{
     .contact-hero{
         grid-template-columns:1fr;
 
-        padding-top:75px;
+        padding-top:65px;
     }
 
     .contact-visual{
-        margin:10px auto 0;
+        margin:0 auto;
     }
 
     .contact-method-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:1fr 1fr;
     }
 
-    .logo-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .photo-grid{
-        grid-template-columns:repeat(3,1fr);
+    .theme-grid{
+        grid-template-columns:1fr 1fr;
     }
 
     .contact-services{
         grid-template-columns:1fr;
 
-        gap:55px;
+        gap:45px;
     }
 
     .student-voices-inner{
@@ -1299,66 +1406,92 @@ img{
 }
 
 
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media(max-width:650px){
 
+    body{
+        font-size:15px;
+    }
+
     .contact-header-inner{
-        padding:18px 5%;
+        padding:15px 5%;
+    }
+
+    .contact-brand h1{
+        font-size:1.4rem;
+    }
+
+    .contact-brand p{
+        font-size:.68rem;
     }
 
     .contact-nav{
-        gap:2px;
+        gap:1px;
     }
 
     .contact-nav a{
-        padding:8px 8px;
+        padding:7px 7px;
 
-        font-size:.76rem;
+        font-size:.72rem;
     }
 
     .contact-hero{
-        padding:65px 6% 75px;
+        padding:58px 6% 68px;
+
+        gap:35px;
     }
 
     .contact-hero h2{
-        font-size:3.2rem;
+        font-size:3rem;
+    }
+
+    .contact-lead{
+        font-size:.94rem;
     }
 
     .contact-visual{
-        height:350px;
+        height:320px;
     }
 
     .contact-photo-frame{
         width:220px;
-        height:290px;
+        height:220px;
 
-        right:30px;
+        right:25px;
+        top:38px;
     }
 
     .hero-blue{
-        width:150px;
-        height:150px;
+        width:135px;
+        height:135px;
     }
 
     .hero-green{
-        width:105px;
-        height:105px;
+        width:92px;
+        height:92px;
 
         left:5px;
-        bottom:25px;
+        bottom:22px;
     }
 
     .hero-red{
-        width:75px;
-        height:75px;
+        width:67px;
+        height:67px;
     }
 
     .hero-yellow{
-        width:42px;
-        height:42px;
+        width:37px;
+        height:37px;
+
+        left:5px;
+        top:42px;
     }
 
     .direct-contact,
-    .identity-section,
+    .contact-themes,
     .contact-services,
     .student-voices-section,
     .contact-footer{
@@ -1367,125 +1500,173 @@ img{
     }
 
     .social-section,
-    .personal-gallery,
     .contact-final{
         padding-left:6%;
         padding-right:6%;
+    }
+
+    .contact-method-grid{
+        grid-template-columns:1fr;
     }
 
     .social-grid{
         grid-template-columns:1fr;
     }
 
-    .logo-grid{
-        grid-template-columns:1fr 1fr;
+    .social-card{
+        min-height:110px;
 
-        gap:12px;
+        padding:18px;
     }
 
-    .logo-card{
-        min-height:140px;
-
-        padding:15px;
+    .social-icon{
+        width:55px;
+        height:55px;
     }
 
-    .logo-card img{
+    .theme-grid{
+        grid-template-columns:1fr;
+    }
+
+    .theme-card{
+        padding:22px;
+    }
+
+    .theme-photo{
+        width:100px;
         height:100px;
     }
 
-    .photo-grid{
-        grid-template-columns:repeat(2,1fr);
+    .contact-final h2{
+        font-size:2.8rem;
     }
 
     .footer-grid{
         grid-template-columns:1fr;
 
-        gap:35px;
+        gap:32px;
     }
 
     .brand-strip-inner{
-        gap:15px;
+        gap:11px;
+    }
+
+    .brand-strip span{
+        font-size:.6rem;
     }
 }
 
-</style></head><body><!-- =========================================================
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
      HEADER
-========================================================= --><header class="contact-header"><div class="contact-header-inner"><a href="index.html" class="contact-brand">
+========================================================= -->
 
-    <h1>Nketia-Marfo</h1>
+<header class="contact-header">
 
-    <p>
-        Thinking deeply. Creating freely. Sharing ideas.
-    </p>
+<div class="contact-header-inner">
+
+<a href="index.html" class="contact-brand">
+
+<h1>Nketia-Marfo</h1>
+
+<p>
+Thinking deeply. Creating freely. Sharing ideas.
+</p>
 
 </a>
 
 
 <nav class="contact-nav">
 
-    <a href="index.html">
-        Home
-    </a>
+<a href="index.html">
+Home
+</a>
 
-    <a href="about.html">
-        About
-    </a>
+<a href="about.html">
+About
+</a>
 
-    <a href="blog.html">
-        Blog
-    </a>
+<a href="blog.html">
+Blog
+</a>
 
-    <a href="Students-Voice.html">
-        Student Voices
-    </a>
+<a href="Students-Voice.html">
+Student Voices
+</a>
 
-    <a href="contact.html" class="active">
-        Contact
-    </a>
+<a href="contact.html" class="active">
+Contact
+</a>
 
 </nav>
 
-</div></header><main class="contact-page"><!-- =========================================================
+</div>
+
+</header>
+
+
+
+<main class="contact-page">
+
+
+<!-- =========================================================
      HERO
-========================================================= --><section class="contact-hero"><div><p class="contact-label">
-    LET'S CONNECT
+========================================================= -->
+
+<section class="contact-hero">
+
+<div>
+
+<p class="contact-label">
+LET'S CONNECT
 </p>
 
 <h2>
-    Start a conversation.
+Start a conversation.
 </h2>
 
 <p class="contact-lead">
-    Have an idea, question, opportunity, collaboration,
-    or something you'd like to discuss?
+Have an idea, question, opportunity, collaboration,
+or something you'd like to discuss?
 </p>
 
 <p class="contact-lead">
-    Whether it involves music, creativity, education,
-    ideas, projects or meaningful conversations,
-    you're welcome here.
+Whether it involves music, creativity, education,
+ideas, projects or meaningful conversations,
+you're welcome here.
 </p>
 
 
 <div class="contact-main-buttons">
 
-    <a
-        href="mailto:nketiamarfo157@gmail.com"
-        class="contact-main-button"
-    >
-        Send an Email
-    </a>
+<a
+href="mailto:nketiamarfo157@gmail.com"
+class="contact-main-button"
+>
+Send an Email
+</a>
 
-    <a
-        href="https://wa.me/233593378431"
-        class="contact-main-button whatsapp"
-    >
-        WhatsApp Me
-    </a>
+<a
+href="https://wa.me/233593378431"
+class="contact-main-button whatsapp"
+>
+WhatsApp Me
+</a>
 
 </div>
 
-</div><div class="contact-visual"><div class="hero-shape hero-blue"></div>
+</div>
+
+
+<div class="contact-visual">
+
+<div class="hero-shape hero-blue"></div>
 
 <div class="hero-shape hero-green"></div>
 
@@ -1494,33 +1675,43 @@ img{
 <div class="hero-shape hero-yellow"></div>
 
 
-<!-- One personal image used as the main contact visual -->
-
 <div class="contact-photo-frame">
 
-    <img
-        src="IMG-20250320-WA0168.jpg"
-        alt="Nketia-Marfo"
-    >
+<img
+src="IMG-20250320-WA0168.jpg"
+alt="Nketia-Marfo"
+>
 
 </div>
 
-</div></section><!-- =========================================================
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
      DIRECT CONTACT
-========================================================= --><section class="direct-contact"><div class="direct-contact-inner"><div class="direct-heading">
+========================================================= -->
 
-    <p class="contact-label">
-        DIRECT CONTACT
-    </p>
+<section class="direct-contact">
 
-    <h2>
-        Reach me directly.
-    </h2>
+<div class="direct-contact-inner">
 
-    <p>
-        Choose whichever contact method works best for you.
-        WhatsApp, phone and email are all available.
-    </p>
+<div class="direct-heading">
+
+<p class="contact-label">
+DIRECT CONTACT
+</p>
+
+<h2>
+Reach me directly.
+</h2>
+
+<p>
+Choose whichever contact method works best for you.
+WhatsApp, phone and email are all available.
+</p>
 
 </div>
 
@@ -1528,145 +1719,184 @@ img{
 <div class="contact-method-grid">
 
 
-    <!-- WHATSAPP -->
+<!-- WHATSAPP -->
 
-    <a
-        href="https://wa.me/233593378431"
-        class="contact-method"
-    >
+<a
+href="https://wa.me/233593378431"
+class="contact-method"
+>
 
-        <div class="method-icon">
+<div class="method-icon">
 
-            <img
-                src="whatsapp-logo-icon-vector-56892597.jpg"
-                alt="WhatsApp"
-            >
-
-        </div>
-
-        <span class="method-label">
-            WhatsApp
-        </span>
-
-        <span class="method-value">
-            0593378431
-        </span>
-
-    </a>
-
-
-
-    <!-- PHONE -->
-
-    <a
-        href="tel:0593378431"
-        class="contact-method"
-    >
-
-        <div class="method-icon phone"
-             style="background:#A61B29;color:white;font-size:1.8rem;">
-            ☎
-        </div>
-
-        <span class="method-label">
-            Phone
-        </span>
-
-        <span class="method-value">
-            0593378431
-        </span>
-
-    </a>
-
-
-
-    <!-- EMAIL -->
-
-    <a
-        href="mailto:nketiamarfo157@gmail.com"
-        class="contact-method"
-    >
-
-        <div class="method-icon email">
-            @
-        </div>
-
-        <span class="method-label">
-            Email
-        </span>
-
-        <span class="method-value">
-            nketiamarfo157@gmail.com
-        </span>
-
-    </a>
+<img
+src="whatsapp-logo-icon-vector-56892597.jpg"
+alt="WhatsApp"
+>
 
 </div>
 
-</div></section><!-- =========================================================
-     COLOR / BRAND STRIP
-========================================================= --><section class="brand-strip"><div class="brand-strip-inner"><span>Music</span>
+<span class="method-label">
+WhatsApp
+</span>
+
+<span class="method-value">
+0593378431
+</span>
+
+</a>
+
+
+
+<!-- PHONE -->
+
+<a
+href="tel:0593378431"
+class="contact-method"
+>
+
+<div class="method-icon phone">
+☎
+</div>
+
+<span class="method-label">
+Phone
+</span>
+
+<span class="method-value">
+0593378431
+</span>
+
+</a>
+
+
+
+<!-- EMAIL -->
+
+<a
+href="mailto:nketiamarfo157@gmail.com"
+class="contact-method"
+>
+
+<div class="method-icon email">
+@
+</div>
+
+<span class="method-label">
+Email
+</span>
+
+<span class="method-value">
+nketiamarfo157@gmail.com
+</span>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     COLOR STRIP
+========================================================= -->
+
+<section class="brand-strip">
+
+<div class="brand-strip-inner">
+
+<span>Music</span>
+
 <span>•</span>
+
 <span>Education</span>
+
 <span>•</span>
+
 <span>Creativity</span>
+
 <span>•</span>
+
 <span>Ideas</span>
+
 <span>•</span>
+
 <span>Stories</span>
+
 <span>•</span>
+
 <span>Community</span>
 
-</div></section><!-- =========================================================
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
      SOCIAL MEDIA
-========================================================= --><section class="social-section"><div class="social-heading"><p class="contact-label">
-    FIND ME ONLINE
+========================================================= -->
+
+<section class="social-section">
+
+<div class="social-heading">
+
+<p class="contact-label">
+FIND ME ONLINE
 </p>
 
 <h2>
-    Follow the journey.
+Follow the journey.
 </h2>
 
 <p>
-    Follow along for music, ideas, creativity, stories,
-    projects and moments from the journey.
+Follow along for music, ideas, creativity, stories,
+projects and moments from the journey.
 </p>
 
-</div><div class="social-grid"><!-- TIKTOK -->
+</div>
+
+
+<div class="social-grid">
+
+
+<!-- TIKTOK -->
 
 <a
-    href="https://www.tiktok.com/@NketiaMarfo"
-    class="social-card"
+href="https://www.tiktok.com/@NketiaMarfo"
+class="social-card"
 >
 
-    <div class="social-icon">
+<div class="social-icon">
 
-        <img
-            src="TikTok_logo.png.webp"
-            alt="TikTok logo"
-        >
+<img
+src="TikTok_logo.png.webp"
+alt="TikTok logo"
+>
 
-    </div>
+</div>
 
-    <div class="social-info">
+<div class="social-info">
 
-        <span class="social-platform">
-            TikTok
-        </span>
+<span class="social-platform">
+TikTok
+</span>
 
-        <h3>
-            Nketia Marfo
-        </h3>
+<h3>
+Nketia Marfo
+</h3>
 
-        <p>
-            Music, creativity & short-form ideas
-        </p>
+<p>
+Music, creativity & short-form ideas
+</p>
 
-    </div>
+</div>
 
-    <span class="social-arrow">
-        ↗
-    </span>
+<span class="social-arrow">
+↗
+</span>
 
 </a>
 
@@ -1675,38 +1905,38 @@ img{
 <!-- FACEBOOK -->
 
 <a
-    href="https://www.facebook.com/"
-    class="social-card"
+href="https://www.facebook.com/"
+class="social-card"
 >
 
-    <div class="social-icon">
+<div class="social-icon">
 
-        <img
-            src="facebook-icon-200x200.jpg"
-            alt="Facebook logo"
-        >
+<img
+src="facebook-icon-200x200.jpg"
+alt="Facebook logo"
+>
 
-    </div>
+</div>
 
-    <div class="social-info">
+<div class="social-info">
 
-        <span class="social-platform">
-            Facebook
-        </span>
+<span class="social-platform">
+Facebook
+</span>
 
-        <h3>
-            Nketia Marfo
-        </h3>
+<h3>
+Nketia Marfo
+</h3>
 
-        <p>
-            Updates, stories & community
-        </p>
+<p>
+Updates, stories & community
+</p>
 
-    </div>
+</div>
 
-    <span class="social-arrow">
-        ↗
-    </span>
+<span class="social-arrow">
+↗
+</span>
 
 </a>
 
@@ -1715,38 +1945,38 @@ img{
 <!-- INSTAGRAM -->
 
 <a
-    href="https://www.instagram.com/Affectionate_Music/"
-    class="social-card"
+href="https://www.instagram.com/Affectionate_Music/"
+class="social-card"
 >
 
-    <div class="social-icon">
+<div class="social-icon">
 
-        <img
-            src="instagram-new--v1.jpg"
-            alt="Instagram logo"
-        >
+<img
+src="instagram-new--v1.jpg"
+alt="Instagram logo"
+>
 
-    </div>
+</div>
 
-    <div class="social-info">
+<div class="social-info">
 
-        <span class="social-platform">
-            Instagram
-        </span>
+<span class="social-platform">
+Instagram
+</span>
 
-        <h3>
-            Affectionate_Music
-        </h3>
+<h3>
+Affectionate_Music
+</h3>
 
-        <p>
-            Music, creativity & visual moments
-        </p>
+<p>
+Music, creativity & visual moments
+</p>
 
-    </div>
+</div>
 
-    <span class="social-arrow">
-        ↗
-    </span>
+<span class="social-arrow">
+↗
+</span>
 
 </a>
 
@@ -1755,424 +1985,392 @@ img{
 <!-- X -->
 
 <a
-    href="https://x.com/Nketia"
-    class="social-card"
+href="https://x.com/Nketia"
+class="social-card"
 >
 
-    <div class="social-icon">
+<div class="social-icon">
 
-        <img
-            src="x-logo-icon-vector-51648900.jpg"
-            alt="X logo"
-        >
+<img
+src="x-logo-icon-vector-51648900.jpg"
+alt="X logo"
+>
 
-    </div>
+</div>
 
-    <div class="social-info">
+<div class="social-info">
 
-        <span class="social-platform">
-            X
-        </span>
+<span class="social-platform">
+X
+</span>
 
-        <h3>
-            Nketia
-        </h3>
+<h3>
+Nketia
+</h3>
 
-        <p>
-            Thoughts, conversations & ideas
-        </p>
+<p>
+Thoughts, conversations & ideas
+</p>
 
-    </div>
+</div>
 
-    <span class="social-arrow">
-        ↗
-    </span>
+<span class="social-arrow">
+↗
+</span>
 
 </a>
 
-</div></section><!-- =========================================================
-     VISUAL IDENTITY
-========================================================= --><section class="identity-section"><div class="identity-inner"><div class="identity-heading">
-
-    <p class="contact-label">
-        VISUAL IDENTITY
-    </p>
-
-    <h2>
-        The Nketia-Marfo presence.
-    </h2>
-
-    <p>
-        A selection of visual identity assets from the
-        collection uploaded to the Nketia-Marfo website.
-    </p>
-
 </div>
 
-
-<div class="logo-grid">
-
-
-    <div class="logo-card">
-
-        <img
-            src="file_0000000012c871fdbce691f44f2fc891.png"
-            alt="Nketia-Marfo visual identity"
-        >
-
-    </div>
+</section>
 
 
-    <div class="logo-card">
 
-        <img
-            src="file_000000007ac471f4af129031a9ca9168.png"
-            alt="Nketia-Marfo visual identity"
-        >
+<!-- =========================================================
+     CONTACT THEMES
+     REPLACES THE LARGE PHOTO COLLECTION
+========================================================= -->
 
-    </div>
+<section class="contact-themes">
 
+<div class="contact-themes-inner">
 
-    <div class="logo-card">
+<div class="contact-themes-heading">
 
-        <img
-            src="file_0000000085dc71f48ae49782334638bd.png"
-            alt="Nketia-Marfo visual identity"
-        >
-
-    </div>
-
-
-    <div class="logo-card">
-
-        <img
-            src="file_0000000095b471fdb0797eacb26bb28d.png"
-            alt="Nketia-Marfo visual identity"
-        >
-
-    </div>
-
-
-    <div class="logo-card">
-
-        <img
-            src="file_0000000097d8720c92b40fe648710dad.png"
-            alt="Nketia-Marfo visual identity"
-        >
-
-    </div>
-
-
-    <div class="logo-card">
-
-        <img
-            src="file_00000000dad071fd9398c12e37f40351.png"
-            alt="Nketia-Marfo visual identity"
-        >
-
-    </div>
-
-
-    <div class="logo-card">
-
-        <img
-            src="file_00000000f10871f49609646e5a2c21be.png"
-            alt="Nketia-Marfo visual identity"
-        >
-
-    </div>
-
-
-    <div class="logo-card">
-
-        <img
-            src="file_00000000f8a871f4bb452ab5ea523124.png"
-            alt="Nketia-Marfo visual identity"
-        >
-
-    </div>
-
-
-</div>
-
-</div></section><!-- =========================================================
-     PERSONAL PHOTOS
-     EXACTLY 10
-========================================================= --><section class="personal-gallery"><div class="personal-gallery-heading"><p class="contact-label">
-    BEYOND THE CONTACT FORM
+<p class="contact-label">
+WHAT I WRITE & TALK ABOUT
 </p>
 
 <h2>
-    A little more of the person behind the page.
+Ideas worth having a conversation about.
 </h2>
 
 <p>
-    A carefully selected collection of photographs adds
-    personality to the Contact page while keeping the
-    rest of the image collection available for the
-    Home and Blog sections.
+The things I care about naturally shape the conversations,
+projects and collaborations that happen here.
 </p>
 
-</div><div class="photo-grid"><!-- 01 -->
-
-<div class="photo-card">
-
-    <img
-        src="1725906574828.jpg"
-        alt="Nketia-Marfo"
-        loading="lazy"
-    >
-
 </div>
 
 
-<!-- 02 -->
-
-<div class="photo-card">
-
-    <img
-        src="1744567769378.jpg"
-        alt="Nketia-Marfo"
-        loading="lazy"
-    >
-
-</div>
+<div class="theme-grid">
 
 
-<!-- 03 -->
+<!-- 01 EDUCATION -->
 
-<div class="photo-card">
+<article class="theme-card">
 
-    <img
-        src="1744670371986.jpg"
-        alt="Nketia-Marfo"
-        loading="lazy"
-    >
+<span class="theme-number">
+01
+</span>
 
-</div>
+<h3>
+Education
+</h3>
 
+<p>
+Learning, opportunity, students,
+teaching and the ideas that shape
+better educational experiences.
+</p>
 
-<!-- 04 -->
+<div class="theme-photo">
 
-<div class="photo-card">
-
-    <img
-        src="1783562225069.jpg"
-        alt="Nketia-Marfo"
-        loading="lazy"
-    >
+<img
+src="IMG_20260210_225825_521.jpg"
+alt="Education"
+loading="lazy"
+>
 
 </div>
 
-
-<!-- 05 -->
-
-<div class="photo-card">
-
-    <img
-        src="1784768722971.jpg"
-        alt="Nketia-Marfo"
-        loading="lazy"
-    >
-
-</div>
+</article>
 
 
-<!-- 06 -->
 
-<div class="photo-card">
+<!-- 02 ECONOMICS -->
 
-    <img
-        src="IMG-20250320-WA0160.jpg"
-        alt="Nketia-Marfo"
-        loading="lazy"
-    >
+<article class="theme-card">
 
-</div>
+<span class="theme-number">
+02
+</span>
 
+<h3>
+Economics
+</h3>
 
-<!-- 07 -->
+<p>
+Money, work, opportunity, markets,
+development and the economic
+questions behind everyday life.
+</p>
 
-<div class="photo-card">
+<div class="theme-photo">
 
-    <img
-        src="IMG-20250320-WA0168.jpg"
-        alt="Nketia-Marfo"
-        loading="lazy"
-    >
+<img
+src="IMG_20260210_225842_806.jpg"
+alt="Economics"
+loading="lazy"
+>
 
 </div>
 
-
-<!-- 08 -->
-
-<div class="photo-card">
-
-    <img
-        src="IMG-20250727-WA0037.jpg"
-        alt="Nketia-Marfo"
-        loading="lazy"
-    >
-
-</div>
+</article>
 
 
-<!-- 09 -->
 
-<div class="photo-card">
+<!-- 03 MUSIC & CULTURE -->
 
-    <img
-        src="IMG-20250810-WA0144.jpg"
-        alt="Nketia-Marfo"
-        loading="lazy"
-    >
+<article class="theme-card">
 
-</div>
+<span class="theme-number">
+03
+</span>
 
+<h3>
+Music & Culture
+</h3>
 
-<!-- 10 -->
+<p>
+Music, performance, creativity,
+culture and the stories people
+express through sound.
+</p>
 
-<div class="photo-card">
+<div class="theme-photo">
 
-    <img
-        src="IMG-20260124-WA0015.jpg"
-        alt="Nketia-Marfo"
-        loading="lazy"
-    >
+<img
+src="IMG-20260614-WA0187.jpg"
+alt="Music and culture"
+loading="lazy"
+>
 
 </div>
 
-</div></section><!-- =========================================================
-     SERVICES
-========================================================= --><section class="contact-services"><div class="services-text"><p class="contact-label">
-    WORK WITH ME
+</article>
+
+
+
+<!-- 04 SOCIETY & ENVIRONMENT -->
+
+<article class="theme-card">
+
+<span class="theme-number">
+04
+</span>
+
+<h3>
+Society & Environment
+</h3>
+
+<p>
+Community, social questions,
+environmental challenges and
+the world around us.
+</p>
+
+<div class="theme-photo">
+
+<img
+src="IMG-20260614-WA0155.jpg"
+alt="Society and environment"
+loading="lazy"
+>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WORK WITH ME
+========================================================= -->
+
+<section class="contact-services">
+
+<div class="services-text">
+
+<p class="contact-label">
+WORK WITH ME
 </p>
 
 <h2>
-    Have something in mind?
+Have something in mind?
 </h2>
 
 <p>
-    Whether you have a creative idea, a service request,
-    an opportunity, a music project, or simply want to
-    start a meaningful conversation, feel free to reach out.
+Whether you have a creative idea, a service request,
+an opportunity, a music project, or simply want to
+start a meaningful conversation, feel free to reach out.
 </p>
 
 <p>
-    Every conversation begins somewhere.
+Every conversation begins somewhere.
 </p>
 
-</div><div class="services-list"><div class="service-item">
+</div>
 
-    <span class="service-item-number">
-        01
-    </span>
 
-    <h3>
-        Creative Services
-    </h3>
+<div class="services-list">
+
+<div class="service-item">
+
+<span class="service-item-number">
+01
+</span>
+
+<h3>
+Creative Services
+</h3>
 
 </div>
 
 
 <div class="service-item">
 
-    <span class="service-item-number">
-        02
-    </span>
+<span class="service-item-number">
+02
+</span>
 
-    <h3>
-        Music & Collaboration
-    </h3>
-
-</div>
-
-
-<div class="service-item">
-
-    <span class="service-item-number">
-        03
-    </span>
-
-    <h3>
-        Ideas & Projects
-    </h3>
+<h3>
+Music & Collaboration
+</h3>
 
 </div>
 
 
 <div class="service-item">
 
-    <span class="service-item-number">
-        04
-    </span>
+<span class="service-item-number">
+03
+</span>
 
-    <h3>
-        Conversations & Opportunities
-    </h3>
+<h3>
+Ideas & Projects
+</h3>
 
 </div>
 
-</div></section><!-- =========================================================
+
+<div class="service-item">
+
+<span class="service-item-number">
+04
+</span>
+
+<h3>
+Conversations & Opportunities
+</h3>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
      STUDENT VOICES
-========================================================= --><section class="student-voices-section"><div class="student-voices-inner"><div class="student-voices-text">
+========================================================= -->
 
-    <p class="contact-label">
-        STUDENT VOICES
-    </p>
+<section class="student-voices-section">
 
-    <h2>
-        Every student has a story.
-    </h2>
+<div class="student-voices-inner">
 
-    <p>
-        Explore experiences, reflections, challenges,
-        discoveries and ideas from students around the world.
-    </p>
+<div class="student-voices-text">
+
+<p class="contact-label">
+STUDENT VOICES
+</p>
+
+<h2>
+Every student has a story.
+</h2>
+
+<p>
+Explore experiences, reflections, challenges,
+discoveries and ideas from students around the world.
+</p>
 
 </div>
 
 
 <a
-    href="Students-Voice.html"
-    class="student-voices-button"
+href="Students-Voice.html"
+class="student-voices-button"
 >
-    Explore Student Voices →
+Explore Student Voices →
 </a>
 
-</div></section><!-- =========================================================
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
      FINAL CTA
-========================================================= --><section class="contact-final"><div><p class="contact-label">
-    NOBODY STARTS ALONE
+========================================================= -->
+
+<section class="contact-final">
+
+<div>
+
+<p class="contact-label">
+NOBODY STARTS ALONE
 </p>
 
 <h2>
-    Let's create something meaningful.
+Let's create something meaningful.
 </h2>
 
-</div><a
+</div>
+
+
+<a
 href="mailto:nketiamarfo157@gmail.com"
 class="final-contact-button"
-
-«»
-
+>
 Get in Touch →
+</a>
 
-</a></section></main><!-- =========================================================
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
      FOOTER
-========================================================= --><footer class="contact-footer"><div class="footer-grid"><!-- BRAND -->
+========================================================= -->
+
+<footer class="contact-footer">
+
+<div class="footer-grid">
+
+
+<!-- BRAND -->
 
 <div class="footer-brand">
 
-    <h2>
-        Nketia-Marfo
-    </h2>
+<h2>
+Nketia-Marfo
+</h2>
 
-    <p>
-        Thinking deeply. Creating freely.
-        Sharing ideas, music, education,
-        stories and conversations.
-    </p>
+<p>
+Thinking deeply. Creating freely.
+Sharing ideas, music, education,
+stories and conversations.
+</p>
 
 </div>
 
@@ -2182,29 +2380,29 @@ Get in Touch →
 
 <div class="footer-column">
 
-    <h3>
-        Explore
-    </h3>
+<h3>
+Explore
+</h3>
 
-    <a href="index.html">
-        Home
-    </a>
+<a href="index.html">
+Home
+</a>
 
-    <a href="about.html">
-        About
-    </a>
+<a href="about.html">
+About
+</a>
 
-    <a href="blog.html">
-        Blog
-    </a>
+<a href="blog.html">
+Blog
+</a>
 
-    <a href="Students-Voice.html">
-        Student Voices
-    </a>
+<a href="Students-Voice.html">
+Student Voices
+</a>
 
-    <a href="contact.html">
-        Contact
-    </a>
+<a href="contact.html">
+Contact
+</a>
 
 </div>
 
@@ -2214,35 +2412,44 @@ Get in Touch →
 
 <div class="footer-column">
 
-    <h3>
-        Connect
-    </h3>
+<h3>
+Connect
+</h3>
 
-    <a href="mailto:nketiamarfo157@gmail.com">
-        Email: nketiamarfo157@gmail.com
-    </a>
+<a href="mailto:nketiamarfo157@gmail.com">
+Email: nketiamarfo157@gmail.com
+</a>
 
-    <a href="https://wa.me/233593378431">
-        WhatsApp: 0593378431
-    </a>
+<a href="https://wa.me/233593378431">
+WhatsApp: 0593378431
+</a>
 
-    <a href="tel:0593378431">
-        Call: 0593378431
-    </a>
+<a href="tel:0593378431">
+Call: 0593378431
+</a>
 
-    <a href="https://www.instagram.com/Affectionate_Music/">
-        Instagram: Affectionate_Music
-    </a>
+<a href="https://www.instagram.com/Affectionate_Music/">
+Instagram: Affectionate_Music
+</a>
 
-    <a href="https://x.com/Nketia">
-        X: Nketia
-    </a>
+<a href="https://x.com/Nketia">
+X: Nketia
+</a>
 
 </div>
 
-</div><div class="footer-bottom"><p>
-    © 2026 Nketia-Marfo. All rights reserved.
+</div>
+
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Nketia-Marfo. All rights reserved.
 </p>
 
-</div></footer></body>
-   </html>
+</div>
+
+</footer>
+
+</body>
+</html>
