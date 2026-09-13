@@ -1,272 +1,560 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Blog | Nketia-Marfo</title>
 
-    <title>Blog | Nketia-Marfo</title>
+<meta
+    name="description"
+    content="Ideas, questions, stories, music, education, economics, creativity, and things Nketia-Marfo is learning."
+>
 
-    <meta
-        name="description"
-        content="Ideas, questions, stories, music, education, economics, creativity, and things Nketia-Marfo is learning."
-    >
+<link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="style.css">
-</head>
+<!-- =====================================================
+     BLOG PAGE FONT & COLOR SYSTEM
+====================================================== -->
 
-<body>
+<style>
 
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
+    /* =====================================================
+       FONT SYSTEM
+    ====================================================== */
 
-    <header class="site-header">
+    .blog-page,
+    .blog-page h1,
+    .blog-page h2,
+    .blog-page h3,
+    .blog-page p,
+    .blog-page a,
+    .blog-page span {
+        font-family:
+            "Inter",
+            "Segoe UI",
+            Arial,
+            Helvetica,
+            sans-serif;
+    }
 
-        <div class="header-content">
+    .blog-page h1,
+    .blog-page h2,
+    .blog-page h3 {
+        font-family:
+            "Georgia",
+            "Times New Roman",
+            serif;
+    }
 
-            <div class="brand-block">
-                <h1 class="site-name">Nketia-Marfo</h1>
 
-                <p>
-                    Thinking deeply. Creating freely. Sharing ideas.
-                </p>
-            </div>
+    /* =====================================================
+       COLOR SYSTEM
+       
+       Deep Blue
+       Red
+       Green
+       Small Silver Accents
+    ====================================================== */
+
+    :root {
+        --deep-blue: #0B1F3A;
+        --deep-blue-light: #163A63;
+
+        --red: #A61B29;
+        --green: #176B45;
+
+        --silver: #B8BEC7;
+        --silver-light: #E5E7EB;
+
+        --white: #FFFFFF;
+        --soft-white: #F7F8FA;
+        --dark-text: #17202A;
+    }
 
 
-            <nav class="main-nav">
+    /* =====================================================
+       GENERAL BLOG PAGE
+    ====================================================== */
 
-                <a href="index.html" class="nav-link">
-                    Home
-                </a>
+    .blog-page {
+        color: var(--dark-text);
+        background: var(--white);
+    }
 
-                <a href="about.html" class="nav-link">
-                    About
-                </a>
 
-                <a href="blog.html" class="nav-link active">
-                    Blog
-                </a>
+    /* =====================================================
+       HEADER
+    ====================================================== */
 
-                <a href="student-voices.html" class="nav-link">
-                    Student Voices
-                </a>
+    .site-header {
+        background: var(--deep-blue);
+        color: var(--white);
+    }
 
-                <a href="contact.html" class="nav-link">
-                    Contact
-                </a>
+    .site-name {
+        color: var(--white);
+    }
 
-            </nav>
+    .brand-block p {
+        color: var(--silver-light);
+    }
+
+    .main-nav .nav-link {
+        color: var(--white);
+        text-decoration: none;
+    }
+
+    .main-nav .nav-link:hover,
+    .main-nav .nav-link.active {
+        color: var(--silver);
+    }
+
+
+    /* =====================================================
+       BLOG HERO
+    ====================================================== */
+
+    .blog-hero {
+        background: var(--soft-white);
+    }
+
+    .blog-label {
+        color: var(--red);
+        font-weight: 700;
+        letter-spacing: 0.12em;
+    }
+
+    .blog-hero h2 {
+        color: var(--deep-blue);
+    }
+
+    .blog-hero h2 span {
+        color: var(--green);
+    }
+
+    .blog-intro {
+        color: #4B5563;
+    }
+
+
+    /* =====================================================
+       HERO ART
+    ====================================================== */
+
+    .gold-circle {
+        background: var(--silver);
+    }
+
+    .green-circle {
+        background: var(--green);
+        color: var(--white);
+    }
+
+    .red-circle {
+        background: var(--red);
+    }
+
+    .blue-circle {
+        background: var(--deep-blue);
+        color: var(--white);
+    }
+
+
+    /* =====================================================
+       FEATURED ARTICLE
+    ====================================================== */
+
+    .featured-blog {
+        background: var(--deep-blue);
+        color: var(--white);
+    }
+
+    .featured-blog-number {
+        color: var(--silver);
+    }
+
+    .featured-blog-content h2 {
+        color: var(--white);
+    }
+
+    .featured-blog-content .article-date {
+        color: var(--silver);
+        font-weight: 600;
+    }
+
+    .featured-blog-content p {
+        color: var(--silver-light);
+    }
+
+    .blog-read-link {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .blog-read-link:hover {
+        color: var(--silver);
+    }
+
+
+    /* =====================================================
+       BLOG STORY — GENERAL
+    ====================================================== */
+
+    .blog-story {
+        color: var(--dark-text);
+    }
+
+    .blog-story-content h2 {
+        color: var(--deep-blue);
+    }
+
+    .blog-story-content p {
+        color: #414B57;
+        line-height: 1.8;
+    }
+
+
+    /* =====================================================
+       MUSIC STORY
+    ====================================================== */
+
+    .blog-story-green {
+        background: #F3F8F5;
+    }
+
+    .blog-story-green .blog-label {
+        color: var(--green);
+    }
+
+    .music-art {
+        background: var(--green);
+        color: var(--white);
+    }
+
+    .art-note {
+        color: var(--silver-light);
+    }
+
+    .art-word {
+        color: var(--white);
+        font-weight: 800;
+        letter-spacing: 0.15em;
+    }
+
+
+    /* =====================================================
+       ENVIRONMENT STORY
+    ====================================================== */
+
+    .blog-story-red {
+        background: #FBF4F5;
+    }
+
+    .blog-story-red .blog-label {
+        color: var(--red);
+    }
+
+    .blog-story-red .blog-read-link {
+        color: var(--red);
+    }
+
+    .blog-story-red .blog-read-link:hover {
+        color: var(--deep-blue);
+    }
+
+
+    /* =====================================================
+       SMALL SILVER DETAILS
+    ====================================================== */
+
+    .blog-page hr {
+        border: none;
+        border-top: 1px solid var(--silver);
+    }
+
+    .blog-page ::selection {
+        background: var(--deep-blue);
+        color: var(--white);
+    }
+
+
+    /* =====================================================
+       RESPONSIVE TYPOGRAPHY
+    ====================================================== */
+
+    @media (max-width: 700px) {
+
+        .blog-page h2 {
+            line-height: 1.15;
+        }
+
+        .blog-page p {
+            font-size: 0.98rem;
+        }
+
+    }
+
+</style>
+
+</head><body><!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="site-header">
+
+    <div class="header-content">
+
+        <div class="brand-block">
+
+            <h1 class="site-name">
+                Nketia-Marfo
+            </h1>
+
+            <p>
+                Thinking deeply. Creating freely. Sharing ideas.
+            </p>
 
         </div>
 
-    </header>
+
+        <nav class="main-nav">
+
+            <a href="index.html" class="nav-link">
+                Home
+            </a>
+
+            <a href="about.html" class="nav-link">
+                About
+            </a>
+
+            <a href="blog.html" class="nav-link active">
+                Blog
+            </a>
+
+            <a href="contact.html" class="nav-link">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
 
 
 
-    <!-- =====================================================
-         BLOG PAGE
-    ====================================================== -->
+<!-- =====================================================
+     BLOG PAGE
+====================================================== -->
 
-    <main class="blog-page">
+<main class="blog-page">
 
 
-        <!-- =================================================
-             BLOG HERO
-        ================================================== -->
+    <!-- =================================================
+         BLOG HERO
+    ================================================== -->
 
-        <section class="blog-hero">
+    <section class="blog-hero">
 
-            <div class="blog-hero-text">
+        <div class="blog-hero-text">
 
-                <p class="blog-label">
-                    THE NKETIA-MARFO JOURNAL
-                </p>
+            <p class="blog-label">
+                THE NKETIA-MARFO JOURNAL
+            </p>
 
-                <h2>
-                    Ideas worth
-                    <span>thinking about.</span>
-                </h2>
+            <h2>
+                Ideas worth
+                <span>thinking about.</span>
+            </h2>
 
-                <p class="blog-intro">
-                    A collection of questions, observations, stories,
-                    and ideas about education, economics, music,
-                    creativity, society, and the world around me.
-                </p>
+            <p class="blog-intro">
+                A collection of questions, observations, stories,
+                and ideas about education, economics, music,
+                creativity, society, and the world around me.
+            </p>
 
+        </div>
+
+
+        <div class="blog-hero-art">
+
+            <div class="gold-circle"></div>
+
+            <div class="green-circle">
+                THINK
             </div>
 
+            <div class="red-circle"></div>
 
-            <div class="blog-hero-art">
-
-                <div class="gold-circle"></div>
-
-                <div class="green-circle">
-                    THINK
-                </div>
-
-                <div class="red-circle"></div>
-
-                <div class="blue-circle">
-                    WRITE
-                </div>
-
+            <div class="blue-circle">
+                WRITE
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
 
-        <!-- =================================================
-             FEATURED ARTICLE
-        ================================================== -->
+    <!-- =================================================
+         FEATURED ARTICLE
+    ================================================== -->
 
-        <section class="featured-blog">
+    <section class="featured-blog">
 
-            <div class="featured-blog-number">
-                01
+        <div class="featured-blog-number">
+            01
+        </div>
+
+
+        <div class="featured-blog-content">
+
+            <p class="blog-label">
+                FEATURED THOUGHT
+            </p>
+
+            <h2>
+                Why Education Should
+                Create Opportunities
+            </h2>
+
+            <p class="article-date">
+                Education · Economics · Young People
+            </p>
+
+            <p>
+                Education is often described as the pathway to
+                a better future. But what happens when completing
+                school does not lead to meaningful opportunities?
+            </p>
+
+            <p>
+                I keep thinking about the connection between
+                education, skills, employment, investment, and
+                the opportunities available to young people.
+            </p>
+
+            <p>
+                For me, this is not simply a question about
+                classrooms. It is a question about what happens
+                after the classroom.
+            </p>
+
+            <a
+                href="#education-article"
+                class="blog-read-link"
+            >
+                Explore the idea →
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ARTICLE TWO — MUSIC
+    ================================================== -->
+
+    <section
+        class="blog-story blog-story-green"
+        id="music-article"
+    >
+
+        <div class="blog-story-image music-art">
+
+            <div class="art-note">
+                ♪
             </div>
 
-
-            <div class="featured-blog-content">
-
-                <p class="blog-label">
-                    FEATURED THOUGHT
-                </p>
-
-                <h2>
-                    Why Education Should
-                    Create Opportunities
-                </h2>
-
-                <p class="article-date">
-                    Education · Economics · Young People
-                </p>
-
-                <p>
-                    Education is often described as the pathway to
-                    a better future. But what happens when completing
-                    school does not lead to meaningful opportunities?
-                </p>
-
-                <p>
-                    I keep thinking about the connection between
-                    education, skills, employment, investment, and
-                    the opportunities available to young people.
-                </p>
-
-                <p>
-                    For me, this is not simply a question about
-                    classrooms. It is a question about what happens
-                    after the classroom.
-                </p>
-
-                <a
-                    href="#education-article"
-                    class="blog-read-link"
-                >
-                    Explore the idea →
-                </a>
-
+            <div class="art-word">
+                MUSIC
             </div>
 
-        </section>
+        </div>
+
+
+        <div class="blog-story-content">
+
+            <p class="blog-label">
+                MUSIC & CREATIVITY
+            </p>
+
+            <h2>
+                Music, Creativity
+                and the Economy
+            </h2>
+
+            <p>
+                Music is more than entertainment. It can be a
+                source of creativity, identity, employment,
+                community, and economic activity.
+            </p>
+
+            <p>
+                Behind every performance is a network of people,
+                skills, decisions, resources, and opportunities.
+            </p>
+
+            <p>
+                I am interested in what happens when creative
+                talent is combined with knowledge about money,
+                planning, entrepreneurship, and the wider economy.
+            </p>
+
+            <a
+                href="#"
+                class="blog-read-link"
+            >
+                Read the story →
+            </a>
+
+        </div>
+
+    </section>
 
 
 
-        <!-- =================================================
-             ARTICLE TWO — MUSIC
-        ================================================== -->
+    <!-- =================================================
+         ARTICLE THREE — ENVIRONMENT
+    ================================================== -->
 
-        <section
-            class="blog-story blog-story-green"
-            id="music-article"
-        >
+    <section
+        class="blog-story blog-story-red"
+        id="environment-article"
+    >
 
-            <div class="blog-story-image music-art">
+        <div class="blog-story-content">
 
-                <div class="art-note">
-                    ♪
-                </div>
+            <p class="blog-label">
+                ENVIRONMENT & SOCIETY
+            </p>
 
-                <div class="art-word">
-                    MUSIC
-                </div>
+            <h2>
+                The Questions
+                Beneath the Surface
+            </h2>
 
-            </div>
+            <p>
+                Some of the biggest questions begin with things
+                we see around us every day.
+            </p>
 
+            <p>
+                Environmental challenges can lead us to think
+                more deeply about communities, responsibility,
+                development, and the choices we make.
+            </p>
 
-            <div class="blog-story-content">
+            <p>
+                Sometimes the most important question is not
+                simply <em>what happened?</em>
+            </p>
 
-                <p class="blog-label">
-                    MUSIC & CREATIVITY
-                </p>
+        </div>
 
-                <h2>
-                    Music, Creativity
-                    and the Economy
-                </h2>
-
-                <p>
-                    Music is more than entertainment. It can be a
-                    source of creativity, identity, employment,
-                    community, and economic activity.
-                </p>
-
-                <p>
-                    Behind every performance is a network of people,
-                    skills, decisions, resources, and opportunities.
-                </p>
-
-                <p>
-                    I am interested in what happens when creative
-                    talent is combined with knowledge about money,
-                    planning, entrepreneurship, and the wider economy.
-                </p>
-
-                <a
-                    href="#"
-                    class="blog-read-link"
-                >
-                    Read the story →
-                </a>
-
-            </div>
-
-        </section>
+    </section>
 
 
+</main>
 
-        <!-- =================================================
-             ARTICLE THREE — ENVIRONMENT
-        ================================================== -->
-
-        <section
-            class="blog-story blog-story-red"
-            id="environment-article"
-        >
-
-            <div class="blog-story-content">
-
-                <p class="blog-label">
-                    ENVIRONMENT & SOCIETY
-                </p>
-
-                <h2>
-                    The Questions
-                    Beneath the Surface
-                </h2>
-
-                <p>
-                    Some of the biggest questions begin with things
-                    we see around us every day.
-                </p>
-
-                <p>
-                    Environmental challenges can lead us to think
-                    more deeply about communities, responsibility,
-                    development, and the choices we make.
-                </p>
-
-                <p>
-                    Sometimes the most important question is not
-                    simply <em>what happened?</
+</body></html>
