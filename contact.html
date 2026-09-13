@@ -2,37 +2,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contact | Nketia-Marfo</title><meta name="description"
-content="Contact Nketia-Marfo for ideas, conversations, opportunities, collaborations, music, creative services, and projects.">
+content="Contact Nketia-Marfo for ideas, conversations, opportunities, collaborations, music, creative services and projects.">
 
 <link rel="stylesheet" href="style.css"><style>
 
 /* =========================================================
-   CONTACT PAGE — Nketia-Marfo
-   IMPORTANT:
-   Students-Voice.html and contact.html are intentionally
-   kept exactly as named in the repository.
+   NNETKIA-MARFO CONTACT PAGE
+   Colors:
+   Deep Blue + Red + Green + Yellow + Small Black
 ========================================================= */
 
 :root{
-    --deep-blue:#0B1F3A;
-    --deep-blue-light:#163A63;
+    --blue:#0B1F3A;
+    --blue-light:#163A63;
+
     --red:#A61B29;
-    --red-light:#C83A48;
+    --red-light:#D13A49;
+
     --green:#176B45;
     --green-light:#2E8B68;
-    --silver:#B8BEC7;
-    --silver-light:#E5E7EB;
+
+    --yellow:#E6B91E;
+    --yellow-light:#F5D65C;
+
+    --black:#111111;
+
     --white:#FFFFFF;
     --off-white:#F7F8FA;
-    --dark-text:#17202A;
-    --muted-text:#5D6975;
+
+    --silver:#B8BEC7;
+    --silver-light:#E5E7EB;
+
+    --text:#17202A;
+    --muted:#5D6975;
 }
 
-/* PAGE */
 
-.contact-page{
+/* =========================================================
+   GENERAL
+========================================================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
     background:var(--off-white);
-    color:var(--dark-text);
+    color:var(--text);
 }
 
 .contact-page p,
@@ -50,12 +71,17 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 .contact-page h1,
 .contact-page h2,
 .contact-page h3,
-.site-footer h2{
+.contact-footer h2{
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 }
+
+img{
+    max-width:100%;
+}
+
 
 /* =========================================================
    HEADER
@@ -64,33 +90,38 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 .contact-header{
     background:var(--white);
     border-bottom:1px solid var(--silver-light);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 .contact-header-inner{
-    max-width:1200px;
+    max-width:1250px;
     margin:auto;
-    padding:22px 7%;
+    padding:18px 6%;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
+
     gap:30px;
 }
 
 .contact-brand{
     text-decoration:none;
-    color:var(--deep-blue);
+    color:var(--blue);
 }
 
 .contact-brand h1{
     margin:0;
-    font-size:1.7rem;
+    font-size:1.75rem;
+    letter-spacing:-.03em;
 }
 
 .contact-brand p{
     margin:4px 0 0;
-    color:var(--muted-text);
-    font-size:.78rem;
+    color:var(--muted);
+    font-size:.75rem;
 }
 
 .contact-nav{
@@ -98,15 +129,18 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
     align-items:center;
     justify-content:center;
     flex-wrap:wrap;
-    gap:8px;
+    gap:5px;
 }
 
 .contact-nav a{
-    color:var(--deep-blue);
+    color:var(--blue);
     text-decoration:none;
-    padding:10px 14px;
-    font-weight:700;
-    font-size:.9rem;
+
+    padding:10px 13px;
+
+    font-size:.88rem;
+    font-weight:800;
+
     transition:.25s ease;
 }
 
@@ -115,48 +149,63 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 }
 
 .contact-nav a.active{
+    background:var(--blue);
     color:var(--white);
-    background:var(--deep-blue);
 }
+
 
 /* =========================================================
    HERO
 ========================================================= */
 
 .contact-hero{
-    max-width:1200px;
+    max-width:1250px;
     margin:auto;
 
-    padding:95px 7% 105px;
+    padding:100px 6% 110px;
 
     display:grid;
-    grid-template-columns:1.05fr .95fr;
+    grid-template-columns:1.1fr .9fr;
+
     align-items:center;
 
-    gap:75px;
+    gap:80px;
 }
 
 .contact-label{
     color:var(--green);
-    font-size:.75rem;
+
+    font-size:.72rem;
     font-weight:900;
-    letter-spacing:.2em;
-    margin-bottom:20px;
+
+    letter-spacing:.22em;
+
+    margin:0 0 20px;
 }
 
 .contact-hero h2{
-    color:var(--deep-blue);
-    font-size:clamp(3.1rem,7vw,6.1rem);
-    line-height:.95;
-    margin:0 0 28px;
+    color:var(--blue);
+
+    font-size:clamp(3.2rem,7vw,6.3rem);
+
+    line-height:.92;
+
+    letter-spacing:-.05em;
+
+    margin:0 0 30px;
+
     max-width:700px;
 }
 
 .contact-lead{
-    max-width:650px;
-    color:var(--muted-text);
-    font-size:1.06rem;
+    color:var(--muted);
+
+    font-size:1.05rem;
+
     line-height:1.85;
+
+    max-width:650px;
+
     margin:0 0 12px;
 }
 
@@ -164,21 +213,27 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
     display:flex;
     flex-wrap:wrap;
     gap:12px;
-    margin-top:30px;
+
+    margin-top:32px;
 }
 
 .contact-main-button{
     display:inline-block;
+
     padding:15px 24px;
-    background:var(--deep-blue);
+
+    background:var(--blue);
     color:var(--white);
+
     text-decoration:none;
-    font-weight:800;
+
+    font-weight:900;
+
     transition:.25s ease;
 }
 
 .contact-main-button:hover{
-    background:var(--green);
+    background:var(--red);
     transform:translateY(-3px);
 }
 
@@ -187,70 +242,122 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 }
 
 .contact-main-button.whatsapp:hover{
-    background:var(--deep-blue);
+    background:var(--blue);
 }
 
-/* HERO VISUAL */
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
 
 .contact-visual{
     position:relative;
+
     height:430px;
-    max-width:460px;
+
     width:100%;
+    max-width:470px;
+
     margin-left:auto;
 }
 
-.contact-circle{
+.contact-photo-frame{
+    position:absolute;
+
+    width:275px;
+    height:350px;
+
+    right:50px;
+    top:20px;
+
+    overflow:hidden;
+
+    border:10px solid var(--white);
+
+    box-shadow:
+        0 25px 60px rgba(11,31,58,.18);
+
+    transform:rotate(3deg);
+
+    background:var(--silver-light);
+
+    z-index:3;
+}
+
+.contact-photo-frame img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.hero-shape{
     position:absolute;
     border-radius:50%;
-    box-shadow:0 25px 60px rgba(11,31,58,.14);
 }
 
-.circle-blue{
-    width:270px;
-    height:270px;
-    background:var(--deep-blue);
-    top:5px;
-    right:35px;
-}
-
-.circle-green{
+.hero-blue{
     width:190px;
     height:190px;
-    background:var(--green);
-    left:15px;
-    top:160px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    color:var(--white);
-    font-size:.75rem;
-    font-weight:900;
-    letter-spacing:.2em;
-}
-
-.circle-red{
-    width:105px;
-    height:105px;
-    background:var(--red);
     right:0;
-    bottom:15px;
+    top:0;
+
+    background:var(--blue);
 }
+
+.hero-green{
+    width:135px;
+    height:135px;
+
+    left:20px;
+    bottom:30px;
+
+    background:var(--green);
+
+    z-index:4;
+}
+
+.hero-red{
+    width:95px;
+    height:95px;
+
+    right:0;
+    bottom:0;
+
+    background:var(--red);
+
+    z-index:5;
+}
+
+.hero-yellow{
+    width:55px;
+    height:55px;
+
+    left:5px;
+    top:55px;
+
+    background:var(--yellow);
+
+    z-index:6;
+}
+
 
 /* =========================================================
    DIRECT CONTACT
 ========================================================= */
 
 .direct-contact{
-    background:var(--deep-blue);
+    background:var(--blue);
     color:var(--white);
-    padding:85px 7%;
+
+    padding:90px 6%;
 }
 
 .direct-contact-inner{
-    max-width:1200px;
+    max-width:1250px;
     margin:auto;
 }
 
@@ -260,164 +367,242 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 }
 
 .direct-heading .contact-label{
-    color:var(--green-light);
+    color:var(--yellow);
 }
 
 .direct-heading h2{
-    font-size:clamp(2.3rem,5vw,4.3rem);
+    font-size:clamp(2.5rem,5vw,4.4rem);
+
+    line-height:1;
+
     margin:0 0 20px;
 }
 
 .direct-heading p{
     color:var(--silver-light);
+
     line-height:1.8;
+
     max-width:700px;
 }
 
 .contact-method-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
+
     gap:18px;
 }
 
 .contact-method{
     display:block;
+
     text-decoration:none;
     color:var(--white);
 
     padding:30px 25px;
-    border:1px solid rgba(255,255,255,.16);
+
+    border:1px solid rgba(255,255,255,.15);
+
     background:rgba(255,255,255,.05);
 
     transition:.3s ease;
 }
 
 .contact-method:hover{
-    transform:translateY(-5px);
+    transform:translateY(-7px);
+
     background:rgba(255,255,255,.09);
+
+    border-color:rgba(255,255,255,.3);
 }
 
 .method-icon{
-    width:58px;
-    height:58px;
+    width:64px;
+    height:64px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    border-radius:16px;
-
-    background:var(--green);
-    color:var(--white);
-
-    font-size:1.45rem;
-    font-weight:900;
+    border-radius:17px;
 
     margin-bottom:22px;
+
+    overflow:hidden;
+
+    background:var(--white);
 }
 
-.method-icon.whatsapp{
-    background:#25D366;
-}
+.method-icon img{
+    width:100%;
+    height:100%;
 
-.method-icon.phone{
-    background:var(--red);
+    object-fit:cover;
+
+    display:block;
 }
 
 .method-icon.email{
-    background:var(--deep-blue-light);
-    border:1px solid rgba(255,255,255,.2);
+    background:var(--blue-light);
+
+    color:var(--white);
+
+    font-size:1.7rem;
+    font-weight:900;
 }
 
 .method-label{
     display:block;
+
     color:var(--silver);
+
     text-transform:uppercase;
+
     letter-spacing:.15em;
+
     font-size:.68rem;
+
     font-weight:900;
+
     margin-bottom:8px;
 }
 
 .method-value{
     display:block;
+
     color:var(--white);
+
     font-size:1.05rem;
+
     font-weight:800;
+
     word-break:break-word;
 }
+
 
 /* =========================================================
    SOCIAL MEDIA
 ========================================================= */
 
 .social-section{
-    max-width:1200px;
+    max-width:1250px;
     margin:auto;
-    padding:100px 7%;
+
+    padding:100px 6%;
 }
 
 .social-heading{
-    max-width:720px;
+    max-width:750px;
+
     margin-bottom:50px;
 }
 
+.social-heading .contact-label{
+    color:var(--red);
+}
+
 .social-heading h2{
-    color:var(--deep-blue);
-    font-size:clamp(2.5rem,5vw,4.5rem);
+    color:var(--blue);
+
+    font-size:clamp(2.6rem,5vw,4.7rem);
+
+    line-height:1;
+
     margin:0 0 20px;
 }
 
 .social-heading p{
-    color:var(--muted-text);
+    color:var(--muted);
+
     line-height:1.8;
 }
 
 .social-grid{
     display:grid;
+
     grid-template-columns:repeat(2,1fr);
+
     gap:20px;
 }
 
 .social-card{
     display:flex;
+
     align-items:center;
+
     gap:20px;
 
     position:relative;
 
-    min-height:140px;
+    min-height:145px;
+
     padding:25px;
 
     background:var(--white);
+
     border:1px solid var(--silver-light);
 
     text-decoration:none;
 
     transition:.3s ease;
+
+    overflow:hidden;
+}
+
+.social-card::after{
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+    height:90px;
+
+    right:-30px;
+    bottom:-40px;
+
+    border-radius:50%;
+
+    background:var(--yellow);
+
+    opacity:.12;
 }
 
 .social-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 20px 45px rgba(11,31,58,.12);
+    transform:translateY(-7px);
+
+    box-shadow:
+        0 22px 45px rgba(11,31,58,.12);
+
+    border-color:var(--yellow);
 }
 
 .social-icon{
-    width:62px;
-    height:62px;
+    width:70px;
+    height:70px;
+
     flex-shrink:0;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
-    background:var(--deep-blue);
-    color:var(--white);
+    border-radius:18px;
 
-    border-radius:17px;
+    overflow:hidden;
 
-    font-size:1.55rem;
-    font-weight:900;
+    background:var(--off-white);
+
+    border:1px solid var(--silver-light);
+}
+
+.social-icon img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
 }
 
 .social-info{
@@ -426,83 +611,157 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 
 .social-platform{
     display:block;
+
     color:var(--green);
+
     text-transform:uppercase;
+
     letter-spacing:.15em;
-    font-size:.67rem;
+
+    font-size:.66rem;
+
     font-weight:900;
+
     margin-bottom:6px;
 }
 
 .social-info h3{
-    color:var(--deep-blue);
+    color:var(--blue);
+
     font-family:
         "Inter",
         "Segoe UI",
         Arial,
         sans-serif;
-    font-size:1.15rem;
+
+    font-size:1.18rem;
+
     margin:0 0 6px;
 }
 
 .social-info p{
-    color:var(--muted-text);
-    font-size:.85rem;
+    color:var(--muted);
+
+    font-size:.84rem;
+
     line-height:1.5;
+
     margin:0;
 }
 
 .social-arrow{
     position:absolute;
+
     right:20px;
-    top:20px;
+    top:18px;
+
     color:var(--red);
+
     font-size:1.2rem;
+
+    z-index:2;
 }
 
+
 /* =========================================================
-   VISUAL IDENTITY / LOGOS
+   SOCIAL BRAND STRIP
+========================================================= */
+
+.brand-strip{
+    background:var(--yellow);
+
+    padding:18px 6%;
+
+    overflow:hidden;
+}
+
+.brand-strip-inner{
+    max-width:1250px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:28px;
+
+    flex-wrap:wrap;
+}
+
+.brand-strip span{
+    color:var(--black);
+
+    font-size:.72rem;
+
+    font-weight:1000;
+
+    letter-spacing:.16em;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   VISUAL IDENTITY
 ========================================================= */
 
 .identity-section{
     background:#EEF3F0;
-    padding:100px 7%;
+
+    padding:100px 6%;
 }
 
 .identity-inner{
-    max-width:1200px;
+    max-width:1250px;
     margin:auto;
 }
 
 .identity-heading{
-    max-width:720px;
+    max-width:750px;
+
     margin-bottom:50px;
 }
 
+.identity-heading .contact-label{
+    color:var(--red);
+}
+
 .identity-heading h2{
-    color:var(--deep-blue);
-    font-size:clamp(2.4rem,5vw,4.4rem);
+    color:var(--blue);
+
+    font-size:clamp(2.5rem,5vw,4.5rem);
+
+    line-height:1;
+
     margin:0 0 20px;
 }
 
 .identity-heading p{
-    color:var(--muted-text);
+    color:var(--muted);
+
     line-height:1.8;
 }
 
 .logo-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:repeat(5,1fr);
+
     gap:18px;
 }
 
 .logo-card{
-    min-height:180px;
+    min-height:175px;
 
     background:var(--white);
+
     border:1px solid var(--silver-light);
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
@@ -512,67 +771,114 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 }
 
 .logo-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 18px 35px rgba(11,31,58,.1);
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 18px 35px rgba(11,31,58,.1);
+
+    border-color:var(--yellow);
 }
 
 .logo-card img{
     display:block;
+
     width:100%;
-    height:130px;
+
+    height:125px;
+
     object-fit:contain;
 }
 
+
 /* =========================================================
    PERSONAL PHOTO GALLERY
+   EXACTLY 10 PHOTOS
 ========================================================= */
 
 .personal-gallery{
-    max-width:1200px;
+    max-width:1250px;
+
     margin:auto;
-    padding:100px 7%;
+
+    padding:100px 6%;
 }
 
 .personal-gallery-heading{
-    max-width:700px;
+    max-width:750px;
+
     margin-bottom:45px;
 }
 
+.personal-gallery-heading .contact-label{
+    color:var(--green);
+}
+
 .personal-gallery-heading h2{
-    color:var(--deep-blue);
-    font-size:clamp(2.4rem,5vw,4.4rem);
+    color:var(--blue);
+
+    font-size:clamp(2.5rem,5vw,4.5rem);
+
+    line-height:1;
+
     margin:0 0 20px;
 }
 
 .personal-gallery-heading p{
-    color:var(--muted-text);
+    color:var(--muted);
+
     line-height:1.8;
 }
 
 .photo-grid{
     display:grid;
+
     grid-template-columns:repeat(5,1fr);
+
     gap:15px;
 }
 
 .photo-card{
     aspect-ratio:1/1;
+
     overflow:hidden;
+
     background:var(--white);
-    border:1px solid var(--silver-light);
+
+    border:4px solid var(--white);
+
+    box-shadow:
+        0 10px 25px rgba(11,31,58,.08);
+
+    position:relative;
+}
+
+.photo-card:nth-child(3n){
+    border-bottom-color:var(--red);
+}
+
+.photo-card:nth-child(3n+1){
+    border-bottom-color:var(--green);
+}
+
+.photo-card:nth-child(3n+2){
+    border-bottom-color:var(--yellow);
 }
 
 .photo-card img{
     width:100%;
     height:100%;
+
     object-fit:cover;
+
     display:block;
-    transition:.4s ease;
+
+    transition:.5s ease;
 }
 
 .photo-card:hover img{
-    transform:scale(1.06);
+    transform:scale(1.07);
 }
+
 
 /* =========================================================
    SERVICES
@@ -580,9 +886,11 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 
 .contact-services{
     background:var(--white);
-    padding:100px 7%;
+
+    padding:100px 6%;
 
     display:grid;
+
     grid-template-columns:1fr 1fr;
 
     gap:80px;
@@ -592,25 +900,35 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
     max-width:620px;
 }
 
+.services-text .contact-label{
+    color:var(--red);
+}
+
 .services-text h2{
-    color:var(--deep-blue);
+    color:var(--blue);
+
     font-size:clamp(2.5rem,5vw,4.5rem);
+
     line-height:1;
+
     margin:0 0 25px;
 }
 
 .services-text p{
-    color:var(--muted-text);
+    color:var(--muted);
+
     line-height:1.8;
 }
 
 .services-list{
-    border-top:1px solid var(--silver);
+    border-top:2px solid var(--blue);
 }
 
 .service-item{
     display:flex;
+
     align-items:center;
+
     gap:25px;
 
     padding:25px 0;
@@ -620,12 +938,28 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 
 .service-item-number{
     color:var(--red);
-    font-family:Georgia,"Times New Roman",serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-size:1.05rem;
+
+    font-weight:bold;
+}
+
+.service-item:nth-child(2) .service-item-number{
+    color:var(--green);
+}
+
+.service-item:nth-child(3) .service-item-number{
+    color:var(--yellow);
 }
 
 .service-item h3{
-    color:var(--deep-blue);
+    color:var(--blue);
+
     margin:0;
 
     font-family:
@@ -637,25 +971,75 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
     font-size:1rem;
 }
 
+
 /* =========================================================
-   STUDENT VOICES CTA
+   STUDENT VOICES
 ========================================================= */
 
 .student-voices-section{
-    background:var(--deep-blue);
+    background:var(--blue);
+
     color:var(--white);
-    padding:90px 7%;
+
+    padding:90px 6%;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.student-voices-section::before{
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    border-radius:50%;
+
+    background:var(--red);
+
+    right:-100px;
+    top:-120px;
+
+    opacity:.45;
+}
+
+.student-voices-section::after{
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    background:var(--yellow);
+
+    left:-50px;
+    bottom:-50px;
+
+    opacity:.7;
 }
 
 .student-voices-inner{
-    max-width:1200px;
+    max-width:1250px;
+
     margin:auto;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     gap:45px;
+
+    position:relative;
+
+    z-index:2;
 }
 
 .student-voices-text{
@@ -663,29 +1047,36 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 }
 
 .student-voices-text .contact-label{
-    color:var(--green-light);
+    color:var(--yellow);
 }
 
 .student-voices-text h2{
-    font-size:clamp(2.4rem,5vw,4.5rem);
+    font-size:clamp(2.5rem,5vw,4.6rem);
+
+    line-height:1;
+
     margin:0 0 18px;
 }
 
 .student-voices-text p{
     color:var(--silver-light);
+
     line-height:1.8;
 }
 
 .student-voices-button{
     display:inline-block;
+
     flex-shrink:0;
 
     padding:17px 27px;
 
     background:var(--red);
+
     color:var(--white);
 
     text-decoration:none;
+
     font-weight:900;
 
     transition:.25s ease;
@@ -693,31 +1084,44 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 
 .student-voices-button:hover{
     background:var(--green);
+
     transform:translateY(-3px);
 }
+
 
 /* =========================================================
    FINAL CTA
 ========================================================= */
 
 .contact-final{
-    max-width:1200px;
+    max-width:1250px;
+
     margin:auto;
 
-    padding:100px 7%;
+    padding:100px 6%;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     gap:45px;
 }
 
+.contact-final .contact-label{
+    color:var(--green);
+}
+
 .contact-final h2{
-    color:var(--deep-blue);
-    font-size:clamp(2.4rem,5vw,4.5rem);
+    color:var(--blue);
+
+    font-size:clamp(2.5rem,5vw,4.6rem);
+
     line-height:1;
+
     margin:0;
+
     max-width:750px;
 }
 
@@ -727,9 +1131,11 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
     padding:18px 28px;
 
     background:var(--red);
+
     color:var(--white);
 
     text-decoration:none;
+
     font-weight:900;
 
     transition:.25s ease;
@@ -737,52 +1143,72 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 
 .final-contact-button:hover{
     background:var(--green);
+
     transform:translateY(-3px);
 }
+
 
 /* =========================================================
    FOOTER
 ========================================================= */
 
 .contact-footer{
-    background:var(--deep-blue);
+    background:var(--black);
+
     color:var(--white);
-    padding:70px 7% 25px;
+
+    padding:75px 6% 25px;
+
+    border-top:6px solid var(--yellow);
 }
 
 .footer-grid{
-    max-width:1200px;
+    max-width:1250px;
+
     margin:auto;
 
     display:grid;
+
     grid-template-columns:1.3fr 1fr 1fr;
+
     gap:50px;
 }
 
 .footer-brand h2{
     margin:0 0 12px;
+
     font-size:2rem;
 }
 
 .footer-brand p{
     color:var(--silver-light);
+
     line-height:1.7;
-    max-width:400px;
+
+    max-width:420px;
 }
 
 .footer-column h3{
-    color:var(--green-light);
+    color:var(--yellow);
+
     font-size:.75rem;
+
     letter-spacing:.16em;
+
     text-transform:uppercase;
+
     margin:0 0 18px;
 }
 
 .footer-column a{
     display:block;
+
     color:var(--silver-light);
+
     text-decoration:none;
+
     margin-bottom:11px;
+
     transition:.2s ease;
 }
 
@@ -791,8 +1217,10 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 }
 
 .footer-bottom{
-    max-width:1200px;
+    max-width:1250px;
+
     margin:45px auto 0;
+
     padding-top:22px;
 
     border-top:1px solid rgba(255,255,255,.15);
@@ -800,29 +1228,35 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 
 .footer-bottom p{
     margin:0;
+
     color:var(--silver);
+
     font-size:.8rem;
 }
+
 
 /* =========================================================
    MOBILE
 ========================================================= */
 
-@media(max-width:900px){
+@media(max-width:1000px){
 
     .contact-header-inner{
         flex-direction:column;
+
         align-items:flex-start;
     }
 
     .contact-nav{
         width:100%;
+
         justify-content:flex-start;
     }
 
     .contact-hero{
         grid-template-columns:1fr;
-        padding-top:70px;
+
+        padding-top:75px;
     }
 
     .contact-visual{
@@ -834,7 +1268,7 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
     }
 
     .logo-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(3,1fr);
     }
 
     .photo-grid{
@@ -843,16 +1277,19 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 
     .contact-services{
         grid-template-columns:1fr;
+
         gap:55px;
     }
 
     .student-voices-inner{
         flex-direction:column;
+
         align-items:flex-start;
     }
 
     .contact-final{
         flex-direction:column;
+
         align-items:flex-start;
     }
 
@@ -861,19 +1298,21 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
     }
 }
 
-@media(max-width:600px){
+
+@media(max-width:650px){
 
     .contact-header-inner{
         padding:18px 5%;
     }
 
     .contact-nav{
-        gap:3px;
+        gap:2px;
     }
 
     .contact-nav a{
-        padding:8px 9px;
-        font-size:.78rem;
+        padding:8px 8px;
+
+        font-size:.76rem;
     }
 
     .contact-hero{
@@ -885,31 +1324,44 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
     }
 
     .contact-visual{
-        height:330px;
+        height:350px;
     }
 
-    .circle-blue{
-        width:195px;
-        height:195px;
-        right:20px;
+    .contact-photo-frame{
+        width:220px;
+        height:290px;
+
+        right:30px;
     }
 
-    .circle-green{
-        width:145px;
-        height:145px;
+    .hero-blue{
+        width:150px;
+        height:150px;
+    }
+
+    .hero-green{
+        width:105px;
+        height:105px;
+
         left:5px;
-        top:125px;
+        bottom:25px;
     }
 
-    .circle-red{
-        width:78px;
-        height:78px;
+    .hero-red{
+        width:75px;
+        height:75px;
+    }
+
+    .hero-yellow{
+        width:42px;
+        height:42px;
     }
 
     .direct-contact,
     .identity-section,
     .contact-services,
-    .student-voices-section{
+    .student-voices-section,
+    .contact-footer{
         padding-left:6%;
         padding-right:6%;
     }
@@ -927,11 +1379,13 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 
     .logo-grid{
         grid-template-columns:1fr 1fr;
+
         gap:12px;
     }
 
     .logo-card{
         min-height:140px;
+
         padding:15px;
     }
 
@@ -945,723 +1399,850 @@ content="Contact Nketia-Marfo for ideas, conversations, opportunities, collabora
 
     .footer-grid{
         grid-template-columns:1fr;
+
         gap:35px;
+    }
+
+    .brand-strip-inner{
+        gap:15px;
     }
 }
 
 </style></head><body><!-- =========================================================
      HEADER
-========================================================= --><header class="contact-header"><div class="contact-header-inner">
+========================================================= --><header class="contact-header"><div class="contact-header-inner"><a href="index.html" class="contact-brand">
 
-    <a href="index.html" class="contact-brand">
+    <h1>Nketia-Marfo</h1>
 
-        <h1>Nketia-Marfo</h1>
+    <p>
+        Thinking deeply. Creating freely. Sharing ideas.
+    </p>
 
-        <p>
-            Thinking deeply. Creating freely. Sharing ideas.
-        </p>
+</a>
 
+
+<nav class="contact-nav">
+
+    <a href="index.html">
+        Home
     </a>
 
-    <nav class="contact-nav">
+    <a href="about.html">
+        About
+    </a>
 
-        <a href="index.html">
-            Home
-        </a>
+    <a href="blog.html">
+        Blog
+    </a>
 
-        <a href="about.html">
-            About
-        </a>
+    <a href="Students-Voice.html">
+        Student Voices
+    </a>
 
-        <a href="blog.html">
-            Blog
-        </a>
+    <a href="contact.html" class="active">
+        Contact
+    </a>
 
-        <!-- EXACT FILE NAME -->
-        <a href="Students-Voice.html">
-            Student Voices
-        </a>
+</nav>
 
-        <a href="contact.html" class="active">
-            Contact
-        </a>
-
-    </nav>
-
-</div>
-
-</header><!-- =========================================================
-     MAIN CONTACT PAGE
-========================================================= --><main class="contact-page"><!-- =========================================================
+</div></header><main class="contact-page"><!-- =========================================================
      HERO
-========================================================= --><section class="contact-hero"><div>
+========================================================= --><section class="contact-hero"><div><p class="contact-label">
+    LET'S CONNECT
+</p>
 
-    <p class="contact-label">
-        LET'S CONNECT
-    </p>
+<h2>
+    Start a conversation.
+</h2>
 
-    <h2>
-        Start a conversation.
-    </h2>
+<p class="contact-lead">
+    Have an idea, question, opportunity, collaboration,
+    or something you'd like to discuss?
+</p>
 
-    <p class="contact-lead">
-        Have an idea, question, opportunity, collaboration,
-        or something you'd like to discuss?
-    </p>
+<p class="contact-lead">
+    Whether it involves music, creativity, education,
+    ideas, projects or meaningful conversations,
+    you're welcome here.
+</p>
 
-    <p class="contact-lead">
-        Please feel free to reach out for services,
-        creative projects, music, ideas, or meaningful
-        conversations.
-    </p>
 
-    <div class="contact-main-buttons">
+<div class="contact-main-buttons">
 
-        <a
-            href="mailto:nketiamarfo157@gmail.com"
-            class="contact-main-button"
-        >
-            Send an Email
-        </a>
-
-        <a
-            href="https://wa.me/233593378431"
-            class="contact-main-button whatsapp"
-        >
-            WhatsApp Me
-        </a>
-
-    </div>
-
-</div>
-
-
-<div class="contact-visual">
-
-    <div class="contact-circle circle-blue"></div>
-
-    <div class="contact-circle circle-green">
-        CONNECT
-    </div>
-
-    <div class="contact-circle circle-red"></div>
-
-</div>
-
-</section><!-- =========================================================
-     DIRECT CONTACT
-========================================================= --><section class="direct-contact"><div class="direct-contact-inner">
-
-    <div class="direct-heading">
-
-        <p class="contact-label">
-            DIRECT CONTACT
-        </p>
-
-        <h2>
-            Reach me directly.
-        </h2>
-
-        <p>
-            Choose whichever contact method works best for
-            you. WhatsApp, phone and email are all available.
-        </p>
-
-    </div>
-
-
-    <div class="contact-method-grid">
-
-
-        <!-- WHATSAPP -->
-
-        <a
-            href="https://wa.me/233593378431"
-            class="contact-method"
-        >
-
-            <div class="method-icon whatsapp">
-                WA
-            </div>
-
-            <span class="method-label">
-                WhatsApp
-            </span>
-
-            <span class="method-value">
-                0593378431
-            </span>
-
-        </a>
-
-
-        <!-- PHONE -->
-
-        <a
-            href="tel:0593378431"
-            class="contact-method"
-        >
-
-            <div class="method-icon phone">
-                ☎
-            </div>
-
-            <span class="method-label">
-                Phone
-            </span>
-
-            <span class="method-value">
-                0593378431
-            </span>
-
-        </a>
-
-
-        <!-- EMAIL -->
-
-        <a
-            href="mailto:nketiamarfo157@gmail.com"
-            class="contact-method"
-        >
-
-            <div class="method-icon email">
-                @
-            </div>
-
-            <span class="method-label">
-                Email
-            </span>
-
-            <span class="method-value">
-                nketiamarfo157@gmail.com
-            </span>
-
-        </a>
-
-    </div>
-
-</div>
-
-</section><!-- =========================================================
-     SOCIAL MEDIA
-========================================================= --><section class="social-section"><div class="social-heading">
-
-    <p class="contact-label">
-        FIND ME ONLINE
-    </p>
-
-    <h2>
-        Follow the journey.
-    </h2>
-
-    <p>
-        Follow along for music, ideas, creativity, stories,
-        projects and moments from the journey.
-    </p>
-
-</div>
-
-
-<div class="social-grid">
-
-
-    <a href="#" class="social-card">
-
-        <div class="social-icon">
-            ♪
-        </div>
-
-        <div class="social-info">
-
-            <span class="social-platform">
-                TikTok
-            </span>
-
-            <h3>
-                Nketia Marfo
-            </h3>
-
-            <p>
-                Music, creativity & short-form ideas
-            </p>
-
-        </div>
-
-        <span class="social-arrow">
-            ↗
-        </span>
-
-    </a>
-
-
-    <a href="#" class="social-card">
-
-        <div class="social-icon">
-            f
-        </div>
-
-        <div class="social-info">
-
-            <span class="social-platform">
-                Facebook
-            </span>
-
-            <h3>
-                Nketia Marfo
-            </h3>
-
-            <p>
-                Updates, stories & community
-            </p>
-
-        </div>
-
-        <span class="social-arrow">
-            ↗
-        </span>
-
-    </a>
-
-
-    <a href="#" class="social-card">
-
-        <div class="social-icon">
-            ◎
-        </div>
-
-        <div class="social-info">
-
-            <span class="social-platform">
-                Instagram
-            </span>
-
-            <h3>
-                Affectionate_Music
-            </h3>
-
-            <p>
-                Music, creativity & visual moments
-            </p>
-
-        </div>
-
-        <span class="social-arrow">
-            ↗
-        </span>
-
-    </a>
-
-
-    <a href="#" class="social-card">
-
-        <div class="social-icon">
-            𝕏
-        </div>
-
-        <div class="social-info">
-
-            <span class="social-platform">
-                X
-            </span>
-
-            <h3>
-                Nketia
-            </h3>
-
-            <p>
-                Thoughts, conversations & ideas
-            </p>
-
-        </div>
-
-        <span class="social-arrow">
-            ↗
-        </span>
-
-    </a>
-
-</div>
-
-</section><!-- =========================================================
-     LOGOS / VISUAL IDENTITY
-========================================================= --><section class="identity-section"><div class="identity-inner">
-
-    <div class="identity-heading">
-
-        <p class="contact-label">
-            VISUAL IDENTITY
-        </p>
-
-        <h2>
-            The Nketia-Marfo presence.
-        </h2>
-
-        <p>
-            A selection of visual identity assets used across
-            my creative work, projects and digital presence.
-        </p>
-
-    </div>
-
-
-    <div class="logo-grid">
-
-
-        <div class="logo-card">
-            <img
-                src="file_0000000012c871fdbce691f44f2fc891.png"
-                alt="Nketia-Marfo visual identity"
-            >
-        </div>
-
-
-        <div class="logo-card">
-            <img
-                src="file_000000007ac471f4af129031a9ca9168.png"
-                alt="Nketia-Marfo visual identity"
-            >
-        </div>
-
-
-        <div class="logo-card">
-            <img
-                src="file_0000000085dc71f48ae49782334638bd.png"
-                alt="Nketia-Marfo visual identity"
-            >
-        </div>
-
-
-        <div class="logo-card">
-            <img
-                src="file_0000000095b471fdb0797eacb26bb28d.png"
-                alt="Nketia-Marfo visual identity"
-            >
-        </div>
-
-
-        <div class="logo-card">
-            <img
-                src="file_0000000097d8720c92b40fe648710dad.png"
-                alt="Nketia-Marfo visual identity"
-            >
-        </div>
-
-
-        <div class="logo-card">
-            <img
-                src="file_00000000dad071fd9398c12e37f40351.png"
-                alt="Nketia-Marfo visual identity"
-            >
-        </div>
-
-
-        <div class="logo-card">
-            <img
-                src="file_00000000f10871f49609646e5a2c21be.png"
-                alt="Nketia-Marfo visual identity"
-            >
-        </div>
-
-
-        <div class="logo-card">
-            <img
-                src="file_00000000f8a871f4bb452ab5ea523124.png"
-                alt="Nketia-Marfo visual identity"
-            >
-        </div>
-
-
-    </div>
-
-</div>
-
-</section><!-- =========================================================
-     PERSONAL PHOTOS
-========================================================= --><section class="personal-gallery"><div class="personal-gallery-heading">
-
-    <p class="contact-label">
-        BEYOND THE CONTACT FORM
-    </p>
-
-    <h2>
-        A little more of the person behind the page.
-    </h2>
-
-    <p>
-        These photographs add a personal touch to the contact
-        experience without attaching any particular image to
-        a specific article, student story or written piece.
-    </p>
-
-</div>
-
-
-<div class="photo-grid">
-
-
-    <div class="photo-card">
-        <img
-            src="1725906574828.jpg"
-            alt="Nketia-Marfo"
-        >
-    </div>
-
-
-    <div class="photo-card">
-        <img
-            src="1744567769378.jpg"
-            alt="Nketia-Marfo"
-        >
-    </div>
-
-
-    <div class="photo-card">
-        <img
-            src="1744670371986.jpg"
-            alt="Nketia-Marfo"
-        >
-    </div>
-
-
-    <div class="photo-card">
-        <img
-            src="1783562225069.jpg"
-            alt="Nketia-Marfo"
-        >
-    </div>
-
-
-    <div class="photo-card">
-        <img
-            src="IMG-20250320-WA0160.jpg"
-            alt="Nketia-Marfo"
-        >
-    </div>
-
-
-</div>
-
-</section><!-- =========================================================
-     SERVICES
-========================================================= --><section class="contact-services"><div class="services-text">
-
-    <p class="contact-label">
-        WORK WITH ME
-    </p>
-
-    <h2>
-        Have something in mind?
-    </h2>
-
-    <p>
-        Whether you have a creative idea, a service request,
-        an opportunity, a music project, or simply want to
-        start a meaningful conversation, feel free to reach out.
-    </p>
-
-    <p>
-        Every conversation begins somewhere.
-    </p>
-
-</div>
-
-
-<div class="services-list">
-
-
-    <div class="service-item">
-
-        <span class="service-item-number">
-            01
-        </span>
-
-        <h3>
-            Creative Services
-        </h3>
-
-    </div>
-
-
-    <div class="service-item">
-
-        <span class="service-item-number">
-            02
-        </span>
-
-        <h3>
-            Music & Collaboration
-        </h3>
-
-    </div>
-
-
-    <div class="service-item">
-
-        <span class="service-item-number">
-            03
-        </span>
-
-        <h3>
-            Ideas & Projects
-        </h3>
-
-    </div>
-
-
-    <div class="service-item">
-
-        <span class="service-item-number">
-            04
-        </span>
-
-        <h3>
-            Conversations & Opportunities
-        </h3>
-
-    </div>
-
-
-</div>
-
-</section><!-- =========================================================
-     STUDENT VOICES
-========================================================= --><section class="student-voices-section"><div class="student-voices-inner">
-
-    <div class="student-voices-text">
-
-        <p class="contact-label">
-            STUDENT VOICES
-        </p>
-
-        <h2>
-            Every student has a story.
-        </h2>
-
-        <p>
-            Explore experiences, reflections, challenges,
-            discoveries and ideas from students around the world.
-        </p>
-
-    </div>
-
-
-    <!-- EXACT FILE NAME -->
     <a
-        href="Students-Voice.html"
-        class="student-voices-button"
+        href="mailto:nketiamarfo157@gmail.com"
+        class="contact-main-button"
     >
-        Explore Student Voices →
+        Send an Email
+    </a>
+
+    <a
+        href="https://wa.me/233593378431"
+        class="contact-main-button whatsapp"
+    >
+        WhatsApp Me
     </a>
 
 </div>
 
-</section><!-- =========================================================
-     FINAL CTA
-========================================================= --><section class="contact-final"><div>
+</div><div class="contact-visual"><div class="hero-shape hero-blue"></div>
+
+<div class="hero-shape hero-green"></div>
+
+<div class="hero-shape hero-red"></div>
+
+<div class="hero-shape hero-yellow"></div>
+
+
+<!-- One personal image used as the main contact visual -->
+
+<div class="contact-photo-frame">
+
+    <img
+        src="IMG-20250320-WA0168.jpg"
+        alt="Nketia-Marfo"
+    >
+
+</div>
+
+</div></section><!-- =========================================================
+     DIRECT CONTACT
+========================================================= --><section class="direct-contact"><div class="direct-contact-inner"><div class="direct-heading">
 
     <p class="contact-label">
-        NOBODY STARTS ALONE
+        DIRECT CONTACT
     </p>
 
     <h2>
-        Let's create something meaningful.
+        Reach me directly.
     </h2>
+
+    <p>
+        Choose whichever contact method works best for you.
+        WhatsApp, phone and email are all available.
+    </p>
+
+</div>
+
+
+<div class="contact-method-grid">
+
+
+    <!-- WHATSAPP -->
+
+    <a
+        href="https://wa.me/233593378431"
+        class="contact-method"
+    >
+
+        <div class="method-icon">
+
+            <img
+                src="whatsapp-logo-icon-vector-56892597.jpg"
+                alt="WhatsApp"
+            >
+
+        </div>
+
+        <span class="method-label">
+            WhatsApp
+        </span>
+
+        <span class="method-value">
+            0593378431
+        </span>
+
+    </a>
+
+
+
+    <!-- PHONE -->
+
+    <a
+        href="tel:0593378431"
+        class="contact-method"
+    >
+
+        <div class="method-icon phone"
+             style="background:#A61B29;color:white;font-size:1.8rem;">
+            ☎
+        </div>
+
+        <span class="method-label">
+            Phone
+        </span>
+
+        <span class="method-value">
+            0593378431
+        </span>
+
+    </a>
+
+
+
+    <!-- EMAIL -->
+
+    <a
+        href="mailto:nketiamarfo157@gmail.com"
+        class="contact-method"
+    >
+
+        <div class="method-icon email">
+            @
+        </div>
+
+        <span class="method-label">
+            Email
+        </span>
+
+        <span class="method-value">
+            nketiamarfo157@gmail.com
+        </span>
+
+    </a>
+
+</div>
+
+</div></section><!-- =========================================================
+     COLOR / BRAND STRIP
+========================================================= --><section class="brand-strip"><div class="brand-strip-inner"><span>Music</span>
+<span>•</span>
+<span>Education</span>
+<span>•</span>
+<span>Creativity</span>
+<span>•</span>
+<span>Ideas</span>
+<span>•</span>
+<span>Stories</span>
+<span>•</span>
+<span>Community</span>
+
+</div></section><!-- =========================================================
+     SOCIAL MEDIA
+========================================================= --><section class="social-section"><div class="social-heading"><p class="contact-label">
+    FIND ME ONLINE
+</p>
+
+<h2>
+    Follow the journey.
+</h2>
+
+<p>
+    Follow along for music, ideas, creativity, stories,
+    projects and moments from the journey.
+</p>
+
+</div><div class="social-grid"><!-- TIKTOK -->
+
+<a
+    href="https://www.tiktok.com/@NketiaMarfo"
+    class="social-card"
+>
+
+    <div class="social-icon">
+
+        <img
+            src="TikTok_logo.png.webp"
+            alt="TikTok logo"
+        >
+
+    </div>
+
+    <div class="social-info">
+
+        <span class="social-platform">
+            TikTok
+        </span>
+
+        <h3>
+            Nketia Marfo
+        </h3>
+
+        <p>
+            Music, creativity & short-form ideas
+        </p>
+
+    </div>
+
+    <span class="social-arrow">
+        ↗
+    </span>
+
+</a>
+
+
+
+<!-- FACEBOOK -->
+
+<a
+    href="https://www.facebook.com/"
+    class="social-card"
+>
+
+    <div class="social-icon">
+
+        <img
+            src="facebook-icon-200x200.jpg"
+            alt="Facebook logo"
+        >
+
+    </div>
+
+    <div class="social-info">
+
+        <span class="social-platform">
+            Facebook
+        </span>
+
+        <h3>
+            Nketia Marfo
+        </h3>
+
+        <p>
+            Updates, stories & community
+        </p>
+
+    </div>
+
+    <span class="social-arrow">
+        ↗
+    </span>
+
+</a>
+
+
+
+<!-- INSTAGRAM -->
+
+<a
+    href="https://www.instagram.com/Affectionate_Music/"
+    class="social-card"
+>
+
+    <div class="social-icon">
+
+        <img
+            src="instagram-new--v1.jpg"
+            alt="Instagram logo"
+        >
+
+    </div>
+
+    <div class="social-info">
+
+        <span class="social-platform">
+            Instagram
+        </span>
+
+        <h3>
+            Affectionate_Music
+        </h3>
+
+        <p>
+            Music, creativity & visual moments
+        </p>
+
+    </div>
+
+    <span class="social-arrow">
+        ↗
+    </span>
+
+</a>
+
+
+
+<!-- X -->
+
+<a
+    href="https://x.com/Nketia"
+    class="social-card"
+>
+
+    <div class="social-icon">
+
+        <img
+            src="x-logo-icon-vector-51648900.jpg"
+            alt="X logo"
+        >
+
+    </div>
+
+    <div class="social-info">
+
+        <span class="social-platform">
+            X
+        </span>
+
+        <h3>
+            Nketia
+        </h3>
+
+        <p>
+            Thoughts, conversations & ideas
+        </p>
+
+    </div>
+
+    <span class="social-arrow">
+        ↗
+    </span>
+
+</a>
+
+</div></section><!-- =========================================================
+     VISUAL IDENTITY
+========================================================= --><section class="identity-section"><div class="identity-inner"><div class="identity-heading">
+
+    <p class="contact-label">
+        VISUAL IDENTITY
+    </p>
+
+    <h2>
+        The Nketia-Marfo presence.
+    </h2>
+
+    <p>
+        A selection of visual identity assets from the
+        collection uploaded to the Nketia-Marfo website.
+    </p>
+
+</div>
+
+
+<div class="logo-grid">
+
+
+    <div class="logo-card">
+
+        <img
+            src="file_0000000012c871fdbce691f44f2fc891.png"
+            alt="Nketia-Marfo visual identity"
+        >
+
+    </div>
+
+
+    <div class="logo-card">
+
+        <img
+            src="file_000000007ac471f4af129031a9ca9168.png"
+            alt="Nketia-Marfo visual identity"
+        >
+
+    </div>
+
+
+    <div class="logo-card">
+
+        <img
+            src="file_0000000085dc71f48ae49782334638bd.png"
+            alt="Nketia-Marfo visual identity"
+        >
+
+    </div>
+
+
+    <div class="logo-card">
+
+        <img
+            src="file_0000000095b471fdb0797eacb26bb28d.png"
+            alt="Nketia-Marfo visual identity"
+        >
+
+    </div>
+
+
+    <div class="logo-card">
+
+        <img
+            src="file_0000000097d8720c92b40fe648710dad.png"
+            alt="Nketia-Marfo visual identity"
+        >
+
+    </div>
+
+
+    <div class="logo-card">
+
+        <img
+            src="file_00000000dad071fd9398c12e37f40351.png"
+            alt="Nketia-Marfo visual identity"
+        >
+
+    </div>
+
+
+    <div class="logo-card">
+
+        <img
+            src="file_00000000f10871f49609646e5a2c21be.png"
+            alt="Nketia-Marfo visual identity"
+        >
+
+    </div>
+
+
+    <div class="logo-card">
+
+        <img
+            src="file_00000000f8a871f4bb452ab5ea523124.png"
+            alt="Nketia-Marfo visual identity"
+        >
+
+    </div>
+
+
+</div>
+
+</div></section><!-- =========================================================
+     PERSONAL PHOTOS
+     EXACTLY 10
+========================================================= --><section class="personal-gallery"><div class="personal-gallery-heading"><p class="contact-label">
+    BEYOND THE CONTACT FORM
+</p>
+
+<h2>
+    A little more of the person behind the page.
+</h2>
+
+<p>
+    A carefully selected collection of photographs adds
+    personality to the Contact page while keeping the
+    rest of the image collection available for the
+    Home and Blog sections.
+</p>
+
+</div><div class="photo-grid"><!-- 01 -->
+
+<div class="photo-card">
+
+    <img
+        src="1725906574828.jpg"
+        alt="Nketia-Marfo"
+        loading="lazy"
+    >
+
+</div>
+
+
+<!-- 02 -->
+
+<div class="photo-card">
+
+    <img
+        src="1744567769378.jpg"
+        alt="Nketia-Marfo"
+        loading="lazy"
+    >
+
+</div>
+
+
+<!-- 03 -->
+
+<div class="photo-card">
+
+    <img
+        src="1744670371986.jpg"
+        alt="Nketia-Marfo"
+        loading="lazy"
+    >
+
+</div>
+
+
+<!-- 04 -->
+
+<div class="photo-card">
+
+    <img
+        src="1783562225069.jpg"
+        alt="Nketia-Marfo"
+        loading="lazy"
+    >
+
+</div>
+
+
+<!-- 05 -->
+
+<div class="photo-card">
+
+    <img
+        src="1784768722971.jpg"
+        alt="Nketia-Marfo"
+        loading="lazy"
+    >
+
+</div>
+
+
+<!-- 06 -->
+
+<div class="photo-card">
+
+    <img
+        src="IMG-20250320-WA0160.jpg"
+        alt="Nketia-Marfo"
+        loading="lazy"
+    >
+
+</div>
+
+
+<!-- 07 -->
+
+<div class="photo-card">
+
+    <img
+        src="IMG-20250320-WA0168.jpg"
+        alt="Nketia-Marfo"
+        loading="lazy"
+    >
+
+</div>
+
+
+<!-- 08 -->
+
+<div class="photo-card">
+
+    <img
+        src="IMG-20250727-WA0037.jpg"
+        alt="Nketia-Marfo"
+        loading="lazy"
+    >
+
+</div>
+
+
+<!-- 09 -->
+
+<div class="photo-card">
+
+    <img
+        src="IMG-20250810-WA0144.jpg"
+        alt="Nketia-Marfo"
+        loading="lazy"
+    >
+
+</div>
+
+
+<!-- 10 -->
+
+<div class="photo-card">
+
+    <img
+        src="IMG-20260124-WA0015.jpg"
+        alt="Nketia-Marfo"
+        loading="lazy"
+    >
+
+</div>
+
+</div></section><!-- =========================================================
+     SERVICES
+========================================================= --><section class="contact-services"><div class="services-text"><p class="contact-label">
+    WORK WITH ME
+</p>
+
+<h2>
+    Have something in mind?
+</h2>
+
+<p>
+    Whether you have a creative idea, a service request,
+    an opportunity, a music project, or simply want to
+    start a meaningful conversation, feel free to reach out.
+</p>
+
+<p>
+    Every conversation begins somewhere.
+</p>
+
+</div><div class="services-list"><div class="service-item">
+
+    <span class="service-item-number">
+        01
+    </span>
+
+    <h3>
+        Creative Services
+    </h3>
+
+</div>
+
+
+<div class="service-item">
+
+    <span class="service-item-number">
+        02
+    </span>
+
+    <h3>
+        Music & Collaboration
+    </h3>
+
+</div>
+
+
+<div class="service-item">
+
+    <span class="service-item-number">
+        03
+    </span>
+
+    <h3>
+        Ideas & Projects
+    </h3>
+
+</div>
+
+
+<div class="service-item">
+
+    <span class="service-item-number">
+        04
+    </span>
+
+    <h3>
+        Conversations & Opportunities
+    </h3>
+
+</div>
+
+</div></section><!-- =========================================================
+     STUDENT VOICES
+========================================================= --><section class="student-voices-section"><div class="student-voices-inner"><div class="student-voices-text">
+
+    <p class="contact-label">
+        STUDENT VOICES
+    </p>
+
+    <h2>
+        Every student has a story.
+    </h2>
+
+    <p>
+        Explore experiences, reflections, challenges,
+        discoveries and ideas from students around the world.
+    </p>
 
 </div>
 
 
 <a
-    href="mailto:nketiamarfo157@gmail.com"
-    class="final-contact-button"
+    href="Students-Voice.html"
+    class="student-voices-button"
 >
-    Get in Touch →
+    Explore Student Voices →
 </a>
 
-</section></main><!-- =========================================================
+</div></section><!-- =========================================================
+     FINAL CTA
+========================================================= --><section class="contact-final"><div><p class="contact-label">
+    NOBODY STARTS ALONE
+</p>
+
+<h2>
+    Let's create something meaningful.
+</h2>
+
+</div><a
+href="mailto:nketiamarfo157@gmail.com"
+class="final-contact-button"
+
+«»
+
+Get in Touch →
+
+</a></section></main><!-- =========================================================
      FOOTER
-========================================================= --><footer class="contact-footer"><div class="footer-grid">
+========================================================= --><footer class="contact-footer"><div class="footer-grid"><!-- BRAND -->
 
+<div class="footer-brand">
 
-    <div class="footer-brand">
-
-        <h2>
-            Nketia-Marfo
-        </h2>
-
-        <p>
-            Thinking deeply. Creating freely.
-            Sharing ideas, music, education,
-            stories and conversations.
-        </p>
-
-    </div>
-
-
-    <!-- NAVIGATION -->
-
-    <div class="footer-column">
-
-        <h3>
-            Explore
-        </h3>
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="about.html">
-            About
-        </a>
-
-        <a href="blog.html">
-            Blog
-        </a>
-
-        <!-- EXACT FILE NAME -->
-        <a href="Students-Voice.html">
-            Student Voices
-        </a>
-
-        <a href="contact.html">
-            Contact
-        </a>
-
-    </div>
-
-
-    <!-- CONTACT -->
-
-    <div class="footer-column">
-
-        <h3>
-            Connect
-        </h3>
-
-        <a href="mailto:nketiamarfo157@gmail.com">
-            Email
-        </a>
-
-        <a href="https://wa.me/233593378431">
-            WhatsApp: 0593378431
-        </a>
-
-        <a href="tel:0593378431">
-            Call: 0593378431
-        </a>
-
-    </div>
-
-
-</div>
-
-
-<div class="footer-bottom">
+    <h2>
+        Nketia-Marfo
+    </h2>
 
     <p>
-        © 2026 Nketia-Marfo. All rights reserved.
+        Thinking deeply. Creating freely.
+        Sharing ideas, music, education,
+        stories and conversations.
     </p>
 
 </div>
 
-</footer></body>
-    </html>
+
+
+<!-- NAVIGATION -->
+
+<div class="footer-column">
+
+    <h3>
+        Explore
+    </h3>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="about.html">
+        About
+    </a>
+
+    <a href="blog.html">
+        Blog
+    </a>
+
+    <a href="Students-Voice.html">
+        Student Voices
+    </a>
+
+    <a href="contact.html">
+        Contact
+    </a>
+
+</div>
+
+
+
+<!-- CONNECT -->
+
+<div class="footer-column">
+
+    <h3>
+        Connect
+    </h3>
+
+    <a href="mailto:nketiamarfo157@gmail.com">
+        Email: nketiamarfo157@gmail.com
+    </a>
+
+    <a href="https://wa.me/233593378431">
+        WhatsApp: 0593378431
+    </a>
+
+    <a href="tel:0593378431">
+        Call: 0593378431
+    </a>
+
+    <a href="https://www.instagram.com/Affectionate_Music/">
+        Instagram: Affectionate_Music
+    </a>
+
+    <a href="https://x.com/Nketia">
+        X: Nketia
+    </a>
+
+</div>
+
+</div><div class="footer-bottom"><p>
+    © 2026 Nketia-Marfo. All rights reserved.
+</p>
+
+</div></footer></body>
+   </html>
