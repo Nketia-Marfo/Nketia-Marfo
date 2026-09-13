@@ -1,1436 +1,1257 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact him| Nketia-Marfo</title>
+<title>Contact | Nketia-Marfo</title>
 
 <meta
     name="description"
-    content="Contact Nketia-Marfo for ideas, conversations, opportunities, collaborations, and services."
+    content="Contact Nketia-Marfo for ideas, conversations, opportunities, collaborations, music, creative services and meaningful projects."
 >
 
 <link rel="stylesheet" href="style.css">
 
-<!-- =====================================================
-     CONTACT PAGE FONTS & COLOR SYSTEM
-====================================================== -->
 
 <style>
 
-    :root {
-        --deep-blue: #0B1F3A;
-        --deep-blue-light: #163A63;
+/* =========================================================
+   CONTACT PAGE — NKETIA-MARFO
+========================================================= */
 
-        --red: #A61B29;
-        --red-light: #C83A48;
+:root {
 
-        --green: #176B45;
-        --green-light: #2E8B68;
+    --deep-blue: #0B1F3A;
+    --deep-blue-light: #163A63;
 
-        --silver: #B8BEC7;
-        --silver-light: #E5E7EB;
+    --red: #A61B29;
+    --red-light: #C83A48;
 
-        --white: #FFFFFF;
-        --off-white: #F7F8FA;
-        --dark-text: #17202A;
-        --muted-text: #5D6975;
-    }
+    --green: #176B45;
+    --green-light: #2E8B68;
 
+    --silver: #B8BEC7;
+    --silver-light: #E5E7EB;
 
-    /* =====================================================
-       FONT SYSTEM
-    ====================================================== */
+    --white: #FFFFFF;
+    --off-white: #F7F8FA;
 
-    .contact-page,
-    .contact-page p,
-    .contact-page a,
-    .contact-page span,
-    .contact-page button {
+    --dark-text: #17202A;
+    --muted-text: #5D6975;
 
-        font-family:
-            "Inter",
-            "Segoe UI",
-            Arial,
-            Helvetica,
-            sans-serif;
+    --soft-green: #EEF3F0;
+}
 
-    }
 
+/* =========================================================
+   BASE
+========================================================= */
 
-    .contact-page h1,
-    .contact-page h2,
-    .contact-page h3,
-    .site-footer h2 {
+.contact-page,
+.contact-page p,
+.contact-page a,
+.contact-page span,
+.contact-page button {
 
-        font-family:
-            Georgia,
-            "Times New Roman",
-            serif;
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
 
-    }
+}
 
 
-    /* =====================================================
-       CONTACT PAGE
-    ====================================================== */
+.contact-page h1,
+.contact-page h2,
+.contact-page h3,
+.site-footer h2 {
 
-    .contact-page {
-        background: var(--off-white);
-        color: var(--dark-text);
-    }
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
+}
 
-    /* =====================================================
-       HERO
-    ====================================================== */
 
-    .contact-hero {
+.contact-page {
 
-        max-width: 1200px;
+    background: var(--off-white);
 
-        margin: 0 auto;
+    color: var(--dark-text);
 
-        padding: 100px 7% 110px;
+}
 
-        display: grid;
 
-        grid-template-columns:
-            1.05fr
-            .95fr;
+/* =========================================================
+   HEADER
+========================================================= */
 
-        align-items: center;
+.contact-header {
 
-        gap: 80px;
+    border-bottom:
+        1px solid
+        var(--silver-light);
 
-    }
+}
 
 
-    .section-label {
+/* =========================================================
+   HERO
+========================================================= */
 
-        color: var(--green);
+.contact-hero {
 
-        font-size: .78rem;
+    max-width: 1250px;
 
-        font-weight: 800;
+    margin: auto;
 
-        letter-spacing: .18em;
+    padding:
+        95px
+        7%
+        90px;
 
-        margin-bottom: 20px;
+    display: grid;
 
-    }
+    grid-template-columns:
+        1fr
+        .8fr;
 
+    gap: 80px;
 
-    .contact-hero h2 {
+    align-items: center;
 
-        color: var(--deep-blue);
+}
 
-        font-size:
-            clamp(3.2rem, 7vw, 6.2rem);
 
-        line-height: .94;
+.section-label {
 
-        max-width: 650px;
+    color: var(--green);
 
-        margin-bottom: 30px;
+    font-size: .76rem;
 
-    }
+    font-weight: 800;
 
+    letter-spacing: .2em;
 
-    .contact-lead {
+    margin-bottom: 18px;
 
-        max-width: 620px;
+}
 
-        color: var(--muted-text);
 
-        font-size: 1.08rem;
+.contact-hero h2 {
 
-        line-height: 1.8;
+    color: var(--deep-blue);
 
-        margin-bottom: 15px;
+    font-size:
+        clamp(3.2rem, 7vw, 6.5rem);
 
-    }
+    line-height: .92;
 
+    max-width: 700px;
 
-    .contact-button {
+    margin:
+        0 0 30px;
 
-        display: inline-block;
+}
 
-        margin-top: 25px;
 
-        padding: 15px 28px;
+.contact-lead {
 
-        background: var(--deep-blue);
+    max-width: 650px;
 
-        color: var(--white);
+    color: var(--muted-text);
 
-        text-decoration: none;
+    font-size: 1.08rem;
 
-        font-weight: 700;
+    line-height: 1.85;
 
-        border: 2px solid var(--deep-blue);
+    margin-bottom: 14px;
 
-        transition: .25s ease;
+}
 
-    }
 
+.contact-button {
 
-    .contact-button:hover {
+    display: inline-block;
 
-        background: var(--green);
+    margin-top: 20px;
 
-        border-color: var(--green);
+    padding:
+        15px
+        27px;
 
-        transform: translateY(-3px);
+    background: var(--deep-blue);
 
-    }
+    color: var(--white);
 
+    text-decoration: none;
 
-    /* =====================================================
-       DECORATIVE VISUAL
-    ====================================================== */
+    font-weight: 800;
 
-    .contact-visual {
+    transition: .25s ease;
 
-        position: relative;
+}
 
-        height: 430px;
 
-        max-width: 450px;
+.contact-button:hover {
 
-        margin-left: auto;
+    background: var(--green);
 
-    }
+    transform: translateY(-3px);
 
+}
 
-    .contact-shape {
 
-        position: absolute;
+/* =========================================================
+   HERO VISUAL
+========================================================= */
 
-        box-shadow:
-            0 20px 50px
-            rgba(11, 31, 58, .12);
+.contact-visual {
 
-    }
+    position: relative;
 
+    min-height: 430px;
 
-    .shape-blue {
+    max-width: 470px;
 
-        width: 250px;
-        height: 250px;
+    width: 100%;
 
-        background: var(--deep-blue);
+    margin-left: auto;
 
-        top: 10px;
-        right: 50px;
+}
 
-        border-radius: 50%;
 
-    }
+.contact-photo {
 
+    position: absolute;
 
-    .shape-green {
+    width: 265px;
 
-        width: 190px;
-        height: 190px;
+    height: 330px;
 
-        background: var(--green);
+    right: 55px;
 
-        color: var(--white);
+    top: 25px;
 
-        left: 15px;
-        top: 145px;
+    object-fit: cover;
 
-        display: flex;
+    border-radius: 6px;
 
-        align-items: center;
+    border:
+        10px
+        solid
+        var(--white);
 
-        justify-content: center;
+    box-shadow:
+        0 25px 60px
+        rgba(11,31,58,.18);
 
-        border-radius: 50%;
+    z-index: 3;
 
-        font-size: .75rem;
+}
 
-        font-weight: 800;
 
-        letter-spacing: .2em;
+.visual-blue {
 
-    }
+    position: absolute;
 
+    width: 180px;
 
-    .shape-red {
+    height: 180px;
 
-        width: 105px;
-        height: 105px;
+    background: var(--deep-blue);
 
-        background: var(--red);
+    border-radius: 50%;
 
-        right: 0;
-        bottom: 20px;
+    top: 0;
 
-        border-radius: 50%;
+    right: 0;
 
-    }
+}
 
 
-    /* =====================================================
-       EMAIL SECTION
-    ====================================================== */
+.visual-green {
 
-    .contact-email-section {
+    position: absolute;
 
-        background: var(--deep-blue);
+    width: 145px;
 
-        color: var(--white);
+    height: 145px;
 
-        padding: 90px 8%;
+    background: var(--green);
 
-        display: grid;
+    border-radius: 50%;
 
-        grid-template-columns:
-            120px
-            1fr;
+    bottom: 20px;
 
-        gap: 40px;
+    left: 20px;
 
-    }
+}
 
 
-    .contact-section-number {
+.visual-red {
 
-        color: var(--silver);
+    position: absolute;
 
-        font-size: 4rem;
+    width: 85px;
 
-    }
+    height: 85px;
 
+    background: var(--red);
 
-    .contact-email-content {
+    border-radius: 50%;
 
-        max-width: 760px;
+    right: 5px;
 
-    }
+    bottom: 0;
 
+    z-index: 4;
 
-    .contact-email-content .section-label {
+}
 
-        color: var(--green-light);
 
-    }
+/* =========================================================
+   QUICK CONTACT
+========================================================= */
 
+.quick-contact {
 
-    .contact-email-content h2 {
+    background: var(--deep-blue);
 
-        font-size:
-            clamp(2.2rem, 5vw, 4.2rem);
+    color: var(--white);
 
-        margin-bottom: 25px;
+    padding:
+        85px
+        7%;
 
-    }
+}
 
 
-    .contact-email-content p {
+.quick-contact-inner {
 
-        color: var(--silver-light);
+    max-width: 1200px;
 
-        font-size: 1.05rem;
+    margin: auto;
 
-        line-height: 1.8;
+}
 
-        margin-bottom: 30px;
 
-    }
+.quick-contact-heading {
 
+    max-width: 720px;
 
-    .email-address {
+    margin-bottom: 45px;
 
-        display: inline-block;
+}
 
-        color: var(--white);
 
-        text-decoration: none;
+.quick-contact-heading .section-label {
 
-        font-size:
-            clamp(1.2rem, 3vw, 2rem);
+    color: var(--green-light);
 
-        font-weight: 700;
+}
 
-        border-bottom:
-            2px solid var(--red);
 
-        padding-bottom: 7px;
+.quick-contact-heading h2 {
 
-        transition: .25s ease;
+    font-size:
+        clamp(2.4rem, 5vw, 4.5rem);
 
-    }
+    line-height: 1;
 
+    margin-bottom: 20px;
 
-    .email-address:hover {
+}
 
-        color: var(--silver);
 
-    }
+.quick-contact-heading p {
 
+    color: var(--silver-light);
 
-    /* =====================================================
-       SOCIAL SECTION
-    ====================================================== */
+    line-height: 1.8;
 
-    .social-section {
+}
 
-        max-width: 1200px;
 
-        margin: auto;
+.contact-methods {
 
-        padding: 105px 7%;
+    display: grid;
 
-    }
+    grid-template-columns:
+        repeat(3, 1fr);
 
+    gap: 18px;
 
-    .social-intro {
+}
 
-        max-width: 700px;
 
-        margin-bottom: 55px;
+.contact-method {
 
-    }
+    display: block;
 
+    padding: 30px;
 
-    .social-intro h2 {
+    min-height: 180px;
 
-        color: var(--deep-blue);
+    color: var(--white);
 
-        font-size:
-            clamp(2.5rem, 5vw, 4.5rem);
+    text-decoration: none;
 
-        margin-bottom: 20px;
+    background:
+        rgba(255,255,255,.06);
 
-    }
+    border:
+        1px solid
+        rgba(255,255,255,.14);
 
+    transition: .3s ease;
 
-    .social-intro p {
+}
 
-        color: var(--muted-text);
 
-        line-height: 1.8;
+.contact-method:hover {
 
-        font-size: 1.05rem;
+    transform: translateY(-6px);
 
-    }
+    background:
+        rgba(255,255,255,.1);
 
+}
 
-    .social-grid {
 
-        display: grid;
+.method-icon {
 
-        grid-template-columns:
-            repeat(2, 1fr);
+    width: 54px;
 
-        gap: 20px;
+    height: 54px;
 
-    }
+    display: flex;
 
+    align-items: center;
 
-    .social-card {
+    justify-content: center;
 
-        position: relative;
+    margin-bottom: 22px;
 
-        display: flex;
+    background: var(--green);
 
-        align-items: center;
+    border-radius: 15px;
 
-        gap: 22px;
+    font-size: 1.35rem;
 
-        min-height: 150px;
+    font-weight: 800;
 
-        padding: 28px;
+}
 
-        text-decoration: none;
 
-        background: var(--white);
+.whatsapp-method .method-icon {
 
-        border:
-            1px solid
-            var(--silver-light);
+    background: #25D366;
 
-        transition: .3s ease;
+}
 
-        overflow: hidden;
 
-    }
+.email-method .method-icon {
 
+    background: var(--red);
 
-    .social-card:hover {
+}
 
-        transform: translateY(-6px);
 
-        box-shadow:
-            0 20px 45px
-            rgba(11, 31, 58, .12);
+.phone-method .method-icon {
 
-    }
+    background: var(--deep-blue-light);
 
+    border:
+        1px solid
+        rgba(255,255,255,.25);
 
-    .social-icon {
+}
 
-        width: 65px;
-        height: 65px;
 
-        flex-shrink: 0;
+.method-label {
 
-        display: flex;
+    display: block;
 
-        align-items: center;
+    color: var(--silver);
 
-        justify-content: center;
+    font-size: .68rem;
 
-        background: var(--deep-blue);
+    font-weight: 800;
 
-        color: var(--white);
+    letter-spacing: .16em;
 
-        border-radius: 18px;
+    text-transform: uppercase;
 
-        font-size: 1.8rem;
+    margin-bottom: 7px;
 
-        font-weight: 800;
+}
 
-    }
 
+.contact-method h3 {
 
-    .social-info {
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
 
-        padding-right: 30px;
+    font-size: 1.1rem;
 
-    }
+    margin-bottom: 8px;
 
+}
 
-    .social-platform {
 
-        display: block;
+.method-detail {
 
-        color: var(--green);
+    color: var(--silver-light);
 
-        font-size: .7rem;
+    font-size: .9rem;
 
-        font-weight: 800;
+    word-break: break-word;
 
-        text-transform: uppercase;
+}
 
-        letter-spacing: .15em;
 
-        margin-bottom: 7px;
+/* =========================================================
+   SOCIAL MEDIA
+========================================================= */
 
-    }
+.social-section {
 
+    max-width: 1200px;
 
-    .social-info h3 {
+    margin: auto;
 
-        color: var(--deep-blue);
+    padding:
+        100px
+        7%;
 
-        font-size: 1.3rem;
+}
 
-        margin-bottom: 6px;
 
-    }
+.social-intro {
 
+    max-width: 720px;
 
-    .social-info p {
+    margin-bottom: 50px;
 
-        color: var(--muted-text);
+}
 
-        font-size: .88rem;
 
-        line-height: 1.5;
+.social-intro h2 {
 
-    }
+    color: var(--deep-blue);
 
+    font-size:
+        clamp(2.5rem, 5vw, 4.6rem);
 
-    .social-arrow {
+    line-height: 1;
 
-        position: absolute;
+    margin-bottom: 20px;
 
-        top: 25px;
-        right: 25px;
+}
 
-        color: var(--red);
 
-        font-size: 1.3rem;
+.social-intro p:last-child {
 
-    }
+    color: var(--muted-text);
 
+    line-height: 1.8;
 
-    .tiktok-card:hover .social-icon,
-    .facebook-card:hover .social-icon {
+}
 
-        background: var(--green);
 
-    }
+.social-grid {
 
+    display: grid;
 
-    .instagram-card:hover .social-icon,
-    .x-card:hover .social-icon {
+    grid-template-columns:
+        repeat(2, 1fr);
 
-        background: var(--red);
+    gap: 20px;
 
-    }
+}
 
 
-    /* =====================================================
-       SERVICES
-    ====================================================== */
+.social-card {
 
-    .contact-services {
+    position: relative;
 
-        background: #EEF3F0;
+    display: flex;
 
-        padding: 100px 8%;
+    align-items: center;
 
-        display: grid;
+    gap: 22px;
 
-        grid-template-columns:
-            1fr
-            1fr;
+    min-height: 145px;
 
-        gap: 90px;
+    padding: 27px;
 
-        align-items: start;
+    text-decoration: none;
 
-    }
+    background: var(--white);
 
+    border:
+        1px solid
+        var(--silver-light);
 
-    .services-text {
+    transition: .3s ease;
 
-        max-width: 600px;
+}
 
-    }
 
+.social-card:hover {
 
-    .services-text h2 {
+    transform: translateY(-5px);
 
-        color: var(--deep-blue);
+    box-shadow:
+        0 20px 45px
+        rgba(11,31,58,.12);
 
-        font-size:
-            clamp(2.5rem, 5vw, 4.5rem);
+}
 
-        line-height: 1;
 
-        margin-bottom: 25px;
+.social-icon {
 
-    }
+    width: 62px;
 
+    height: 62px;
 
-    .services-text p {
+    flex-shrink: 0;
 
-        color: var(--muted-text);
+    display: flex;
 
-        line-height: 1.8;
+    align-items: center;
 
-        margin-bottom: 18px;
+    justify-content: center;
 
-    }
+    background: var(--deep-blue);
 
+    color: var(--white);
 
-    .services-list {
+    border-radius: 17px;
 
-        border-top:
-            1px solid
-            var(--silver);
+    font-size: 1.65rem;
 
-    }
+    font-weight: 800;
 
+}
 
-    .service-item {
 
-        display: flex;
+.social-info {
 
-        align-items: center;
+    padding-right: 25px;
 
-        gap: 25px;
+}
 
-        padding: 25px 0;
 
-        border-bottom:
-            1px solid
-            var(--silver);
+.social-platform {
 
-    }
+    display: block;
 
+    color: var(--green);
 
-    .service-item span {
+    font-size: .68rem;
 
-        color: var(--red);
+    font-weight: 800;
 
-        font-family:
-            Georgia,
-            "Times New Roman",
-            serif;
+    text-transform: uppercase;
 
-        font-size: 1.1rem;
+    letter-spacing: .15em;
 
-    }
+    margin-bottom: 6px;
 
+}
 
-    .service-item h3 {
 
-        color: var(--deep-blue);
+.social-info h3 {
 
-        font-family:
-            "Inter",
-            "Segoe UI",
-            Arial,
-            sans-serif;
+    color: var(--deep-blue);
 
-        font-size: 1.05rem;
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
 
-    }
+    font-size: 1.2rem;
 
+    margin-bottom: 5px;
 
-    /* =====================================================
-       FINAL CTA
-    ====================================================== */
+}
 
-    .contact-final {
 
-        max-width: 1200px;
+.social-info p {
 
-        margin: auto;
+    color: var(--muted-text);
 
-        padding: 100px 7%;
+    font-size: .85rem;
 
-        display: flex;
+    line-height: 1.5;
 
-        justify-content: space-between;
+}
 
-        align-items: center;
 
-        gap: 50px;
+.social-arrow {
 
-    }
+    position: absolute;
 
+    top: 22px;
 
-    .contact-final h2 {
+    right: 22px;
 
-        color: var(--deep-blue);
+    color: var(--red);
 
-        font-size:
-            clamp(2.3rem, 5vw, 4.5rem);
+}
 
-        line-height: 1;
 
-        max-width: 700px;
+.tiktok-card:hover .social-icon,
+.facebook-card:hover .social-icon {
 
-    }
+    background: var(--green);
 
+}
 
-    .final-contact-button {
 
-        flex-shrink: 0;
+.instagram-card:hover .social-icon,
+.x-card:hover .social-icon {
 
-        padding: 18px 28px;
+    background: var(--red);
 
-        background: var(--red);
+}
 
-        color: var(--white);
 
-        text-decoration: none;
+/* =========================================================
+   VISUAL IDENTITY / LOGOS
+========================================================= */
 
-        font-weight: 800;
+.identity-section {
 
-        transition: .25s ease;
+    background: var(--soft-green);
 
-    }
+    padding:
+        95px
+        7%;
 
+}
 
-    .final-contact-button:hover {
 
-        background: var(--green);
+.identity-inner {
 
-        transform: translateY(-3px);
+    max-width: 1200px;
 
-    }
+    margin: auto;
 
+}
 
-    /* =====================================================
-       MOBILE
-    ====================================================== */
 
-    @media (max-width: 850px) {
+.identity-heading {
 
-        .contact-hero {
+    max-width: 720px;
 
-            grid-template-columns: 1fr;
+    margin-bottom: 45px;
 
-            padding-top: 75px;
+}
 
-        }
 
+.identity-heading h2 {
 
-        .contact-visual {
+    color: var(--deep-blue);
 
-            margin: 20px auto 0;
+    font-size:
+        clamp(2.5rem, 5vw, 4.5rem);
 
-            width: 100%;
+    line-height: 1;
 
-            max-width: 400px;
+    margin-bottom: 20px;
 
-        }
+}
 
 
-        .contact-email-section {
+.identity-heading p {
 
-            grid-template-columns: 1fr;
+    color: var(--muted-text);
 
-            gap: 10px;
+    line-height: 1.8;
 
-        }
+}
 
 
-        .contact-section-number {
+.logo-grid {
 
-            font-size: 2.5rem;
+    display: grid;
 
-        }
+    grid-template-columns:
+        repeat(4, 1fr);
 
+    gap: 18px;
 
-        .social-grid {
+}
 
-            grid-template-columns: 1fr;
 
-        }
+.logo-card {
 
+    min-height: 190px;
 
-        .contact-services {
+    padding: 18px;
 
-            grid-template-columns: 1fr;
+    display: flex;
 
-            gap: 50px;
+    align-items: center;
 
-        }
+    justify-content: center;
 
+    background: var(--white);
 
-        .contact-final {
+    border:
+        1px solid
+        var(--silver-light);
 
-            flex-direction: column;
+    transition: .3s ease;
 
-            align-items: flex-start;
+}
 
-        }
 
-    }
+.logo-card:hover {
 
+    transform: translateY(-5px);
 
-    @media (max-width: 600px) {
+    box-shadow:
+        0 18px 40px
+        rgba(11,31,58,.1);
 
-        .contact-hero {
+}
 
-            padding: 65px 6% 75px;
 
-        }
+.logo-card img {
 
+    display: block;
 
-        .contact-hero h2 {
+    max-width: 100%;
 
-            font-size: 3.3rem;
+    max-height: 145px;
 
-        }
+    width: auto;
 
+    height: auto;
 
-        .contact-visual {
+    object-fit: contain;
 
-            height: 330px;
+}
 
-        }
 
+/* =========================================================
+   PERSONAL VISUAL JOURNAL
+========================================================= */
 
-        .shape-blue {
+.personal-gallery {
 
-            width: 190px;
-            height: 190px;
+    max-width: 1200px;
 
-            right: 25px;
+    margin: auto;
 
-        }
+    padding:
+        100px
+        7%;
 
+}
 
-        .shape-green {
 
-            width: 145px;
-            height: 145px;
+.gallery-heading {
 
-            left: 10px;
-            top: 125px;
+    max-width: 700px;
 
-        }
+    margin-bottom: 45px;
 
+}
 
-        .shape-red {
 
-            width: 80px;
-            height: 80px;
+.gallery-heading h2 {
 
-        }
+    color: var(--deep-blue);
 
+    font-size:
+        clamp(2.5rem, 5vw, 4.4rem);
 
-        .contact-email-section {
+    line-height: 1;
 
-            padding: 70px 7%;
+    margin-bottom: 18px;
 
-        }
+}
 
 
-        .social-section {
+.gallery-heading p {
 
-            padding: 75px 6%;
+    color: var(--muted-text);
 
-        }
+    line-height: 1.8;
 
+}
 
-        .social-card {
 
-            padding: 22px;
+.photo-grid {
 
-            min-height: 130px;
+    display: grid;
 
-        }
+    grid-template-columns:
+        1.15fr
+        .85fr
+        .85fr;
 
+    grid-auto-rows: 210px;
 
-        .social-icon {
+    gap: 15px;
 
-            width: 55px;
-            height: 55px;
+}
 
-            font-size: 1.5rem;
 
-        }
+.photo-card {
 
+    position: relative;
 
-        .social-info h3 {
+    overflow: hidden;
 
-            font-size: 1.05rem;
+    background: var(--deep-blue);
 
-        }
+}
 
 
-        .social-info p {
+.photo-card:first-child {
 
-            font-size: .8rem;
+    grid-row:
+        span 2;
 
-        }
+}
 
 
-        .contact-services {
+.photo-card img {
 
-            padding: 75px 7%;
+    width: 100%;
 
-        }
+    height: 100%;
 
+    object-fit: cover;
 
-        .contact-final {
+    display: block;
 
-            padding: 75px 6%;
+    transition: transform .5s ease;
 
-        }
+}
 
-    }
 
-</style>
+.photo-card:hover img {
 
-</head><body><!-- =====================================================
-     HEADER
-====================================================== -->
+    transform: scale(1.05);
 
-<header class="site-header">
+}
 
-    <div class="header-content">
 
-        <div class="brand-block">
+.photo-caption {
 
-            <h1 class="site-name">
-                Nketia-Marfo
-            </h1>
+    position: absolute;
 
-            <p>
-                Thinking deeply. Creating freely. Sharing ideas.
-            </p>
+    left: 0;
 
-        </div>
+    right: 0;
 
+    bottom: 0;
 
-        <nav class="main-nav">
+    padding:
+        30px
+        18px
+        16px;
 
-            <a href="index.html" class="nav-link">
-                Home
-            </a>
+    color: var(--white);
 
-            <a href="about.html" class="nav-link">
-                About
-            </a>
+    background:
+        linear-gradient(
+            transparent,
+            rgba(11,31,58,.85)
+        );
 
-            <a href="blog.html" class="nav-link">
-                Blog
-            </a>
+    font-size: .8rem;
 
-            <a href="contact.html" class="nav-link active">
-                Contact
-            </a>
+    font-weight: 700;
 
-        </nav>
+}
 
-    </div>
 
-</header>
+/* =========================================================
+   SERVICES
+========================================================= */
 
+.contact-services {
 
+    background: var(--white);
 
-<!-- =====================================================
-     CONTACT PAGE
-====================================================== -->
+    padding:
+        100px
+        8%;
 
-<main class="contact-page">
+    display: grid;
 
+    grid-template-columns:
+        1fr
+        1fr;
 
-    <!-- HERO -->
+    gap: 90px;
 
-    <section class="contact-hero">
+    align-items: start;
 
-        <div class="contact-hero-text">
+}
 
-            <p class="section-label">
-                LET'S CONNECT
-            </p>
 
-            <h2>
-                Start a conversation.
-            </h2>
+.services-text {
 
-            <p class="contact-lead">
-                Have an idea, question, opportunity, collaboration,
-                or something you'd like to discuss?
-            </p>
+    max-width: 600px;
 
-            <p class="contact-lead">
-                Please feel free to reach out for our services.
-                I would be happy to hear from you.
-            </p>
+}
 
-            <a
-                href="mailto:nketiamarfo157@gmail.com"
-                class="contact-button"
-            >
-                Send an Email
-            </a>
 
-        </div>
+.services-text h2 {
 
+    color: var(--deep-blue);
 
-        <!-- Decorative visual blocks -->
+    font-size:
+        clamp(2.5rem, 5vw, 4.5rem);
 
-        <div class="contact-visual">
+    line-height: 1;
 
-            <div class="contact-shape shape-blue"></div>
+    margin-bottom: 25px;
 
-            <div class="contact-shape shape-green">
-                <span>CONNECT</span>
-            </div>
+}
 
-            <div class="contact-shape shape-red"></div>
 
-        </div>
+.services-text p {
 
-    </section>
+    color: var(--muted-text);
 
+    line-height: 1.8;
 
+    margin-bottom: 18px;
 
-    <!-- EMAIL SECTION -->
+}
 
-    <section class="contact-email-section">
 
-        <div class="contact-section-number">
-            01
-        </div>
+.services-list {
 
-        <div class="contact-email-content">
+    border-top:
+        1px solid
+        var(--silver);
 
-            <p class="section-label">
-                DIRECT CONTACT
-            </p>
+}
 
-            <h2>
-                Email me directly.
-            </h2>
 
-            <p>
-                For questions, opportunities, collaborations,
-                services, or anything you'd like to share,
-                email is the easiest way to reach me.
-            </p>
+.service-item {
 
-            <a
-                href="mailto:nketiamarfo157@gmail.com"
-                class="email-address"
-            >
-                nketiamarfo157@gmail.com
-            </a>
+    display: flex;
 
-        </div>
+    align-items: center;
 
-    </section>
+    gap: 25px;
 
+    padding: 25px 0;
 
+    border-bottom:
+        1px solid
+        var(--silver);
 
-    <!-- SOCIAL MEDIA -->
+}
 
-    <section class="social-section">
 
-        <div class="social-intro">
+.service-item span {
 
-            <p class="section-label">
-                FIND ME ONLINE
-            </p>
+    color: var(--red);
 
-            <h2>
-                Follow the journey.
-            </h2>
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-            <p>
-                Follow along for music, ideas, creativity,
-                stories, projects, and moments from the journey.
-            </p>
+    font-size: 1.1rem;
 
-        </div>
+}
 
 
-        <div class="social-grid">
+.service-item h3 {
 
+    color: var(--deep-blue);
 
-            <!-- TIKTOK -->
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
 
-            <a
-                href="#"
-                class="social-card tiktok-card"
-            >
+    font-size: 1.05rem;
 
-                <div class="social-icon">
-                    ♪
-                </div>
+}
 
-                <div class="social-info">
 
-                    <span class="social-platform">
-                        TikTok
-                    </span>
+/* =========================================================
+   STUDENT VOICES CONNECTION
+========================================================= */
 
-                    <h3>
-                        Nketia Marfo
-                    </h3>
+.student-voices-cta {
 
-                    <p>
-                        Music, creativity & short-form ideas
-                    </p>
+    background: var(--deep-blue);
 
-                </div>
+    color: var(--white);
 
-                <span class="social-arrow">
-                    ↗
-                </span>
+    padding:
+        90px
+        7%;
 
-            </a>
+}
 
 
+.student-voices-inner {
 
-            <!-- FACEBOOK -->
+    max-width: 1150px;
 
-            <a
-                href="#"
-                class="social-card facebook-card"
-            >
+    margin: auto;
 
-                <div class="social-icon">
-                    f
-                </div>
+    display: flex;
 
-                <div class="social-info">
+    align-items: center;
 
-                    <span class="social-platform">
-                        Facebook
-                    </span>
+    justify-content: space-between;
 
-                    <h3>
-                        Nketia Marfo
-                    </h3>
+    gap: 45px;
 
-                    <p>
-                        Updates, stories & community
-                    </p>
+}
 
-                </div>
 
-                <span class="social-arrow">
-                    ↗
-                </span>
+.student-voices-inner h2 {
 
-            </a>
+    font-size:
+        clamp(2.2rem, 5vw, 4.3rem);
 
+    line-height: 1;
 
+    margin-bottom: 18px;
 
-            <!-- INSTAGRAM -->
+}
 
-            <a
-                href="#"
-                class="social-card instagram-card"
-            >
 
-                <div class="social-icon">
-                    ◎
-                </div>
+.student-voices-inner p {
 
-                <div class="social-info">
+    max-width: 650px;
 
-                    <span class="social-platform">
-                        Instagram
-                    </span>
+    color: var(--silver-light);
 
-                    <h3>
-                        Affectionate_Music
-                    </h3>
+    line-height: 1.8;
 
-                    <p>
-                        Music, creativity & visual moments
-                    </p>
+}
 
-                </div>
 
-                <span class="social-arrow">
-                    ↗
-                </span>
+.student-voices-button {
 
-            </a>
+    flex-shrink: 0;
 
+    padding:
+        16px
+        26px;
 
+    background: var(--green);
 
-            <!-- X -->
+    color: var(--white);
 
-            <a
-                href="#"
-                class="social-card x-card"
-            >
+    text-decoration: none;
 
-                <div class="social-icon">
-                    𝕏
-                </div>
+    font-weight: 800;
 
-                <div class="social-info">
+    transition: .25s ease;
 
-                    <span class="social-platform">
-                        X
-                    </span>
+}
 
-                    <h3>
-                        Nketia
-                    </h3>
 
-                    <p>
-                        Thoughts, conversations & ideas
-                    </p>
+.student-voices-button:hover {
 
-                </div>
+    background: var(--red);
 
-                <span class="social-arrow">
-                    ↗
-                </span>
+    transform: translateY(-3px);
 
-            </a>
+}
 
 
-        </div>
+/* =========================================================
+   FINAL CTA
+========================================================= */
 
-    </section>
+.contact-final {
 
+    max-width: 1200px;
 
+    margin: auto;
 
-    <!-- SERVICES / OPPORTUNITIES -->
+    padding:
+        100px
+        7%;
 
-    <section class="contact-services">
+    display: flex;
 
-        <div class="services-text">
+    justify-content: space-between;
 
-            <p class="section-label">
-                WORK WITH ME
-            </p>
+    align-items: center;
 
-            <h2>
-                Have something in mind?
-            </h2>
+    gap: 50px;
 
-            <p>
-                Whether you have a creative idea, a service request,
-                an opportunity, or simply want to start a meaningful
-                conversation, feel free to reach out.
-            </p>
+}
 
-            <p>
-                Every conversation begins somewhere.
-            </p>
 
-        </div>
+.contact-final h2 {
 
+    color: var(--deep-blue);
 
-        <div class="services-list">
+    font-size:
+        clamp(2.3rem, 5vw, 4.5rem);
 
-            <div class="service-item">
+    line-height: 1;
 
-                <span>
-                    01
-                </span>
+    max-width: 700px;
 
-                <h3>
-                    Creative Services
-                </h3>
+}
 
-            </div>
 
+.final-contact-button {
 
-            <div class="service-item">
+    flex-shrink: 0;
 
-                <span>
-                    02
-                </span>
+    padding:
+        18px
+        28px;
 
-                <h3>
-                    Music & Collaboration
-                </h3>
+    background: var(--red);
 
-            </div>
+    color: var(--white);
 
+    text-decoration: none;
 
-            <div class="service-item">
+    font-weight: 800;
 
-                <span>
-                    03
-                </span>
+    transition: .25s ease;
 
-                <h3>
-                    Ideas & Projects
-                </h3>
+}
 
-            </div>
 
+.final-contact-button:hover {
 
-            <div class="service-item">
+    background: var(--green);
 
-                <span>
-                    04
-                </span>
+    transform: translateY(-3px);
 
-                <h3>
-                    Conversations & Opportunities
-                </h3>
+}
 
-            </div>
 
-        </div>
-
-    </section>
-
-
-
-    <!-- FINAL CTA -->
-
-    <section class="contact-final">
-
-        <div>
-
-            <p class="section-label">
-                NOBODY STARTS ALONE
-            </p>
-
-            <h2>
-                Let's create something meaningful.
-            </h2>
-
-        </div>
-
-
-        <a
-            href="mailto:nketiamarfo157@gmail.com"
-            class="final-contact-button"
-        >
-            Get in Touch →
-        </a>
-
-    </section>
-
-</main>
-
-
-
-<!-- =====================================================
-     FOOTER
-====================================================== -->
-
-<footer class="site-footer">
-
-    <div class="footer-content">
-
-
-        <div class="footer-brand">
-
-            <h2>
-                Nketia-Marfo
-            </h2>
-
-            <p>
-                Thinking deeply. Creating freely.
-                Sharing ideas.
-            </p>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="blog.html">
-                Blog
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </div>
-
-
-        <div class="footer-contact">
-
-            <p>
-                Email
-            </p>
-
-            <a
-                href="mailto:nketiamarfo157@gmail.com"
-            >
-                nketiamarfo157@gmail.com
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 Nketia-Marfo. All rights reserved.
-        </p>
-
-    </div>
-
-</footer>
-
-</body></html>
+/* =========================================================
+  
