@@ -54,8 +54,12 @@
             text-decoration: none;
         }
 
+        img {
+            max-width: 100%;
+        }
+
         /* =========================================================
-           MAIN WEBSITE HEADER
+           HEADER
            ========================================================= */
 
         .site-header {
@@ -64,7 +68,7 @@
             z-index: 9999;
             background: rgba(255,255,255,0.97);
             border-bottom: 1px solid var(--silver-light);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
         }
 
         .header-inner {
@@ -82,6 +86,7 @@
             align-items: center;
             gap: 10px;
             color: var(--blue);
+            flex-shrink: 0;
         }
 
         .brand-mark {
@@ -118,6 +123,7 @@
         .main-nav {
             display: flex;
             align-items: center;
+            justify-content: flex-end;
             flex-wrap: wrap;
             gap: 5px;
         }
@@ -183,7 +189,7 @@
 
         .hero-content {
             width: min(1180px, 92%);
-            min-height: 570px;
+            min-height: 590px;
             margin: auto;
             display: grid;
             grid-template-columns: 1fr 0.9fr;
@@ -261,7 +267,7 @@
            ========================================================= */
 
         .hero-visual {
-            height: 430px;
+            height: 450px;
             position: relative;
         }
 
@@ -353,6 +359,61 @@
         }
 
         /* =========================================================
+           PERSONAL PHOTO INTRO
+           ========================================================= */
+
+        .personal-intro {
+            width: min(1080px, 92%);
+            margin: 30px auto 75px;
+            background: white;
+            border: 1px solid var(--silver-light);
+            box-shadow: 0 15px 45px rgba(11,31,58,0.07);
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            overflow: hidden;
+        }
+
+        .personal-intro-photo {
+            min-height: 390px;
+            overflow: hidden;
+        }
+
+        .personal-intro-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .personal-intro-text {
+            padding: 55px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .personal-intro-text h2 {
+            color: var(--blue);
+            font-family: Georgia, serif;
+            font-size: 35px;
+            line-height: 1.25;
+            margin-bottom: 18px;
+        }
+
+        .personal-intro-text p {
+            color: var(--muted);
+            font-size: 15px;
+            margin-bottom: 14px;
+        }
+
+        .personal-signature {
+            margin-top: 12px;
+            color: var(--green);
+            font-family: Georgia, serif;
+            font-weight: bold;
+        }
+
+        /* =========================================================
            STATS
            ========================================================= */
 
@@ -434,6 +495,26 @@
         }
 
         /* =========================================================
+           STORY DIVIDER PHOTO
+           ========================================================= */
+
+        .story-photo {
+            width: min(1000px, 92%);
+            height: 300px;
+            margin: 15px auto 55px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(11,31,58,0.12);
+        }
+
+        .story-photo img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* =========================================================
            VOICE CARDS
            ========================================================= */
 
@@ -443,7 +524,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 25px;
-            padding-bottom: 80px;
+            padding-bottom: 45px;
         }
 
         .voice-card {
@@ -534,7 +615,64 @@
         }
 
         /* =========================================================
-           FEATURED MESSAGE
+           FEATURED PERSONAL PHOTO
+           ========================================================= */
+
+        .personal-feature {
+            width: min(1050px, 92%);
+            margin: 35px auto 75px;
+            position: relative;
+            overflow: hidden;
+            min-height: 390px;
+            border-radius: 15px;
+            box-shadow: 0 18px 45px rgba(11,31,58,0.16);
+        }
+
+        .personal-feature img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .personal-feature-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(11,31,58,0.88),
+                rgba(11,31,58,0.45),
+                rgba(11,31,58,0.12)
+            );
+            display: flex;
+            align-items: center;
+        }
+
+        .personal-feature-content {
+            width: min(620px, 85%);
+            margin-left: 55px;
+            color: white;
+        }
+
+        .personal-feature-content .section-label {
+            color: #D6E2ED;
+        }
+
+        .personal-feature-content h2 {
+            font-family: Georgia, serif;
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .personal-feature-content p {
+            color: #E2EAF1;
+            font-size: 15px;
+        }
+
+        /* =========================================================
+           BIGGER PICTURE
            ========================================================= */
 
         .featured-message {
@@ -712,6 +850,14 @@
                 grid-template-columns: 1fr;
             }
 
+            .personal-intro {
+                grid-template-columns: 1fr;
+            }
+
+            .personal-intro-photo {
+                min-height: 350px;
+            }
+
             .footer-inner {
                 grid-template-columns: 1fr 1fr;
             }
@@ -761,6 +907,22 @@
 
             .voices-tools h2 {
                 font-size: 30px;
+            }
+
+            .story-photo {
+                height: 240px;
+            }
+
+            .personal-intro-text {
+                padding: 35px 25px;
+            }
+
+            .personal-feature {
+                min-height: 420px;
+            }
+
+            .personal-feature-content {
+                margin-left: 25px;
             }
 
             .voice-cta {
@@ -822,10 +984,13 @@
                 padding-left: 18px;
                 padding-right: 18px;
             }
+
+            .story-photo {
+                height: 200px;
+            }
         }
     </style>
 </head>
-
 
 <body class="student-voices-page">
 
@@ -838,15 +1003,12 @@
         <div class="header-inner">
 
             <a href="index.html" class="brand">
-
                 <span class="brand-mark">NM</span>
 
                 <span class="brand-name">
                     Nketia-Marfo
                 </span>
-
             </a>
-
 
             <nav class="main-nav" aria-label="Main navigation">
 
@@ -862,6 +1024,7 @@
                     Blog
                 </a>
 
+                <!-- THIS IS A NORMAL HTML PAGE -->
                 <a href="student-voices.html" class="nav-link active">
                     Student Voices
                 </a>
@@ -922,10 +1085,13 @@
 
                 <div class="hero-visual">
 
+                    <!-- Replace these three filenames only if you want
+                         different photos from your repository. -->
+
                     <div class="photo-frame photo-one">
 
                         <img
-                            src="images/nketia-photo-1.jpg"
+                            src="IMG-20260614-WA0187.jpg"
                             alt="Nketia-Marfo"
                         >
 
@@ -935,7 +1101,7 @@
                     <div class="photo-frame photo-two">
 
                         <img
-                            src="images/nketia-photo-2.jpg"
+                            src="IMG_20260301_181413_373.jpg"
                             alt="Nketia-Marfo"
                         >
 
@@ -945,7 +1111,7 @@
                     <div class="photo-frame photo-three">
 
                         <img
-                            src="images/nketia-photo-3.jpg"
+                            src="IMG-20260614-WA0191.jpg"
                             alt="Nketia-Marfo"
                         >
 
@@ -984,6 +1150,57 @@
                 courage, education, community and the determination to build
                 a better future.
             </p>
+
+        </section>
+
+
+        <!-- =====================================================
+             NKETIA-MARFO PERSONAL INTRODUCTION
+             ===================================================== -->
+
+        <section class="personal-intro">
+
+            <div class="personal-intro-photo">
+
+                <img
+                    src="IMG-20260124-WA0015.jpg"
+                    alt="Nketia-Marfo"
+                >
+
+            </div>
+
+            <div class="personal-intro-text">
+
+                <div class="section-label">
+                    A SPACE FOR STORIES
+                </div>
+
+                <h2>
+                    Every journey can teach us something.
+                </h2>
+
+                <p>
+                    I created Student Voices because students are more than
+                    grades, applications, certificates and academic titles.
+                </p>
+
+                <p>
+                    Behind every educational journey is a person with
+                    questions, struggles, dreams, discoveries and experiences
+                    worth hearing.
+                </p>
+
+                <p>
+                    These stories are here to remind us that learning can
+                    happen through people, places, challenges and unexpected
+                    opportunities.
+                </p>
+
+                <div class="personal-signature">
+                    — Nketia-Marfo
+                </div>
+
+            </div>
 
         </section>
 
@@ -1036,7 +1253,7 @@
 
 
         <!-- =====================================================
-             STUDENT VOICES
+             STORIES
              ===================================================== -->
 
         <section class="voices-section" id="voices">
@@ -1063,25 +1280,16 @@
 
             <div class="voices-grid" id="voicesGrid">
 
-
                 <!-- 01 -->
-
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            01
-                        </div>
-
-                        <div class="voice-country">
-                            🇬🇭
-                        </div>
+                        <div class="voice-number">01</div>
+                        <div class="voice-country">🇬🇭</div>
 
                         <h3 class="voice-author">
                             Renalta Aboagyewaa Nkansah
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1102,36 +1310,25 @@
                     </div>
 
                     <div class="voice-bottom">
-
                         <span class="voice-tag">
                             International Experience
                         </span>
-
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
                 <!-- 02 -->
-
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            02
-                        </div>
-
-                        <div class="voice-country">
-                            🇬🇭
-                        </div>
+                        <div class="voice-number">02</div>
+                        <div class="voice-country">🇬🇭</div>
 
                         <h3 class="voice-author">
                             Louis Agya Kwame Sottie
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1151,36 +1348,23 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Leadership
-                        </span>
-
+                        <span class="voice-tag">Leadership</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
                 <!-- 03 -->
-
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            03
-                        </div>
-
-                        <div class="voice-country">
-                            🇳🇬
-                        </div>
+                        <div class="voice-number">03</div>
+                        <div class="voice-country">🇳🇬</div>
 
                         <h3 class="voice-author">
                             Cambridge-Africa Nigerian PhD Student/Alumna
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1201,36 +1385,23 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Career & Purpose
-                        </span>
-
+                        <span class="voice-tag">Career & Purpose</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
                 <!-- 04 -->
-
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            04
-                        </div>
-
-                        <div class="voice-country">
-                            🇰🇪
-                        </div>
+                        <div class="voice-number">04</div>
+                        <div class="voice-country">🇰🇪</div>
 
                         <h3 class="voice-author">
                             Lynnet Hamblin
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1249,36 +1420,34 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Growth
-                        </span>
-
+                        <span class="voice-tag">Growth</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
-                <!-- 05 -->
+                <!-- PHOTO -->
+                <div class="story-photo">
 
+                    <img
+                        src="IMG-20260308-WA0121.jpg"
+                        alt="Nketia-Marfo"
+                    >
+
+                </div>
+
+
+                <!-- 05 -->
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            05
-                        </div>
-
-                        <div class="voice-country">
-                            🇿🇦
-                        </div>
+                        <div class="voice-number">05</div>
+                        <div class="voice-country">🇿🇦</div>
 
                         <h3 class="voice-author">
                             Matome Lethwane
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1297,36 +1466,23 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Resilience
-                        </span>
-
+                        <span class="voice-tag">Resilience</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
                 <!-- 06 -->
-
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            06
-                        </div>
-
-                        <div class="voice-country">
-                            🇨🇦
-                        </div>
+                        <div class="voice-number">06</div>
+                        <div class="voice-country">🇨🇦</div>
 
                         <h3 class="voice-author">
                             Sarah Mohamed
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1345,36 +1501,23 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Student Journey
-                        </span>
-
+                        <span class="voice-tag">Student Journey</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
                 <!-- 07 -->
-
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            07
-                        </div>
-
-                        <div class="voice-country">
-                            🇨🇦
-                        </div>
+                        <div class="voice-number">07</div>
+                        <div class="voice-country">🇨🇦</div>
 
                         <h3 class="voice-author">
                             Hy Goldberg
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1393,36 +1536,23 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Perseverance
-                        </span>
-
+                        <span class="voice-tag">Perseverance</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
                 <!-- 08 -->
-
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            08
-                        </div>
-
-                        <div class="voice-country">
-                            🇺🇸
-                        </div>
+                        <div class="voice-number">08</div>
+                        <div class="voice-country">🇺🇸</div>
 
                         <h3 class="voice-author">
                             Ben Bowman
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1441,36 +1571,34 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Education
-                        </span>
-
+                        <span class="voice-tag">Education</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
-                <!-- 09 -->
+                <!-- PHOTO -->
+                <div class="story-photo">
 
+                    <img
+                        src="IMG-20260327-WA0071.jpg"
+                        alt="Nketia-Marfo"
+                    >
+
+                </div>
+
+
+                <!-- 09 -->
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            09
-                        </div>
-
-                        <div class="voice-country">
-                            🇺🇸
-                        </div>
+                        <div class="voice-number">09</div>
+                        <div class="voice-country">🇺🇸</div>
 
                         <h3 class="voice-author">
                             Lori Lander
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1489,36 +1617,23 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Transformation
-                        </span>
-
+                        <span class="voice-tag">Transformation</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
                 <!-- 10 -->
-
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            10
-                        </div>
-
-                        <div class="voice-country">
-                            🇺🇸
-                        </div>
+                        <div class="voice-number">10</div>
+                        <div class="voice-country">🇺🇸</div>
 
                         <h3 class="voice-author">
                             Kristy Chau
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1537,36 +1652,23 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Opportunity
-                        </span>
-
+                        <span class="voice-tag">Opportunity</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
                 <!-- 11 -->
-
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            11
-                        </div>
-
-                        <div class="voice-country">
-                            🇬🇧
-                        </div>
+                        <div class="voice-number">11</div>
+                        <div class="voice-country">🇬🇧</div>
 
                         <h3 class="voice-author">
                             Olivia Butterfield
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1585,36 +1687,23 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Academic Growth
-                        </span>
-
+                        <span class="voice-tag">Academic Growth</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
                 <!-- 12 -->
-
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            12
-                        </div>
-
-                        <div class="voice-country">
-                            🇬🇧
-                        </div>
+                        <div class="voice-number">12</div>
+                        <div class="voice-country">🇬🇧</div>
 
                         <h3 class="voice-author">
                             Daphne Harries
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1633,36 +1722,34 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Experience
-                        </span>
-
+                        <span class="voice-tag">Experience</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
-                <!-- 13 -->
+                <!-- PHOTO -->
+                <div class="story-photo">
 
+                    <img
+                        src="IMG-20260328-WA0182.jpg"
+                        alt="Nketia-Marfo"
+                    >
+
+                </div>
+
+
+                <!-- 13 -->
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            13
-                        </div>
-
-                        <div class="voice-country">
-                            🇬🇧
-                        </div>
+                        <div class="voice-number">13</div>
+                        <div class="voice-country">🇬🇧</div>
 
                         <h3 class="voice-author">
                             Chloe Pomfret
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1681,36 +1768,23 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Inspiration
-                        </span>
-
+                        <span class="voice-tag">Inspiration</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
                 <!-- 14 -->
-
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            14
-                        </div>
-
-                        <div class="voice-country">
-                            🇬🇧
-                        </div>
+                        <div class="voice-number">14</div>
+                        <div class="voice-country">🇬🇧</div>
 
                         <h3 class="voice-author">
                             Alexandros Pamnani
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1729,36 +1803,23 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Curiosity
-                        </span>
-
+                        <span class="voice-tag">Curiosity</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
                 <!-- 15 -->
-
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            15
-                        </div>
-
-                        <div class="voice-country">
-                            🇩🇪
-                        </div>
+                        <div class="voice-number">15</div>
+                        <div class="voice-country">🇩🇪</div>
 
                         <h3 class="voice-author">
                             Ehsanullah Attiq
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1778,36 +1839,23 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            International Student
-                        </span>
-
+                        <span class="voice-tag">International Student</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
                 <!-- 16 -->
-
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            16
-                        </div>
-
-                        <div class="voice-country">
-                            🇩🇪
-                        </div>
+                        <div class="voice-number">16</div>
+                        <div class="voice-country">🇩🇪</div>
 
                         <h3 class="voice-author">
                             Akua Bobson
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1826,36 +1874,34 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Study Abroad
-                        </span>
-
+                        <span class="voice-tag">Study Abroad</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
-                <!-- 17 -->
+                <!-- PHOTO -->
+                <div class="story-photo">
 
+                    <img
+                        src="IMG-20260607-WA0126.jpg"
+                        alt="Nketia-Marfo"
+                    >
+
+                </div>
+
+
+                <!-- 17 -->
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            17
-                        </div>
-
-                        <div class="voice-country">
-                            🇳🇱
-                        </div>
+                        <div class="voice-number">17</div>
+                        <div class="voice-country">🇳🇱</div>
 
                         <h3 class="voice-author">
                             Alena Kerosinskaya
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1874,36 +1920,23 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Courage
-                        </span>
-
+                        <span class="voice-tag">Courage</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
                 <!-- 18 -->
-
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            18
-                        </div>
-
-                        <div class="voice-country">
-                            🇦🇺
-                        </div>
+                        <div class="voice-number">18</div>
+                        <div class="voice-country">🇦🇺</div>
 
                         <h3 class="voice-author">
                             Hasnain
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1922,36 +1955,23 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            New Beginnings
-                        </span>
-
+                        <span class="voice-tag">New Beginnings</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
                 <!-- 19 -->
-
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            19
-                        </div>
-
-                        <div class="voice-country">
-                            🇫🇷
-                        </div>
+                        <div class="voice-number">19</div>
+                        <div class="voice-country">🇫🇷</div>
 
                         <h3 class="voice-author">
                             Camille Gardent
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -1970,36 +1990,23 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Development
-                        </span>
-
+                        <span class="voice-tag">Development</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
 
                 <!-- 20 -->
-
                 <article class="voice-card">
 
                     <div class="voice-top">
-
-                        <div class="voice-number">
-                            20
-                        </div>
-
-                        <div class="voice-country">
-                            🇨🇳
-                        </div>
+                        <div class="voice-number">20</div>
+                        <div class="voice-country">🇨🇳</div>
 
                         <h3 class="voice-author">
                             Shen Xiaodong
                         </h3>
-
                     </div>
 
                     <div class="voice-content">
@@ -2018,17 +2025,48 @@
                     </div>
 
                     <div class="voice-bottom">
-
-                        <span class="voice-tag">
-                            Community Impact
-                        </span>
-
+                        <span class="voice-tag">Community Impact</span>
                         <span class="voice-dot"></span>
-
                     </div>
 
                 </article>
 
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PERSONAL PHOTO BEFORE THE FINAL MESSAGE
+             ===================================================== -->
+
+        <section class="personal-feature">
+
+            <img
+                src="IMG_20260319_160228_606.jpg"
+                alt="Nketia-Marfo"
+            >
+
+            <div class="personal-feature-overlay">
+
+                <div class="personal-feature-content">
+
+                    <div class="section-label">
+                        KEEP LISTENING
+                    </div>
+
+                    <h2>
+                        Every story can open another person's mind.
+                    </h2>
+
+                    <p>
+                        Student Voices is about creating a place where
+                        experiences can travel beyond the person who lived
+                        them — becoming encouragement, questions and new
+                        possibilities for someone else.
+                    </p>
+
+                </div>
 
             </div>
 
@@ -2093,7 +2131,7 @@
 
 
     <!-- =========================================================
-         MAIN WEBSITE FOOTER
+         FOOTER
          ========================================================= -->
 
     <footer class="site-footer">
@@ -2134,6 +2172,7 @@
                         Blog
                     </a>
 
+                    <!-- SAME HTML PAGE -->
                     <a href="student-voices.html">
                         Student Voices
                     </a>
@@ -2216,15 +2255,10 @@
                 const cardText =
                     card.textContent.toLowerCase();
 
-                if (cardText.includes(searchTerm)) {
-
-                    card.style.display = "";
-
-                } else {
-
-                    card.style.display = "none";
-
-                }
+                card.style.display =
+                    cardText.includes(searchTerm)
+                        ? ""
+                        : "none";
 
             });
 
