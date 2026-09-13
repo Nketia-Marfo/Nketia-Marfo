@@ -2,329 +2,1252 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nketia-Marfo | Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Nketia-Marfo — thinking deeply, creating freely, and sharing ideas about education, economics, music, culture, society and opportunity."
-    >
+<title>Nketia-Marfo | Home</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta
+name="description"
+content="Nketia-Marfo — thinking deeply, creating freely, and sharing ideas about education, economics, music, culture, society and opportunity."
+>
 
-    <style>
+<link rel="stylesheet" href="style.css">
 
-        /* =====================================================
-           HOME PAGE — EXTRA IMAGE POLISH
-        ===================================================== */
+<style>
 
-        .hero-round-photo,
-        .latter-photo,
-        .square-photo,
-        .home-gallery-image {
-            overflow: hidden;
-        }
+/* =========================================================
+   NKETIA-MARFO HOME
+   RED • DEEP BLUE • GREEN • YELLOW • MAGENTA • BLACK
+========================================================= */
 
-        .hero-round-photo img,
-        .latter-photo img,
-        .square-photo img,
-        .home-gallery-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-
-        /* =====================================================
-           HOME PHOTO GALLERY
-        ===================================================== */
-
-        .home-gallery {
-            padding: 100px 7%;
-            background: #ffffff;
-        }
-
-        .home-gallery-header {
-            max-width: 760px;
-            margin-bottom: 55px;
-        }
-
-        .home-gallery-header h2 {
-            font-size: clamp(2.2rem, 5vw, 4rem);
-            line-height: 1.08;
-            color: #0b1f3a;
-            margin: 12px 0 20px;
-        }
-
-        .home-gallery-header p:not(.small-heading) {
-            color: #5d6975;
-            line-height: 1.8;
-            max-width: 680px;
-        }
-
-        .home-gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-        }
-
-        .home-gallery-item {
-            position: relative;
-            height: 300px;
-            overflow: hidden;
-            background: #e8ebef;
-        }
-
-        .home-gallery-item:nth-child(2),
-        .home-gallery-item:nth-child(6) {
-            height: 360px;
-        }
-
-        .home-gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform .5s ease;
-        }
-
-        .home-gallery-item:hover img {
-            transform: scale(1.06);
-        }
-
-        .home-gallery-caption {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            padding: 35px 20px 18px;
-            background: linear-gradient(
-                to top,
-                rgba(11,31,58,.88),
-                rgba(11,31,58,0)
-            );
-            color: #ffffff;
-        }
-
-        .home-gallery-caption span {
-            font-size: .75rem;
-            font-weight: 700;
-            letter-spacing: .08em;
-            text-transform: uppercase;
-            opacity: .85;
-        }
-
-        .home-gallery-caption strong {
-            display: block;
-            margin-top: 5px;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 1.05rem;
-        }
+:root{
+    --blue:#0B1F3A;
+    --blue2:#163A63;
+    --red:#A61B29;
+    --red2:#D23A4A;
+    --green:#176B45;
+    --green2:#2E8B68;
+    --yellow:#F2C94C;
+    --yellow-soft:#FFF5C7;
+    --magenta:#A51D6E;
+    --magenta-soft:#F8E3F0;
+    --black:#111111;
+    --white:#FFFFFF;
+    --cream:#FBFAF6;
+    --light:#F4F6F8;
+    --gray:#5D6975;
+    --line:#E2E5E9;
+}
 
 
-        /* =====================================================
-           PHOTO STORY STRIP
-        ===================================================== */
+/* =========================================================
+   GLOBAL
+========================================================= */
 
-        .photo-story-section {
-            padding: 90px 7%;
-            background: #f7f8fa;
-        }
+.home-page{
+    background:var(--cream);
+    color:var(--black);
+}
 
-        .photo-story-grid {
-            display: grid;
-            grid-template-columns: 1.15fr .85fr;
-            gap: 50px;
-            align-items: center;
-        }
+.home-page img{
+    max-width:100%;
+}
 
-        .photo-story-main {
-            min-height: 520px;
-            overflow: hidden;
-        }
+.home-page h1,
+.home-page h2,
+.home-page h3{
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+}
 
-        .photo-story-main img {
-            width: 100%;
-            height: 100%;
-            min-height: 520px;
-            object-fit: cover;
-            display: block;
-        }
+.home-page p,
+.home-page a,
+.home-page span{
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+}
 
-        .photo-story-text {
-            max-width: 600px;
-        }
-
-        .photo-story-text h2 {
-            font-size: clamp(2.2rem, 5vw, 4rem);
-            line-height: 1.08;
-            color: #0b1f3a;
-            margin: 12px 0 25px;
-        }
-
-        .photo-story-text p {
-            color: #5d6975;
-            line-height: 1.85;
-        }
-
-        .photo-story-text .lead-text {
-            font-size: 1.12rem;
-        }
+.home-page a{
+    text-decoration:none;
+}
 
 
-        /* =====================================================
-           CREATIVE IMAGE GRID
-        ===================================================== */
+/* =========================================================
+   HEADER
+========================================================= */
 
-        .creative-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 45px;
-        }
+.home-header{
+    background:var(--white);
+    border-bottom:1px solid var(--line);
+    position:relative;
+    z-index:20;
+}
 
-        .creative-gallery-item {
-            height: 300px;
-            overflow: hidden;
-        }
+.home-header-inner{
+    max-width:1250px;
+    margin:auto;
+    padding:20px 6%;
 
-        .creative-gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform .5s ease;
-        }
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
 
-        .creative-gallery-item:hover img {
-            transform: scale(1.05);
-        }
+.home-brand{
+    color:var(--blue);
+}
+
+.home-brand h2{
+    margin:0;
+    font-size:1.65rem;
+}
+
+.home-brand p{
+    margin:5px 0 0;
+    color:var(--gray);
+    font-size:.76rem;
+}
+
+.home-nav{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    flex-wrap:wrap;
+    gap:5px;
+}
+
+.home-nav a{
+    color:var(--blue);
+    padding:10px 13px;
+    font-size:.86rem;
+    font-weight:800;
+    transition:.25s ease;
+}
+
+.home-nav a:hover{
+    color:var(--red);
+}
+
+.home-nav a.active{
+    background:var(--blue);
+    color:white;
+}
 
 
-        /* =====================================================
-           RESPONSIVE
-        ===================================================== */
+/* =========================================================
+   HERO
+========================================================= */
 
-        @media (max-width: 1050px) {
+.home-hero{
+    max-width:1250px;
+    margin:auto;
 
-            .home-gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+    min-height:690px;
+    padding:90px 6% 100px;
 
-            .photo-story-grid {
-                grid-template-columns: 1fr;
-            }
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:70px;
+    align-items:center;
+}
 
-            .photo-story-main,
-            .photo-story-main img {
-                min-height: 430px;
-            }
+.home-hero-copy{
+    position:relative;
+}
 
-        }
+.home-kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    color:var(--green);
+    font-size:.72rem;
+    font-weight:900;
+    letter-spacing:.2em;
+    margin-bottom:22px;
+}
+
+.home-kicker::before{
+    content:"";
+    width:38px;
+    height:4px;
+    background:var(--yellow);
+}
+
+.home-hero h1{
+    color:var(--blue);
+    font-size:clamp(3.3rem,7vw,6.7rem);
+    line-height:.91;
+    margin:0 0 30px;
+    letter-spacing:-.04em;
+}
+
+.home-hero h1 span{
+    color:var(--red);
+}
+
+.home-hero-lead{
+    max-width:670px;
+    color:var(--gray);
+    font-size:1.12rem;
+    line-height:1.85;
+    margin:0 0 16px;
+}
+
+.home-hero-text{
+    max-width:650px;
+    color:#333;
+    line-height:1.8;
+}
+
+.home-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:30px;
+}
+
+.home-button{
+    display:inline-block;
+    padding:15px 25px;
+    background:var(--blue);
+    color:white;
+    font-weight:900;
+    transition:.25s ease;
+}
+
+.home-button:hover{
+    background:var(--red);
+    transform:translateY(-3px);
+}
+
+.home-button.yellow{
+    background:var(--yellow);
+    color:var(--black);
+}
+
+.home-button.yellow:hover{
+    background:var(--green);
+    color:white;
+}
 
 
-        @media (max-width: 700px) {
+/* =========================================================
+   HERO PHOTO COLLAGE
+========================================================= */
 
-            .home-gallery {
-                padding: 75px 6%;
-            }
+.home-hero-visual{
+    min-height:560px;
+    position:relative;
+}
 
-            .home-gallery-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 12px;
-            }
+.hero-image{
+    position:absolute;
+    overflow:hidden;
+    box-shadow:0 25px 60px rgba(11,31,58,.17);
+}
 
-            .home-gallery-item,
-            .home-gallery-item:nth-child(2),
-            .home-gallery-item:nth-child(6) {
-                height: 230px;
-            }
+.hero-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.5s ease;
+}
 
-            .home-gallery-caption {
-                padding: 28px 12px 12px;
-            }
+.hero-image:hover img{
+    transform:scale(1.05);
+}
 
-            .home-gallery-caption strong {
-                font-size: .9rem;
-            }
+.hero-main-image{
+    width:68%;
+    height:430px;
+    top:35px;
+    right:0;
+    border:10px solid white;
+}
 
-            .photo-story-section {
-                padding: 75px 6%;
-            }
+.hero-second-image{
+    width:42%;
+    height:250px;
+    bottom:25px;
+    left:0;
+    border:8px solid white;
+}
 
-            .photo-story-main,
-            .photo-story-main img {
-                min-height: 360px;
-            }
+.hero-third-image{
+    width:30%;
+    height:190px;
+    top:0;
+    left:5%;
+    border:7px solid white;
+}
 
-            .creative-gallery {
-                grid-template-columns: 1fr;
-            }
+.hero-color-block{
+    position:absolute;
+    width:125px;
+    height:125px;
+    background:var(--magenta);
+    right:3%;
+    bottom:0;
+    z-index:-1;
+}
 
-            .creative-gallery-item {
-                height: 280px;
-            }
+.hero-yellow-block{
+    position:absolute;
+    width:90px;
+    height:90px;
+    background:var(--yellow);
+    left:0;
+    top:50%;
+    z-index:-1;
+}
 
-        }
 
-    </style>
+/* =========================================================
+   INTRO STATEMENT
+========================================================= */
+
+.home-statement{
+    background:var(--blue);
+    color:white;
+    padding:95px 6%;
+}
+
+.home-statement-inner{
+    max-width:1250px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:100px 1fr;
+    gap:50px;
+    align-items:start;
+}
+
+.statement-number{
+    color:var(--yellow);
+    font-family:Georgia,serif;
+    font-size:2rem;
+    border-top:4px solid var(--red);
+    padding-top:12px;
+}
+
+.home-statement h2{
+    max-width:950px;
+    font-size:clamp(2.5rem,5vw,5rem);
+    line-height:1.05;
+    margin:0 0 25px;
+}
+
+.home-statement p{
+    max-width:760px;
+    color:#DDE3EA;
+    font-size:1.05rem;
+    line-height:1.85;
+}
+
+
+/* =========================================================
+   EDITORIAL STORY
+========================================================= */
+
+.editorial-section{
+    max-width:1250px;
+    margin:auto;
+    padding:110px 6%;
+}
+
+.editorial-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.editorial-photo{
+    position:relative;
+    min-height:550px;
+}
+
+.editorial-photo-main{
+    width:82%;
+    height:500px;
+    overflow:hidden;
+}
+
+.editorial-photo-main img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.editorial-photo-small{
+    position:absolute;
+    width:43%;
+    height:230px;
+    right:0;
+    bottom:0;
+    overflow:hidden;
+    border:10px solid var(--cream);
+}
+
+.editorial-photo-small img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.editorial-tag{
+    color:var(--green);
+    font-size:.72rem;
+    font-weight:900;
+    letter-spacing:.2em;
+}
+
+.editorial-text h2{
+    color:var(--blue);
+    font-size:clamp(2.6rem,5vw,4.8rem);
+    line-height:1;
+    margin:15px 0 25px;
+}
+
+.editorial-text .lead{
+    font-size:1.14rem;
+    color:#333;
+    line-height:1.8;
+}
+
+.editorial-text p{
+    color:var(--gray);
+    line-height:1.85;
+}
+
+.editorial-link{
+    display:inline-block;
+    margin-top:15px;
+    color:var(--red);
+    font-weight:900;
+}
+
+
+/* =========================================================
+   AREAS OF INTEREST
+========================================================= */
+
+.interests{
+    background:#EEF3F0;
+    padding:105px 6%;
+}
+
+.interests-inner{
+    max-width:1250px;
+    margin:auto;
+}
+
+.section-label{
+    color:var(--green);
+    font-size:.72rem;
+    font-weight:900;
+    letter-spacing:.2em;
+}
+
+.section-title{
+    color:var(--blue);
+    font-size:clamp(2.7rem,5vw,4.8rem);
+    line-height:1;
+    margin:14px 0 20px;
+}
+
+.section-description{
+    max-width:700px;
+    color:var(--gray);
+    line-height:1.85;
+}
+
+.interest-grid{
+    margin-top:55px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:17px;
+}
+
+.interest-card{
+    background:white;
+    padding:32px 25px;
+    min-height:290px;
+    border-top:5px solid var(--blue);
+    transition:.3s ease;
+}
+
+.interest-card:nth-child(2){
+    border-color:var(--red);
+}
+
+.interest-card:nth-child(3){
+    border-color:var(--yellow);
+}
+
+.interest-card:nth-child(4){
+    border-color:var(--magenta);
+}
+
+.interest-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 20px 40px rgba(11,31,58,.1);
+}
+
+.interest-number{
+    color:var(--red);
+    font-weight:900;
+    font-size:.8rem;
+}
+
+.interest-card h3{
+    color:var(--blue);
+    font-size:1.55rem;
+    margin:25px 0 15px;
+}
+
+.interest-card p{
+    color:var(--gray);
+    line-height:1.75;
+}
+
+
+/* =========================================================
+   WRITING + PHOTO SECTIONS
+========================================================= */
+
+.story-section{
+    max-width:1250px;
+    margin:auto;
+    padding:110px 6%;
+}
+
+.story-layout{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.story-layout.reverse{
+    grid-template-columns:1.1fr .9fr;
+}
+
+.story-layout.reverse .story-image{
+    order:2;
+}
+
+.story-image{
+    min-height:500px;
+    overflow:hidden;
+    position:relative;
+}
+
+.story-image img{
+    width:100%;
+    height:100%;
+    min-height:500px;
+    object-fit:cover;
+    display:block;
+    transition:.5s ease;
+}
+
+.story-image:hover img{
+    transform:scale(1.04);
+}
+
+.story-image::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:80px;
+    height:80px;
+    background:var(--yellow);
+    mix-blend-mode:multiply;
+}
+
+.story-copy{
+    max-width:650px;
+}
+
+.story-copy h2{
+    color:var(--blue);
+    font-size:clamp(2.5rem,5vw,4.6rem);
+    line-height:1.03;
+    margin:15px 0 25px;
+}
+
+.story-copy .lead{
+    color:#333;
+    font-size:1.1rem;
+    line-height:1.85;
+}
+
+.story-copy p{
+    color:var(--gray);
+    line-height:1.85;
+}
+
+.story-number{
+    color:var(--red);
+    font-weight:900;
+    font-size:.78rem;
+    letter-spacing:.15em;
+}
+
+
+/* =========================================================
+   MUSIC FEATURE
+========================================================= */
+
+.music-feature{
+    background:var(--magenta);
+    color:white;
+    padding:100px 6%;
+}
+
+.music-feature-inner{
+    max-width:1250px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:65px;
+    align-items:center;
+}
+
+.music-feature h2{
+    font-size:clamp(2.8rem,5vw,5rem);
+    line-height:1;
+    margin:15px 0 25px;
+}
+
+.music-feature p{
+    color:#FBEAF4;
+    line-height:1.85;
+}
+
+.music-photo-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.music-photo{
+    height:290px;
+    overflow:hidden;
+}
+
+.music-photo:first-child{
+    height:380px;
+}
+
+.music-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+
+/* =========================================================
+   FEATURED THOUGHT
+========================================================= */
+
+.featured-thought{
+    background:var(--yellow);
+    padding:100px 6%;
+}
+
+.featured-thought-inner{
+    max-width:1250px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:100px 1fr;
+    gap:45px;
+}
+
+.featured-number{
+    color:var(--red);
+    font-family:Georgia,serif;
+    font-size:2rem;
+}
+
+.featured-thought h2{
+    color:var(--blue);
+    font-size:clamp(2.7rem,5vw,5rem);
+    line-height:1;
+    max-width:850px;
+    margin:0 0 25px;
+}
+
+.featured-thought p{
+    color:#303030;
+    line-height:1.85;
+    max-width:760px;
+}
+
+
+/* =========================================================
+   PHOTO STORY STRIP
+========================================================= */
+
+.photo-strip{
+    padding:100px 6%;
+    background:white;
+}
+
+.photo-strip-inner{
+    max-width:1250px;
+    margin:auto;
+}
+
+.photo-strip-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:17px;
+    margin-top:50px;
+}
+
+.strip-photo{
+    height:390px;
+    overflow:hidden;
+    position:relative;
+}
+
+.strip-photo:nth-child(2){
+    height:460px;
+    margin-top:-35px;
+}
+
+.strip-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.5s ease;
+}
+
+.strip-photo:hover img{
+    transform:scale(1.05);
+}
+
+.strip-caption{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:55px 20px 20px;
+
+    color:white;
+
+    background:linear-gradient(
+        to top,
+        rgba(11,31,58,.9),
+        transparent
+    );
+}
+
+.strip-caption span{
+    font-size:.7rem;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    color:var(--yellow);
+    font-weight:900;
+}
+
+.strip-caption strong{
+    display:block;
+    margin-top:5px;
+    font-family:Georgia,serif;
+    font-size:1.15rem;
+}
+
+
+/* =========================================================
+   SECOND PHOTO STORY
+========================================================= */
+
+.experience-section{
+    background:var(--light);
+    padding:110px 6%;
+}
+
+.experience-inner{
+    max-width:1250px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:70px;
+    align-items:center;
+}
+
+.experience-image{
+    height:560px;
+    overflow:hidden;
+}
+
+.experience-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.experience-copy h2{
+    color:var(--blue);
+    font-size:clamp(2.5rem,5vw,4.6rem);
+    line-height:1;
+    margin:15px 0 25px;
+}
+
+.experience-copy p{
+    color:var(--gray);
+    line-height:1.85;
+}
+
+
+/* =========================================================
+   MINI PHOTO WALL
+========================================================= */
+
+.mini-wall{
+    padding:95px 6%;
+    background:var(--cream);
+}
+
+.mini-wall-inner{
+    max-width:1250px;
+    margin:auto;
+}
+
+.mini-wall-grid{
+    margin-top:45px;
+
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
+}
+
+.mini-wall-item{
+    aspect-ratio:1/1;
+    overflow:hidden;
+}
+
+.mini-wall-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.4s ease;
+}
+
+.mini-wall-item:hover img{
+    transform:scale(1.07);
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.home-final{
+    background:var(--blue);
+    color:white;
+    padding:105px 6%;
+}
+
+.home-final-inner{
+    max-width:1250px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+}
+
+.home-final h2{
+    font-size:clamp(2.8rem,5vw,5rem);
+    line-height:1;
+    margin:15px 0 0;
+}
+
+.home-final p{
+    color:#DCE2E9;
+    max-width:700px;
+    line-height:1.8;
+}
+
+.final-button{
+    flex-shrink:0;
+    padding:17px 28px;
+    background:var(--red);
+    color:white;
+    font-weight:900;
+    transition:.25s ease;
+}
+
+.final-button:hover{
+    background:var(--green);
+    transform:translateY(-3px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.home-footer{
+    background:#080F18;
+    color:white;
+    padding:70px 6% 25px;
+}
+
+.footer-inner{
+    max-width:1250px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:50px;
+}
+
+.footer-brand h2{
+    font-family:Georgia,serif;
+    margin:0 0 12px;
+    font-size:2rem;
+}
+
+.footer-brand p{
+    color:#BFC7D0;
+    line-height:1.7;
+}
+
+.footer-column h3{
+    color:var(--yellow);
+    text-transform:uppercase;
+    letter-spacing:.15em;
+    font-size:.7rem;
+    margin:0 0 18px;
+}
+
+.footer-column a,
+.footer-column p{
+    display:block;
+    color:#BFC7D0;
+    margin:0 0 10px;
+    line-height:1.6;
+}
+
+.footer-column a:hover{
+    color:white;
+}
+
+.footer-bottom{
+    max-width:1250px;
+    margin:45px auto 0;
+    padding-top:22px;
+    border-top:1px solid rgba(255,255,255,.12);
+}
+
+.footer-bottom p{
+    color:#7F8994;
+    font-size:.78rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1000px){
+
+    .home-hero{
+        grid-template-columns:1fr;
+    }
+
+    .home-hero-visual{
+        max-width:650px;
+        width:100%;
+        margin:auto;
+    }
+
+    .interest-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .editorial-grid,
+    .story-layout,
+    .story-layout.reverse,
+    .music-feature-inner,
+    .experience-inner{
+        grid-template-columns:1fr;
+    }
+
+    .story-layout.reverse .story-image{
+        order:0;
+    }
+
+    .music-photo-grid{
+        max-width:650px;
+    }
+
+    .photo-strip-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .strip-photo:nth-child(2){
+        margin-top:0;
+    }
+
+    .mini-wall-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .footer-inner{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .home-header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:18px 5%;
+    }
+
+    .home-nav{
+        width:100%;
+        justify-content:flex-start;
+    }
+
+    .home-nav a{
+        padding:8px 9px;
+        font-size:.76rem;
+    }
+
+    .home-hero{
+        padding:65px 6% 80px;
+    }
+
+    .home-hero h1{
+        font-size:3.45rem;
+    }
+
+    .home-hero-visual{
+        min-height:410px;
+    }
+
+    .hero-main-image{
+        width:70%;
+        height:310px;
+    }
+
+    .hero-second-image{
+        width:45%;
+        height:190px;
+    }
+
+    .hero-third-image{
+        width:32%;
+        height:145px;
+    }
+
+    .home-statement{
+        padding:75px 6%;
+    }
+
+    .home-statement-inner,
+    .featured-thought-inner{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .editorial-section,
+    .story-section,
+    .experience-section{
+        padding:75px 6%;
+    }
+
+    .editorial-photo,
+    .story-image{
+        min-height:390px;
+    }
+
+    .editorial-photo-main{
+        height:390px;
+    }
+
+    .story-image img{
+        min-height:390px;
+    }
+
+    .interests{
+        padding:75px 6%;
+    }
+
+    .interest-grid{
+        grid-template-columns:1fr;
+    }
+
+    .music-feature{
+        padding:75px 6%;
+    }
+
+    .music-photo{
+        height:220px !important;
+    }
+
+    .featured-thought{
+        padding:75px 6%;
+    }
+
+    .photo-strip{
+        padding:75px 6%;
+    }
+
+    .photo-strip-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .strip-photo{
+        height:280px;
+    }
+
+    .mini-wall{
+        padding:75px 6%;
+    }
+
+    .mini-wall-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .home-final{
+        padding:75px 6%;
+    }
+
+    .home-final-inner{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .footer-inner{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+}
+
+@media(max-width:450px){
+
+    .home-nav{
+        gap:1px;
+    }
+
+    .home-nav a{
+        font-size:.7rem;
+        padding:7px 6px;
+    }
+
+    .home-hero h1{
+        font-size:3rem;
+    }
+
+    .home-hero-visual{
+        min-height:360px;
+    }
+
+    .hero-main-image{
+        height:270px;
+    }
+
+    .hero-second-image{
+        height:165px;
+    }
+
+    .hero-third-image{
+        height:125px;
+    }
+
+    .photo-strip-grid{
+        grid-template-columns:1fr;
+    }
+
+    .strip-photo,
+    .strip-photo:nth-child(2){
+        height:320px;
+    }
+
+}
+
+</style>
 
 </head>
 
 
-<body>
+<body class="home-page">
 
 
-<!-- =====================================================
+<!-- =========================================================
      HEADER
-===================================================== -->
+========================================================= -->
 
-<header class="site-header">
+<header class="home-header">
 
-    <div class="header-content">
+<div class="home-header-inner">
 
-        <div class="brand-block">
+    <a href="index.html" class="home-brand">
 
-            <a href="index.html" class="site-name">
-                Nketia-Marfo
-            </a>
+        <h2>Nketia-Marfo</h2>
 
-            <p>
-                Thinking deeply. Creating freely. Sharing ideas.
-            </p>
+        <p>
+            Thinking deeply. Creating freely. Sharing ideas.
+        </p>
 
-        </div>
+    </a>
 
 
-        <nav class="main-nav">
+    <nav class="home-nav">
 
-            <a href="index.html" class="nav-link active">
-                Home
-            </a>
+        <a href="index.html" class="active">
+            Home
+        </a>
 
-            <a href="about.html" class="nav-link">
-                About
-            </a>
+        <a href="about.html">
+            About
+        </a>
 
-            <a href="blog.html" class="nav-link">
-                Blog
-            </a>
+        <a href="blog.html">
+            Blog
+        </a>
 
-            <!-- STUDENT VOICES IS A SEPARATE PAGE -->
-            <a href="student-voices.html" class="nav-link">
-                Student Voices
-            </a>
+        <!-- IMPORTANT: EXACT REPOSITORY FILE NAME -->
+        <a href="Students-Voice.html">
+            Student Voices
+        </a>
 
-            <a href="contact.html" class="nav-link">
-                Contact
-            </a>
+        <a href="contact.html">
+            Contact
+        </a>
 
-        </nav>
+    </nav>
 
-    </div>
+</div>
 
 </header>
 
@@ -333,102 +1256,108 @@
 <main>
 
 
-<!-- =====================================================
+<!-- =========================================================
      HERO
-===================================================== -->
+========================================================= -->
 
-<section class="hero-section">
+<section class="home-hero">
 
-    <div class="hero-text">
+<div class="home-hero-copy">
 
-        <p class="small-heading">
-            WELCOME TO NKETIA-MARFO
-        </p>
+    <div class="home-kicker">
+        WELCOME TO NKETIA-MARFO
+    </div>
 
-        <h1>
-            Thinking deeply.<br>
-            Creating freely.<br>
-            Sharing ideas.
-        </h1>
+    <h1>
+        Thinking deeply.<br>
+        Creating <span>freely.</span><br>
+        Sharing ideas.
+    </h1>
 
-        <p class="lead-text">
-            I’m Nketia-Marfo. This is my personal space for
-            sharing ideas, stories, projects, and perspectives
-            on education, economics, music, society, culture,
-            and opportunities.
-        </p>
+    <p class="home-hero-lead">
+        I’m Nketia-Marfo. This is my personal space for
+        ideas, stories, projects, music, education, economics,
+        culture, society and opportunity.
+    </p>
 
-        <p>
-            I am curious about how ideas become opportunities,
-            how creativity can create possibilities, and how
-            knowledge can make a meaningful difference.
-        </p>
+    <p class="home-hero-text">
+        I am curious about how ideas become opportunities,
+        how creativity can create possibilities, and how
+        knowledge can make a meaningful difference.
+    </p>
 
-        <div class="hero-actions">
+    <div class="home-actions">
 
-            <a href="about.html" class="button">
-                Discover More →
-            </a>
+        <a href="about.html" class="home-button">
+            Discover More →
+        </a>
 
-            <a href="blog.html" class="text-link">
-                Explore my ideas →
-            </a>
+        <a href="blog.html" class="home-button yellow">
+            Explore My Ideas →
+        </a>
 
-        </div>
+    </div>
+
+</div>
+
+
+<div class="home-hero-visual">
+
+    <div class="hero-image hero-main-image">
+
+        <img
+            src="file_0000000037bc8210ba33c13682e0591b.png"
+            alt="Nketia-Marfo"
+        >
 
     </div>
 
 
-    <div class="hero-photo-group">
+    <div class="hero-image hero-second-image">
 
-        <div class="hero-round-photo hero-photo-1">
-
-            <img
-                src="file_0000000037bc8210ba33c13682e0591b.png"
-                alt="Nketia-Marfo"
-            >
-
-        </div>
-
-
-        <div class="hero-round-photo hero-photo-2">
-
-            <img
-                src="file_00000000782081f486b26a47a83586ad.png"
-                alt="Nketia-Marfo"
-            >
-
-        </div>
-
-
-        <div class="hero-round-photo hero-photo-3">
-
-            <img
-                src="file_0000000099e471f48092d9c598859a2a.png"
-                alt="Nketia-Marfo"
-            >
-
-        </div>
+        <img
+            src="file_00000000782081f486b26a47a83586ad.png"
+            alt="Nketia-Marfo"
+        >
 
     </div>
+
+
+    <div class="hero-image hero-third-image">
+
+        <img
+            src="file_0000000099e471f48092d9c598859a2a.png"
+            alt="Nketia-Marfo"
+        >
+
+    </div>
+
+
+    <div class="hero-color-block"></div>
+
+    <div class="hero-yellow-block"></div>
+
+</div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      STATEMENT
-===================================================== -->
+========================================================= -->
 
-<section class="statement-section">
+<section class="home-statement">
+
+<div class="home-statement-inner">
 
     <div class="statement-number">
         01
     </div>
 
-    <div class="statement-content">
+    <div>
 
-        <p class="small-heading">
+        <p class="home-kicker">
             A PLACE FOR IDEAS
         </p>
 
@@ -445,89 +1374,109 @@
 
     </div>
 
+</div>
+
 </section>
 
 
 
-<!-- =====================================================
-     MIDDLE SECTION
-===================================================== -->
+<!-- =========================================================
+     EDUCATION / LEARNING STORY
+========================================================= -->
 
-<section class="middle-section">
+<section class="editorial-section">
 
-    <div class="square-photo">
+<div class="editorial-grid">
 
-        <img
-            src="IMG-20260124-WA0015.jpg"
-            alt="Nketia-Marfo exploring ideas and learning"
-        >
+    <div class="editorial-photo">
+
+        <div class="editorial-photo-main">
+
+            <img
+                src="IMG-20260124-WA0015.jpg"
+                alt="Nketia-Marfo learning and exploring ideas"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <div class="editorial-photo-small">
+
+            <img
+                src="1744567769378.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
+
+        </div>
 
     </div>
 
 
-    <div class="middle-text">
+    <div class="editorial-text">
 
-        <p class="small-heading">
+        <span class="editorial-tag">
             MY PERSPECTIVE
-        </p>
+        </span>
 
         <h2>
             Ideas That Become
-            Opportunities
+            Opportunities.
         </h2>
 
-        <p class="lead-text">
+        <p class="lead">
             I am interested in the space where education,
-            skills, creativity, and opportunity meet.
+            skills, creativity and opportunity meet.
         </p>
 
         <p>
             Sometimes a simple question can become a much
             bigger conversation about society, work, money,
-            culture, education, investment, and the future
+            development, education, investment and the future
             of young people.
         </p>
 
-        <a href="blog.html" class="text-link">
+        <a href="blog.html" class="editorial-link">
             Explore my ideas →
         </a>
 
     </div>
 
+</div>
+
 </section>
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      AREAS OF INTEREST
-===================================================== -->
+========================================================= -->
 
-<section class="interests-section">
+<section class="interests">
 
-    <div class="section-intro">
+<div class="interests-inner">
 
-        <p class="small-heading">
-            EXPLORE
-        </p>
+    <span class="section-label">
+        EXPLORE
+    </span>
 
-        <h2>
-            What I Write About
-        </h2>
+    <h2 class="section-title">
+        What I Write About
+    </h2>
 
-        <p>
-            My interests move across different areas that
-            shape how people learn, create, work, and build
-            their futures.
-        </p>
-
-    </div>
+    <p class="section-description">
+        My interests move across different areas that shape
+        how people learn, create, work, connect and build
+        their futures.
+    </p>
 
 
     <div class="interest-grid">
 
         <article class="interest-card">
 
-            <span>01</span>
+            <span class="interest-number">01</span>
 
             <h3>
                 Education
@@ -544,7 +1493,7 @@
 
         <article class="interest-card">
 
-            <span>02</span>
+            <span class="interest-number">02</span>
 
             <h3>
                 Economics
@@ -552,7 +1501,7 @@
 
             <p>
                 Work, money, development, investment,
-                entrepreneurship, and opportunity.
+                entrepreneurship and opportunity.
             </p>
 
         </article>
@@ -560,14 +1509,14 @@
 
         <article class="interest-card">
 
-            <span>03</span>
+            <span class="interest-number">03</span>
 
             <h3>
                 Music & Culture
             </h3>
 
             <p>
-                Music, performance, creativity, culture,
+                Music, performance, creativity, culture
                 and artistic expression.
             </p>
 
@@ -576,7 +1525,7 @@
 
         <article class="interest-card">
 
-            <span>04</span>
+            <span class="interest-number">04</span>
 
             <h3>
                 Society & Environment
@@ -584,160 +1533,299 @@
 
             <p>
                 Questions about society, communities,
-                the environment, and the world around us.
+                the environment and the world around us.
             </p>
 
         </article>
 
     </div>
 
+</div>
+
 </section>
 
 
 
-<!-- =====================================================
-     LATTER SECTION
-===================================================== -->
+<!-- =========================================================
+     EDUCATION STORY + PHOTO
+========================================================= -->
 
-<section class="latter-section">
+<section class="story-section">
 
-    <div class="latter-text">
+<div class="story-layout">
 
-        <p class="small-heading">
-            MUSIC & CREATIVITY
+    <div class="story-image">
+
+        <img
+            src="IMG-20260308-WA0121.jpg"
+            alt="Nketia-Marfo"
+            loading="lazy"
+        >
+
+    </div>
+
+
+    <div class="story-copy">
+
+        <span class="story-number">
+            02 • EDUCATION
+        </span>
+
+        <h2>
+            Education Should
+            Open Doors.
+        </h2>
+
+        <p class="lead">
+            Education should be more than simply completing
+            school. It should help people develop useful
+            skills, understand their environment and discover
+            meaningful opportunities.
         </p>
+
+        <p>
+            I think about what happens after the classroom:
+            the skills people carry, the choices they make,
+            the opportunities available to them and the
+            barriers that can stand in their way.
+        </p>
+
+        <a href="blog.html" class="editorial-link">
+            Read more ideas →
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ECONOMICS STORY
+========================================================= -->
+
+<section class="story-section">
+
+<div class="story-layout reverse">
+
+    <div class="story-image">
+
+        <img
+            src="IMG-20260327-WA0071.jpg"
+            alt="Nketia-Marfo"
+            loading="lazy"
+        >
+
+    </div>
+
+
+    <div class="story-copy">
+
+        <span class="story-number">
+            03 • ECONOMICS
+        </span>
+
+        <h2>
+            Understanding
+            Opportunity.
+        </h2>
+
+        <p class="lead">
+            Economics helps me ask questions about work,
+            money, investment, growth and the choices people
+            make when resources are limited.
+        </p>
+
+        <p>
+            I am especially interested in how young people
+            can turn knowledge and skills into real economic
+            opportunities — and how communities can create
+            environments where that becomes possible.
+        </p>
+
+        <a href="blog.html" class="editorial-link">
+            Explore the conversation →
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MUSIC FEATURE
+========================================================= -->
+
+<section class="music-feature">
+
+<div class="music-feature-inner">
+
+    <div>
+
+        <span
+            class="section-label"
+            style="color:#F2C94C;"
+        >
+            MUSIC • CREATIVITY • CULTURE
+        </span>
 
         <h2>
             Music, Creativity
-            and the Economy
+            and the Economy.
         </h2>
 
-        <p class="lead-text">
+        <p>
             Music is more than entertainment. It can connect
-            people, preserve culture, educate communities,
-            and create opportunities.
+            people, preserve culture, educate communities and
+            create opportunities.
         </p>
 
         <p>
             I am interested in understanding how creativity
             can grow into meaningful work while remaining
-            connected to culture, education, and purpose.
+            connected to culture, education and purpose.
         </p>
 
-        <a href="about.html" class="text-link">
-            Explore my interests →
+        <a
+            href="about.html"
+            class="home-button yellow"
+        >
+            Explore My Interests →
         </a>
 
     </div>
 
 
-    <div class="latter-photo-group">
+    <div class="music-photo-grid">
 
-        <div class="latter-photo latter-photo-1">
+        <div class="music-photo">
 
             <img
                 src="IMG-20260614-WA0187.jpg"
                 alt="Nketia-Marfo and music"
+                loading="lazy"
             >
 
         </div>
 
 
-        <div class="latter-photo latter-photo-2">
+        <div class="music-photo">
 
             <img
                 src="IMG-20260614-WA0191.jpg"
                 alt="Nketia-Marfo creative interests"
+                loading="lazy"
             >
 
         </div>
 
 
-        <div class="latter-photo latter-photo-3">
+        <div class="music-photo">
 
             <img
                 src="IMG-20260628-WA0080.jpg"
                 alt="Nketia-Marfo music and creativity"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <div class="music-photo">
+
+            <img
+                src="IMG-20250727-WA0037.jpg"
+                alt="Nketia-Marfo creative journey"
+                loading="lazy"
             >
 
         </div>
 
     </div>
+
+</div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      FEATURED THOUGHT
-===================================================== -->
+========================================================= -->
 
-<section class="featured-section">
+<section class="featured-thought">
+
+<div class="featured-thought-inner">
 
     <div class="featured-number">
-        03
+        04
     </div>
 
-    <div class="featured-text">
+    <div>
 
-        <p class="small-heading">
-            LATEST THOUGHT
-        </p>
+        <span class="section-label">
+            FEATURED THOUGHT
+        </span>
 
         <h2>
             Why Education Should
-            Create Opportunities
+            Create Opportunities.
         </h2>
 
         <p>
             Education should be more than simply completing
             school. It should help people develop useful
-            skills, understand their environment, and
-            discover meaningful opportunities.
+            skills, understand their environment and discover
+            meaningful opportunities.
         </p>
 
-        <a href="blog.html" class="text-link">
+        <a
+            href="blog.html"
+            class="editorial-link"
+        >
             Read the story →
         </a>
 
     </div>
 
+</div>
+
 </section>
 
 
 
-<!-- =====================================================
-     NEW HOME PHOTO GALLERY
-===================================================== -->
+<!-- =========================================================
+     JOURNEY PHOTO STRIP
+========================================================= -->
 
-<section class="home-gallery">
+<section class="photo-strip">
 
-    <div class="home-gallery-header">
+<div class="photo-strip-inner">
 
-        <p class="small-heading">
-            MOMENTS & JOURNEY
-        </p>
+    <span class="section-label">
+        MOMENTS & JOURNEY
+    </span>
 
-        <h2>
-            A Little More About
-            the Person Behind the Ideas.
-        </h2>
+    <h2 class="section-title">
+        A Little More About
+        the Person Behind the Ideas.
+    </h2>
 
-        <p>
-            Beyond writing and ideas, this space also captures
-            some of the moments, experiences, creativity,
-            learning, and memories that continue to shape my
-            journey.
-        </p>
-
-    </div>
+    <p class="section-description">
+        Beyond writing and ideas, these moments capture
+        experiences, learning, creativity and memories
+        that continue to shape the journey.
+    </p>
 
 
-    <div class="home-gallery-grid">
+    <div class="photo-strip-grid">
 
-        <!-- PHOTO 1 -->
-
-        <div class="home-gallery-item">
+        <div class="strip-photo">
 
             <img
                 src="1784768722971.jpg"
@@ -745,68 +1833,17 @@
                 loading="lazy"
             >
 
-            <div class="home-gallery-caption">
-
+            <div class="strip-caption">
                 <span>Journey</span>
-
                 <strong>
-                    Learning through experience
+                    Learning through experience.
                 </strong>
-
             </div>
 
         </div>
 
 
-        <!-- PHOTO 2 -->
-
-        <div class="home-gallery-item">
-
-            <img
-                src="IMG-20260308-WA0121.jpg"
-                alt="Nketia-Marfo"
-                loading="lazy"
-            >
-
-            <div class="home-gallery-caption">
-
-                <span>Growth</span>
-
-                <strong>
-                    Becoming through every experience
-                </strong>
-
-            </div>
-
-        </div>
-
-
-        <!-- PHOTO 3 -->
-
-        <div class="home-gallery-item">
-
-            <img
-                src="IMG-20260327-WA0071.jpg"
-                alt="Nketia-Marfo"
-                loading="lazy"
-            >
-
-            <div class="home-gallery-caption">
-
-                <span>Ideas</span>
-
-                <strong>
-                    Curiosity in motion
-                </strong>
-
-            </div>
-
-        </div>
-
-
-        <!-- PHOTO 4 -->
-
-        <div class="home-gallery-item">
+        <div class="strip-photo">
 
             <img
                 src="IMG-20260328-WA0182.jpg"
@@ -814,22 +1851,17 @@
                 loading="lazy"
             >
 
-            <div class="home-gallery-caption">
-
+            <div class="strip-caption">
                 <span>Perspective</span>
-
                 <strong>
-                    Seeing the world differently
+                    Seeing the world differently.
                 </strong>
-
             </div>
 
         </div>
 
 
-        <!-- PHOTO 5 -->
-
-        <div class="home-gallery-item">
+        <div class="strip-photo">
 
             <img
                 src="IMG-20260607-WA0126.jpg"
@@ -837,249 +1869,234 @@
                 loading="lazy"
             >
 
-            <div class="home-gallery-caption">
-
+            <div class="strip-caption">
                 <span>Community</span>
-
                 <strong>
-                    People, places and stories
+                    People, places and stories.
                 </strong>
-
             </div>
 
         </div>
 
+    </div>
 
-        <!-- PHOTO 6 -->
+</div>
 
-        <div class="home-gallery-item">
-
-            <img
-                src="IMG-20260802-WA0445.jpg"
-                alt="Nketia-Marfo"
-                loading="lazy"
-            >
-
-            <div class="home-gallery-caption">
-
-                <span>Creativity</span>
-
-                <strong>
-                    Creating with purpose
-                </strong>
-
-            </div>
-
-        </div>
+</section>
 
 
-        <!-- PHOTO 7 -->
 
-        <div class="home-gallery-item">
+<!-- =========================================================
+     BEYOND THE SCREEN
+========================================================= -->
 
+<section class="experience-section">
+
+<div class="experience-inner">
+
+    <div class="experience-image">
+
+        <img
+            src="IMG_20260319_160228_606.jpg"
+            alt="Nketia-Marfo"
+            loading="lazy"
+        >
+
+    </div>
+
+
+    <div class="experience-copy">
+
+        <span class="section-label">
+            BEYOND THE SCREEN
+        </span>
+
+        <h2>
+            Ideas Come From
+            Living, Learning
+            and Listening.
+        </h2>
+
+        <p>
+            The ideas I share are connected to the world
+            around me — the people I meet, the questions
+            I ask, the things I learn and the experiences
+            that make me think more deeply.
+        </p>
+
+        <p>
+            I believe meaningful ideas do not always begin
+            in a classroom. Sometimes they begin with a
+            conversation, a song, a community, a challenge,
+            a book or a simple question that refuses to
+            disappear.
+        </p>
+
+        <a
+            href="about.html"
+            class="editorial-link"
+        >
+            Learn more about me →
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MORE PERSONAL MOMENTS
+========================================================= -->
+
+<section class="mini-wall">
+
+<div class="mini-wall-inner">
+
+    <span class="section-label">
+        THE JOURNEY CONTINUES
+    </span>
+
+    <h2 class="section-title">
+        Moments That Matter.
+    </h2>
+
+    <p class="section-description">
+        Different moments, different settings, one continuing
+        journey of learning, creativity and growth.
+    </p>
+
+
+    <div class="mini-wall-grid">
+
+        <div class="mini-wall-item">
             <img
                 src="IMG_20260303_195951_662.jpg"
                 alt="Nketia-Marfo"
                 loading="lazy"
             >
-
-            <div class="home-gallery-caption">
-
-                <span>Memory</span>
-
-                <strong>
-                    Moments worth remembering
-                </strong>
-
-            </div>
-
         </div>
 
-
-        <!-- PHOTO 8 -->
-
-        <div class="home-gallery-item">
-
+        <div class="mini-wall-item">
             <img
                 src="IMG_20260304_172957_144.jpg"
                 alt="Nketia-Marfo"
                 loading="lazy"
             >
-
-            <div class="home-gallery-caption">
-
-                <span>Life</span>
-
-                <strong>
-                    The journey continues
-                </strong>
-
-            </div>
-
         </div>
 
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PHOTO STORY
-===================================================== -->
-
-<section class="photo-story-section">
-
-    <div class="photo-story-grid">
-
-        <div class="photo-story-main">
-
+        <div class="mini-wall-item">
             <img
-                src="IMG_20260319_160228_606.jpg"
+                src="IMG_20260222_125912_662.jpg"
                 alt="Nketia-Marfo"
                 loading="lazy"
             >
-
         </div>
 
-
-        <div class="photo-story-text">
-
-            <p class="small-heading">
-                BEYOND THE SCREEN
-            </p>
-
-            <h2>
-                Ideas Come From
-                Living, Learning
-                and Listening.
-            </h2>
-
-            <p class="lead-text">
-                The ideas I share are connected to the world
-                around me — the people I meet, the questions
-                I ask, the things I learn, and the experiences
-                that make me think more deeply.
-            </p>
-
-            <p>
-                I believe meaningful ideas do not always begin
-                in a classroom. Sometimes they begin with a
-                conversation, a song, a community, a challenge,
-                a book, or a simple question that refuses to
-                disappear.
-            </p>
-
-            <a href="about.html" class="text-link">
-                Learn more about me →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CREATIVE PHOTO COLLECTION
-===================================================== -->
-
-<section class="home-gallery">
-
-    <div class="home-gallery-header">
-
-        <p class="small-heading">
-            MUSIC • CREATIVITY • CULTURE
-        </p>
-
-        <h2>
-            Creativity Is Part
-            of the Journey.
-        </h2>
-
-        <p>
-            Music and creativity remain an important part of
-            how I express myself, connect with people, and
-            understand culture.
-        </p>
-
-    </div>
-
-
-    <div class="creative-gallery">
-
-        <div class="creative-gallery-item">
-
+        <div class="mini-wall-item">
             <img
-                src="IMG_20260319_182732_442.jpg"
-                alt="Nketia-Marfo creative journey"
-                loading="lazy"
-            >
-
-        </div>
-
-
-        <div class="creative-gallery-item">
-
-            <img
-                src="IMG_20260319_182734_616.jpg"
+                src="IMG_20260301_181413_373.jpg"
                 alt="Nketia-Marfo"
                 loading="lazy"
             >
-
         </div>
 
-
-        <div class="creative-gallery-item">
-
+        <div class="mini-wall-item">
             <img
-                src="IMG_20260319_182737_286.jpg"
-                alt="Nketia-Marfo music and creativity"
+                src="IMG-20250810-WA0144.jpg"
+                alt="Nketia-Marfo"
                 loading="lazy"
             >
+        </div>
 
+        <div class="mini-wall-item">
+            <img
+                src="IMG-20260319_182732_442.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
+        </div>
+
+        <div class="mini-wall-item">
+            <img
+                src="IMG-20260319_182734_616.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
+        </div>
+
+        <div class="mini-wall-item">
+            <img
+                src="IMG-20260319_182737_286.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
+        </div>
+
+        <div class="mini-wall-item">
+            <img
+                src="IMG-20260319_182740_279.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
+        </div>
+
+        <div class="mini-wall-item">
+            <img
+                src="IMG-20260319_182732_442.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
         </div>
 
     </div>
+
+</div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      FINAL CONTACT
-===================================================== -->
+========================================================= -->
 
-<section class="final-section">
+<section class="home-final">
 
-    <div class="final-text">
+<div class="home-final-inner">
 
-        <p class="small-heading">
+    <div>
+
+        <span
+            class="section-label"
+            style="color:#F2C94C;"
+        >
             LET'S CONNECT
-        </p>
+        </span>
 
         <h2>
             There is always
             more to explore.
         </h2>
 
-    </div>
-
-
-    <div class="final-action">
-
         <p>
-            Have an idea, question, opportunity, or something
-            interesting to discuss?
+            Have an idea, question, opportunity, collaboration,
+            music project or something interesting to discuss?
         </p>
 
-        <a href="contact.html" class="button">
-            Contact Me →
-        </a>
-
     </div>
+
+
+    <a
+        href="contact.html"
+        class="final-button"
+    >
+        Contact Me →
+    </a>
+
+</div>
 
 </section>
 
@@ -1088,100 +2105,105 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      FOOTER
-===================================================== -->
+========================================================= -->
 
-<footer>
+<footer class="home-footer">
 
-    <div class="footer-content">
-
-        <div class="footer-brand">
-
-            <h2>
-                Nketia-Marfo
-            </h2>
-
-            <p>
-                Thinking deeply.<br>
-                Creating freely.<br>
-                Sharing ideas.
-            </p>
-
-        </div>
+<div class="footer-inner">
 
 
-        <div class="footer-links">
+    <div class="footer-brand">
 
-            <h3>
-                Explore
-            </h3>
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="blog.html">
-                Blog
-            </a>
-
-            <!-- STUDENT VOICES IS A SEPARATE PAGE -->
-            <a href="student-voices.html">
-                Student Voices
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </div>
-
-
-        <div class="footer-contact">
-
-            <h3>
-                Connect
-            </h3>
-
-            <p>
-                nketiamarfo157@gmail.com
-            </p>
-
-            <p>
-                TikTok: Nketia Marfo
-            </p>
-
-            <p>
-                Facebook: Nketia Marfo
-            </p>
-
-            <p>
-                Instagram: Affectionate_Music
-            </p>
-
-            <p>
-                X: Nketia
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
+        <h2>
+            Nketia-Marfo
+        </h2>
 
         <p>
-            © 2026 Nketia-Marfo. All rights reserved.
+            Thinking deeply.<br>
+            Creating freely.<br>
+            Sharing ideas.
         </p>
 
     </div>
+
+
+    <div class="footer-column">
+
+        <h3>
+            Explore
+        </h3>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="blog.html">
+            Blog
+        </a>
+
+        <!-- EXACT FILE NAME -->
+        <a href="Students-Voice.html">
+            Student Voices
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h3>
+            Connect
+        </h3>
+
+        <p>
+            nketiamarfo157@gmail.com
+        </p>
+
+        <p>
+            WhatsApp: 0593378431
+        </p>
+
+        <p>
+            TikTok: Nketia Marfo
+        </p>
+
+        <p>
+            Facebook: Nketia Marfo
+        </p>
+
+        <p>
+            Instagram: Affectionate_Music
+        </p>
+
+        <p>
+            X: Nketia
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+    <p>
+        © 2026 Nketia-Marfo. All rights reserved.
+    </p>
+
+</div>
 
 </footer>
 
 
 </body>
-                </html>
+            </html>
