@@ -7,8 +7,217 @@
 
     <title>Nketia-Marfo | Home</title>
 
+    <meta
+        name="description"
+        content="Nketia-Marfo — thinking deeply, creating freely, and sharing ideas about education, economics, music, culture, society and opportunity."
+    >
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           STUDENT VOICES — HOME PREVIEW
+        ===================================================== */
+
+        .student-voices-home {
+            padding: 100px 7%;
+            background: #f7f8fa;
+        }
+
+        .student-voices-home .section-intro {
+            max-width: 760px;
+            margin-bottom: 55px;
+        }
+
+        .student-voices-home .section-intro h2 {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1.08;
+            margin: 12px 0 20px;
+        }
+
+        .student-voices-home .section-intro p:not(.small-heading) {
+            color: #5d6975;
+            line-height: 1.8;
+            max-width: 680px;
+        }
+
+        .voices-home-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .voice-home-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            overflow: hidden;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .voice-home-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 45px rgba(11, 31, 58, .10);
+        }
+
+        .voice-home-image {
+            width: 100%;
+            height: 245px;
+            overflow: hidden;
+            background: #e5e7eb;
+        }
+
+        .voice-home-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .voice-home-content {
+            padding: 28px;
+        }
+
+        .voice-country {
+            display: inline-block;
+            margin-bottom: 12px;
+            font-size: .82rem;
+            font-weight: 700;
+            color: #176b45;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+        }
+
+        .voice-home-content h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.55rem;
+            line-height: 1.25;
+            color: #0b1f3a;
+            margin: 0 0 15px;
+        }
+
+        .voice-home-content p {
+            color: #5d6975;
+            line-height: 1.75;
+            margin: 0 0 20px;
+        }
+
+        .voice-read-more {
+            color: #a61b29;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .voice-read-more:hover {
+            text-decoration: underline;
+        }
+
+        .voices-home-bottom {
+            margin-top: 55px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #dfe3e8;
+        }
+
+        .voices-home-bottom p {
+            margin: 0;
+            color: #5d6975;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .voices-home-bottom a {
+            display: inline-block;
+            background: #0b1f3a;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 23px;
+            font-weight: 700;
+            transition: background .3s ease;
+            white-space: nowrap;
+        }
+
+        .voices-home-bottom a:hover {
+            background: #a61b29;
+        }
+
+
+        /* =====================================================
+           EXTRA HOME IMAGE POLISH
+           Keeps the original framing concept
+        ===================================================== */
+
+        .hero-round-photo,
+        .latter-photo {
+            overflow: hidden;
+        }
+
+        .hero-round-photo img,
+        .latter-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .square-photo {
+            overflow: hidden;
+        }
+
+        .square-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+
+            .voices-home-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .student-voices-home {
+                padding: 75px 6%;
+            }
+
+            .voices-home-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .voice-home-image {
+                height: 230px;
+            }
+
+            .voices-home-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .voices-home-bottom a {
+                width: 100%;
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
@@ -48,6 +257,11 @@
                 Blog
             </a>
 
+            <!-- STUDENT VOICES ADDED TO NAVIGATION -->
+            <a href="Students-Voice" class="nav-link">
+                Student Voices
+            </a>
+
             <a href="contact.html" class="nav-link">
                 Contact
             </a>
@@ -65,7 +279,6 @@
 
 <!-- =====================================================
      HERO
-     WRITING LEFT — ROUND PHOTOS RIGHT
 ===================================================== -->
 
 <section class="hero-section">
@@ -110,10 +323,6 @@
     </div>
 
 
-    <!-- =================================================
-         THREE SMALL ROUND PHOTOS
-    ================================================= -->
-
     <div class="hero-photo-group">
 
         <div class="hero-round-photo hero-photo-1">
@@ -139,7 +348,7 @@
         <div class="hero-round-photo hero-photo-3">
 
             <img
-                src="file_0000000099e471f48092d9c5988591b.png"
+                src="file_0000000099e471f48092d9c598859a2a.png"
                 alt="Nketia-Marfo"
             >
 
@@ -160,7 +369,6 @@
     <div class="statement-number">
         01
     </div>
-
 
     <div class="statement-content">
 
@@ -187,7 +395,6 @@
 
 <!-- =====================================================
      MIDDLE SECTION
-     SQUARE PHOTO LEFT — TEXT RIGHT
 ===================================================== -->
 
 <section class="middle-section">
@@ -196,7 +403,7 @@
 
         <img
             src="IMG-20260124-WA0015.jpg"
-            alt="Nketia-Marfo"
+            alt="Nketia-Marfo exploring ideas and learning"
         >
 
     </div>
@@ -262,12 +469,9 @@
 
     <div class="interest-grid">
 
-
         <article class="interest-card">
 
-            <span>
-                01
-            </span>
+            <span>01</span>
 
             <h3>
                 Education
@@ -282,12 +486,9 @@
         </article>
 
 
-
         <article class="interest-card">
 
-            <span>
-                02
-            </span>
+            <span>02</span>
 
             <h3>
                 Economics
@@ -301,12 +502,9 @@
         </article>
 
 
-
         <article class="interest-card">
 
-            <span>
-                03
-            </span>
+            <span>03</span>
 
             <h3>
                 Music & Culture
@@ -320,12 +518,9 @@
         </article>
 
 
-
         <article class="interest-card">
 
-            <span>
-                04
-            </span>
+            <span>04</span>
 
             <h3>
                 Society & Environment
@@ -338,7 +533,6 @@
 
         </article>
 
-
     </div>
 
 </section>
@@ -347,7 +541,6 @@
 
 <!-- =====================================================
      LATTER SECTION
-     TEXT LEFT — ROUND PHOTOS RIGHT
 ===================================================== -->
 
 <section class="latter-section">
@@ -382,18 +575,13 @@
     </div>
 
 
-
-    <!-- =================================================
-         THREE ROUND PHOTOS
-    ================================================= -->
-
     <div class="latter-photo-group">
 
         <div class="latter-photo latter-photo-1">
 
             <img
                 src="IMG-20260614-WA0187.jpg"
-                alt="Nketia-Marfo"
+                alt="Nketia-Marfo and music"
             >
 
         </div>
@@ -403,7 +591,7 @@
 
             <img
                 src="IMG-20260614-WA0191.jpg"
-                alt="Nketia-Marfo"
+                alt="Nketia-Marfo creative interests"
             >
 
         </div>
@@ -413,7 +601,7 @@
 
             <img
                 src="IMG-20260628-WA0080.jpg"
-                alt="Nketia-Marfo"
+                alt="Nketia-Marfo music and creativity"
             >
 
         </div>
@@ -433,7 +621,6 @@
     <div class="featured-number">
         03
     </div>
-
 
     <div class="featured-text">
 
@@ -455,6 +642,292 @@
 
         <a href="blog.html" class="text-link">
             Read the story →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STUDENT VOICES
+===================================================== -->
+
+<section class="student-voices-home" id="student-voices">
+
+    <div class="section-intro">
+
+        <p class="small-heading">
+            STUDENT VOICES
+        </p>
+
+        <h2>
+            Every student has a story.
+        </h2>
+
+        <p>
+            Education is not experienced in the same way by
+            everyone. Student Voices brings together stories,
+            experiences, ideas, challenges, and lessons from
+            students and learners across different places.
+        </p>
+
+    </div>
+
+
+    <div class="voices-home-grid">
+
+        <article class="voice-home-card">
+
+            <div class="voice-home-image">
+
+                <img
+                    src="1784768722971.jpg"
+                    alt="Student experience and international education"
+                >
+
+            </div>
+
+            <div class="voice-home-content">
+
+                <span class="voice-country">
+                    🇬🇭 Ghana
+                </span>
+
+                <h3>
+                    My UHK/Erasmus Experience Changed My Life
+                </h3>
+
+                <p>
+                    An international educational experience can
+                    introduce students to new cultures, new
+                    perspectives, and possibilities beyond the
+                    classroom.
+                </p>
+
+                <a
+                    href="Students-Voice"
+                    class="voice-read-more"
+                >
+                    Read the Student Voice →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="voice-home-card">
+
+            <div class="voice-home-image">
+
+                <img
+                    src="IMG-20260308-WA0121.jpg"
+                    alt="Student leadership and education"
+                >
+
+            </div>
+
+            <div class="voice-home-content">
+
+                <span class="voice-country">
+                    🇬🇭 Ghana
+                </span>
+
+                <h3>
+                    Balancing Books and Leadership
+                </h3>
+
+                <p>
+                    Student life can involve more than academic
+                    achievement. Leadership teaches responsibility,
+                    communication, service, and how to work with
+                    others.
+                </p>
+
+                <a
+                    href="Students-Voice"
+                    class="voice-read-more"
+                >
+                    Read the Student Voice →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="voice-home-card">
+
+            <div class="voice-home-image">
+
+                <img
+                    src="IMG-20260327-WA0071.jpg"
+                    alt="Student career and purpose"
+                >
+
+            </div>
+
+            <div class="voice-home-content">
+
+                <span class="voice-country">
+                    🇳🇬 Nigeria
+                </span>
+
+                <h3>
+                    Career Decisions and Self-Actualisation
+                </h3>
+
+                <p>
+                    Choosing a career is often a journey of
+                    discovering interests, abilities, purpose,
+                    opportunities, and the kind of future a
+                    student wants to build.
+                </p>
+
+                <a
+                    href="Students-Voice"
+                    class="voice-read-more"
+                >
+                    Read the Student Voice →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="voice-home-card">
+
+            <div class="voice-home-image">
+
+                <img
+                    src="IMG-20260328-WA0182.jpg"
+                    alt="Student growth and education"
+                >
+
+            </div>
+
+            <div class="voice-home-content">
+
+                <span class="voice-country">
+                    🇰🇪 Kenya
+                </span>
+
+                <h3>
+                    From Kenya to UBC
+                </h3>
+
+                <p>
+                    Moving into a new educational environment
+                    can create opportunities for growth, community,
+                    cultural exchange, and personal discovery.
+                </p>
+
+                <a
+                    href="Students-Voice"
+                    class="voice-read-more"
+                >
+                    Read the Student Voice →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="voice-home-card">
+
+            <div class="voice-home-image">
+
+                <img
+                    src="IMG-20260607-WA0126.jpg"
+                    alt="Student resilience and education"
+                >
+
+            </div>
+
+            <div class="voice-home-content">
+
+                <span class="voice-country">
+                    🇿🇦 South Africa
+                </span>
+
+                <h3>
+                    From Survival to Solution
+                </h3>
+
+                <p>
+                    Education can become a source of resilience
+                    when students learn to turn difficult
+                    circumstances into questions, ideas, and
+                    possible solutions.
+                </p>
+
+                <a
+                    href="Students-Voice"
+                    class="voice-read-more"
+                >
+                    Read the Student Voice →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="voice-home-card">
+
+            <div class="voice-home-image">
+
+                <img
+                    src="IMG-20260614-WA0155.jpg"
+                    alt="Student perseverance and education"
+                >
+
+            </div>
+
+            <div class="voice-home-content">
+
+                <span class="voice-country">
+                    🇨🇦 Canada
+                </span>
+
+                <h3>
+                    Made by Perseverance, Family and Education
+                </h3>
+
+                <p>
+                    Behind many educational journeys are family,
+                    perseverance, sacrifice, encouragement, and
+                    the determination to keep moving forward.
+                </p>
+
+                <a
+                    href="Students-Voice"
+                    class="voice-read-more"
+                >
+                    Read the Student Voice →
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <div class="voices-home-bottom">
+
+        <p>
+            Different places. Different journeys. Different
+            challenges. But every voice carries an experience
+            worth hearing.
+        </p>
+
+        <a href="Students-Voice">
+            Explore All Student Voices →
         </a>
 
     </div>
@@ -511,9 +984,6 @@
 
     <div class="footer-content">
 
-
-        <!-- BRAND -->
-
         <div class="footer-brand">
 
             <h2>
@@ -528,9 +998,6 @@
 
         </div>
 
-
-
-        <!-- NAVIGATION -->
 
         <div class="footer-links">
 
@@ -550,15 +1017,17 @@
                 Blog
             </a>
 
+            <!-- STUDENT VOICES ADDED TO FOOTER -->
+            <a href="Students-Voice">
+                Student Voices
+            </a>
+
             <a href="contact.html">
                 Contact
             </a>
 
         </div>
 
-
-
-        <!-- CONTACT -->
 
         <div class="footer-contact">
 
@@ -588,12 +1057,8 @@
 
         </div>
 
-
     </div>
 
-
-
-    <!-- COPYRIGHT -->
 
     <div class="footer-bottom">
 
@@ -608,3 +1073,7 @@
 
 </body>
 </html>
+
+This keeps your Student Voices section on the Home page and also makes sure Student Voices appears in the top navigation and footer navigation.
+
+One thing to check on GitHub: the link "Students-Voice" must exactly match the name/path of your Student Voices page or folder.
