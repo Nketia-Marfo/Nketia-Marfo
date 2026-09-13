@@ -2340,3 +2340,288 @@ footer {
         padding: 18px 5%;
     }
    }
+/* =========================================================
+   PERSONAL PHOTO BACKGROUNDS
+   NKETIA MARFO
+========================================================= */
+
+
+/* =========================================================
+   HOME PAGE
+   Wooden chair → Blue outfit → Beach balcony
+========================================================= */
+
+.home-page .hero-section {
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 33, 61, 0.78),
+            rgba(20, 33, 61, 0.78)
+        ),
+        url("Stylish Portrait with Wooden Stool.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 0;
+}
+
+.home-page .middle-section {
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.82),
+            rgba(255, 255, 255, 0.82)
+        ),
+        url("1000622709.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home-page .latter-section {
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 33, 61, 0.72),
+            rgba(20, 33, 61, 0.72)
+        ),
+        url("1000579848.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Make Home text readable over photographs */
+
+.home-page .hero-section,
+.home-page .middle-section,
+.home-page .latter-section {
+    isolation: isolate;
+}
+
+.home-page .hero-section::before,
+.home-page .middle-section::before,
+.home-page .latter-section::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   ABOUT PAGE
+   Blue hoodie → Beach balcony
+========================================================= */
+
+.about-page .personal-story {
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 33, 61, 0.74),
+            rgba(20, 33, 61, 0.74)
+        ),
+        url("Big Dreams, Bright Futures.png");
+
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+.about-page .story-intro h2,
+.about-page .story-content h3 {
+    color: white;
+}
+
+.about-page .story-intro p,
+.about-page .story-content p {
+    color: #f1f4f7;
+}
+
+
+/* Lower About section */
+
+.about-page .story-point:last-child {
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 33, 61, 0.68),
+            rgba(20, 33, 61, 0.68)
+        ),
+        url("1000579848.png");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.about-page .story-point:last-child h3,
+.about-page .story-point:last-child p {
+    color: white;
+}
+
+
+/* =========================================================
+   BLOG PAGE
+   Blue hoodie → Wooden chair
+========================================================= */
+
+
+/* Upper Blog area */
+
+.blog-page .hero-section {
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 33, 61, 0.75),
+            rgba(20, 33, 61, 0.75)
+        ),
+        url("Big Dreams, Bright Futures.png");
+
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+
+/* Lower Blog area */
+
+.blog-page .latter-section {
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 33, 61, 0.70),
+            rgba(20, 33, 61, 0.70)
+        ),
+        url("Stylish Portrait with Wooden Stool.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Blog text readability */
+
+.blog-page .hero-section h1,
+.blog-page .hero-section p,
+.blog-page .latter-section h2,
+.blog-page .latter-section p {
+    color: white;
+}
+
+
+/* =========================================================
+   CONTACT PAGE
+   Blue T-shirt → Seashore
+========================================================= */
+
+
+/* Upper Contact section */
+
+.contact-page .contact-hero {
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 33, 61, 0.70),
+            rgba(20, 33, 61, 0.70)
+        ),
+        url("1000538278(8).jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+
+/* Contact heading */
+
+.contact-page .contact-hero h2,
+.contact-page .contact-hero .contact-lead {
+    color: white;
+}
+
+
+/* Lower Contact area */
+
+.contact-page .contact-final {
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 33, 61, 0.70),
+            rgba(20, 33, 61, 0.70)
+        ),
+        url("1000583267(6).png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+.contact-page .contact-final h2 {
+    color: white;
+}
+
+
+/* =========================================================
+   MOBILE BACKGROUND POSITION
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .home-page .hero-section {
+        background-position: 65% center;
+    }
+
+    .home-page .middle-section {
+        background-position: center;
+    }
+
+    .home-page .latter-section {
+        background-position: center;
+    }
+
+    .about-page .personal-story {
+        background-position: 65% top;
+    }
+
+    .blog-page .hero-section {
+        background-position: 65% top;
+    }
+
+    .blog-page .latter-section {
+        background-position: center;
+    }
+
+    .contact-page .contact-hero {
+        background-position: center;
+    }
+
+    .contact-page .contact-final {
+        background-position: center;
+    }
+}
