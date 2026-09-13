@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Student Voices | Nketia-Marfo</title>
+    <title>Student-Voices | Nketia-Marfo</title>
 
     <meta
         name="description"
-        content="Student Voices by Nketia-Marfo — stories, experiences, ideas and lessons from students around the world."
+        content="Student-Voices by Nketia-Marfo — stories, experiences, ideas and lessons from students around the world."
     >
 
     <link rel="stylesheet" href="style.css">
 
     <style>
         /* =========================================================
-           STUDENT VOICES — NKETIA-MARFO
+           STUDENT-VOICES — NKETIA-MARFO
            ========================================================= */
 
         :root {
