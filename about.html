@@ -663,27 +663,22 @@
 
         .story-list {
 
-            max-width: 1150px;
+            max-width: 1000px;
 
             margin: auto;
 
         }
 
 
+        /* =========================================================
+           STORY WRITING + PICTURE
+        ========================================================= */
+
         .story-point {
 
-            display: grid;
+            display: block;
 
-            grid-template-columns:
-                75px
-                1fr
-                190px;
-
-            align-items: center;
-
-            gap: 40px;
-
-            padding: 50px 0;
+            padding: 55px 0;
 
             border-top:
                 1px solid
@@ -718,6 +713,17 @@
 
             color: var(--orange);
 
+            margin-bottom: 10px;
+
+        }
+
+
+        .story-content {
+
+            max-width: 760px;
+
+            margin: 0 auto;
+
         }
 
 
@@ -734,14 +740,14 @@
 
             margin: 0;
 
-            max-width: 680px;
+            max-width: 720px;
 
         }
 
 
 
         /* =========================================================
-           STORY PHOTOS — MODERATE LARGE SQUARE
+           STORY PHOTOS — SQUARE UNDER EACH WRITING
         ========================================================= */
 
         .story-photo {
@@ -752,7 +758,7 @@
 
             object-fit: cover;
 
-            justify-self: center;
+            margin: 28px auto 0;
 
             border: none;
 
@@ -763,7 +769,8 @@
             border-radius: 10px;
 
             transition:
-                transform 0.3s ease;
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
 
         }
 
@@ -772,6 +779,10 @@
 
             transform:
                 scale(1.04);
+
+            box-shadow:
+                0 12px 30px
+                rgba(20, 33, 61, 0.14);
 
         }
 
@@ -1265,7 +1276,7 @@
 
             color: white;
 
-            padding: 35px 7%;
+            padding: 40px 7%;
 
             border-top:
                 5px solid
@@ -1286,7 +1297,20 @@
 
             align-items: center;
 
-            gap: 20px;
+            gap: 30px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .footer-left {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
 
         }
 
@@ -1312,6 +1336,47 @@
                 serif;
 
             font-size: 1.2rem;
+
+        }
+
+
+        .footer-nav {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .footer-nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 0.82rem;
+
+            transition:
+                color 0.3s ease;
+
+        }
+
+
+        .footer-nav a:hover {
+
+            color: var(--orange);
+
+        }
+
+
+        .footer-nav a.active {
+
+            color: var(--orange);
 
         }
 
@@ -1398,16 +1463,16 @@
             }
 
 
-            /* Slightly smaller story photos for tablets */
+            .story-list {
 
-            .story-point {
+                max-width: 850px;
 
-                grid-template-columns:
-                    65px
-                    1fr
-                    165px;
+            }
 
-                gap: 28px;
+
+            .story-content {
+
+                max-width: 700px;
 
             }
 
@@ -1587,14 +1652,8 @@
 
             .story-point {
 
-                grid-template-columns:
-                    45px
-                    1fr;
-
-                gap: 18px;
-
                 padding:
-                    32px 0;
+                    35px 0;
 
             }
 
@@ -1614,7 +1673,7 @@
 
 
             /* =====================================================
-               MODERATE SQUARE STORY PHOTOS ON MOBILE
+               SQUARE STORY PHOTOS UNDER WRITINGS ON MOBILE
             ===================================================== */
 
             .story-photo {
@@ -1623,9 +1682,8 @@
 
                 height: 135px;
 
-                margin-top: 20px;
-
-                justify-self: start;
+                margin:
+                    22px auto 0;
 
                 border-radius: 10px;
 
@@ -1736,6 +1794,14 @@
 
             }
 
+
+            .footer-nav {
+
+                gap:
+                    13px 18px;
+
+            }
+
         }
 
     </style>
@@ -1781,6 +1847,12 @@
 
             <a href="blog.html">
                 Blog
+            </a>
+
+            <!-- STUDENT VOICES ADDED TO NAVIGATION -->
+
+            <a href="Students-Voice">
+                Student Voices
             </a>
 
             <a href="contact.html">
@@ -1967,7 +2039,9 @@
     <div class="story-list">
 
 
-        <!-- 01 -->
+        <!-- =====================================================
+             01
+        ===================================================== -->
 
         <article class="story-point">
 
@@ -1987,18 +2061,20 @@
                     educational opportunity available to me.
                 </p>
 
-            </div>
+                <img
+                    class="story-photo"
+                    src="1784768722971.jpg"
+                    alt="Nketia-Marfo academic journey">
 
-            <img
-                class="story-photo"
-                src="1784768722971.jpg"
-                alt="Nketia-Marfo">
+            </div>
 
         </article>
 
 
 
-        <!-- 02 -->
+        <!-- =====================================================
+             02
+        ===================================================== -->
 
         <article class="story-point">
 
@@ -2019,18 +2095,20 @@
                     can create opportunities.
                 </p>
 
-            </div>
+                <img
+                    class="story-photo"
+                    src="IMG-20260308-WA0121.jpg"
+                    alt="Nketia-Marfo academic achievement">
 
-            <img
-                class="story-photo"
-                src="IMG-20260308-WA0121.jpg"
-                alt="Nketia-Marfo">
+            </div>
 
         </article>
 
 
 
-        <!-- 03 -->
+        <!-- =====================================================
+             03
+        ===================================================== -->
 
         <article class="story-point">
 
@@ -2051,18 +2129,20 @@
                     what I learn connects to the world around me.
                 </p>
 
-            </div>
+                <img
+                    class="story-photo"
+                    src="IMG-20260327-WA0071.jpg"
+                    alt="Nketia-Marfo learning and curiosity">
 
-            <img
-                class="story-photo"
-                src="IMG-20260327-WA0071.jpg"
-                alt="Nketia-Marfo">
+            </div>
 
         </article>
 
 
 
-        <!-- 04 -->
+        <!-- =====================================================
+             04
+        ===================================================== -->
 
         <article class="story-point">
 
@@ -2082,18 +2162,20 @@
                     myself beyond what I am formally required to learn.
                 </p>
 
-            </div>
+                <img
+                    class="story-photo"
+                    src="IMG-20260328-WA0182.jpg"
+                    alt="Nketia-Marfo independent learning">
 
-            <img
-                class="story-photo"
-                src="IMG-20260328-WA0182.jpg"
-                alt="Nketia-Marfo">
+            </div>
 
         </article>
 
 
 
-        <!-- 05 -->
+        <!-- =====================================================
+             05
+        ===================================================== -->
 
         <article class="story-point">
 
@@ -2115,18 +2197,20 @@
                     own abilities.
                 </p>
 
-            </div>
+                <img
+                    class="story-photo"
+                    src="IMG-20260607-WA0126.jpg"
+                    alt="Nketia-Marfo teaching others">
 
-            <img
-                class="story-photo"
-                src="IMG-20260607-WA0126.jpg"
-                alt="Nketia-Marfo">
+            </div>
 
         </article>
 
 
 
-        <!-- 06 -->
+        <!-- =====================================================
+             06
+        ===================================================== -->
 
         <article class="story-point">
 
@@ -2148,18 +2232,20 @@
                     difference in someone's future.
                 </p>
 
-            </div>
+                <img
+                    class="story-photo"
+                    src="IMG-20260614-WA0155.jpg"
+                    alt="Nketia-Marfo supporting students">
 
-            <img
-                class="story-photo"
-                src="IMG-20260614-WA0155.jpg"
-                alt="Nketia-Marfo">
+            </div>
 
         </article>
 
 
 
-        <!-- 07 -->
+        <!-- =====================================================
+             07
+        ===================================================== -->
 
         <article class="story-point">
 
@@ -2181,18 +2267,20 @@
                     greater than any one person.
                 </p>
 
-            </div>
+                <img
+                    class="story-photo"
+                    src="IMG-20260802-WA0445.jpg"
+                    alt="Nketia-Marfo leadership through music">
 
-            <img
-                class="story-photo"
-                src="IMG-20260802-WA0445.jpg"
-                alt="Nketia-Marfo">
+            </div>
 
         </article>
 
 
 
-        <!-- 08 -->
+        <!-- =====================================================
+             08
+        ===================================================== -->
 
         <article class="story-point">
 
@@ -2213,18 +2301,20 @@
                     even when progress takes time.
                 </p>
 
-            </div>
+                <img
+                    class="story-photo"
+                    src="IMG_20260303_195951_662.jpg"
+                    alt="Nketia-Marfo playing music">
 
-            <img
-                class="story-photo"
-                src="IMG_20260303_195951_662.jpg"
-                alt="Nketia-Marfo">
+            </div>
 
         </article>
 
 
 
-        <!-- 09 -->
+        <!-- =====================================================
+             09
+        ===================================================== -->
 
         <article class="story-point">
 
@@ -2245,18 +2335,20 @@
                     abilities to support and encourage others.
                 </p>
 
-            </div>
+                <img
+                    class="story-photo"
+                    src="IMG_20260303_195951_718.jpg"
+                    alt="Nketia-Marfo serving the community">
 
-            <img
-                class="story-photo"
-                src="IMG_20260303_195951_718.jpg"
-                alt="Nketia-Marfo">
+            </div>
 
         </article>
 
 
 
-        <!-- 10 -->
+        <!-- =====================================================
+             10
+        ===================================================== -->
 
         <article class="story-point">
 
@@ -2277,18 +2369,20 @@
                     to turn ideas into action.
                 </p>
 
-            </div>
+                <img
+                    class="story-photo"
+                    src="IMG_20260303_195952_089.jpg"
+                    alt="Nketia-Marfo taking initiative">
 
-            <img
-                class="story-photo"
-                src="IMG_20260303_195952_089.jpg"
-                alt="Nketia-Marfo">
+            </div>
 
         </article>
 
 
 
-        <!-- 11 -->
+        <!-- =====================================================
+             11
+        ===================================================== -->
 
         <article class="story-point">
 
@@ -2310,18 +2404,20 @@
                     understanding myself and the world around me.
                 </p>
 
-            </div>
+                <img
+                    class="story-photo"
+                    src="IMG_20260304_172957_144.jpg"
+                    alt="Nketia-Marfo exploring different interests">
 
-            <img
-                class="story-photo"
-                src="IMG_20260304_172957_144.jpg"
-                alt="Nketia-Marfo">
+            </div>
 
         </article>
 
 
 
-        <!-- 12 -->
+        <!-- =====================================================
+             12
+        ===================================================== -->
 
         <article class="story-point">
 
@@ -2345,12 +2441,12 @@
                     difference.
                 </p>
 
-            </div>
+                <img
+                    class="story-photo"
+                    src="IMG_20260319_160228_606.jpg"
+                    alt="Nketia-Marfo looking ahead">
 
-            <img
-                class="story-photo"
-                src="IMG_20260319_160228_606.jpg"
-                alt="Nketia-Marfo">
+            </div>
 
         </article>
 
@@ -2665,13 +2761,47 @@
 
     <div class="footer-inner">
 
-        <div class="footer-name">
-            Nketia-Marfo
+
+        <div class="footer-left">
+
+            <div class="footer-name">
+                Nketia-Marfo
+            </div>
+
+            <p>
+                © 2026 Nketia-Marfo. All rights reserved.
+            </p>
+
         </div>
 
-        <p>
-            © 2026 Nketia-Marfo. All rights reserved.
-        </p>
+
+        <!-- FOOTER NAVIGATION -->
+
+        <div class="footer-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a
+                href="about.html"
+                class="active">
+                About
+            </a>
+
+            <a href="blog.html">
+                Blog
+            </a>
+
+            <a href="Students-Voice">
+                Student Voices
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
 
     </div>
 
