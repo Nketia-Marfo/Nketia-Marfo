@@ -2,7 +2,25 @@
    NKETIA-MARFO
    UNIVERSITY-INSPIRED PERSONAL WEBSITE
    MASTER STYLE SHEET
-   COLORS: DEEP BLUE • GREEN • LIGHT RED
+   PHOTO BACKGROUND EDITION
+
+   BACKGROUND PHOTOS
+   HOME:
+   - Hero: Stylish Portrait with Wooden Stool.png
+   - Middle: 1000622709.png
+   - Latter: 1000579848.png
+
+   ABOUT:
+   - Main: Big Dreams, Bright Futures.png
+   - Lower: 1000579848.png
+
+   BLOG:
+   - Upper: Big Dreams, Bright Futures.png
+   - Lower: Stylish Portrait with Wooden Stool.png
+
+   CONTACT:
+   - Upper: 1000538278(8).jpg
+   - Lower: 1000583267(6).png
 ========================================================= */
 
 :root {
@@ -44,8 +62,11 @@ html {
 body {
     background: var(--cream);
     color: var(--text);
+
     font-family: Arial, Helvetica, sans-serif;
+
     line-height: 1.7;
+
     overflow-x: hidden;
 }
 
@@ -79,17 +100,23 @@ h4 {
 .site-header {
     background: var(--deep-blue);
     color: white;
+
     border-bottom: 4px solid var(--green);
+
     position: relative;
+
     z-index: 1000;
 }
 
 .header-content {
     width: min(1250px, 90%);
+
     min-height: 105px;
+
     margin: auto;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
@@ -103,19 +130,25 @@ h4 {
 
 .site-name {
     color: white;
+
     text-decoration: none;
 
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: 32px;
+
     font-weight: bold;
+
     letter-spacing: -0.8px;
 }
 
 .brand-block p {
     margin-top: 4px;
+
     color: #d9e1ee;
 
     font-size: 12px;
+
     letter-spacing: 0.5px;
 }
 
@@ -127,8 +160,10 @@ h4 {
 nav,
 .main-nav {
     display: flex;
+
     align-items: center;
     justify-content: flex-end;
+
     gap: 27px;
 }
 
@@ -137,11 +172,15 @@ nav a,
     position: relative;
 
     color: white;
+
     text-decoration: none;
 
     font-size: 12px;
+
     font-weight: bold;
+
     letter-spacing: 1.3px;
+
     text-transform: uppercase;
 
     padding: 8px 0;
@@ -154,6 +193,7 @@ nav a::after,
     content: "";
 
     position: absolute;
+
     left: 0;
     bottom: 0;
 
@@ -190,8 +230,11 @@ nav a.active::after,
     color: var(--green);
 
     font-size: 11px;
+
     font-weight: bold;
+
     letter-spacing: 2.5px;
+
     text-transform: uppercase;
 }
 
@@ -199,6 +242,7 @@ nav a.active::after,
     margin-bottom: 20px;
 
     font-size: 19px;
+
     line-height: 1.75;
 }
 
@@ -208,12 +252,15 @@ nav a.active::after,
     margin-top: 18px;
 
     color: var(--deep-blue);
+
     text-decoration: none;
 
     font-size: 13px;
+
     font-weight: bold;
 
     border-bottom: 2px solid var(--red);
+
     padding-bottom: 5px;
 
     transition: 0.25s ease;
@@ -226,39 +273,94 @@ nav a.active::after,
 
 /* =========================================================
    HOME — HERO
+   BACKGROUND: WOODEN STOOL
 ========================================================= */
 
 .hero-section {
     width: min(1200px, 92%);
-    min-height: 600px;
+
+    min-height: 650px;
 
     margin: auto;
-    padding: 95px 0 90px;
+
+    padding: 95px 55px;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
     gap: 90px;
+
+    position: relative;
+
+    isolation: isolate;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 20, 15, .86),
+            rgba(10, 20, 15, .52),
+            rgba(10, 20, 15, .22)
+        ),
+        url("Stylish Portrait with Wooden Stool.png");
+
+    background-size: cover;
+
+    background-position: center 35%;
+
+    border-radius: 0 0 22px 22px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+}
+
+.hero-section::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 33, 61, .28),
+            transparent 55%
+        );
+
+    z-index: -1;
 }
 
 .hero-text {
     flex: 1;
+
     max-width: 690px;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 .hero-text h1 {
     margin-bottom: 30px;
 
-    color: var(--deep-blue);
+    color: white;
 
     font-size: clamp(48px, 6vw, 76px);
+
     line-height: 1.01;
+
     letter-spacing: -3px;
+
+    text-shadow: 0 3px 18px rgba(0,0,0,.35);
 }
 
 .hero-text h1::first-letter {
-    color: var(--green);
+    color: #7bd19d;
 }
 
 .hero-text p:not(.small-heading) {
@@ -266,8 +368,17 @@ nav a.active::after,
 
     margin-bottom: 16px;
 
+    color: #f5f7fa;
+
     font-size: 16px;
+
     line-height: 1.8;
+
+    text-shadow: 0 2px 8px rgba(0,0,0,.45);
+}
+
+.hero-text .small-heading {
+    color: #9be2b6;
 }
 
 
@@ -281,7 +392,10 @@ nav a.active::after,
     flex: 0 0 365px;
 
     width: 365px;
+
     height: 390px;
+
+    z-index: 2;
 }
 
 .hero-round-photo {
@@ -295,6 +409,7 @@ nav a.active::after,
     background: white;
 
     border: 3px solid var(--green);
+
     border-radius: 50%;
 
     box-shadow: var(--shadow);
@@ -317,6 +432,7 @@ nav a.active::after,
     height: 100%;
 
     object-fit: cover;
+
     border-radius: 50%;
 }
 
@@ -337,33 +453,71 @@ nav a.active::after,
 
 
 /* =========================================================
-   STATEMENT SECTION
+   HOME — STATEMENT
+   BACKGROUND: BLUE OUTFIT / WHITE BACKGROUND
 ========================================================= */
 
 .statement-section {
-    background: var(--deep-blue);
     color: white;
 
-    padding: 95px max(4%, calc((100% - 1200px) / 2));
+    padding: 110px max(4%, calc((100% - 1200px) / 2));
 
     display: flex;
+
     align-items: flex-start;
 
     gap: 65px;
 
     border-left: 10px solid var(--green);
+
+    position: relative;
+
+    isolation: isolate;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20,33,61,.86),
+            rgba(20,33,61,.64),
+            rgba(20,33,61,.30)
+        ),
+        url("1000622709.png");
+
+    background-size: cover;
+
+    background-position: center 30%;
+
+    overflow: hidden;
+}
+
+.statement-section::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(10, 20, 35, .15);
+
+    z-index: -1;
 }
 
 .statement-number {
     color: var(--red);
 
     font-size: 12px;
+
     font-weight: bold;
+
     letter-spacing: 2px;
 }
 
 .statement-content {
     max-width: 790px;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 .statement-content .small-heading {
@@ -376,40 +530,92 @@ nav a.active::after,
     color: white;
 
     font-size: clamp(38px, 5vw, 62px);
+
     line-height: 1.06;
+
     letter-spacing: -2px;
+
+    text-shadow: 0 3px 15px rgba(0,0,0,.35);
 }
 
 .statement-content p:last-child {
     max-width: 680px;
-    color: #d9e1ee;
+
+    color: #f0f4f8;
+
     font-size: 17px;
 }
 
 
 /* =========================================================
-   MIDDLE SECTION
+   HOME — MIDDLE SECTION
 ========================================================= */
 
 .middle-section {
     width: min(1100px, 90%);
+
     min-height: 550px;
 
     margin: auto;
-    padding: 95px 0;
+
+    padding: 95px 55px;
 
     display: flex;
+
     align-items: center;
 
     gap: 90px;
+
+    position: relative;
+
+    isolation: isolate;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20,33,61,.86),
+            rgba(20,33,61,.58),
+            rgba(20,33,61,.18)
+        ),
+        url("1000622709.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+}
+
+.middle-section::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.10);
+
+    z-index: -1;
 }
 
 .square-photo {
     flex: 0 0 330px;
+
     width: 330px;
 
     display: flex;
+
     justify-content: center;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 .square-photo img {
@@ -419,6 +625,7 @@ nav a.active::after,
     object-fit: cover;
 
     background: white;
+
     padding: 7px;
 
     border: 4px solid var(--red);
@@ -430,28 +637,48 @@ nav a.active::after,
 
 .square-photo img:hover {
     transform: translateY(-6px);
+
     border-color: var(--green);
+
     box-shadow: var(--shadow-hover);
 }
 
 .middle-text {
     flex: 1;
+
     max-width: 650px;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 .middle-text h2 {
     margin-bottom: 25px;
 
-    color: var(--deep-blue);
+    color: white;
 
     font-size: clamp(39px, 4.8vw, 59px);
+
     line-height: 1.06;
+
     letter-spacing: -2px;
+
+    text-shadow: 0 3px 15px rgba(0,0,0,.35);
 }
 
 .middle-text p:not(.small-heading) {
     margin-bottom: 15px;
+
+    color: #f5f7fa;
+
     font-size: 16px;
+
+    text-shadow: 0 2px 8px rgba(0,0,0,.4);
+}
+
+.middle-text .small-heading {
+    color: #9be2b6;
 }
 
 
@@ -465,11 +692,13 @@ nav a.active::after,
     padding: 100px 4%;
 
     border-top: 1px solid #c8ded1;
+
     border-bottom: 1px solid #c8ded1;
 }
 
 .section-intro {
     width: min(1100px, 100%);
+
     margin: auto auto 55px;
 }
 
@@ -479,23 +708,29 @@ nav a.active::after,
     color: var(--deep-blue);
 
     font-size: clamp(40px, 5vw, 62px);
+
     line-height: 1.05;
+
     letter-spacing: -2px;
 }
 
 .section-intro > p:last-child {
     max-width: 650px;
+
     font-size: 16px;
 }
 
 .interest-grid {
     width: min(1100px, 100%);
+
     margin: auto;
 
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
 
     border-top: 1px solid #a9c8b6;
+
     border-left: 1px solid #a9c8b6;
 }
 
@@ -507,6 +742,7 @@ nav a.active::after,
     background: rgba(255,255,255,0.35);
 
     border-right: 1px solid #a9c8b6;
+
     border-bottom: 1px solid #a9c8b6;
 
     transition: 0.3s ease;
@@ -514,7 +750,9 @@ nav a.active::after,
 
 .interest-card:hover {
     background: white;
+
     transform: translateY(-5px);
+
     box-shadow: var(--shadow);
 }
 
@@ -522,17 +760,21 @@ nav a.active::after,
     color: var(--red);
 
     font-size: 11px;
+
     font-weight: bold;
+
     letter-spacing: 1px;
 }
 
 .interest-card h3 {
     margin-top: 48px;
+
     margin-bottom: 13px;
 
     color: var(--deep-blue);
 
     font-size: 27px;
+
     line-height: 1.15;
 }
 
@@ -540,46 +782,94 @@ nav a.active::after,
     color: #46515b;
 
     font-size: 14px;
+
     line-height: 1.7;
 }
 
 
 /* =========================================================
-   LATTER SECTION
+   HOME — LATTER SECTION
+   BACKGROUND: BEACH / BALCONY
 ========================================================= */
 
 .latter-section {
     width: min(1200px, 92%);
+
     min-height: 640px;
 
     margin: auto;
-    padding: 100px 0;
+
+    padding: 100px 55px;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
     gap: 80px;
+
+    position: relative;
+
+    isolation: isolate;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10,28,40,.82),
+            rgba(10,28,40,.50),
+            rgba(10,28,40,.18)
+        ),
+        url("1000579848.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
 }
 
 .latter-text {
     flex: 1;
+
     max-width: 650px;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 .latter-text h2 {
     margin-bottom: 28px;
 
-    color: var(--deep-blue);
+    color: white;
 
     font-size: clamp(40px, 5vw, 63px);
+
     line-height: 1.05;
+
     letter-spacing: -2px;
+
+    text-shadow: 0 3px 15px rgba(0,0,0,.35);
 }
 
 .latter-text p:not(.small-heading) {
     margin-bottom: 15px;
+
+    color: #f5f7fa;
+
     font-size: 16px;
+
+    text-shadow: 0 2px 8px rgba(0,0,0,.4);
+}
+
+.latter-text .small-heading {
+    color: #9be2b6;
 }
 
 .latter-photo-group {
@@ -588,7 +878,10 @@ nav a.active::after,
     flex: 0 0 410px;
 
     width: 410px;
+
     height: 440px;
+
+    z-index: 2;
 }
 
 .latter-photo {
@@ -599,6 +892,7 @@ nav a.active::after,
     background: white;
 
     border: 3px solid var(--green);
+
     border-radius: 50%;
 
     overflow: hidden;
@@ -610,7 +904,9 @@ nav a.active::after,
 
 .latter-photo:hover {
     transform: translateY(-7px);
+
     border-color: var(--red);
+
     box-shadow: var(--shadow-hover);
 }
 
@@ -619,6 +915,7 @@ nav a.active::after,
     height: 100%;
 
     object-fit: cover;
+
     border-radius: 50%;
 }
 
@@ -657,6 +954,7 @@ nav a.active::after,
     padding: 100px max(4%, calc((100% - 1100px) / 2));
 
     display: flex;
+
     align-items: flex-start;
 
     gap: 65px;
@@ -668,7 +966,9 @@ nav a.active::after,
     color: var(--red);
 
     font-size: 12px;
+
     font-weight: bold;
+
     letter-spacing: 2px;
 }
 
@@ -682,12 +982,15 @@ nav a.active::after,
     color: var(--deep-blue);
 
     font-size: clamp(39px, 5vw, 62px);
+
     line-height: 1.06;
+
     letter-spacing: -2px;
 }
 
 .featured-text p:not(.small-heading) {
     max-width: 680px;
+
     font-size: 17px;
 }
 
@@ -698,11 +1001,13 @@ nav a.active::after,
 
 .final-section {
     background: var(--deep-blue);
+
     color: white;
 
     padding: 95px max(4%, calc((100% - 1100px) / 2));
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
@@ -723,7 +1028,9 @@ nav a.active::after,
     color: white;
 
     font-size: clamp(42px, 5vw, 66px);
+
     line-height: 1.05;
+
     letter-spacing: -2px;
 }
 
@@ -748,6 +1055,7 @@ nav a.active::after,
     display: inline-block;
 
     background: var(--red);
+
     color: white;
 
     padding: 14px 25px;
@@ -755,7 +1063,9 @@ nav a.active::after,
     text-decoration: none;
 
     font-size: 13px;
+
     font-weight: bold;
+
     letter-spacing: .4px;
 
     border-radius: 2px;
@@ -765,6 +1075,7 @@ nav a.active::after,
 
 .button:hover {
     background: var(--green);
+
     transform: translateY(-2px);
 }
 
@@ -775,16 +1086,19 @@ nav a.active::after,
 
 footer {
     background: #0d1729;
+
     color: white;
 }
 
 .footer-content {
     width: min(1100px, 90%);
+
     margin: auto;
 
     padding: 65px 0;
 
     display: grid;
+
     grid-template-columns: 2fr 1fr 1.5fr;
 
     gap: 70px;
@@ -794,18 +1108,22 @@ footer {
     margin-bottom: 12px;
 
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: 30px;
 }
 
 .footer-brand p {
     color: #aeb9c8;
+
     font-size: 13px;
 }
 
 .footer-links,
 .footer-contact {
     display: flex;
+
     flex-direction: column;
+
     gap: 8px;
 }
 
@@ -816,7 +1134,9 @@ footer {
     color: #79cf9b;
 
     font-size: 11px;
+
     letter-spacing: 2px;
+
     text-transform: uppercase;
 }
 
@@ -836,6 +1156,7 @@ footer {
 
 .footer-contact p {
     color: #9eabbc;
+
     font-size: 12px;
 }
 
@@ -849,12 +1170,14 @@ footer {
 
 .footer-bottom p {
     color: #78869a;
+
     font-size: 11px;
 }
 
 
 /* =========================================================
    ABOUT — MY STORY
+   MAIN BACKGROUND: BLUE HOODIE
 ========================================================= */
 
 .personal-story {
@@ -863,15 +1186,61 @@ footer {
     margin: auto;
 
     padding: 120px 7%;
+
+    position: relative;
+
+    isolation: isolate;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10,25,50,.82),
+            rgba(10,25,50,.55),
+            rgba(10,25,50,.22)
+        ),
+        url("Big Dreams, Bright Futures.png");
+
+    background-size: cover;
+
+    background-position: center 25%;
+
+    border-radius: 0 0 20px 20px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+}
+
+.personal-story::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,.10),
+        rgba(0,0,0,.25)
+    );
+
+    z-index: -1;
 }
 
 .story-intro {
     max-width: 760px;
+
     margin-bottom: 70px;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 .story-intro h2 {
-    color: var(--deep-blue);
+    color: white;
 
     font-family: Georgia, "Times New Roman", serif;
 
@@ -880,12 +1249,24 @@ footer {
     line-height: 1.05;
 
     margin: 15px 0 25px;
+
+    text-shadow: 0 3px 15px rgba(0,0,0,.4);
 }
 
 .story-intro p {
     font-size: 1.08rem;
+
     line-height: 1.8;
+
     max-width: 700px;
+
+    color: #f2f5f8;
+
+    text-shadow: 0 2px 8px rgba(0,0,0,.4);
+}
+
+.story-intro .small-heading {
+    color: #9be2b6;
 }
 
 .story-point {
@@ -897,20 +1278,25 @@ footer {
 
     padding: 65px 0;
 
-    border-top: 1px solid var(--line);
+    border-top: 1px solid rgba(255,255,255,.30);
+
+    position: relative;
+
+    z-index: 2;
 }
 
 .story-point:last-child {
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid rgba(255,255,255,.30);
 }
 
 .story-number {
     font-family: Georgia, "Times New Roman", serif;
 
     font-size: 1.8rem;
+
     font-weight: bold;
 
-    color: var(--green);
+    color: #9be2b6;
 
     padding-top: 5px;
 }
@@ -920,23 +1306,29 @@ footer {
 }
 
 .story-content h3 {
-    color: var(--deep-blue);
+    color: white;
 
     font-size: clamp(1.7rem, 3vw, 2.5rem);
 
     line-height: 1.15;
 
     margin: 0 0 18px;
+
+    text-shadow: 0 2px 12px rgba(0,0,0,.35);
 }
 
 .story-content p {
     max-width: 760px;
+
+    color: #f1f4f7;
 
     font-size: 1.05rem;
 
     line-height: 1.85;
 
     margin: 0 0 30px;
+
+    text-shadow: 0 2px 8px rgba(0,0,0,.4);
 }
 
 .story-photo {
@@ -966,16 +1358,51 @@ footer {
 
 
 /* =========================================================
+   ABOUT — LOWER STORY BACKGROUND
+   BEACH / BALCONY
+========================================================= */
+
+.personal-story .story-point:last-child {
+    margin-left: -7%;
+    margin-right: -7%;
+
+    padding-left: 7%;
+    padding-right: 7%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10,28,40,.83),
+            rgba(10,28,40,.52),
+            rgba(10,28,40,.20)
+        ),
+        url("1000579848.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================================================
    STUDENT VOICES
 ========================================================= */
 
 .student-voices-page {
     background: var(--cream);
+
     color: var(--text);
 }
 
 .student-header {
     background: var(--deep-blue);
+
     color: white;
 
     padding: 100px 7%;
@@ -985,6 +1412,7 @@ footer {
 
 .student-header-inner {
     max-width: 1100px;
+
     margin: auto;
 }
 
@@ -1000,7 +1428,9 @@ footer {
     color: white;
 
     font-size: clamp(45px, 7vw, 78px);
+
     line-height: 1;
+
     letter-spacing: -3px;
 }
 
@@ -1013,7 +1443,9 @@ footer {
 }
 
 
-/* Individual student voice */
+/* =========================================================
+   STUDENT ENTRY
+========================================================= */
 
 .student-entry {
     width: min(1100px, 88%);
@@ -1041,6 +1473,7 @@ footer {
     font-family: Georgia, "Times New Roman", serif;
 
     font-size: 20px;
+
     font-weight: bold;
 }
 
@@ -1064,6 +1497,7 @@ footer {
     color: var(--green);
 
     font-size: 18px;
+
     font-weight: bold;
 
     margin-bottom: 18px;
@@ -1077,6 +1511,149 @@ footer {
     font-size: 16px;
 
     line-height: 1.85;
+}
+
+
+/* =========================================================
+   BLOG BACKGROUND SYSTEM
+   BLUE HOODIE = UPPER
+   WOODEN STOOL = LOWER
+========================================================= */
+
+/*
+   These classes can be added to the corresponding
+   upper and lower sections of blog.html if they
+   do not already exist.
+*/
+
+.blog-upper-background {
+    position: relative;
+
+    isolation: isolate;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10,25,50,.84),
+            rgba(10,25,50,.54),
+            rgba(10,25,50,.20)
+        ),
+        url("Big Dreams, Bright Futures.png");
+
+    background-size: cover;
+
+    background-position: center 25%;
+
+    overflow: hidden;
+}
+
+.blog-lower-background {
+    position: relative;
+
+    isolation: isolate;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15,25,20,.84),
+            rgba(15,25,20,.52),
+            rgba(15,25,20,.18)
+        ),
+        url("Stylish Portrait with Wooden Stool.png");
+
+    background-size: cover;
+
+    background-position: center 30%;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTACT BACKGROUND SYSTEM
+   BLUE T-SHIRT = UPPER
+   SEASHORE SMILE = LOWER
+========================================================= */
+
+.contact-upper-background {
+    position: relative;
+
+    isolation: isolate;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10,25,50,.82),
+            rgba(10,25,50,.48),
+            rgba(10,25,50,.15)
+        ),
+        url("1000538278(8).jpg");
+
+    background-size: cover;
+
+    background-position: center 30%;
+
+    overflow: hidden;
+}
+
+.contact-lower-background {
+    position: relative;
+
+    isolation: isolate;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20,45,65,.75),
+            rgba(20,45,65,.35),
+            rgba(20,45,65,.10)
+        ),
+        url("1000583267(6).png");
+
+    background-size: cover;
+
+    background-position: center 35%;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND CONTENT READABILITY
+========================================================= */
+
+.blog-upper-background h1,
+.blog-upper-background h2,
+.blog-upper-background h3,
+.blog-lower-background h1,
+.blog-lower-background h2,
+.blog-lower-background h3,
+.contact-upper-background h1,
+.contact-upper-background h2,
+.contact-upper-background h3,
+.contact-lower-background h1,
+.contact-lower-background h2,
+.contact-lower-background h3 {
+    color: white;
+
+    text-shadow: 0 3px 14px rgba(0,0,0,.45);
+}
+
+.blog-upper-background p,
+.blog-lower-background p,
+.contact-upper-background p,
+.contact-lower-background p {
+    color: #f5f7fa;
+
+    text-shadow: 0 2px 8px rgba(0,0,0,.4);
 }
 
 
@@ -1101,13 +1678,18 @@ footer {
     nav,
     .main-nav {
         justify-content: flex-start;
+
         flex-wrap: wrap;
+
         gap: 18px;
     }
 
     .hero-section {
-        padding: 75px 0;
+        padding: 75px 35px;
+
         gap: 45px;
+
+        background-position: 60% center;
     }
 
     .hero-text h1 {
@@ -1118,6 +1700,7 @@ footer {
         flex-basis: 300px;
 
         width: 300px;
+
         height: 350px;
     }
 
@@ -1140,11 +1723,18 @@ footer {
 
     .middle-section {
         width: 92%;
+
         gap: 55px;
+
+        padding-left: 35px;
+        padding-right: 35px;
+
+        background-position: 55% center;
     }
 
     .square-photo {
         flex-basis: 280px;
+
         width: 280px;
     }
 
@@ -1159,23 +1749,32 @@ footer {
 
     .latter-section {
         gap: 45px;
+
+        padding-left: 35px;
+        padding-right: 35px;
+
+        background-position: 60% center;
     }
 
     .latter-photo-group {
         flex-basis: 340px;
+
         width: 340px;
+
         height: 390px;
     }
 
     .latter-photo-1 {
         width: 190px;
         height: 190px;
+
         right: 65px;
     }
 
     .latter-photo-2 {
         width: 145px;
         height: 145px;
+
         top: 165px;
     }
 
@@ -1186,6 +1785,14 @@ footer {
 
     .footer-content {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .personal-story .story-point:last-child {
+        margin-left: -35px;
+        margin-right: -35px;
+
+        padding-left: 35px;
+        padding-right: 35px;
     }
 }
 
@@ -1220,26 +1827,47 @@ footer {
     nav a,
     .nav-link {
         font-size: 10px;
+
         letter-spacing: 1px;
     }
 
 
-    /* HERO */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .hero-section {
-        width: 90%;
+        width: 100%;
 
-        padding: 65px 0 55px;
+        padding: 65px 7% 55px;
 
         flex-direction: column;
 
         align-items: flex-start;
 
         gap: 25px;
+
+        border-radius: 0;
+
+        min-height: 700px;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(10,20,15,.80),
+                rgba(10,20,15,.52),
+                rgba(10,20,15,.30)
+            ),
+            url("Stylish Portrait with Wooden Stool.png");
+
+        background-size: cover;
+
+        background-position: 62% center;
     }
 
     .hero-text h1 {
         font-size: 42px;
+
         letter-spacing: -1.8px;
     }
 
@@ -1253,6 +1881,7 @@ footer {
 
     .hero-photo-group {
         width: 300px;
+
         height: 320px;
 
         flex-basis: 320px;
@@ -1281,14 +1910,20 @@ footer {
     }
 
 
-    /* STATEMENT */
+    /* =====================================================
+       STATEMENT
+    ===================================================== */
 
     .statement-section {
-        padding: 65px 5%;
+        padding: 70px 7%;
 
         flex-direction: column;
 
         gap: 20px;
+
+        min-height: 600px;
+
+        background-position: 55% center;
     }
 
     .statement-content h2 {
@@ -1296,18 +1931,37 @@ footer {
     }
 
 
-    /* MIDDLE */
+    /* =====================================================
+       MIDDLE
+    ===================================================== */
 
     .middle-section {
-        width: 90%;
+        width: 100%;
 
-        padding: 70px 0;
+        padding: 75px 7%;
 
         flex-direction: column;
 
         align-items: flex-start;
 
         gap: 45px;
+
+        border-radius: 0;
+
+        min-height: 650px;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(20,33,61,.84),
+                rgba(20,33,61,.50),
+                rgba(20,33,61,.28)
+            ),
+            url("1000622709.png");
+
+        background-size: cover;
+
+        background-position: center;
     }
 
     .square-photo {
@@ -1332,7 +1986,9 @@ footer {
     }
 
 
-    /* INTERESTS */
+    /* =====================================================
+       INTERESTS
+    ===================================================== */
 
     .interests-section {
         padding: 70px 5%;
@@ -1348,6 +2004,7 @@ footer {
 
     .interest-card {
         min-height: auto;
+
         padding: 30px 25px;
     }
 
@@ -1356,18 +2013,37 @@ footer {
     }
 
 
-    /* LATTER */
+    /* =====================================================
+       LATTER
+    ===================================================== */
 
     .latter-section {
-        width: 90%;
+        width: 100%;
 
-        padding: 75px 0;
+        padding: 75px 7%;
 
         flex-direction: column;
 
         align-items: flex-start;
 
         gap: 35px;
+
+        border-radius: 0;
+
+        min-height: 700px;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(10,28,40,.78),
+                rgba(10,28,40,.48),
+                rgba(10,28,40,.22)
+            ),
+            url("1000579848.png");
+
+        background-size: cover;
+
+        background-position: center;
     }
 
     .latter-text h2 {
@@ -1376,6 +2052,7 @@ footer {
 
     .latter-photo-group {
         width: 320px;
+
         height: 360px;
 
         flex-basis: 360px;
@@ -1386,23 +2063,28 @@ footer {
     .latter-photo-1 {
         width: 185px;
         height: 185px;
+
         right: 67px;
     }
 
     .latter-photo-2 {
         width: 140px;
         height: 140px;
+
         top: 160px;
     }
 
     .latter-photo-3 {
         width: 135px;
         height: 135px;
+
         left: 20px;
     }
 
 
-    /* FEATURED */
+    /* =====================================================
+       FEATURED
+    ===================================================== */
 
     .featured-section {
         padding: 70px 5%;
@@ -1417,7 +2099,9 @@ footer {
     }
 
 
-    /* FINAL */
+    /* =====================================================
+       FINAL
+    ===================================================== */
 
     .final-section {
         padding: 70px 5%;
@@ -1434,10 +2118,27 @@ footer {
     }
 
 
-    /* STORY */
+    /* =====================================================
+       ABOUT
+    ===================================================== */
 
     .personal-story {
-        padding: 80px 6%;
+        padding: 80px 7%;
+
+        border-radius: 0;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(10,25,50,.78),
+                rgba(10,25,50,.54),
+                rgba(10,25,50,.28)
+            ),
+            url("Big Dreams, Bright Futures.png");
+
+        background-size: cover;
+
+        background-position: center 20%;
     }
 
     .story-intro {
@@ -1468,8 +2169,113 @@ footer {
         font-size: 0.98rem;
     }
 
+    .personal-story .story-point:last-child {
+        margin-left: -7%;
 
-    /* STUDENT VOICES */
+        margin-right: -7%;
+
+        padding-left: 7%;
+
+        padding-right: 7%;
+
+        min-height: 550px;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(10,28,40,.72),
+                rgba(10,28,40,.45),
+                rgba(10,28,40,.22)
+            ),
+            url("1000579848.png");
+
+        background-size: cover;
+
+        background-position: center;
+    }
+
+
+    /* =====================================================
+       BLOG
+    ===================================================== */
+
+    .blog-upper-background {
+        min-height: 620px;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(10,25,50,.80),
+                rgba(10,25,50,.48),
+                rgba(10,25,50,.20)
+            ),
+            url("Big Dreams, Bright Futures.png");
+
+        background-size: cover;
+
+        background-position: center 20%;
+    }
+
+    .blog-lower-background {
+        min-height: 620px;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(15,25,20,.78),
+                rgba(15,25,20,.48),
+                rgba(15,25,20,.20)
+            ),
+            url("Stylish Portrait with Wooden Stool.png");
+
+        background-size: cover;
+
+        background-position: center 30%;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    .contact-upper-background {
+        min-height: 600px;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(10,25,50,.78),
+                rgba(10,25,50,.46),
+                rgba(10,25,50,.18)
+            ),
+            url("1000538278(8).jpg");
+
+        background-size: cover;
+
+        background-position: center;
+    }
+
+    .contact-lower-background {
+        min-height: 600px;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(20,45,65,.72),
+                rgba(20,45,65,.40),
+                rgba(20,45,65,.12)
+            ),
+            url("1000583267(6).png");
+
+        background-size: cover;
+
+        background-position: center 35%;
+    }
+
+
+    /* =====================================================
+       STUDENT VOICES
+    ===================================================== */
 
     .student-header {
         padding: 70px 7%;
@@ -1477,6 +2283,7 @@ footer {
 
     .student-header h1 {
         font-size: 44px;
+
         letter-spacing: -1.5px;
     }
 
@@ -1515,7 +2322,9 @@ footer {
     }
 
 
-    /* FOOTER */
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     .footer-content {
         width: 90%;
@@ -1530,4 +2339,4 @@ footer {
     .footer-bottom {
         padding: 18px 5%;
     }
-}
+   }
