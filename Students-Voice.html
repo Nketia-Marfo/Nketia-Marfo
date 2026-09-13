@@ -1,2270 +1,2633 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Student Voices | Nketia-Marfo</title>
 
-    <title>Student Voices | Nketia-Marfo</title>
+<meta
+    name="description"
+    content="Student Voices by Nketia-Marfo — stories, experiences, ideas and lessons from students around the world."
+>
 
-    <meta
-        name="description"
-        content="Student Voices by Nketia-Marfo — stories, experiences, ideas and lessons from students around the world."
-    >
+<link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="style.css">
+<style>
+    /* =========================================================
+       NKETIA-MARFO — STUDENT VOICES
+       DEEP BLUE • RED • YELLOW • GREEN
+       ========================================================= */
 
-    <style>
-        /* =========================================================
-           NKETIA-MARFO — STUDENT VOICES
-           ========================================================= */
+    :root {
+        --deep-blue: #071A33;
+        --blue: #0B2A4A;
+        --blue-light: #174A76;
 
-        :root {
-            --blue: #0B1F3A;
-            --blue-2: #163A63;
-            --red: #A61B29;
-            --red-2: #C83A48;
-            --green: #176B45;
-            --green-2: #2E8B68;
-            --silver: #B8BEC7;
-            --silver-light: #E5E7EB;
-            --white: #FFFFFF;
-            --cream: #F7F8FA;
-            --text: #17202A;
-            --muted: #66727F;
-        }
+        --red: #A71930;
+        --red-light: #D13A4E;
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        --yellow: #F2C94C;
+        --yellow-light: #FFE79A;
 
-        html {
-            scroll-behavior: smooth;
-        }
+        --green: #176B45;
+        --green-light: #2E8B68;
 
-        body {
-            background: var(--cream);
-            color: var(--text);
-            font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-            line-height: 1.7;
-        }
+        --white: #FFFFFF;
+        --cream: #F7F8F5;
+        --soft-blue: #EEF4F8;
 
-        a {
-            text-decoration: none;
-        }
+        --text: #18212B;
+        --muted: #65717D;
+        --border: #DDE3E8;
+    }
 
-        img {
-            max-width: 100%;
-        }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        /* =========================================================
-           HEADER
-           ========================================================= */
+    html {
+        scroll-behavior: smooth;
+    }
 
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 9999;
-            background: rgba(255,255,255,0.97);
-            border-bottom: 1px solid var(--silver-light);
-            backdrop-filter: blur(12px);
-        }
+    body {
+        background: var(--cream);
+        color: var(--text);
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+        line-height: 1.7;
+    }
 
-        .header-inner {
-            width: min(1180px, 92%);
-            min-height: 76px;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        background: rgba(255,255,255,0.97);
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+        width: min(1180px, 92%);
+        min-height: 76px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--deep-blue);
+        flex-shrink: 0;
+    }
+
+    .brand-mark {
+        width: 43px;
+        height: 43px;
+        border-radius: 50%;
+        background: var(--deep-blue);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Georgia, serif;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .brand-mark::after {
+        content: "";
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--red);
+        position: absolute;
+        right: -2px;
+        top: -2px;
+    }
+
+    .brand-name {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .main-nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .nav-link {
+        padding: 9px 13px;
+        border-radius: 7px;
+        color: var(--text);
+        font-size: 14px;
+        font-weight: 600;
+        transition: 0.25s ease;
+    }
+
+    .nav-link:hover {
+        color: var(--red);
+        background: var(--cream);
+    }
+
+    .nav-link.active {
+        background: var(--deep-blue);
+        color: white;
+    }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .voices-hero {
+        position: relative;
+        overflow: hidden;
+        background:
+            linear-gradient(
+                135deg,
+                var(--deep-blue),
+                var(--blue) 62%,
+                #14563F
+            );
+        color: white;
+    }
+
+    .voices-hero::before {
+        content: "";
+        position: absolute;
+        width: 430px;
+        height: 430px;
+        border: 75px solid rgba(255,255,255,0.035);
+        border-radius: 50%;
+        right: -180px;
+        top: -220px;
+    }
+
+    .voices-hero::after {
+        content: "";
+        position: absolute;
+        width: 230px;
+        height: 230px;
+        background: var(--red);
+        opacity: 0.14;
+        border-radius: 50%;
+        left: -120px;
+        bottom: -120px;
+    }
+
+    .hero-content {
+        width: min(1180px, 92%);
+        min-height: 590px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 0.9fr;
+        align-items: center;
+        gap: 65px;
+        padding: 80px 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-label {
+        display: inline-block;
+        margin-bottom: 17px;
+        color: var(--yellow);
+        font-size: 12px;
+        letter-spacing: 3px;
+        font-weight: 800;
+    }
+
+    .hero-title {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(48px, 6vw, 76px);
+        line-height: 1.02;
+        margin-bottom: 25px;
+    }
+
+    .hero-title span {
+        color: var(--yellow);
+    }
+
+    .hero-description {
+        max-width: 650px;
+        color: #DCE5ED;
+        font-size: 17px;
+        line-height: 1.85;
+        margin-bottom: 32px;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero-button {
+        display: inline-block;
+        padding: 13px 22px;
+        border-radius: 7px;
+        font-weight: 700;
+        transition: 0.25s ease;
+    }
+
+    .hero-button.primary {
+        background: var(--red);
+        color: white;
+    }
+
+    .hero-button.primary:hover {
+        background: var(--red-light);
+        transform: translateY(-2px);
+    }
+
+    .hero-button.secondary {
+        color: white;
+        border: 1px solid rgba(255,255,255,0.3);
+        background: rgba(255,255,255,0.05);
+    }
+
+    .hero-button.secondary:hover {
+        background: var(--green);
+    }
+
+    /* =========================================================
+       HERO PHOTO COLLAGE
+       ========================================================= */
+
+    .hero-visual {
+        height: 450px;
+        position: relative;
+    }
+
+    .photo-frame {
+        position: absolute;
+        padding: 9px;
+        background: white;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.28);
+    }
+
+    .photo-frame img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    .photo-one {
+        width: 245px;
+        height: 305px;
+        right: 15px;
+        top: 5px;
+        transform: rotate(4deg);
+        z-index: 2;
+    }
+
+    .photo-two {
+        width: 190px;
+        height: 235px;
+        left: 0;
+        top: 110px;
+        transform: rotate(-5deg);
+        z-index: 4;
+    }
+
+    .photo-three {
+        width: 175px;
+        height: 215px;
+        right: 145px;
+        bottom: 0;
+        transform: rotate(-2deg);
+        z-index: 5;
+    }
+
+    .photo-caption {
+        position: absolute;
+        left: 18px;
+        bottom: 17px;
+        padding: 12px 17px;
+        background: var(--green);
+        color: white;
+        font-size: 12px;
+        font-weight: 800;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        z-index: 10;
+    }
+
+    /* =========================================================
+       INTRO
+       ========================================================= */
+
+    .voices-intro {
+        width: min(850px, 92%);
+        margin: auto;
+        text-align: center;
+        padding: 85px 0 45px;
+    }
+
+    .section-label {
+        color: var(--red);
+        font-size: 11px;
+        letter-spacing: 3px;
+        font-weight: 800;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+    }
+
+    .voices-intro h2 {
+        color: var(--deep-blue);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(32px, 4vw, 47px);
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .voices-intro p {
+        color: var(--muted);
+        font-size: 16px;
+    }
+
+    /* =========================================================
+       PERSONAL BRAND PHOTO SECTION
+       ========================================================= */
+
+    .personal-intro {
+        width: min(1080px, 92%);
+        margin: 30px auto 75px;
+        background: white;
+        border: 1px solid var(--border);
+        box-shadow: 0 15px 45px rgba(7,26,51,0.08);
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        overflow: hidden;
+    }
+
+    .personal-intro-photo {
+        min-height: 390px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .personal-intro-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .photo-owner-label {
+        position: absolute;
+        left: 18px;
+        bottom: 18px;
+        background: var(--yellow);
+        color: var(--deep-blue);
+        padding: 8px 12px;
+        font-size: 10px;
+        letter-spacing: 1px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .personal-intro-text {
+        padding: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .personal-intro-text h2 {
+        color: var(--deep-blue);
+        font-family: Georgia, serif;
+        font-size: 35px;
+        line-height: 1.25;
+        margin-bottom: 18px;
+    }
+
+    .personal-intro-text p {
+        color: var(--muted);
+        font-size: 15px;
+        margin-bottom: 14px;
+    }
+
+    .personal-signature {
+        margin-top: 12px;
+        color: var(--green);
+        font-family: Georgia, serif;
+        font-weight: bold;
+    }
+
+    /* =========================================================
+       BRAND PHOTO STRIP
+       ========================================================= */
+
+    .brand-gallery {
+        width: min(1120px, 92%);
+        margin: 0 auto 75px;
+    }
+
+    .brand-gallery-heading {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .brand-gallery-heading h2 {
+        color: var(--deep-blue);
+        font-family: Georgia, serif;
+        font-size: 31px;
+        margin-bottom: 8px;
+    }
+
+    .brand-gallery-heading p {
+        color: var(--muted);
+        font-size: 14px;
+    }
+
+    .brand-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .brand-gallery-card {
+        height: 210px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        background: var(--deep-blue);
+        box-shadow: 0 10px 28px rgba(7,26,51,0.12);
+    }
+
+    .brand-gallery-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.35s ease;
+    }
+
+    .brand-gallery-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .brand-gallery-card span {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        background: rgba(7,26,51,0.85);
+        color: white;
+        padding: 6px 9px;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    /* =========================================================
+       STATS
+       ========================================================= */
+
+    .voice-stats {
+        width: min(1000px, 92%);
+        margin: 10px auto 70px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .stat-card {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 28px;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(7,26,51,0.05);
+    }
+
+    .stat-card:nth-child(1) {
+        border-top: 5px solid var(--red);
+    }
+
+    .stat-card:nth-child(2) {
+        border-top: 5px solid var(--yellow);
+    }
+
+    .stat-card:nth-child(3) {
+        border-top: 5px solid var(--green);
+    }
+
+    .stat-number {
+        display: block;
+        color: var(--deep-blue);
+        font-family: Georgia, serif;
+        font-size: 39px;
+        font-weight: bold;
+    }
+
+    .stat-text {
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    /* =========================================================
+       STORIES HEADER
+       ========================================================= */
+
+    .voices-section {
+        padding-bottom: 10px;
+    }
+
+    .voices-tools {
+        width: min(1180px, 92%);
+        margin: auto;
+        margin-bottom: 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .voices-tools h2 {
+        color: var(--deep-blue);
+        font-family: Georgia, serif;
+        font-size: 34px;
+    }
+
+    .voices-tools h2 span {
+        color: var(--red);
+    }
+
+    .search-box {
+        width: min(360px, 100%);
+    }
+
+    .search-box input {
+        width: 100%;
+        padding: 14px 17px;
+        border: 1px solid #AEB8C2;
+        border-radius: 8px;
+        background: white;
+        outline: none;
+        font-size: 14px;
+    }
+
+    .search-box input:focus {
+        border-color: var(--green);
+    }
+
+    /* =========================================================
+       VOICE CARDS
+       ========================================================= */
+
+    .voices-grid {
+        width: min(1180px, 92%);
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding-bottom: 45px;
+    }
+
+    .voice-card {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 13px;
+        overflow: hidden;
+        box-shadow: 0 8px 30px rgba(7,26,51,0.055);
+        transition: 0.25s ease;
+    }
+
+    .voice-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 17px 40px rgba(7,26,51,0.12);
+    }
+
+    .voice-top {
+        padding: 25px 25px 16px;
+        display: flex;
+        align-items: center;
+        gap: 13px;
+    }
+
+    .voice-number {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        border-radius: 50%;
+        background: var(--deep-blue);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Georgia, serif;
+        font-weight: bold;
+    }
+
+    .voice-country {
+        font-size: 24px;
+    }
+
+    .voice-author {
+        color: var(--deep-blue);
+        font-family: Georgia, serif;
+        font-size: 19px;
+        line-height: 1.25;
+    }
+
+    .voice-content {
+        padding: 7px 25px 28px;
+    }
+
+    .voice-title {
+        color: var(--red);
+        font-family: Georgia, serif;
+        font-size: 21px;
+        line-height: 1.4;
+        margin-bottom: 14px;
+    }
+
+    .voice-explanation {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .voice-bottom {
+        border-top: 1px solid var(--border);
+        padding: 14px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .voice-tag {
+        color: var(--green);
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .voice-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--yellow);
+    }
+
+    /* =========================================================
+       PHOTO BREAKS
+       These are separate from the written student cards.
+       ========================================================= */
+
+    .photo-break {
+        width: min(1120px, 92%);
+        margin: 30px auto 65px;
+        position: relative;
+        height: 280px;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 18px 45px rgba(7,26,51,0.15);
+    }
+
+    .photo-break img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .photo-break-overlay {
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(
+                90deg,
+                rgba(7,26,51,0.84),
+                rgba(7,26,51,0.35),
+                rgba(7,26,51,0.05)
+            );
+        display: flex;
+        align-items: center;
+    }
+
+    .photo-break-content {
+        width: min(580px, 82%);
+        margin-left: 45px;
+        color: white;
+    }
+
+    .photo-break-content small {
+        color: var(--yellow);
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .photo-break-content h2 {
+        font-family: Georgia, serif;
+        font-size: clamp(27px, 4vw, 40px);
+        line-height: 1.2;
+        margin-top: 8px;
+    }
+
+    /* =========================================================
+       FINAL PERSONAL PHOTO
+       ========================================================= */
+
+    .personal-feature {
+        width: min(1050px, 92%);
+        margin: 35px auto 75px;
+        position: relative;
+        overflow: hidden;
+        min-height: 390px;
+        border-radius: 15px;
+        box-shadow: 0 18px 45px rgba(7,26,51,0.16);
+    }
+
+    .personal-feature img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .personal-feature-overlay {
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(
+                90deg,
+                rgba(7,26,51,0.90),
+                rgba(7,26,51,0.48),
+                rgba(7,26,51,0.10)
+            );
+        display: flex;
+        align-items: center;
+    }
+
+    .personal-feature-content {
+        width: min(620px, 85%);
+        margin-left: 55px;
+        color: white;
+    }
+
+    .personal-feature-content .section-label {
+        color: var(--yellow);
+    }
+
+    .personal-feature-content h2 {
+        font-family: Georgia, serif;
+        font-size: clamp(32px, 4vw, 48px);
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .personal-feature-content p {
+        color: #E2EAF1;
+        font-size: 15px;
+    }
+
+    /* =========================================================
+       BIGGER PICTURE
+       ========================================================= */
+
+    .featured-message {
+        position: relative;
+        overflow: hidden;
+        background: var(--deep-blue);
+        color: white;
+    }
+
+    .featured-message::before {
+        content: "";
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        border: 60px solid rgba(255,255,255,0.04);
+        border-radius: 50%;
+        right: -120px;
+        top: -150px;
+    }
+
+    .featured-inner {
+        width: min(900px, 92%);
+        margin: auto;
+        text-align: center;
+        padding: 90px 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .featured-inner .section-label {
+        color: var(--yellow);
+    }
+
+    .featured-inner h2 {
+        font-family: Georgia, serif;
+        font-size: clamp(31px, 4vw, 47px);
+        line-height: 1.25;
+        margin-bottom: 20px;
+    }
+
+    .featured-inner p {
+        color: #D8E2EB;
+        font-size: 16px;
+        max-width: 720px;
+        margin: auto;
+    }
+
+    /* =========================================================
+       FINAL PHOTO STRIP
+       ========================================================= */
+
+    .final-photo-strip {
+        width: min(1120px, 92%);
+        margin: 65px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .final-photo {
+        height: 230px;
+        overflow: hidden;
+        border-radius: 12px;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(7,26,51,0.12);
+    }
+
+    .final-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .final-photo span {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background: var(--red);
+        color: white;
+        padding: 6px 9px;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    /* =========================================================
+       CTA
+       ========================================================= */
+
+    .voice-cta {
+        width: min(1050px, 92%);
+        margin: 70px auto;
+        padding: 43px;
+        background: white;
+        border: 1px solid var(--border);
+        border-left: 6px solid var(--green);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        box-shadow: 0 10px 35px rgba(7,26,51,0.06);
+    }
+
+    .voice-cta h2 {
+        color: var(--deep-blue);
+        font-family: Georgia, serif;
+        font-size: 31px;
+        margin-bottom: 7px;
+    }
+
+    .voice-cta p {
+        color: var(--muted);
+        font-size: 14px;
+    }
+
+    .cta-button {
+        padding: 13px 23px;
+        border-radius: 7px;
+        background: var(--green);
+        color: white;
+        font-weight: 700;
+        white-space: nowrap;
+        transition: 0.25s ease;
+    }
+
+    .cta-button:hover {
+        background: var(--green-light);
+        transform: translateY(-2px);
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    .site-footer {
+        background: var(--deep-blue);
+        color: white;
+        padding: 60px 0 25px;
+    }
+
+    .footer-inner {
+        width: min(1180px, 92%);
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 50px;
+        padding-bottom: 40px;
+    }
+
+    .footer-brand h2 {
+        font-family: Georgia, serif;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+        color: #C9D4DF;
+        max-width: 430px;
+        font-size: 14px;
+    }
+
+    .footer-column h3 {
+        font-family: Georgia, serif;
+        margin-bottom: 15px;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-links a {
+        color: #C9D4DF;
+        font-size: 13px;
+        transition: 0.2s;
+    }
+
+    .footer-links a:hover {
+        color: var(--yellow);
+    }
+
+    .footer-bottom {
+        width: min(1180px, 92%);
+        margin: auto;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255,255,255,0.12);
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        color: #9EABB8;
+        font-size: 12px;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 900px) {
+
+        .hero-content {
+            grid-template-columns: 1fr;
             gap: 25px;
         }
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--blue);
-            flex-shrink: 0;
-        }
-
-        .brand-mark {
-            width: 43px;
-            height: 43px;
-            border-radius: 50%;
-            background: var(--blue);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Georgia, serif;
-            font-weight: bold;
-            position: relative;
-        }
-
-        .brand-mark::after {
-            content: "";
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background: var(--red);
-            position: absolute;
-            right: -2px;
-            top: -2px;
-        }
-
-        .brand-name {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .main-nav {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-
-        .nav-link {
-            padding: 9px 13px;
-            border-radius: 7px;
-            color: var(--text);
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.25s ease;
-        }
-
-        .nav-link:hover {
-            color: var(--red);
-            background: var(--cream);
-        }
-
-        .nav-link.active {
-            background: var(--blue);
-            color: white;
-        }
-
-        /* =========================================================
-           HERO
-           ========================================================= */
-
-        .voices-hero {
-            position: relative;
-            overflow: hidden;
-            background:
-                linear-gradient(
-                    135deg,
-                    var(--blue),
-                    var(--blue-2) 60%,
-                    #19485A
-                );
-            color: white;
-        }
-
-        .voices-hero::before {
-            content: "";
-            position: absolute;
-            width: 420px;
-            height: 420px;
-            border: 70px solid rgba(255,255,255,0.04);
-            border-radius: 50%;
-            right: -180px;
-            top: -210px;
-        }
-
-        .voices-hero::after {
-            content: "";
-            position: absolute;
-            width: 190px;
-            height: 190px;
-            background: var(--red);
-            opacity: 0.12;
-            border-radius: 50%;
-            left: -100px;
-            bottom: -100px;
-        }
-
-        .hero-content {
-            width: min(1180px, 92%);
-            min-height: 590px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1fr 0.9fr;
-            align-items: center;
-            gap: 65px;
-            padding: 80px 0;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-label {
-            display: inline-block;
-            margin-bottom: 17px;
-            color: #C9D8E7;
-            font-size: 12px;
-            letter-spacing: 3px;
-            font-weight: 800;
-        }
-
-        .hero-title {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(48px, 6vw, 76px);
-            line-height: 1.02;
-            margin-bottom: 25px;
-        }
-
-        .hero-title span {
-            color: #DCE8F2;
-        }
-
-        .hero-description {
-            max-width: 650px;
-            color: #DCE5ED;
-            font-size: 17px;
-            line-height: 1.85;
-            margin-bottom: 32px;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .hero-button {
-            display: inline-block;
-            padding: 13px 22px;
-            border-radius: 7px;
-            font-weight: 700;
-            transition: 0.25s ease;
-        }
-
-        .hero-button.primary {
-            background: var(--red);
-            color: white;
-        }
-
-        .hero-button.primary:hover {
-            background: var(--red-2);
-            transform: translateY(-2px);
-        }
-
-        .hero-button.secondary {
-            color: white;
-            border: 1px solid rgba(255,255,255,0.3);
-            background: rgba(255,255,255,0.05);
-        }
-
-        .hero-button.secondary:hover {
-            background: rgba(255,255,255,0.12);
-        }
-
-        /* =========================================================
-           HERO PHOTOS
-           ========================================================= */
-
         .hero-visual {
-            height: 450px;
-            position: relative;
-        }
-
-        .photo-frame {
-            position: absolute;
-            padding: 9px;
-            background: white;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.28);
-        }
-
-        .photo-frame img {
             width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: cover;
-        }
-
-        .photo-one {
-            width: 245px;
-            height: 305px;
-            right: 15px;
-            top: 5px;
-            transform: rotate(4deg);
-            z-index: 2;
-        }
-
-        .photo-two {
-            width: 190px;
-            height: 235px;
-            left: 0;
-            top: 110px;
-            transform: rotate(-5deg);
-            z-index: 4;
-        }
-
-        .photo-three {
-            width: 175px;
-            height: 215px;
-            right: 145px;
-            bottom: 0;
-            transform: rotate(-2deg);
-            z-index: 5;
-        }
-
-        .photo-caption {
-            position: absolute;
-            left: 18px;
-            bottom: 17px;
-            padding: 12px 17px;
-            background: var(--green);
-            color: white;
-            font-size: 12px;
-            font-weight: 800;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            z-index: 10;
-        }
-
-        /* =========================================================
-           INTRO
-           ========================================================= */
-
-        .voices-intro {
-            width: min(850px, 92%);
+            max-width: 520px;
             margin: auto;
-            text-align: center;
-            padding: 85px 0 45px;
         }
 
-        .section-label {
-            color: var(--red);
-            font-size: 11px;
-            letter-spacing: 3px;
-            font-weight: 800;
-            margin-bottom: 12px;
-            text-transform: uppercase;
+        .voices-grid {
+            grid-template-columns: 1fr;
         }
-
-        .voices-intro h2 {
-            color: var(--blue);
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(32px, 4vw, 47px);
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        .voices-intro p {
-            color: var(--muted);
-            font-size: 16px;
-        }
-
-        /* =========================================================
-           PERSONAL PHOTO INTRO
-           ========================================================= */
 
         .personal-intro {
-            width: min(1080px, 92%);
-            margin: 30px auto 75px;
-            background: white;
-            border: 1px solid var(--silver-light);
-            box-shadow: 0 15px 45px rgba(11,31,58,0.07);
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            overflow: hidden;
+            grid-template-columns: 1fr;
         }
 
         .personal-intro-photo {
-            min-height: 390px;
-            overflow: hidden;
+            min-height: 350px;
         }
 
-        .personal-intro-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .personal-intro-text {
-            padding: 55px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .personal-intro-text h2 {
-            color: var(--blue);
-            font-family: Georgia, serif;
-            font-size: 35px;
-            line-height: 1.25;
-            margin-bottom: 18px;
-        }
-
-        .personal-intro-text p {
-            color: var(--muted);
-            font-size: 15px;
-            margin-bottom: 14px;
-        }
-
-        .personal-signature {
-            margin-top: 12px;
-            color: var(--green);
-            font-family: Georgia, serif;
-            font-weight: bold;
-        }
-
-        /* =========================================================
-           STATS
-           ========================================================= */
-
-        .voice-stats {
-            width: min(1000px, 92%);
-            margin: 10px auto 70px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .stat-card {
-            background: white;
-            border: 1px solid var(--silver-light);
-            border-radius: 12px;
-            padding: 28px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(11,31,58,0.05);
-        }
-
-        .stat-number {
-            display: block;
-            color: var(--blue);
-            font-family: Georgia, serif;
-            font-size: 39px;
-            font-weight: bold;
-        }
-
-        .stat-text {
-            color: var(--muted);
-            font-size: 13px;
-            font-weight: 700;
-        }
-
-        /* =========================================================
-           STORIES HEADER
-           ========================================================= */
-
-        .voices-section {
-            padding-bottom: 10px;
-        }
-
-        .voices-tools {
-            width: min(1180px, 92%);
-            margin: auto;
-            margin-bottom: 28px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .voices-tools h2 {
-            color: var(--blue);
-            font-family: Georgia, serif;
-            font-size: 34px;
-        }
-
-        .voices-tools h2 span {
-            color: var(--red);
-        }
-
-        .search-box {
-            width: min(360px, 100%);
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 14px 17px;
-            border: 1px solid var(--silver);
-            border-radius: 8px;
-            background: white;
-            outline: none;
-            font-size: 14px;
-        }
-
-        .search-box input:focus {
-            border-color: var(--blue);
-        }
-
-        /* =========================================================
-           STORY DIVIDER PHOTO
-           ========================================================= */
-
-        .story-photo {
-            width: min(1000px, 92%);
-            height: 300px;
-            margin: 15px auto 55px;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 15px 40px rgba(11,31,58,0.12);
-        }
-
-        .story-photo img {
-            width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: cover;
-        }
-
-        /* =========================================================
-           VOICE CARDS
-           ========================================================= */
-
-        .voices-grid {
-            width: min(1180px, 92%);
-            margin: auto;
-            display: grid;
+        .brand-gallery-grid {
             grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            padding-bottom: 45px;
-        }
-
-        .voice-card {
-            background: white;
-            border: 1px solid var(--silver-light);
-            border-radius: 13px;
-            overflow: hidden;
-            box-shadow: 0 8px 30px rgba(11,31,58,0.055);
-            transition: 0.25s ease;
-        }
-
-        .voice-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 17px 40px rgba(11,31,58,0.12);
-        }
-
-        .voice-top {
-            padding: 25px 25px 16px;
-            display: flex;
-            align-items: center;
-            gap: 13px;
-        }
-
-        .voice-number {
-            width: 44px;
-            height: 44px;
-            min-width: 44px;
-            border-radius: 50%;
-            background: var(--blue);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: Georgia, serif;
-            font-weight: bold;
-        }
-
-        .voice-country {
-            font-size: 24px;
-        }
-
-        .voice-author {
-            color: var(--blue);
-            font-family: Georgia, serif;
-            font-size: 19px;
-            line-height: 1.25;
-        }
-
-        .voice-content {
-            padding: 7px 25px 28px;
-        }
-
-        .voice-title {
-            color: var(--red);
-            font-family: Georgia, serif;
-            font-size: 21px;
-            line-height: 1.4;
-            margin-bottom: 14px;
-        }
-
-        .voice-explanation {
-            color: var(--muted);
-            font-size: 14px;
-            line-height: 1.8;
-        }
-
-        .voice-bottom {
-            border-top: 1px solid var(--silver-light);
-            padding: 14px 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .voice-tag {
-            color: var(--green);
-            font-size: 10px;
-            letter-spacing: 1.5px;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
-
-        .voice-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: var(--red);
-        }
-
-        /* =========================================================
-           FEATURED PERSONAL PHOTO
-           ========================================================= */
-
-        .personal-feature {
-            width: min(1050px, 92%);
-            margin: 35px auto 75px;
-            position: relative;
-            overflow: hidden;
-            min-height: 390px;
-            border-radius: 15px;
-            box-shadow: 0 18px 45px rgba(11,31,58,0.16);
-        }
-
-        .personal-feature img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .personal-feature-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                90deg,
-                rgba(11,31,58,0.88),
-                rgba(11,31,58,0.45),
-                rgba(11,31,58,0.12)
-            );
-            display: flex;
-            align-items: center;
-        }
-
-        .personal-feature-content {
-            width: min(620px, 85%);
-            margin-left: 55px;
-            color: white;
-        }
-
-        .personal-feature-content .section-label {
-            color: #D6E2ED;
-        }
-
-        .personal-feature-content h2 {
-            font-family: Georgia, serif;
-            font-size: clamp(32px, 4vw, 48px);
-            line-height: 1.2;
-            margin-bottom: 15px;
-        }
-
-        .personal-feature-content p {
-            color: #E2EAF1;
-            font-size: 15px;
-        }
-
-        /* =========================================================
-           BIGGER PICTURE
-           ========================================================= */
-
-        .featured-message {
-            position: relative;
-            overflow: hidden;
-            background: var(--blue);
-            color: white;
-        }
-
-        .featured-message::before {
-            content: "";
-            position: absolute;
-            width: 350px;
-            height: 350px;
-            border: 60px solid rgba(255,255,255,0.04);
-            border-radius: 50%;
-            right: -120px;
-            top: -150px;
-        }
-
-        .featured-inner {
-            width: min(900px, 92%);
-            margin: auto;
-            text-align: center;
-            padding: 90px 0;
-            position: relative;
-            z-index: 2;
-        }
-
-        .featured-inner .section-label {
-            color: #C7D6E5;
-        }
-
-        .featured-inner h2 {
-            font-family: Georgia, serif;
-            font-size: clamp(31px, 4vw, 47px);
-            line-height: 1.25;
-            margin-bottom: 20px;
-        }
-
-        .featured-inner p {
-            color: #D8E2EB;
-            font-size: 16px;
-            max-width: 720px;
-            margin: auto;
-        }
-
-        /* =========================================================
-           CTA
-           ========================================================= */
-
-        .voice-cta {
-            width: min(1050px, 92%);
-            margin: 70px auto;
-            padding: 43px;
-            background: white;
-            border: 1px solid var(--silver-light);
-            border-left: 6px solid var(--green);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-            box-shadow: 0 10px 35px rgba(11,31,58,0.06);
-        }
-
-        .voice-cta h2 {
-            color: var(--blue);
-            font-family: Georgia, serif;
-            font-size: 31px;
-            margin-bottom: 7px;
-        }
-
-        .voice-cta p {
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        .cta-button {
-            padding: 13px 23px;
-            border-radius: 7px;
-            background: var(--green);
-            color: white;
-            font-weight: 700;
-            white-space: nowrap;
-            transition: 0.25s ease;
-        }
-
-        .cta-button:hover {
-            background: var(--green-2);
-            transform: translateY(-2px);
-        }
-
-        /* =========================================================
-           FOOTER
-           ========================================================= */
-
-        .site-footer {
-            background: var(--blue);
-            color: white;
-            padding: 60px 0 25px;
         }
 
         .footer-inner {
-            width: min(1180px, 92%);
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr;
-            gap: 50px;
-            padding-bottom: 40px;
+            grid-template-columns: 1fr 1fr;
         }
 
-        .footer-brand h2 {
-            font-family: Georgia, serif;
-            font-size: 28px;
-            margin-bottom: 10px;
+        .footer-brand {
+            grid-column: 1 / -1;
         }
+    }
 
-        .footer-brand p {
-            color: #C9D4DF;
-            max-width: 430px;
-            font-size: 14px;
-        }
+    @media (max-width: 700px) {
 
-        .footer-column h3 {
-            font-family: Georgia, serif;
-            margin-bottom: 15px;
-        }
-
-        .footer-links {
-            display: flex;
+        .header-inner {
+            padding: 14px 0;
             flex-direction: column;
-            gap: 8px;
+            gap: 12px;
         }
 
-        .footer-links a {
-            color: #C9D4DF;
-            font-size: 13px;
-            transition: 0.2s;
+        .main-nav {
+            justify-content: center;
         }
 
-        .footer-links a:hover {
-            color: white;
+        .nav-link {
+            font-size: 12px;
+            padding: 7px 9px;
+        }
+
+        .hero-content {
+            padding: 65px 0;
+        }
+
+        .hero-title {
+            font-size: 49px;
+        }
+
+        .hero-description {
+            font-size: 15px;
+        }
+
+        .voice-stats {
+            grid-template-columns: 1fr;
+        }
+
+        .voices-tools {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .voices-tools h2 {
+            font-size: 30px;
+        }
+
+        .brand-gallery-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .photo-break {
+            height: 240px;
+        }
+
+        .photo-break-content {
+            margin-left: 25px;
+        }
+
+        .personal-intro-text {
+            padding: 35px 25px;
+        }
+
+        .personal-feature {
+            min-height: 420px;
+        }
+
+        .personal-feature-content {
+            margin-left: 25px;
+        }
+
+        .final-photo-strip {
+            grid-template-columns: 1fr;
+        }
+
+        .voice-cta {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 32px;
+        }
+
+        .footer-inner {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .footer-brand {
+            grid-column: auto;
         }
 
         .footer-bottom {
-            width: min(1180px, 92%);
-            margin: auto;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.12);
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            color: #9EABB8;
-            font-size: 12px;
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 500px) {
+
+        .hero-title {
+            font-size: 42px;
         }
 
-        /* =========================================================
-           RESPONSIVE
-           ========================================================= */
-
-        @media (max-width: 900px) {
-
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-
-            .hero-visual {
-                width: 100%;
-                max-width: 520px;
-                margin: auto;
-            }
-
-            .voices-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .personal-intro {
-                grid-template-columns: 1fr;
-            }
-
-            .personal-intro-photo {
-                min-height: 350px;
-            }
-
-            .footer-inner {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .footer-brand {
-                grid-column: 1 / -1;
-            }
+        .hero-visual {
+            height: 320px;
         }
 
-        @media (max-width: 700px) {
-
-            .header-inner {
-                padding: 14px 0;
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .main-nav {
-                justify-content: center;
-            }
-
-            .nav-link {
-                font-size: 12px;
-                padding: 7px 9px;
-            }
-
-            .hero-content {
-                padding: 65px 0;
-            }
-
-            .hero-title {
-                font-size: 49px;
-            }
-
-            .hero-description {
-                font-size: 15px;
-            }
-
-            .voice-stats {
-                grid-template-columns: 1fr;
-            }
-
-            .voices-tools {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .voices-tools h2 {
-                font-size: 30px;
-            }
-
-            .story-photo {
-                height: 240px;
-            }
-
-            .personal-intro-text {
-                padding: 35px 25px;
-            }
-
-            .personal-feature {
-                min-height: 420px;
-            }
-
-            .personal-feature-content {
-                margin-left: 25px;
-            }
-
-            .voice-cta {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 32px;
-            }
-
-            .footer-inner {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .footer-brand {
-                grid-column: auto;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-            }
+        .photo-one {
+            width: 175px;
+            height: 220px;
         }
 
-        @media (max-width: 500px) {
-
-            .hero-title {
-                font-size: 42px;
-            }
-
-            .hero-visual {
-                height: 320px;
-            }
-
-            .photo-one {
-                width: 175px;
-                height: 220px;
-            }
-
-            .photo-two {
-                width: 135px;
-                height: 170px;
-                top: 90px;
-            }
-
-            .photo-three {
-                width: 120px;
-                height: 150px;
-                right: 85px;
-            }
-
-            .photo-caption {
-                left: 3px;
-                bottom: 3px;
-                font-size: 10px;
-            }
-
-            .voice-top,
-            .voice-content,
-            .voice-bottom {
-                padding-left: 18px;
-                padding-right: 18px;
-            }
-
-            .story-photo {
-                height: 200px;
-            }
+        .photo-two {
+            width: 135px;
+            height: 170px;
+            top: 90px;
         }
-    </style>
-</head>
 
-<body class="student-voices-page">
+        .photo-three {
+            width: 120px;
+            height: 150px;
+            right: 85px;
+        }
 
-    <!-- =========================================================
-         MAIN WEBSITE NAVIGATION
-         ========================================================= -->
+        .photo-caption {
+            left: 3px;
+            bottom: 3px;
+            font-size: 10px;
+        }
 
-    <header class="site-header">
+        .brand-gallery-grid {
+            grid-template-columns: 1fr;
+        }
 
-        <div class="header-inner">
+        .photo-break {
+            height: 210px;
+        }
 
-            <a href="index.html" class="brand">
-                <span class="brand-mark">NM</span>
+        .voice-top,
+        .voice-content,
+        .voice-bottom {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+    }
+</style>
 
-                <span class="brand-name">
-                    Nketia-Marfo
-                </span>
+</head><body class="student-voices-page"><!-- =========================================================
+     MAIN NAVIGATION
+     IMPORTANT: THE FILE IS Students-Voice.html
+     ========================================================= -->
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+        <a href="index.html" class="brand">
+            <span class="brand-mark">NM</span>
+            <span class="brand-name">Nketia-Marfo</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+
+            <a href="index.html" class="nav-link">
+                Home
             </a>
 
-            <nav class="main-nav" aria-label="Main navigation">
+            <a href="about.html" class="nav-link">
+                About
+            </a>
 
-                <a href="index.html" class="nav-link">
-                    Home
-                </a>
+            <a href="blog.html" class="nav-link">
+                Blog
+            </a>
 
-                <a href="about.html" class="nav-link">
-                    About
-                </a>
+            <!-- CORRECT FILE NAME -->
+            <a href="Students-Voice.html" class="nav-link active">
+                Student Voices
+            </a>
 
-                <a href="blog.html" class="nav-link">
-                    Blog
-                </a>
+            <a href="contact.html" class="nav-link">
+                Contact
+            </a>
 
-                <!-- THIS IS A NORMAL HTML PAGE -->
-                <a href="student-voices.html" class="nav-link active">
-                    Student Voices
-                </a>
+        </nav>
 
-                <a href="contact.html" class="nav-link">
-                    Contact
-                </a>
+    </div>
 
-            </nav>
+</header>
+
+
+<main>
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="voices-hero">
+
+        <div class="hero-content">
+
+            <div>
+
+                <span class="hero-label">
+                    STUDENT VOICES
+                </span>
+
+                <h1 class="hero-title">
+                    Every student<br>
+                    has a <span>story.</span>
+                </h1>
+
+                <p class="hero-description">
+                    A space for student experiences, reflections,
+                    challenges, discoveries and ideas. Because education
+                    is not only about classrooms, grades and certificates.
+                    It is also about the people and stories behind them.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="#voices" class="hero-button primary">
+                        Explore the Voices
+                    </a>
+
+                    <a href="contact.html" class="hero-button secondary">
+                        Share an Idea
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Nketia-Marfo personal photos -->
+            <div class="hero-visual">
+
+                <div class="photo-frame photo-one">
+                    <img
+                        src="IMG-20260614-WA0187.jpg"
+                        alt="Nketia-Marfo"
+                    >
+                </div>
+
+                <div class="photo-frame photo-two">
+                    <img
+                        src="IMG_20260301_181413_373.jpg"
+                        alt="Nketia-Marfo"
+                    >
+                </div>
+
+                <div class="photo-frame photo-three">
+                    <img
+                        src="IMG-20260614-WA0191.jpg"
+                        alt="Nketia-Marfo"
+                    >
+                </div>
+
+                <div class="photo-caption">
+                    Nketia-Marfo • Student Voices
+                </div>
+
+            </div>
 
         </div>
 
-    </header>
+    </section>
 
 
-    <main>
+    <!-- =====================================================
+         INTRODUCTION
+         ===================================================== -->
 
-        <!-- =====================================================
-             HERO
-             ===================================================== -->
+    <section class="voices-intro">
 
-        <section class="voices-hero">
+        <div class="section-label">
+            WHY STUDENT VOICES?
+        </div>
 
-            <div class="hero-content">
+        <h2>
+            Learning becomes powerful when we hear the people living it.
+        </h2>
 
-                <div>
+        <p>
+            Student Voices brings together experiences from different
+            backgrounds and parts of the world. Each story offers a
+            different lesson about perseverance, leadership, discovery,
+            courage, education, community and the determination to build
+            a better future.
+        </p>
 
-                    <span class="hero-label">
-                        STUDENT VOICES
-                    </span>
-
-                    <h1 class="hero-title">
-                        Every student<br>
-                        has a <span>story.</span>
-                    </h1>
-
-                    <p class="hero-description">
-                        A space for student experiences, reflections,
-                        challenges, discoveries and ideas. Because education
-                        is not only about classrooms, grades and certificates.
-                        It is also about the people and stories behind them.
-                    </p>
-
-                    <div class="hero-actions">
-
-                        <a href="#voices" class="hero-button primary">
-                            Explore the Voices
-                        </a>
-
-                        <a href="contact.html" class="hero-button secondary">
-                            Share an Idea
-                        </a>
-
-                    </div>
-
-                </div>
+    </section>
 
 
-                <div class="hero-visual">
+    <!-- =====================================================
+         PERSONAL INTRODUCTION
+         ===================================================== -->
 
-                    <!-- Replace these three filenames only if you want
-                         different photos from your repository. -->
+    <section class="personal-intro">
 
-                    <div class="photo-frame photo-one">
+        <div class="personal-intro-photo">
 
-                        <img
-                            src="IMG-20260614-WA0187.jpg"
-                            alt="Nketia-Marfo"
-                        >
+            <img
+                src="IMG-20260124-WA0015.jpg"
+                alt="Nketia-Marfo"
+            >
 
-                    </div>
+            <span class="photo-owner-label">
+                Nketia-Marfo
+            </span>
 
+        </div>
 
-                    <div class="photo-frame photo-two">
-
-                        <img
-                            src="IMG_20260301_181413_373.jpg"
-                            alt="Nketia-Marfo"
-                        >
-
-                    </div>
-
-
-                    <div class="photo-frame photo-three">
-
-                        <img
-                            src="IMG-20260614-WA0191.jpg"
-                            alt="Nketia-Marfo"
-                        >
-
-                    </div>
-
-
-                    <div class="photo-caption">
-                        Stories. Ideas. Possibilities.
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             INTRODUCTION
-             ===================================================== -->
-
-        <section class="voices-intro">
+        <div class="personal-intro-text">
 
             <div class="section-label">
-                WHY STUDENT VOICES?
+                A SPACE FOR STORIES
             </div>
 
             <h2>
-                Learning becomes powerful when we hear the people living it.
+                Every journey can teach us something.
             </h2>
 
             <p>
-                Student Voices brings together experiences from different
-                backgrounds and parts of the world. Each story offers a
-                different lesson about perseverance, leadership, discovery,
-                courage, education, community and the determination to build
-                a better future.
+                I created Student Voices because students are more than
+                grades, applications, certificates and academic titles.
             </p>
 
-        </section>
+            <p>
+                Behind every educational journey is a person with
+                questions, struggles, dreams, discoveries and experiences
+                worth hearing.
+            </p>
+
+            <p>
+                These stories are here to remind us that learning can
+                happen through people, places, challenges and unexpected
+                opportunities.
+            </p>
+
+            <div class="personal-signature">
+                — Nketia-Marfo
+            </div>
+
+        </div>
+
+    </section>
 
 
-        <!-- =====================================================
-             NKETIA-MARFO PERSONAL INTRODUCTION
-             ===================================================== -->
+    <!-- =====================================================
+         EXTRA NKETIA-MARFO PHOTO GALLERY
+         Separate from the student stories
+         ===================================================== -->
 
-        <section class="personal-intro">
+    <section class="brand-gallery">
 
-            <div class="personal-intro-photo">
+        <div class="brand-gallery-heading">
+
+            <div class="section-label">
+                THE PERSON BEHIND THE PLATFORM
+            </div>
+
+            <h2>
+                A few moments from Nketia-Marfo
+            </h2>
+
+            <p>
+                These are personal photos used as part of the visual
+                identity of this Student Voices page.
+            </p>
+
+        </div>
+
+
+        <div class="brand-gallery-grid">
+
+            <div class="brand-gallery-card">
 
                 <img
-                    src="IMG-20260124-WA0015.jpg"
+                    src="IMG-20260308-WA0121.jpg"
                     alt="Nketia-Marfo"
+                    loading="lazy"
+                >
+
+                <span>
+                    Nketia-Marfo
+                </span>
+
+            </div>
+
+
+            <div class="brand-gallery-card">
+
+                <img
+                    src="IMG-20260327-WA0071.jpg"
+                    alt="Nketia-Marfo"
+                    loading="lazy"
+                >
+
+                <span>
+                    Personal Moment
+                </span>
+
+            </div>
+
+
+            <div class="brand-gallery-card">
+
+                <img
+                    src="IMG-20260328-WA0182.jpg"
+                    alt="Nketia-Marfo"
+                    loading="lazy"
+                >
+
+                <span>
+                    Nketia-Marfo
+                </span>
+
+            </div>
+
+
+            <div class="brand-gallery-card">
+
+                <img
+                    src="IMG-20260607-WA0126.jpg"
+                    alt="Nketia-Marfo"
+                    loading="lazy"
+                >
+
+                <span>
+                    Personal Moment
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         STATS
+         ===================================================== -->
+
+    <section class="voice-stats">
+
+        <div class="stat-card">
+            <span class="stat-number">20</span>
+            <span class="stat-text">Student Stories</span>
+        </div>
+
+        <div class="stat-card">
+            <span class="stat-number">10+</span>
+            <span class="stat-text">Countries Represented</span>
+        </div>
+
+        <div class="stat-card">
+            <span class="stat-number">1</span>
+            <span class="stat-text">Shared Love for Learning</span>
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         STORIES
+         ===================================================== -->
+
+    <section class="voices-section" id="voices">
+
+        <div class="voices-tools">
+
+            <h2>
+                The <span>Voices</span>
+            </h2>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="voiceSearch"
+                    placeholder="Search student stories..."
+                    aria-label="Search student stories"
                 >
 
             </div>
 
-            <div class="personal-intro-text">
+        </div>
 
-                <div class="section-label">
-                    A SPACE FOR STORIES
+
+        <div class="voices-grid" id="voicesGrid">
+
+            <!-- 01 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">01</div>
+                    <div class="voice-country">🇬🇭</div>
+
+                    <h3 class="voice-author">
+                        Renalta Aboagyewaa Nkansah
+                    </h3>
                 </div>
 
-                <h2>
-                    Every journey can teach us something.
-                </h2>
+                <div class="voice-content">
 
-                <p>
-                    I created Student Voices because students are more than
-                    grades, applications, certificates and academic titles.
-                </p>
-
-                <p>
-                    Behind every educational journey is a person with
-                    questions, struggles, dreams, discoveries and experiences
-                    worth hearing.
-                </p>
-
-                <p>
-                    These stories are here to remind us that learning can
-                    happen through people, places, challenges and unexpected
-                    opportunities.
-                </p>
-
-                <div class="personal-signature">
-                    — Nketia-Marfo
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             STATS
-             ===================================================== -->
-
-        <section class="voice-stats">
-
-            <div class="stat-card">
-
-                <span class="stat-number">
-                    20
-                </span>
-
-                <span class="stat-text">
-                    Student Stories
-                </span>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <span class="stat-number">
-                    10+
-                </span>
-
-                <span class="stat-text">
-                    Countries Represented
-                </span>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <span class="stat-number">
-                    1
-                </span>
-
-                <span class="stat-text">
-                    Shared Love for Learning
-                </span>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             STORIES
-             ===================================================== -->
-
-        <section class="voices-section" id="voices">
-
-            <div class="voices-tools">
-
-                <h2>
-                    The <span>Voices</span>
-                </h2>
-
-                <div class="search-box">
-
-                    <input
-                        type="text"
-                        id="voiceSearch"
-                        placeholder="Search student stories..."
-                        aria-label="Search student stories"
-                    >
-
-                </div>
-
-            </div>
-
-
-            <div class="voices-grid" id="voicesGrid">
-
-                <!-- 01 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">01</div>
-                        <div class="voice-country">🇬🇭</div>
-
-                        <h3 class="voice-author">
-                            Renalta Aboagyewaa Nkansah
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            My UHK/Erasmus Experience Changed My Life
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Renalta's story reflects how international
-                            academic experiences can change a student's
-                            understanding of education, culture and personal
-                            possibility. Her experience shows how stepping
-                            into a new environment can build confidence,
-                            independence and a wider perspective.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">
-                            International Experience
-                        </span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- 02 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">02</div>
-                        <div class="voice-country">🇬🇭</div>
-
-                        <h3 class="voice-author">
-                            Louis Agya Kwame Sottie
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            Balancing Books and Leadership
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Louis' experience explores the challenge of
-                            combining academic responsibility with
-                            leadership. His story reminds students that
-                            leadership can teach discipline, teamwork,
-                            responsibility and service.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Leadership</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- 03 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">03</div>
-                        <div class="voice-country">🇳🇬</div>
-
-                        <h3 class="voice-author">
-                            Cambridge-Africa Nigerian PhD Student/Alumna
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            Young People's Career Decisions and
-                            Self-Actualisation
-                        </h2>
-
-                        <p class="voice-explanation">
-                            This reflection looks at how young people make
-                            career choices while trying to understand who
-                            they are and what they want from life. It
-                            highlights purpose, personal growth and thoughtful
-                            decisions about education and future work.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Career & Purpose</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- 04 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">04</div>
-                        <div class="voice-country">🇰🇪</div>
-
-                        <h3 class="voice-author">
-                            Lynnet Hamblin
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            From Kenya to UBC: Education, Growth and Community
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Lynnet's journey shows how moving into a new
-                            academic environment can create opportunities
-                            for growth. Beyond academics, the story emphasizes
-                            community, belonging and supportive relationships.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Growth</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- PHOTO -->
-                <div class="story-photo">
-
-                    <img
-                        src="IMG-20260308-WA0121.jpg"
-                        alt="Nketia-Marfo"
-                    >
-
-                </div>
-
-
-                <!-- 05 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">05</div>
-                        <div class="voice-country">🇿🇦</div>
-
-                        <h3 class="voice-author">
-                            Matome Lethwane
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            From Survival to Solution
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Matome's story focuses on resilience and the
-                            decision to move beyond difficult circumstances.
-                            It presents education and problem-solving as tools
-                            for creating meaningful solutions.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Resilience</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- 06 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">06</div>
-                        <div class="voice-country">🇨🇦</div>
-
-                        <h3 class="voice-author">
-                            Sarah Mohamed
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            Student Story: Sarah Mohamed
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Sarah's student story provides a personal look
-                            at education as a journey of identity, opportunity
-                            and growth. Behind every academic profile is a
-                            person learning to understand their possibilities.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Student Journey</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- 07 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">07</div>
-                        <div class="voice-country">🇨🇦</div>
-
-                        <h3 class="voice-author">
-                            Hy Goldberg
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            Made by Perseverance, Family and Education
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Hy's story brings together perseverance, family
-                            and education. It demonstrates how achievement is
-                            often connected to the people who encourage us
-                            and the determination we develop.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Perseverance</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- 08 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">08</div>
-                        <div class="voice-country">🇺🇸</div>
-
-                        <h3 class="voice-author">
-                            Ben Bowman
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            Coming Full-Circle: Student to Teacher
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Ben's experience highlights the transformation
-                            that can happen when a learner eventually becomes
-                            an educator. Education can create a cycle in which
-                            knowledge is passed forward to others.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Education</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- PHOTO -->
-                <div class="story-photo">
-
-                    <img
-                        src="IMG-20260327-WA0071.jpg"
-                        alt="Nketia-Marfo"
-                    >
-
-                </div>
-
-
-                <!-- 09 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">09</div>
-                        <div class="voice-country">🇺🇸</div>
-
-                        <h3 class="voice-author">
-                            Lori Lander
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            Education Changed My Life
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Lori's reflection centers on the transformative
-                            power of learning and how education can influence
-                            confidence, opportunity, relationships and future
-                            direction.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Transformation</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- 10 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">10</div>
-                        <div class="voice-country">🇺🇸</div>
-
-                        <h3 class="voice-author">
-                            Kristy Chau
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            My Education Changed My Life
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Kristy's story explores education as a source of
-                            personal change. Learning can open doors while
-                            helping students discover confidence, direction
-                            and possibility.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Opportunity</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- 11 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">11</div>
-                        <div class="voice-country">🇬🇧</div>
-
-                        <h3 class="voice-author">
-                            Olivia Butterfield
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            My Time at Oxford Has Been Completely Transformative
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Olivia's experience reflects the intellectual
-                            and personal changes that can come from studying
-                            in a demanding academic environment and being
-                            challenged to grow.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Academic Growth</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- 12 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">12</div>
-                        <div class="voice-country">🇬🇧</div>
-
-                        <h3 class="voice-author">
-                            Daphne Harries
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            Student Story: Daphne Harries
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Daphne's student story presents education as a
-                            personal journey rather than simply an academic
-                            destination, shaped by experiences, choices and
-                            relationships.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Experience</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- PHOTO -->
-                <div class="story-photo">
-
-                    <img
-                        src="IMG-20260328-WA0182.jpg"
-                        alt="Nketia-Marfo"
-                    >
-
-                </div>
-
-
-                <!-- 13 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">13</div>
-                        <div class="voice-country">🇬🇧</div>
-
-                        <h3 class="voice-author">
-                            Chloe Pomfret
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            There's Inspiration All Around You
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Chloe's reflection encourages students to pay
-                            attention to the people, places and everyday
-                            experiences around them. Inspiration can begin
-                            with simply noticing and learning.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Inspiration</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- 14 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">14</div>
-                        <div class="voice-country">🇬🇧</div>
-
-                        <h3 class="voice-author">
-                            Alexandros Pamnani
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            A Passion for Learning
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Alexandros' story celebrates curiosity and the
-                            desire to keep learning. Education becomes more
-                            meaningful when students develop genuine interest
-                            in discovering ideas.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Curiosity</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- 15 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">15</div>
-                        <div class="voice-country">🇩🇪</div>
-
-                        <h3 class="voice-author">
-                            Ehsanullah Attiq
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            Adapting to a New Educational Landscape:
-                            My Experience as an International Student
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Ehsanullah's experience explores the adjustments
-                            international students can make when entering a
-                            new education system, emphasizing adaptability,
-                            cultural learning and courage.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">International Student</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- 16 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">16</div>
-                        <div class="voice-country">🇩🇪</div>
-
-                        <h3 class="voice-author">
-                            Akua Bobson
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            Why Germany? Why Heidelberg?
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Akua's story examines the motivations behind
-                            choosing a particular country and university,
-                            including culture, environment, opportunity and
-                            personal growth.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Study Abroad</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- PHOTO -->
-                <div class="story-photo">
-
-                    <img
-                        src="IMG-20260607-WA0126.jpg"
-                        alt="Nketia-Marfo"
-                    >
-
-                </div>
-
-
-                <!-- 17 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">17</div>
-                        <div class="voice-country">🇳🇱</div>
-
-                        <h3 class="voice-author">
-                            Alena Kerosinskaya
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            Don't Be Afraid to Fail, Be Afraid Not to Try
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Alena's reflection focuses on courage and the
-                            importance of taking opportunities even when
-                            success is uncertain. Failure can become part of
-                            learning and growth.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Courage</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- 18 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">18</div>
-                        <div class="voice-country">🇦🇺</div>
-
-                        <h3 class="voice-author">
-                            Hasnain
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            Hasnain's New Life
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Hasnain's story captures the experience of
-                            beginning a new chapter in a different
-                            environment and creating a sense of belonging
-                            through unfamiliar experiences.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">New Beginnings</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- 19 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">19</div>
-                        <div class="voice-country">🇫🇷</div>
-
-                        <h3 class="voice-author">
-                            Camille Gardent
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            GBSB Student Story: Camille Gardent
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Camille's story provides another perspective on
-                            how education, professional preparation and
-                            personal development can come together to shape
-                            future direction.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Development</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-
-                <!-- 20 -->
-                <article class="voice-card">
-
-                    <div class="voice-top">
-                        <div class="voice-number">20</div>
-                        <div class="voice-country">🇨🇳</div>
-
-                        <h3 class="voice-author">
-                            Shen Xiaodong
-                        </h3>
-                    </div>
-
-                    <div class="voice-content">
-
-                        <h2 class="voice-title">
-                            Transforming Lives in Remote Mountains
-                        </h2>
-
-                        <p class="voice-explanation">
-                            Shen's story connects education with service and
-                            community impact, highlighting how learning can
-                            extend beyond the individual and reach communities
-                            with fewer resources.
-                        </p>
-
-                    </div>
-
-                    <div class="voice-bottom">
-                        <span class="voice-tag">Community Impact</span>
-                        <span class="voice-dot"></span>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             PERSONAL PHOTO BEFORE THE FINAL MESSAGE
-             ===================================================== -->
-
-        <section class="personal-feature">
-
-            <img
-                src="IMG_20260319_160228_606.jpg"
-                alt="Nketia-Marfo"
-            >
-
-            <div class="personal-feature-overlay">
-
-                <div class="personal-feature-content">
-
-                    <div class="section-label">
-                        KEEP LISTENING
-                    </div>
-
-                    <h2>
-                        Every story can open another person's mind.
+                    <h2 class="voice-title">
+                        My UHK/Erasmus Experience Changed My Life
                     </h2>
 
-                    <p>
-                        Student Voices is about creating a place where
-                        experiences can travel beyond the person who lived
-                        them — becoming encouragement, questions and new
-                        possibilities for someone else.
+                    <p class="voice-explanation">
+                        Renalta's story reflects how international
+                        academic experiences can change a student's
+                        understanding of education, culture and personal
+                        possibility. Her experience shows how stepping
+                        into a new environment can build confidence,
+                        independence and a wider perspective.
                     </p>
 
                 </div>
 
+                <div class="voice-bottom">
+                    <span class="voice-tag">
+                        International Experience
+                    </span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+
+            <!-- 02 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">02</div>
+                    <div class="voice-country">🇬🇭</div>
+
+                    <h3 class="voice-author">
+                        Louis Agya Kwame Sottie
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+
+                    <h2 class="voice-title">
+                        Balancing Books and Leadership
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Louis' experience explores the challenge of
+                        combining academic responsibility with
+                        leadership. His story reminds students that
+                        leadership can teach discipline, teamwork,
+                        responsibility and service.
+                    </p>
+
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Leadership</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+
+            <!-- 03 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">03</div>
+                    <div class="voice-country">🇳🇬</div>
+
+                    <h3 class="voice-author">
+                        Cambridge-Africa Nigerian PhD Student/Alumna
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+
+                    <h2 class="voice-title">
+                        Young People's Career Decisions and
+                        Self-Actualisation
+                    </h2>
+
+                    <p class="voice-explanation">
+                        This reflection looks at how young people make
+                        career choices while trying to understand who
+                        they are and what they want from life. It
+                        highlights purpose, personal growth and thoughtful
+                        decisions about education and future work.
+                    </p>
+
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Career & Purpose</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+
+            <!-- 04 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">04</div>
+                    <div class="voice-country">🇰🇪</div>
+
+                    <h3 class="voice-author">
+                        Lynnet Hamblin
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+
+                    <h2 class="voice-title">
+                        From Kenya to UBC: Education, Growth and Community
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Lynnet's journey shows how moving into a new
+                        academic environment can create opportunities
+                        for growth. Beyond academics, the story emphasizes
+                        community, belonging and supportive relationships.
+                    </p>
+
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Growth</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- =================================================
+             PERSONAL PHOTO BREAK
+             NOT PART OF THE STUDENT STORIES
+             ================================================= -->
+
+        <div class="photo-break">
+
+            <img
+                src="IMG-20260628-WA0080.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
+
+            <div class="photo-break-overlay">
+
+                <div class="photo-break-content">
+
+                    <small>
+                        Nketia-Marfo • Visual Story
+                    </small>
+
+                    <h2>
+                        Behind every platform is a person with a reason.
+                    </h2>
+
+                </div>
+
             </div>
 
-        </section>
+        </div>
 
 
-        <!-- =====================================================
-             FEATURED MESSAGE
-             ===================================================== -->
+        <div class="voices-grid">
 
-        <section class="featured-message">
+            <!-- 05 -->
+            <article class="voice-card">
 
-            <div class="featured-inner">
+                <div class="voice-top">
+                    <div class="voice-number">05</div>
+                    <div class="voice-country">🇿🇦</div>
+
+                    <h3 class="voice-author">
+                        Matome Lethwane
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+                    <h2 class="voice-title">
+                        From Survival to Solution
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Matome's story focuses on resilience and the
+                        decision to move beyond difficult circumstances.
+                        It presents education and problem-solving as tools
+                        for creating meaningful solutions.
+                    </p>
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Resilience</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+
+            <!-- 06 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">06</div>
+                    <div class="voice-country">🇨🇦</div>
+
+                    <h3 class="voice-author">
+                        Sarah Mohamed
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+                    <h2 class="voice-title">
+                        Student Story: Sarah Mohamed
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Sarah's student story provides a personal look
+                        at education as a journey of identity, opportunity
+                        and growth.
+                    </p>
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Student Journey</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+
+            <!-- 07 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">07</div>
+                    <div class="voice-country">🇨🇦</div>
+
+                    <h3 class="voice-author">
+                        Hy Goldberg
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+                    <h2 class="voice-title">
+                        Made by Perseverance, Family and Education
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Hy's story brings together perseverance, family
+                        and education. It demonstrates how achievement is
+                        often connected to the people who encourage us
+                        and the determination we develop.
+                    </p>
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Perseverance</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+
+            <!-- 08 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">08</div>
+                    <div class="voice-country">🇺🇸</div>
+
+                    <h3 class="voice-author">
+                        Ben Bowman
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+                    <h2 class="voice-title">
+                        Coming Full-Circle: Student to Teacher
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Ben's experience highlights the transformation
+                        that can happen when a learner eventually becomes
+                        an educator.
+                    </p>
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Education</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- =================================================
+             SECOND PERSONAL PHOTO
+             ================================================= -->
+
+        <div class="photo-break">
+
+            <img
+                src="IMG_20260303_195951_662.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
+
+            <div class="photo-break-overlay">
+
+                <div class="photo-break-content">
+
+                    <small>
+                        Nketia-Marfo • Student Voices
+                    </small>
+
+                    <h2>
+                        Stories connect people across different journeys.
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="voices-grid">
+
+            <!-- 09 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">09</div>
+                    <div class="voice-country">🇺🇸</div>
+
+                    <h3 class="voice-author">
+                        Lori Lander
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+                    <h2 class="voice-title">
+                        Education Changed My Life
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Lori's reflection centers on the transformative
+                        power of learning and how education can influence
+                        confidence, opportunity, relationships and future
+                        direction.
+                    </p>
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Transformation</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+
+            <!-- 10 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">10</div>
+                    <div class="voice-country">🇺🇸</div>
+
+                    <h3 class="voice-author">
+                        Kristy Chau
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+                    <h2 class="voice-title">
+                        My Education Changed My Life
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Kristy's story explores education as a source of
+                        personal change. Learning can open doors while
+                        helping students discover confidence, direction
+                        and possibility.
+                    </p>
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Opportunity</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+
+            <!-- 11 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">11</div>
+                    <div class="voice-country">🇬🇧</div>
+
+                    <h3 class="voice-author">
+                        Olivia Butterfield
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+                    <h2 class="voice-title">
+                        My Time at Oxford Has Been Completely Transformative
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Olivia's experience reflects the intellectual
+                        and personal changes that can come from studying
+                        in a demanding academic environment.
+                    </p>
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Academic Growth</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+
+            <!-- 12 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">12</div>
+                    <div class="voice-country">🇬🇧</div>
+
+                    <h3 class="voice-author">
+                        Daphne Harries
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+                    <h2 class="voice-title">
+                        Student Story: Daphne Harries
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Daphne's student story presents education as a
+                        personal journey rather than simply an academic
+                        destination, shaped by experiences, choices and
+                        relationships.
+                    </p>
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Experience</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- =================================================
+             THIRD PERSONAL PHOTO
+             ================================================= -->
+
+        <div class="photo-break">
+
+            <img
+                src="IMG_20260304_172957_144.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
+
+            <div class="photo-break-overlay">
+
+                <div class="photo-break-content">
+
+                    <small>
+                        Nketia-Marfo • Personal Moment
+                    </small>
+
+                    <h2>
+                        Listen. Learn. Reflect. Share.
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="voices-grid">
+
+            <!-- 13 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">13</div>
+                    <div class="voice-country">🇬🇧</div>
+
+                    <h3 class="voice-author">
+                        Chloe Pomfret
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+                    <h2 class="voice-title">
+                        There's Inspiration All Around You
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Chloe's reflection encourages students to pay
+                        attention to the people, places and everyday
+                        experiences around them.
+                    </p>
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Inspiration</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+
+            <!-- 14 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">14</div>
+                    <div class="voice-country">🇬🇧</div>
+
+                    <h3 class="voice-author">
+                        Alexandros Pamnani
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+                    <h2 class="voice-title">
+                        A Passion for Learning
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Alexandros' story celebrates curiosity and the
+                        desire to keep learning. Education becomes more
+                        meaningful when students develop genuine interest
+                        in discovering ideas.
+                    </p>
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Curiosity</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+
+            <!-- 15 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">15</div>
+                    <div class="voice-country">🇩🇪</div>
+
+                    <h3 class="voice-author">
+                        Ehsanullah Attiq
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+                    <h2 class="voice-title">
+                        Adapting to a New Educational Landscape:
+                        My Experience as an International Student
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Ehsanullah's experience explores the adjustments
+                        international students can make when entering a
+                        new education system.
+                    </p>
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">International Student</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+
+            <!-- 16 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">16</div>
+                    <div class="voice-country">🇩🇪</div>
+
+                    <h3 class="voice-author">
+                        Akua Bobson
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+                    <h2 class="voice-title">
+                        Why Germany? Why Heidelberg?
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Akua's story examines the motivations behind
+                        choosing a particular country and university,
+                        including culture, environment, opportunity and
+                        personal growth.
+                    </p>
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Study Abroad</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- =================================================
+             FOURTH PERSONAL PHOTO
+             ================================================= -->
+
+        <div class="photo-break">
+
+            <img
+                src="IMG_20260319_182732_442.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
+
+            <div class="photo-break-overlay">
+
+                <div class="photo-break-content">
+
+                    <small>
+                        Nketia-Marfo • Visual Story
+                    </small>
+
+                    <h2>
+                        Different experiences can lead to shared ideas.
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="voices-grid">
+
+            <!-- 17 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">17</div>
+                    <div class="voice-country">🇳🇱</div>
+
+                    <h3 class="voice-author">
+                        Alena Kerosinskaya
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+                    <h2 class="voice-title">
+                        Don't Be Afraid to Fail, Be Afraid Not to Try
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Alena's reflection focuses on courage and the
+                        importance of taking opportunities even when
+                        success is uncertain. Failure can become part of
+                        learning and growth.
+                    </p>
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Courage</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+
+            <!-- 18 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">18</div>
+                    <div class="voice-country">🇦🇺</div>
+
+                    <h3 class="voice-author">
+                        Hasnain
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+                    <h2 class="voice-title">
+                        Hasnain's New Life
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Hasnain's story captures the experience of
+                        beginning a new chapter in a different
+                        environment and creating a sense of belonging.
+                    </p>
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">New Beginnings</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+
+            <!-- 19 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">19</div>
+                    <div class="voice-country">🇫🇷</div>
+
+                    <h3 class="voice-author">
+                        Camille Gardent
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+                    <h2 class="voice-title">
+                        GBSB Student Story: Camille Gardent
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Camille's story provides another perspective on
+                        how education, professional preparation and
+                        personal development can shape future direction.
+                    </p>
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Development</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+
+            <!-- 20 -->
+            <article class="voice-card">
+
+                <div class="voice-top">
+                    <div class="voice-number">20</div>
+                    <div class="voice-country">🇨🇳</div>
+
+                    <h3 class="voice-author">
+                        Shen Xiaodong
+                    </h3>
+                </div>
+
+                <div class="voice-content">
+                    <h2 class="voice-title">
+                        Transforming Lives in Remote Mountains
+                    </h2>
+
+                    <p class="voice-explanation">
+                        Shen's story connects education with service and
+                        community impact, highlighting how learning can
+                        extend beyond the individual.
+                    </p>
+                </div>
+
+                <div class="voice-bottom">
+                    <span class="voice-tag">Community Impact</span>
+                    <span class="voice-dot"></span>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL PERSONAL FEATURE
+         ===================================================== -->
+
+    <section class="personal-feature">
+
+        <img
+            src="IMG_20260319_160228_606.jpg"
+            alt="Nketia-Marfo"
+            loading="lazy"
+        >
+
+        <div class="personal-feature-overlay">
+
+            <div class="personal-feature-content">
 
                 <div class="section-label">
-                    THE BIGGER PICTURE
+                    KEEP LISTENING
                 </div>
 
                 <h2>
-                    Different places. Different journeys.
-                    One shared belief in possibility.
+                    Every story can open another person's mind.
                 </h2>
 
                 <p>
-                    Student stories remind us that there is no single way
-                    to learn, grow or build a future. What matters is the
-                    willingness to keep asking questions, moving forward
-                    and learning from the people around us.
+                    Student Voices is about creating a place where
+                    experiences can travel beyond the person who lived
+                    them — becoming encouragement, questions and new
+                    possibilities for someone else.
                 </p>
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- =====================================================
-             CONTACT CTA
-             ===================================================== -->
+    <!-- =====================================================
+         BIGGER PICTURE
+         ===================================================== -->
 
-        <section class="voice-cta">
+    <section class="featured-message">
 
-            <div>
+        <div class="featured-inner">
 
-                <h2>
-                    Have a story worth sharing?
-                </h2>
-
-                <p>
-                    Student Voices creates space for experiences,
-                    reflections and ideas that can encourage someone else.
-                </p>
-
+            <div class="section-label">
+                THE BIGGER PICTURE
             </div>
 
-            <a href="contact.html" class="cta-button">
-                Get in Touch
-            </a>
+            <h2>
+                Different places. Different journeys.
+                One shared belief in possibility.
+            </h2>
 
-        </section>
+            <p>
+                Student stories remind us that there is no single way
+                to learn, grow or build a future. What matters is the
+                willingness to keep asking questions, moving forward
+                and learning from the people around us.
+            </p>
 
-    </main>
+        </div>
 
-
-    <!-- =========================================================
-         FOOTER
-         ========================================================= -->
-
-    <footer class="site-footer">
-
-        <div class="footer-inner">
-
-            <div class="footer-brand">
-
-                <h2>
-                    Nketia-Marfo
-                </h2>
-
-                <p>
-                    Ideas, music, education, stories and conversations
-                    that connect people and create possibilities.
-                </p>
-
-            </div>
+    </section>
 
 
-            <div class="footer-column">
+    <!-- =====================================================
+         FINAL PERSONAL PHOTO STRIP
+         ===================================================== -->
 
-                <h3>
-                    Explore
-                </h3>
+    <section class="final-photo-strip">
 
-                <div class="footer-links">
+        <div class="final-photo">
 
-                    <a href="index.html">
-                        Home
-                    </a>
+            <img
+                src="IMG_20260319_182734_616.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
 
-                    <a href="about.html">
-                        About
-                    </a>
+            <span>
+                Nketia-Marfo
+            </span>
 
-                    <a href="blog.html">
-                        Blog
-                    </a>
-
-                    <!-- SAME HTML PAGE -->
-                    <a href="student-voices.html">
-                        Student Voices
-                    </a>
-
-                    <a href="contact.html">
-                        Contact
-                    </a>
-
-                </div>
-
-            </div>
+        </div>
 
 
-            <div class="footer-column">
+        <div class="final-photo">
 
-                <h3>
-                    Connect
-                </h3>
+            <img
+                src="IMG_20260319_182737_286.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
 
-                <div class="footer-links">
+            <span>
+                Personal Moment
+            </span>
 
-                    <a href="mailto:nketiamarfo157@gmail.com">
-                        nketiamarfo157@gmail.com
-                    </a>
+        </div>
 
-                    <a href="https://www.tiktok.com/" target="_blank" rel="noopener">
-                        TikTok — Nketia Marfo
-                    </a>
 
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener">
-                        Instagram — Affectionate_Music
-                    </a>
+        <div class="final-photo">
 
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener">
-                        Facebook — Nketia Marfo
-                    </a>
+            <img
+                src="IMG_20260319_182740_279.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
 
-                    <a href="https://x.com/" target="_blank" rel="noopener">
-                        X — Nketia
-                    </a>
+            <span>
+                Student Voices
+            </span>
 
-                </div>
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT CTA
+         ===================================================== -->
+
+    <section class="voice-cta">
+
+        <div>
+
+            <h2>
+                Have a story worth sharing?
+            </h2>
+
+            <p>
+                Student Voices creates space for experiences,
+                reflections and ideas that can encourage someone else.
+            </p>
+
+        </div>
+
+        <a href="contact.html" class="cta-button">
+            Get in Touch
+        </a>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-brand">
+
+            <h2>
+                Nketia-Marfo
+            </h2>
+
+            <p>
+                Ideas, music, education, stories and conversations
+                that connect people and create possibilities.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Explore
+            </h3>
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="blog.html">
+                    Blog
+                </a>
+
+                <!-- CORRECT FILE NAME -->
+                <a href="Students-Voice.html">
+                    Student Voices
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
 
             </div>
 
         </div>
 
 
-        <div class="footer-bottom">
+        <div class="footer-column">
 
-            <span>
-                © 2026 Nketia-Marfo. All rights reserved.
-            </span>
+            <h3>
+                Connect
+            </h3>
 
-            <span>
-                Stories that deserve to be heard.
-            </span>
+            <div class="footer-links">
+
+                <a href="mailto:nketiamarfo157@gmail.com">
+                    nketiamarfo157@gmail.com
+                </a>
+
+                <a href="https://www.tiktok.com/" target="_blank" rel="noopener">
+                    TikTok — Nketia Marfo
+                </a>
+
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                    Instagram — Affectionate_Music
+                </a>
+
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                    Facebook — Nketia Marfo
+                </a>
+
+                <a href="https://x.com/" target="_blank" rel="noopener">
+                    X — Nketia
+                </a>
+
+            </div>
 
         </div>
 
-    </footer>
+    </div>
 
 
-    <!-- =========================================================
-         SEARCH
-         ========================================================= -->
+    <div class="footer-bottom">
 
-    <script>
+        <span>
+            © 2026 Nketia-Marfo. All rights reserved.
+        </span>
 
-        const searchInput = document.getElementById("voiceSearch");
-        const cards = document.querySelectorAll(".voice-card");
+        <span>
+            Stories that deserve to be heard.
+        </span>
 
-        searchInput.addEventListener("input", function () {
+    </div>
 
-            const searchTerm =
-                this.value.toLowerCase().trim();
+</footer>
 
-            cards.forEach(function (card) {
 
-                const cardText =
-                    card.textContent.toLowerCase();
+<!-- =========================================================
+     SEARCH
+     ========================================================= -->
 
-                card.style.display =
-                    cardText.includes(searchTerm)
-                        ? ""
-                        : "none";
+<script>
 
-            });
+    const searchInput = document.getElementById("voiceSearch");
+    const cards = document.querySelectorAll(".voice-card");
+
+    searchInput.addEventListener("input", function () {
+
+        const searchTerm =
+            this.value.toLowerCase().trim();
+
+        cards.forEach(function (card) {
+
+            const cardText =
+                card.textContent.toLowerCase();
+
+            card.style.display =
+                cardText.includes(searchTerm)
+                    ? ""
+                    : "none";
 
         });
 
-    </script>
+    });
+
+</script>
 
 </body>
-</html>
+    </html>
