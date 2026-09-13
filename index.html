@@ -17,161 +17,190 @@
     <style>
 
         /* =====================================================
-           STUDENT VOICES — HOME PREVIEW
+           HOME PAGE — EXTRA IMAGE POLISH
         ===================================================== */
 
-        .student-voices-home {
-            padding: 100px 7%;
-            background: #f7f8fa;
+        .hero-round-photo,
+        .latter-photo,
+        .square-photo,
+        .home-gallery-image {
+            overflow: hidden;
         }
 
-        .student-voices-home .section-intro {
+        .hero-round-photo img,
+        .latter-photo img,
+        .square-photo img,
+        .home-gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        /* =====================================================
+           HOME PHOTO GALLERY
+        ===================================================== */
+
+        .home-gallery {
+            padding: 100px 7%;
+            background: #ffffff;
+        }
+
+        .home-gallery-header {
             max-width: 760px;
             margin-bottom: 55px;
         }
 
-        .student-voices-home .section-intro h2 {
+        .home-gallery-header h2 {
             font-size: clamp(2.2rem, 5vw, 4rem);
             line-height: 1.08;
+            color: #0b1f3a;
             margin: 12px 0 20px;
         }
 
-        .student-voices-home .section-intro p:not(.small-heading) {
+        .home-gallery-header p:not(.small-heading) {
             color: #5d6975;
             line-height: 1.8;
             max-width: 680px;
         }
 
-        .voices-home-grid {
+        .home-gallery-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
         }
 
-        .voice-home-card {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
+        .home-gallery-item {
+            position: relative;
+            height: 300px;
             overflow: hidden;
-            transition: transform .3s ease, box-shadow .3s ease;
+            background: #e8ebef;
         }
 
-        .voice-home-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 18px 45px rgba(11, 31, 58, .10);
+        .home-gallery-item:nth-child(2),
+        .home-gallery-item:nth-child(6) {
+            height: 360px;
         }
 
-        .voice-home-image {
-            width: 100%;
-            height: 245px;
-            overflow: hidden;
-            background: #e5e7eb;
-        }
-
-        .voice-home-image img {
+        .home-gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
+            transition: transform .5s ease;
         }
 
-        .voice-home-content {
-            padding: 28px;
+        .home-gallery-item:hover img {
+            transform: scale(1.06);
         }
 
-        .voice-country {
-            display: inline-block;
-            margin-bottom: 12px;
-            font-size: .82rem;
-            font-weight: 700;
-            color: #176b45;
-            letter-spacing: .05em;
-            text-transform: uppercase;
-        }
-
-        .voice-home-content h3 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 1.55rem;
-            line-height: 1.25;
-            color: #0b1f3a;
-            margin: 0 0 15px;
-        }
-
-        .voice-home-content p {
-            color: #5d6975;
-            line-height: 1.75;
-            margin: 0 0 20px;
-        }
-
-        .voice-read-more {
-            color: #a61b29;
-            text-decoration: none;
-            font-weight: 700;
-        }
-
-        .voice-read-more:hover {
-            text-decoration: underline;
-        }
-
-        .voices-home-bottom {
-            margin-top: 55px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 30px;
-            padding-top: 30px;
-            border-top: 1px solid #dfe3e8;
-        }
-
-        .voices-home-bottom p {
-            margin: 0;
-            color: #5d6975;
-            max-width: 600px;
-            line-height: 1.7;
-        }
-
-        .voices-home-bottom a {
-            display: inline-block;
-            background: #0b1f3a;
+        .home-gallery-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 35px 20px 18px;
+            background: linear-gradient(
+                to top,
+                rgba(11,31,58,.88),
+                rgba(11,31,58,0)
+            );
             color: #ffffff;
-            text-decoration: none;
-            padding: 14px 23px;
-            font-weight: 700;
-            transition: background .3s ease;
-            white-space: nowrap;
         }
 
-        .voices-home-bottom a:hover {
-            background: #a61b29;
+        .home-gallery-caption span {
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            opacity: .85;
+        }
+
+        .home-gallery-caption strong {
+            display: block;
+            margin-top: 5px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.05rem;
         }
 
 
         /* =====================================================
-           EXTRA HOME IMAGE POLISH
-           Keeps the original framing concept
+           PHOTO STORY STRIP
         ===================================================== */
 
-        .hero-round-photo,
-        .latter-photo {
+        .photo-story-section {
+            padding: 90px 7%;
+            background: #f7f8fa;
+        }
+
+        .photo-story-grid {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .photo-story-main {
+            min-height: 520px;
             overflow: hidden;
         }
 
-        .hero-round-photo img,
-        .latter-photo img {
+        .photo-story-main img {
             width: 100%;
             height: 100%;
+            min-height: 520px;
             object-fit: cover;
             display: block;
         }
 
-        .square-photo {
+        .photo-story-text {
+            max-width: 600px;
+        }
+
+        .photo-story-text h2 {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1.08;
+            color: #0b1f3a;
+            margin: 12px 0 25px;
+        }
+
+        .photo-story-text p {
+            color: #5d6975;
+            line-height: 1.85;
+        }
+
+        .photo-story-text .lead-text {
+            font-size: 1.12rem;
+        }
+
+
+        /* =====================================================
+           CREATIVE IMAGE GRID
+        ===================================================== */
+
+        .creative-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 45px;
+        }
+
+        .creative-gallery-item {
+            height: 300px;
             overflow: hidden;
         }
 
-        .square-photo img {
+        .creative-gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
+            transition: transform .5s ease;
+        }
+
+        .creative-gallery-item:hover img {
+            transform: scale(1.05);
         }
 
 
@@ -179,10 +208,19 @@
            RESPONSIVE
         ===================================================== */
 
-        @media (max-width: 1000px) {
+        @media (max-width: 1050px) {
 
-            .voices-home-grid {
+            .home-gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .photo-story-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-story-main,
+            .photo-story-main img {
+                min-height: 430px;
             }
 
         }
@@ -190,26 +228,44 @@
 
         @media (max-width: 700px) {
 
-            .student-voices-home {
+            .home-gallery {
                 padding: 75px 6%;
             }
 
-            .voices-home-grid {
-                grid-template-columns: 1fr;
+            .home-gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
             }
 
-            .voice-home-image {
+            .home-gallery-item,
+            .home-gallery-item:nth-child(2),
+            .home-gallery-item:nth-child(6) {
                 height: 230px;
             }
 
-            .voices-home-bottom {
-                flex-direction: column;
-                align-items: flex-start;
+            .home-gallery-caption {
+                padding: 28px 12px 12px;
             }
 
-            .voices-home-bottom a {
-                width: 100%;
-                text-align: center;
+            .home-gallery-caption strong {
+                font-size: .9rem;
+            }
+
+            .photo-story-section {
+                padding: 75px 6%;
+            }
+
+            .photo-story-main,
+            .photo-story-main img {
+                min-height: 360px;
+            }
+
+            .creative-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .creative-gallery-item {
+                height: 280px;
             }
 
         }
@@ -257,8 +313,8 @@
                 Blog
             </a>
 
-            <!-- STUDENT VOICES ADDED TO NAVIGATION -->
-            <a href="Students-Voice" class="nav-link">
+            <!-- STUDENT VOICES IS A SEPARATE PAGE -->
+            <a href="student-voices.html" class="nav-link">
                 Student Voices
             </a>
 
@@ -651,284 +707,340 @@
 
 
 <!-- =====================================================
-     STUDENT VOICES
+     NEW HOME PHOTO GALLERY
 ===================================================== -->
 
-<section class="student-voices-home" id="student-voices">
+<section class="home-gallery">
 
-    <div class="section-intro">
+    <div class="home-gallery-header">
 
         <p class="small-heading">
-            STUDENT VOICES
+            MOMENTS & JOURNEY
         </p>
 
         <h2>
-            Every student has a story.
+            A Little More About
+            the Person Behind the Ideas.
         </h2>
 
         <p>
-            Education is not experienced in the same way by
-            everyone. Student Voices brings together stories,
-            experiences, ideas, challenges, and lessons from
-            students and learners across different places.
+            Beyond writing and ideas, this space also captures
+            some of the moments, experiences, creativity,
+            learning, and memories that continue to shape my
+            journey.
         </p>
 
     </div>
 
 
-    <div class="voices-home-grid">
+    <div class="home-gallery-grid">
 
-        <article class="voice-home-card">
+        <!-- PHOTO 1 -->
 
-            <div class="voice-home-image">
+        <div class="home-gallery-item">
 
-                <img
-                    src="1784768722971.jpg"
-                    alt="Student experience and international education"
-                >
+            <img
+                src="1784768722971.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
 
-            </div>
+            <div class="home-gallery-caption">
 
-            <div class="voice-home-content">
+                <span>Journey</span>
 
-                <span class="voice-country">
-                    🇬🇭 Ghana
-                </span>
-
-                <h3>
-                    My UHK/Erasmus Experience Changed My Life
-                </h3>
-
-                <p>
-                    An international educational experience can
-                    introduce students to new cultures, new
-                    perspectives, and possibilities beyond the
-                    classroom.
-                </p>
-
-                <a
-                    href="Students-Voice"
-                    class="voice-read-more"
-                >
-                    Read the Student Voice →
-                </a>
+                <strong>
+                    Learning through experience
+                </strong>
 
             </div>
 
-        </article>
+        </div>
 
 
-        <article class="voice-home-card">
+        <!-- PHOTO 2 -->
 
-            <div class="voice-home-image">
+        <div class="home-gallery-item">
 
-                <img
-                    src="IMG-20260308-WA0121.jpg"
-                    alt="Student leadership and education"
-                >
+            <img
+                src="IMG-20260308-WA0121.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
 
-            </div>
+            <div class="home-gallery-caption">
 
-            <div class="voice-home-content">
+                <span>Growth</span>
 
-                <span class="voice-country">
-                    🇬🇭 Ghana
-                </span>
-
-                <h3>
-                    Balancing Books and Leadership
-                </h3>
-
-                <p>
-                    Student life can involve more than academic
-                    achievement. Leadership teaches responsibility,
-                    communication, service, and how to work with
-                    others.
-                </p>
-
-                <a
-                    href="Students-Voice"
-                    class="voice-read-more"
-                >
-                    Read the Student Voice →
-                </a>
+                <strong>
+                    Becoming through every experience
+                </strong>
 
             </div>
 
-        </article>
+        </div>
 
 
-        <article class="voice-home-card">
+        <!-- PHOTO 3 -->
 
-            <div class="voice-home-image">
+        <div class="home-gallery-item">
 
-                <img
-                    src="IMG-20260327-WA0071.jpg"
-                    alt="Student career and purpose"
-                >
+            <img
+                src="IMG-20260327-WA0071.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
 
-            </div>
+            <div class="home-gallery-caption">
 
-            <div class="voice-home-content">
+                <span>Ideas</span>
 
-                <span class="voice-country">
-                    🇳🇬 Nigeria
-                </span>
-
-                <h3>
-                    Career Decisions and Self-Actualisation
-                </h3>
-
-                <p>
-                    Choosing a career is often a journey of
-                    discovering interests, abilities, purpose,
-                    opportunities, and the kind of future a
-                    student wants to build.
-                </p>
-
-                <a
-                    href="Students-Voice"
-                    class="voice-read-more"
-                >
-                    Read the Student Voice →
-                </a>
+                <strong>
+                    Curiosity in motion
+                </strong>
 
             </div>
 
-        </article>
+        </div>
 
 
-        <article class="voice-home-card">
+        <!-- PHOTO 4 -->
 
-            <div class="voice-home-image">
+        <div class="home-gallery-item">
 
-                <img
-                    src="IMG-20260328-WA0182.jpg"
-                    alt="Student growth and education"
-                >
+            <img
+                src="IMG-20260328-WA0182.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
 
-            </div>
+            <div class="home-gallery-caption">
 
-            <div class="voice-home-content">
+                <span>Perspective</span>
 
-                <span class="voice-country">
-                    🇰🇪 Kenya
-                </span>
-
-                <h3>
-                    From Kenya to UBC
-                </h3>
-
-                <p>
-                    Moving into a new educational environment
-                    can create opportunities for growth, community,
-                    cultural exchange, and personal discovery.
-                </p>
-
-                <a
-                    href="Students-Voice"
-                    class="voice-read-more"
-                >
-                    Read the Student Voice →
-                </a>
+                <strong>
+                    Seeing the world differently
+                </strong>
 
             </div>
 
-        </article>
+        </div>
 
 
-        <article class="voice-home-card">
+        <!-- PHOTO 5 -->
 
-            <div class="voice-home-image">
+        <div class="home-gallery-item">
 
-                <img
-                    src="IMG-20260607-WA0126.jpg"
-                    alt="Student resilience and education"
-                >
+            <img
+                src="IMG-20260607-WA0126.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
 
-            </div>
+            <div class="home-gallery-caption">
 
-            <div class="voice-home-content">
+                <span>Community</span>
 
-                <span class="voice-country">
-                    🇿🇦 South Africa
-                </span>
-
-                <h3>
-                    From Survival to Solution
-                </h3>
-
-                <p>
-                    Education can become a source of resilience
-                    when students learn to turn difficult
-                    circumstances into questions, ideas, and
-                    possible solutions.
-                </p>
-
-                <a
-                    href="Students-Voice"
-                    class="voice-read-more"
-                >
-                    Read the Student Voice →
-                </a>
+                <strong>
+                    People, places and stories
+                </strong>
 
             </div>
 
-        </article>
+        </div>
 
 
-        <article class="voice-home-card">
+        <!-- PHOTO 6 -->
 
-            <div class="voice-home-image">
+        <div class="home-gallery-item">
 
-                <img
-                    src="IMG-20260614-WA0155.jpg"
-                    alt="Student perseverance and education"
-                >
+            <img
+                src="IMG-20260802-WA0445.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
 
-            </div>
+            <div class="home-gallery-caption">
 
-            <div class="voice-home-content">
+                <span>Creativity</span>
 
-                <span class="voice-country">
-                    🇨🇦 Canada
-                </span>
-
-                <h3>
-                    Made by Perseverance, Family and Education
-                </h3>
-
-                <p>
-                    Behind many educational journeys are family,
-                    perseverance, sacrifice, encouragement, and
-                    the determination to keep moving forward.
-                </p>
-
-                <a
-                    href="Students-Voice"
-                    class="voice-read-more"
-                >
-                    Read the Student Voice →
-                </a>
+                <strong>
+                    Creating with purpose
+                </strong>
 
             </div>
 
-        </article>
+        </div>
+
+
+        <!-- PHOTO 7 -->
+
+        <div class="home-gallery-item">
+
+            <img
+                src="IMG_20260303_195951_662.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
+
+            <div class="home-gallery-caption">
+
+                <span>Memory</span>
+
+                <strong>
+                    Moments worth remembering
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO 8 -->
+
+        <div class="home-gallery-item">
+
+            <img
+                src="IMG_20260304_172957_144.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
+
+            <div class="home-gallery-caption">
+
+                <span>Life</span>
+
+                <strong>
+                    The journey continues
+                </strong>
+
+            </div>
+
+        </div>
 
     </div>
 
+</section>
 
-    <div class="voices-home-bottom">
+
+
+<!-- =====================================================
+     PHOTO STORY
+===================================================== -->
+
+<section class="photo-story-section">
+
+    <div class="photo-story-grid">
+
+        <div class="photo-story-main">
+
+            <img
+                src="IMG_20260319_160228_606.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <div class="photo-story-text">
+
+            <p class="small-heading">
+                BEYOND THE SCREEN
+            </p>
+
+            <h2>
+                Ideas Come From
+                Living, Learning
+                and Listening.
+            </h2>
+
+            <p class="lead-text">
+                The ideas I share are connected to the world
+                around me — the people I meet, the questions
+                I ask, the things I learn, and the experiences
+                that make me think more deeply.
+            </p>
+
+            <p>
+                I believe meaningful ideas do not always begin
+                in a classroom. Sometimes they begin with a
+                conversation, a song, a community, a challenge,
+                a book, or a simple question that refuses to
+                disappear.
+            </p>
+
+            <a href="about.html" class="text-link">
+                Learn more about me →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CREATIVE PHOTO COLLECTION
+===================================================== -->
+
+<section class="home-gallery">
+
+    <div class="home-gallery-header">
+
+        <p class="small-heading">
+            MUSIC • CREATIVITY • CULTURE
+        </p>
+
+        <h2>
+            Creativity Is Part
+            of the Journey.
+        </h2>
 
         <p>
-            Different places. Different journeys. Different
-            challenges. But every voice carries an experience
-            worth hearing.
+            Music and creativity remain an important part of
+            how I express myself, connect with people, and
+            understand culture.
         </p>
 
-        <a href="Students-Voice">
-            Explore All Student Voices →
-        </a>
+    </div>
+
+
+    <div class="creative-gallery">
+
+        <div class="creative-gallery-item">
+
+            <img
+                src="IMG_20260319_182732_442.jpg"
+                alt="Nketia-Marfo creative journey"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <div class="creative-gallery-item">
+
+            <img
+                src="IMG_20260319_182734_616.jpg"
+                alt="Nketia-Marfo"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <div class="creative-gallery-item">
+
+            <img
+                src="IMG_20260319_182737_286.jpg"
+                alt="Nketia-Marfo music and creativity"
+                loading="lazy"
+            >
+
+        </div>
 
     </div>
 
@@ -1017,8 +1129,8 @@
                 Blog
             </a>
 
-            <!-- STUDENT VOICES ADDED TO FOOTER -->
-            <a href="Students-Voice">
+            <!-- STUDENT VOICES IS A SEPARATE PAGE -->
+            <a href="student-voices.html">
                 Student Voices
             </a>
 
@@ -1072,8 +1184,4 @@
 
 
 </body>
-</html>
-
-This keeps your Student Voices section on the Home page and also makes sure Student Voices appears in the top navigation and footer navigation.
-
-One thing to check on GitHub: the link "Students-Voice" must exactly match the name/path of your Student Voices page or folder.
+                </html>
