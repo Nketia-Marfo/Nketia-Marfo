@@ -1,1390 +1,2246 @@
-<!DOCTYPE html>  
-<html lang="en">  
-  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  
-    <title>Blog | Nketia Marfo</title>  
-  
-    <meta  
-        name="description"  
-        content="Ideas, questions, stories, music, education, economics, creativity, and things Nketia Marfo is learning."  
-    >  
-  
-    <link rel="stylesheet" href="style.css">  
-  
-    <style>  
-  
-        /* =====================================================  
-           NKETIA MARFO BLOG  
-           COLOR SYSTEM:  
-           DEEP BLUE • RED • YELLOW • GREEN  
-        ====================================================== */  
-  
-        :root {  
-            --deep-blue: #0B1F3A;  
-            --deep-blue-light: #163A63;  
-  
-            --red: #A61B29;  
-            --red-light: #FBF0F2;  
-  
-            --yellow: #E5B93C;  
-            --yellow-light: #FFF8DE;  
-  
-            --green: #176B45;  
-            --green-light: #F0F8F4;  
-  
-            --white: #FFFFFF;  
-            --soft-white: #F7F8FA;  
-  
-            --dark-text: #17202A;  
-            --muted-text: #56616F;  
-  
-            --border: #E1E5EA;  
-        }  
-  
-  
-        /* =====================================================  
-           GENERAL  
-        ====================================================== */  
-  
-        .blog-page,  
-        .blog-page * {  
-            box-sizing: border-box;  
-        }  
-  
-        .blog-page {  
-            color: var(--dark-text);  
-            background: var(--white);  
-            font-family:  
-                "Inter",  
-                "Segoe UI",  
-                Arial,  
-                Helvetica,  
-                sans-serif;  
-        }  
-  
-        .blog-page h1,  
-        .blog-page h2,  
-        .blog-page h3 {  
-            font-family:  
-                Georgia,  
-                "Times New Roman",  
-                serif;  
-        }  
-  
-        .blog-page a {  
-            transition: 0.25s ease;  
-        }  
-  
-  
-        /* =====================================================  
-           HEADER  
-        ====================================================== */  
-  
-        .blog-page .site-header {  
-            background: var(--deep-blue);  
-            color: var(--white);  
-            border-bottom: 4px solid var(--yellow);  
-        }  
-  
-        .blog-page .header-content {  
-            width: min(1180px, 92%);  
-            margin: auto;  
-            padding: 22px 0;  
-  
-            display: flex;  
-            align-items: center;  
-            justify-content: space-between;  
-            gap: 30px;  
-        }  
-  
-        .blog-page .site-name {  
-            margin: 0;  
-            color: var(--white);  
-            font-size: 1.9rem;  
-            font-weight: 800;  
-        }  
-  
-        .blog-page .brand-block p {  
-            margin: 5px 0 0;  
-            color: #D9E1EA;  
-            font-size: 0.9rem;  
-        }  
-  
-        .blog-page .main-nav {  
-            display: flex;  
-            align-items: center;  
-            justify-content: center;  
-            flex-wrap: wrap;  
-            gap: 8px;  
-        }  
-  
-        .blog-page .nav-link {  
-            color: var(--white);  
-            text-decoration: none;  
-            padding: 9px 13px;  
-            border-radius: 8px;  
-            font-size: 0.92rem;  
-            font-weight: 600;  
-        }  
-  
-        .blog-page .nav-link:hover {  
-            background: rgba(255,255,255,0.1);  
-            color: var(--yellow);  
-        }  
-  
-        .blog-page .nav-link.active {  
-            background: var(--red);  
-            color: var(--white);  
-        }  
-  
-  
-        /* =====================================================  
-           SMALL COLOR STRIPE  
-        ====================================================== */  
-  
-        .color-stripe {  
-            height: 5px;  
-  
-            background:  
-                linear-gradient(  
-                    90deg,  
-                    var(--deep-blue) 0%,  
-                    var(--deep-blue) 25%,  
-                    var(--red) 25%,  
-                    var(--red) 50%,  
-                    var(--yellow) 50%,  
-                    var(--yellow) 75%,  
-                    var(--green) 75%,  
-                    var(--green) 100%  
-                );  
-        }  
-  
-  
-        /* =====================================================  
-           BLOG HERO  
-        ====================================================== */  
-  
-        .blog-hero {  
-            width: min(1180px, 92%);  
-            margin: auto;  
-  
-            min-height: 470px;  
-            padding: 75px 0;  
-  
-            display: grid;  
-            grid-template-columns: 1.1fr 0.9fr;  
-            align-items: center;  
-            gap: 50px;  
-        }  
-  
-        .blog-label {  
-            margin: 0 0 16px;  
-  
-            color: var(--red);  
-            font-size: 0.8rem;  
-            font-weight: 800;  
-            letter-spacing: 0.16em;  
-        }  
-  
-        .blog-hero h2 {  
-            margin: 0;  
-            color: var(--deep-blue);  
-            font-size: clamp(2.6rem, 6vw, 4.8rem);  
-            line-height: 1.03;  
-        }  
-  
-        .blog-hero h2 span {  
-            color: var(--green);  
-        }  
-  
-        .blog-intro {  
-            max-width: 650px;  
-            margin-top: 25px;  
-  
-            color: var(--muted-text);  
-            font-size: 1.08rem;  
-            line-height: 1.85;  
-        }  
-  
-  
-        /* =====================================================  
-           HERO ART  
-        ====================================================== */  
-  
-        .blog-hero-art {  
-            position: relative;  
-            min-height: 360px;  
-        }  
-  
-        .blog-hero-art div {  
-            position: absolute;  
-            border-radius: 50%;  
-        }  
-  
-        .gold-circle {  
-            width: 170px;  
-            height: 170px;  
-  
-            right: 12%;  
-            top: 5%;  
-  
-            background: var(--yellow);  
-            opacity: 0.9;  
-        }  
-  
-        .green-circle {  
-            width: 220px;  
-            height: 220px;  
-  
-            left: 5%;  
-            top: 22%;  
-  
-            display: flex;  
-            align-items: center;  
-            justify-content: center;  
-  
-            background: var(--green);  
-            color: var(--white);  
-  
-            font-weight: 900;  
-            font-size: 1.1rem;  
-            letter-spacing: 0.16em;  
-  
-            box-shadow: 0 20px 50px rgba(23,107,69,0.18);  
-        }  
-  
-        .red-circle {  
-            width: 110px;  
-            height: 110px;  
-  
-            right: 3%;  
-            bottom: 5%;  
-  
-            background: var(--red);  
-        }  
-  
-        .blue-circle {  
-            width: 150px;  
-            height: 150px;  
-  
-            left: 42%;  
-            bottom: 0;  
-  
-            display: flex;  
-            align-items: center;  
-            justify-content: center;  
-  
-            background: var(--deep-blue);  
-            color: var(--white);  
-  
-            font-weight: 900;  
-            letter-spacing: 0.13em;  
-  
-            box-shadow: 0 20px 45px rgba(11,31,58,0.2);  
-        }  
-  
-  
-        /* =====================================================  
-           FEATURED ARTICLE  
-        ====================================================== */  
-  
-        .featured-blog {  
-            width: min(1180px, 92%);  
-            margin: 20px auto 0;  
-  
-            padding: 55px;  
-  
-            display: grid;  
-            grid-template-columns: 100px 1fr;  
-            gap: 35px;  
-  
-            background: var(--deep-blue);  
-            color: var(--white);  
-  
-            border-radius: 24px;  
-  
-            box-shadow: 0 20px 55px rgba(11,31,58,0.15);  
-        }  
-  
-        .featured-blog-number {  
-            color: var(--yellow);  
-            font-size: 3rem;  
-            font-weight: 900;  
-        }  
-  
-        .featured-blog-content .blog-label {  
-            color: var(--yellow);  
-        }  
-  
-        .featured-blog-content h2 {  
-            margin: 0 0 18px;  
-  
-            color: var(--white);  
-            font-size: clamp(2rem, 4vw, 3.2rem);  
-            line-height: 1.1;  
-        }  
-  
-        .article-date {  
-            color: #DCE5EF;  
-            font-weight: 700;  
-        }  
-  
-        .featured-blog-content p {  
-            max-width: 780px;  
-  
-            color: #DCE5EF;  
-            line-height: 1.85;  
-        }  
-  
-        .blog-read-link {  
-            display: inline-block;  
-            margin-top: 15px;  
-  
-            color: var(--yellow);  
-            text-decoration: none;  
-            font-weight: 800;  
-        }  
-  
-        .blog-read-link:hover {  
-            color: var(--white);  
-            transform: translateX(4px);  
-        }  
-  
-  
-        /* =====================================================  
-           ARTICLE SECTIONS  
-        ====================================================== */  
-  
-        .blog-story {  
-            width: min(1180px, 92%);  
-            margin: 70px auto;  
-  
-            padding: 55px;  
-  
-            display: grid;  
-            grid-template-columns: 0.9fr 1.1fr;  
-            gap: 55px;  
-  
-            align-items: center;  
-  
-            border-radius: 24px;  
-        }  
-  
-        .blog-story-green {  
-            background: var(--green-light);  
-        }  
-  
-        .blog-story-red {  
-            background: var(--red-light);  
-        }  
-  
-        .blog-story-content h2 {  
-            margin: 0 0 20px;  
-  
-            color: var(--deep-blue);  
-            font-size: clamp(2rem, 4vw, 3rem);  
-            line-height: 1.1;  
-        }  
-  
-        .blog-story-content p {  
-            color: #414B57;  
-            line-height: 1.85;  
-        }  
-  
-        .blog-story-green .blog-label {  
-            color: var(--green);  
-        }  
-  
-        .blog-story-red .blog-label {  
-            color: var(--red);  
-        }  
-  
-        .blog-story-red .blog-read-link {  
-            color: var(--red);  
-        }  
-  
-        .blog-story-red .blog-read-link:hover {  
-            color: var(--deep-blue);  
-        }  
-  
-  
-        /* =====================================================  
-           MUSIC ART  
-        ====================================================== */  
-  
-        .music-art {  
-            min-height: 310px;  
-  
-            display: flex;  
-            flex-direction: column;  
-            align-items: center;  
-            justify-content: center;  
-  
-            border-radius: 22px;  
-  
-            background: var(--green);  
-            color: var(--white);  
-  
-            box-shadow: 0 20px 45px rgba(23,107,69,0.15);  
-        }  
-  
-        .art-note {  
-            color: var(--yellow);  
-            font-size: 6rem;  
-            line-height: 1;  
-        }  
-  
-        .art-word {  
-            margin-top: 15px;  
-  
-            color: var(--white);  
-            font-weight: 900;  
-            letter-spacing: 0.18em;  
-        }  
-  
-  
-        /* =====================================================  
-           PERSONAL PHOTO SECTION  
-             
-           IMPORTANT:  
-           These pictures are separated from article text so  
-           visitors do NOT mistake them for article images.  
-        ====================================================== */  
-  
-        .visual-journal {  
-            width: min(1180px, 92%);  
-            margin: 90px auto;  
-  
-            padding: 55px 0;  
-        }  
-  
-        .visual-heading {  
-            text-align: center;  
-            max-width: 720px;  
-            margin: 0 auto 40px;  
-        }  
-  
-        .visual-heading .blog-label {  
-            color: var(--deep-blue);  
-        }  
-  
-        .visual-heading h2 {  
-            margin: 0;  
-  
-            color: var(--deep-blue);  
-            font-size: clamp(2rem, 4vw, 3rem);  
-        }  
-  
-        .visual-heading p {  
-            color: var(--muted-text);  
-            line-height: 1.8;  
-        }  
-  
-        .photo-grid {  
-            display: grid;  
-            grid-template-columns: repeat(5, 1fr);  
-            gap: 18px;  
-        }  
-  
-        .personal-photo {  
-            position: relative;  
-  
-            aspect-ratio: 1 / 1;  
-  
-            overflow: hidden;  
-  
-            border-radius: 18px;  
-  
-            background: var(--soft-white);  
-  
-            border: 3px solid var(--yellow);  
-  
-            box-shadow: 0 12px 30px rgba(11,31,58,0.10);  
-  
-            transition: 0.3s ease;  
-        }  
-  
-        .personal-photo:nth-child(2) {  
-            border-color: var(--red);  
-        }  
-  
-        .personal-photo:nth-child(3) {  
-            border-color: var(--green);  
-        }  
-  
-        .personal-photo:nth-child(4) {  
-            border-color: var(--deep-blue);  
-        }  
-  
-        .personal-photo:nth-child(5) {  
-            border-color: var(--yellow);  
-        }  
-  
-        .personal-photo:hover {  
-            transform: translateY(-8px);  
-            box-shadow: 0 20px 40px rgba(11,31,58,0.17);  
-        }  
-  
-        .personal-photo img {  
-            width: 100%;  
-            height: 100%;  
-  
-            display: block;  
-  
-            object-fit: cover;  
-  
-            transition: transform 0.45s ease;  
-        }  
-  
-        .personal-photo:hover img {  
-            transform: scale(1.06);  
-        }  
-  
-        .photo-caption {  
-            position: absolute;  
-            left: 10px;  
-            right: 10px;  
-            bottom: 10px;  
-  
-            padding: 8px 10px;  
-  
-            background: rgba(11,31,58,0.82);  
-            color: var(--white);  
-  
-            border-radius: 8px;  
-  
-            font-size: 0.75rem;  
-            font-weight: 700;  
-            text-align: center;  
-        }  
-  
-  
-        /* =====================================================  
-           BIGGER PICTURE  
-        ====================================================== */  
-  
-        .bigger-picture {  
-            width: min(900px, 92%);  
-            margin: 90px auto;  
-  
-            text-align: center;  
-        }  
-  
-        .bigger-picture .blog-label {  
-            color: var(--yellow);  
-        }  
-  
-        .bigger-picture h2 {  
-            margin: 0;  
-  
-            color: var(--deep-blue);  
-            font-size: clamp(2rem, 4vw, 3rem);  
-        }  
-  
-        .bigger-picture p {  
-            color: var(--muted-text);  
-            line-height: 1.9;  
-            font-size: 1.05rem;  
-        }  
-  
-  
-        /* =====================================================  
-           FOOTER  
-        ====================================================== */  
-  
-        .blog-footer {  
-            margin-top: 90px;  
-  
-            background: var(--deep-blue);  
-            color: var(--white);  
-  
-            border-top: 5px solid var(--yellow);  
-        }  
-  
-        .footer-content {  
-            width: min(1180px, 92%);  
-            margin: auto;  
-  
-            padding: 60px 0 30px;  
-  
-            display: grid;  
-            grid-template-columns: 1.3fr 0.8fr 1fr;  
-            gap: 45px;  
-        }  
-  
-        .footer-brand h2 {  
-            margin: 0 0 12px;  
-  
-            font-family:  
-                Georgia,  
-                "Times New Roman",  
-                serif;  
-  
-            font-size: 2rem;  
-        }  
-  
-        .footer-brand p {  
-            max-width: 430px;  
-  
-            color: #C9D3DF;  
-            line-height: 1.8;  
-        }  
-  
-        .footer-title {  
-            margin: 0 0 18px;  
-  
-            color: var(--yellow);  
-  
-            font-size: 0.85rem;  
-            font-weight: 800;  
-            letter-spacing: 0.13em;  
-            text-transform: uppercase;  
-        }  
-  
-        .footer-links {  
-            display: flex;  
-            flex-direction: column;  
-            gap: 11px;  
-        }  
-  
-        .footer-links a {  
-            color: #E7EDF4;  
-            text-decoration: none;  
-        }  
-  
-        .footer-links a:hover {  
-            color: var(--yellow);  
-            transform: translateX(3px);  
-        }  
-  
-        .footer-connect a {  
-            color: #E7EDF4;  
-            text-decoration: none;  
-        }  
-  
-        .footer-connect p {  
-            margin: 8px 0;  
-            color: #C9D3DF;  
-        }  
-  
-        .footer-connect a:hover {  
-            color: var(--yellow);  
-        }  
-  
-        .footer-bottom {  
-            width: min(1180px, 92%);  
-            margin: auto;  
-  
-            padding: 20px 0;  
-  
-            border-top: 1px solid rgba(255,255,255,0.15);  
-  
-            display: flex;  
-            align-items: center;  
-            justify-content: space-between;  
-            gap: 20px;  
-  
-            color: #AEBBC9;  
-            font-size: 0.85rem;  
-        }  
-  
-  
-        /* =====================================================  
-           RESPONSIVE  
-        ====================================================== */  
-  
-        @media (max-width: 900px) {  
-  
-            .blog-page .header-content {  
-                flex-direction: column;  
-                text-align: center;  
-            }  
-  
-            .blog-hero {  
-                grid-template-columns: 1fr;  
-                text-align: center;  
-                padding-top: 55px;  
-            }  
-  
-            .blog-intro {  
-                margin-left: auto;  
-                margin-right: auto;  
-            }  
-  
-            .blog-hero-art {  
-                max-width: 500px;  
-                width: 100%;  
-                margin: auto;  
-            }  
-  
-            .featured-blog {  
-                grid-template-columns: 1fr;  
-                padding: 40px;  
-            }  
-  
-            .featured-blog-number {  
-                font-size: 2rem;  
-            }  
-  
-            .blog-story {  
-                grid-template-columns: 1fr;  
-                padding: 40px;  
-            }  
-  
-            .photo-grid {  
-                grid-template-columns: repeat(3, 1fr);  
-            }  
-  
-            .footer-content {  
-                grid-template-columns: 1fr 1fr;  
-            }  
-  
-        }  
-  
-  
-        @media (max-width: 600px) {  
-  
-            .blog-page .main-nav {  
-                gap: 3px;  
-            }  
-  
-            .blog-page .nav-link {  
-                padding: 8px 9px;  
-                font-size: 0.82rem;  
-            }  
-  
-            .blog-hero {  
-                min-height: auto;  
-                padding: 50px 0;  
-            }  
-  
-            .blog-hero-art {  
-                min-height: 280px;  
-            }  
-  
-            .gold-circle {  
-                width: 120px;  
-                height: 120px;  
-            }  
-  
-            .green-circle {  
-                width: 170px;  
-                height: 170px;  
-            }  
-  
-            .red-circle {  
-                width: 80px;  
-                height: 80px;  
-            }  
-  
-            .blue-circle {  
-                width: 115px;  
-                height: 115px;  
-            }  
-  
-            .featured-blog,  
-            .blog-story {  
-                padding: 28px 22px;  
-                border-radius: 18px;  
-            }  
-  
-            .music-art {  
-                min-height: 240px;  
-            }  
-  
-            .photo-grid {  
-                grid-template-columns: repeat(2, 1fr);  
-                gap: 12px;  
-            }  
-  
-            .visual-journal {  
-                padding: 30px 0;  
-            }  
-  
-            .footer-content {  
-                grid-template-columns: 1fr;  
-                padding-top: 45px;  
-            }  
-  
-            .footer-bottom {  
-                flex-direction: column;  
-                text-align: center;  
-            }  
-  
-        }  
-  
-    </style>  
-  
-</head>  
-  
-  
-<body>  
-  
-<div class="blog-page">  
-  
-  
-    <!-- =====================================================  
-         HEADER  
-    ====================================================== -->  
-  
-    <header class="site-header">  
-  
-        <div class="header-content">  
-  
-            <div class="brand-block">  
-  
-                <h1 class="site-name">  
-                    Nketia Marfo  
-                </h1>  
-  
-                <p>  
-                    Thinking deeply. Creating freely. Sharing ideas.  
-                </p>  
-  
-            </div>  
-  
-  
-            <nav class="main-nav">  
-  
-                <a href="index.html" class="nav-link">  
-                    Home  
-                </a>  
-  
-                <a href="about.html" class="nav-link">  
-                    About  
-                </a>  
-  
-                <a href="blog.html" class="nav-link active">  
-                    Blog  
-                </a>  
-  
-                <!-- EXACT REPOSITORY FILENAME -->  
-                <a href="Students-Voice.html" class="nav-link">  
-                    Student Voices  
-                </a>  
-  
-                <a href="contact.html" class="nav-link">  
-                    Contact  
-                </a>  
-  
-            </nav>  
-  
-        </div>  
-  
-    </header>  
-  
-  
-    <!-- FOUR-COLOR BRAND STRIPE -->  
-  
-    <div class="color-stripe"></div>  
-  
-  
-  
-    <!-- =====================================================  
-         BLOG PAGE  
-    ====================================================== -->  
-  
-    <main>  
-  
-  
-        <!-- =================================================  
-             BLOG HERO  
-        ================================================== -->  
-  
-        <section class="blog-hero">  
-  
-            <div class="blog-hero-text">  
-  
-                <p class="blog-label">  
-                    THE NKETIA MARFO JOURNAL  
-                </p>  
-  
-                <h2>  
-                    Ideas worth  
-                    <span>thinking about.</span>  
-                </h2>  
-  
-                <p class="blog-intro">  
-                    A collection of questions, observations, stories,  
-                    and ideas about education, economics, music,  
-                    creativity, society, and the world around me.  
-                </p>  
-  
-            </div>  
-  
-  
-            <div class="blog-hero-art">  
-  
-                <div class="gold-circle"></div>  
-  
-                <div class="green-circle">  
-                    THINK  
-                </div>  
-  
-                <div class="red-circle"></div>  
-  
-                <div class="blue-circle">  
-                    WRITE  
-                </div>  
-  
-            </div>  
-  
-        </section>  
-  
-  
-  
-        <!-- =================================================  
-             FEATURED ARTICLE  
-        ================================================== -->  
-  
-        <section class="featured-blog">  
-  
-            <div class="featured-blog-number">  
-                01  
-            </div>  
-  
-  
-            <div class="featured-blog-content">  
-  
-                <p class="blog-label">  
-                    FEATURED THOUGHT  
-                </p>  
-  
-                <h2>  
-                    Why Education Should  
-                    Create Opportunities  
-                </h2>  
-  
-                <p class="article-date">  
-                    Education · Economics · Young People  
-                </p>  
-  
-                <p>  
-                    Education is often described as the pathway to  
-                    a better future. But what happens when completing  
-                    school does not lead to meaningful opportunities?  
-                </p>  
-  
-                <p>  
-                    I keep thinking about the connection between  
-                    education, skills, employment, investment, and  
-                    the opportunities available to young people.  
-                </p>  
-  
-                <p>  
-                    For me, this is not simply a question about  
-                    classrooms. It is a question about what happens  
-                    after the classroom.  
-                </p>  
-  
-                <a  
-                    href="#education-article"  
-                    class="blog-read-link"  
-                >  
-                    Explore the idea →  
-                </a>  
-  
-            </div>  
-  
-        </section>  
-  
-  
-  
-        <!-- =================================================  
-             ARTICLE TWO — MUSIC  
-        ================================================== -->  
-  
-        <section  
-            class="blog-story blog-story-green"  
-            id="music-article"  
-        >  
-  
-            <div class="blog-story-image music-art">  
-  
-                <div class="art-note">  
-                    ♪  
-                </div>  
-  
-                <div class="art-word">  
-                    MUSIC  
-                </div>  
-  
-            </div>  
-  
-  
-            <div class="blog-story-content">  
-  
-                <p class="blog-label">  
-                    MUSIC & CREATIVITY  
-                </p>  
-  
-                <h2>  
-                    Music, Creativity  
-                    and the Economy  
-                </h2>  
-  
-                <p>  
-                    Music is more than entertainment. It can be a  
-                    source of creativity, identity, employment,  
-                    community, and economic activity.  
-                </p>  
-  
-                <p>  
-                    Behind every performance is a network of people,  
-                    skills, decisions, resources, and opportunities.  
-                </p>  
-  
-                <p>  
-                    I am interested in what happens when creative  
-                    talent is combined with knowledge about money,  
-                    planning, entrepreneurship, and the wider economy.  
-                </p>  
-  
-                <a  
-                    href="#"  
-                    class="blog-read-link"  
-                >  
-                    Read the story →  
-                </a>  
-  
-            </div>  
-  
-        </section>  
-  
-  
-  
-        <!-- =================================================  
-             ARTICLE THREE — ENVIRONMENT  
-        ================================================== -->  
-  
-        <section  
-            class="blog-story blog-story-red"  
-            id="environment-article"  
-        >  
-  
-            <div class="blog-story-content">  
-  
-                <p class="blog-label">  
-                    ENVIRONMENT & SOCIETY  
-                </p>  
-  
-                <h2>  
-                    The Questions  
-                    Beneath the Surface  
-                </h2>  
-  
-                <p>  
-                    Some of the biggest questions begin with things  
-                    we see around us every day.  
-                </p>  
-  
-                <p>  
-                    Environmental challenges can lead us to think  
-                    more deeply about communities, responsibility,  
-                    development, and the choices we make.  
-                </p>  
-  
-                <p>  
-                    Sometimes the most important question is not  
-                    simply <em>what happened?</em>  
-                </p>  
-  
-            </div>  
-  
-        </section>  
-  
-  
-  
-        <!-- =====================================================  
-             NKETIA MARFO VISUAL JOURNAL  
-               
-             These are PERSONAL PHOTOS.  
-             They are intentionally separated from article  
-             content so visitors don't mistake them for images  
-             belonging to the student stories.  
-        ====================================================== -->  
-  
-        <section class="visual-journal">  
-  
-            <div class="visual-heading">  
-  
-                <p class="blog-label">  
-                    NKETIA MARFO • VISUAL JOURNAL  
-                </p>  
-  
-                <h2>  
-                    A Few Frames From My Journey  
-                </h2>  
-  
-                <p>  
-                    Beyond the ideas I write about, there are  
-                    moments, places and memories that become part  
-                    of the journey. These photographs are part of  
-                    my personal visual collection.  
-                </p>  
-  
-            </div>  
-  
-  
-            <div class="photo-grid">  
-  
-  
-                <!-- PHOTO 1 -->  
-  
-                <div class="personal-photo">  
-  
-                    <img  
-                        src="1725906574828.jpg"  
-                        alt="Nketia Marfo personal photograph"  
-                        loading="lazy"  
-                    >  
-  
-                    <div class="photo-caption">  
-                        Nketia Marfo  
-                    </div>  
-  
-                </div>  
-  
-  
-                <!-- PHOTO 2 -->  
-  
-                <div class="personal-photo">  
-  
-                    <img  
-                        src="1744567769378.jpg"  
-                        alt="Nketia Marfo personal photograph"  
-                        loading="lazy"  
-                    >  
-  
-                    <div class="photo-caption">  
-                        Personal Journey  
-                    </div>  
-  
-                </div>  
-  
-  
-                <!-- PHOTO 3 -->  
-  
-                <div class="personal-photo">  
-  
-                    <img  
-                        src="1744670371986.jpg"  
-                        alt="Nketia Marfo personal photograph"  
-                        loading="lazy"  
-                    >  
-  
-                    <div class="photo-caption">  
-                        Moments & Memories  
-                    </div>  
-  
-                </div>  
-  
-  
-                <!-- PHOTO 4 -->  
-  
-                <div class="personal-photo">  
-  
-                    <img  
-                        src="1783562225069.jpg"  
-                        alt="Nketia Marfo personal photograph"  
-                        loading="lazy"  
-                    >  
-  
-                    <div class="photo-caption">  
-                        Life Beyond the Page  
-                    </div>  
-  
-                </div>  
-  
-  
-                <!-- PHOTO 5 -->  
-  
-                <div class="personal-photo">  
-  
-                    <img  
-                        src="IMG-20250320-WA0160.jpg"  
-                        alt="Nketia Marfo personal photograph"  
-                        loading="lazy"  
-                    >  
-  
-                    <div class="photo-caption">  
-                        Nketia Marfo  
-                    </div>  
-  
-                </div>  
-  
-  
-            </div>  
-  
-        </section>  
-  
-  
-  
-        <!-- =================================================  
-             BIGGER PICTURE  
-        ================================================== -->  
-  
-        <section class="bigger-picture">  
-  
-            <p class="blog-label">  
-                THE BIGGER PICTURE  
-            </p>  
-  
-            <h2>  
-                Think. Question. Create. Share.  
-            </h2>  
-  
-            <p>  
-                I believe that ideas become more meaningful when  
-                we are willing to question what we see, listen to  
-                different perspectives, learn from experience, and  
-                turn curiosity into something useful.  
-            </p>  
-  
-            <p>  
-                This journal is a place for those thoughts —  
-                education, economics, music, creativity, society,  
-                personal growth, and the questions that continue  
-                to shape how I see the world.  
-            </p>  
-  
-        </section>  
-  
-  
-    </main>  
-  
-  
-  
-    <!-- =====================================================  
-         FOOTER  
-    ====================================================== -->  
-  
-    <footer class="blog-footer">  
-  
-        <div class="footer-content">  
-  
-  
-            <!-- BRAND -->  
-  
-            <div class="footer-brand">  
-  
-                <h2>  
-                    Nketia Marfo  
-                </h2>  
-  
-                <p>  
-                    Ideas, music, education, stories and  
-                    conversations that connect people and  
-                    create possibilities.  
-                </p>  
-  
-            </div>  
-  
-  
-            <!-- EXPLORE -->  
-  
-            <div>  
-  
-                <h3 class="footer-title">  
-                    Explore  
-                </h3>  
-  
-                <div class="footer-links">  
-  
-                    <a href="index.html">  
-                        Home  
-                    </a>  
-  
-                    <a href="about.html">  
-                        About  
-                    </a>  
-  
-                    <a href="blog.html">  
-                        Blog  
-                    </a>  
-  
-                    <!-- EXACT REPOSITORY FILENAME -->  
-                    <a href="Students-Voice.html">  
-                        Student Voices  
-                    </a>  
-  
-                    <a href="contact.html">  
-                        Contact  
-                    </a>  
-  
-                </div>  
-  
-            </div>  
-  
-  
-            <!-- CONNECT -->  
-  
-            <div class="footer-connect">  
-  
-                <h3 class="footer-title">  
-                    Connect  
-                </h3>  
-  
-                <p>  
-                    <a href="mailto:nketiamarfo157@gmail.com">  
-                        nketiamarfo157@gmail.com  
-                    </a>  
-                </p>  
-  
-                <p>  
-                    TikTok:  
-                    <a href="#">  
-                        Nketia Marfo  
-                    </a>  
-                </p>  
-  
-                <p>  
-                    Instagram:  
-                    <a href="#">  
-                        Affectionate_Music  
-                    </a>  
-                </p>  
-  
-                <p>  
-                    Facebook:  
-                    <a href="#">  
-                        Nketia Marfo  
-                    </a>  
-                </p>  
-  
-                <p>  
-                    X:  
-                    <a href="#">  
-                        Nketia  
-                    </a>  
-                </p>  
-  
-            </div>  
-  
-        </div>  
-  
-  
-        <!-- FOOTER BOTTOM -->  
-  
-        <div class="footer-bottom">  
-  
-            <span>  
-                © 2026 Nketia Marfo. All rights reserved.  
-            </span>  
-  
-            <span>  
-                Stories that deserve to be heard.  
-            </span>  
-  
-        </div>  
-  
-    </footer>  
-  
-  
-</div>  
-  
-</body>  
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog | Nketia Marfo</title>
+
+    <meta
+        name="description"
+        content="Ideas, questions, stories, music, education, economics, creativity, and things Nketia Marfo is learning."
+    >
+
+    <style>
+
+        /* =========================================================
+           NKETIA MARFO — PREMIUM BLOG
+           PHOTOGRAPHIC EDITION
+           ========================================================= */
+
+        :root {
+
+            --navy: #071426;
+            --navy-2: #0c1d35;
+
+            --red: #a61b29;
+            --red-light: #d82c3c;
+
+            --gold: #e5b93c;
+            --gold-light: #f5d76e;
+
+            --green: #176b45;
+
+            --white: #ffffff;
+            --soft-white: #f5f7fa;
+
+            --text: #17202a;
+            --muted: #66717f;
+
+            --border: rgba(255,255,255,0.16);
+
+            --shadow:
+                0 30px 80px rgba(0,0,0,0.25);
+
+            --shadow-heavy:
+                0 40px 100px rgba(0,0,0,0.38);
+        }
+
+
+        /* =========================================================
+           RESET
+           ========================================================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--soft-white);
+            color: var(--text);
+
+            font-family:
+                Inter,
+                "Segoe UI",
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        a {
+            transition: 0.3s ease;
+        }
+
+
+        /* =========================================================
+           HEADER
+           ========================================================= */
+
+        .site-header {
+            position: relative;
+            z-index: 100;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(7,20,38,0.98),
+                    rgba(12,29,53,0.96)
+                );
+
+            color: white;
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+
+            box-shadow:
+                0 15px 40px rgba(0,0,0,0.16);
+        }
+
+        .header-content {
+            width: min(1200px, 92%);
+            margin: auto;
+
+            padding: 22px 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .brand-block {
+            flex-shrink: 0;
+        }
+
+        .site-name {
+            margin: 0;
+
+            color: white;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 1.9rem;
+            font-weight: 800;
+
+            letter-spacing: -0.03em;
+        }
+
+        .brand-block p {
+            margin-top: 5px;
+
+            color: #c7d2df;
+
+            font-size: 0.85rem;
+
+            letter-spacing: 0.02em;
+        }
+
+
+        /* =========================================================
+           NAVIGATION
+           ========================================================= */
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            flex-wrap: wrap;
+
+            gap: 6px;
+        }
+
+        .nav-link {
+            color: white;
+
+            text-decoration: none;
+
+            padding: 9px 13px;
+
+            border-radius: 8px;
+
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            background: rgba(255,255,255,0.09);
+            color: var(--gold-light);
+        }
+
+        .nav-link.active {
+            background: var(--red);
+            color: white;
+
+            box-shadow:
+                0 8px 20px rgba(166,27,41,0.3);
+        }
+
+
+        /* =========================================================
+           FOUR COLOR BRAND STRIPE
+           ========================================================= */
+
+        .color-stripe {
+            height: 5px;
+
+            background:
+                linear-gradient(
+                    90deg,
+
+                    var(--navy) 0%,
+                    var(--navy) 25%,
+
+                    var(--red) 25%,
+                    var(--red) 50%,
+
+                    var(--gold) 50%,
+                    var(--gold) 75%,
+
+                    var(--green) 75%,
+                    var(--green) 100%
+                );
+        }
+
+
+        /* =========================================================
+           GLOBAL PHOTO BACKGROUND SYSTEM
+           ========================================================= */
+
+        .photo-section {
+            position: relative;
+
+            overflow: hidden;
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .photo-section::before {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            z-index: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3,10,20,0.94) 0%,
+                    rgba(3,10,20,0.76) 42%,
+                    rgba(3,10,20,0.50) 72%,
+                    rgba(3,10,20,0.68) 100%
+                );
+        }
+
+        .photo-section::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            z-index: 0;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(0,0,0,0.25),
+                    transparent 35%,
+                    rgba(0,0,0,0.40)
+                );
+        }
+
+        .photo-section > * {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        /* =========================================================
+           HERO
+           IMAGE 1
+           ========================================================= */
+
+        .blog-hero {
+
+            min-height: 650px;
+
+            display: flex;
+            align-items: center;
+
+            background-image:
+                url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000012c871fdbce691f44f2fc891.png");
+
+            background-position: center;
+        }
+
+        .hero-inner {
+            width: min(1200px, 92%);
+            margin: auto;
+
+            padding: 100px 0;
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.15fr)
+                minmax(300px, 0.85fr);
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 760px;
+        }
+
+        .blog-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            margin-bottom: 20px;
+
+            color: var(--gold-light);
+
+            font-size: 0.78rem;
+
+            font-weight: 900;
+
+            letter-spacing: 0.18em;
+
+            text-transform: uppercase;
+        }
+
+        .blog-label::before {
+            content: "";
+
+            width: 35px;
+            height: 2px;
+
+            background: var(--gold);
+        }
+
+        .blog-hero h2 {
+            margin: 0;
+
+            color: white;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(3.2rem, 7vw, 6.5rem);
+
+            line-height: 0.96;
+
+            letter-spacing: -0.045em;
+        }
+
+        .blog-hero h2 span {
+            display: block;
+
+            color: var(--gold-light);
+        }
+
+        .blog-intro {
+            max-width: 680px;
+
+            margin-top: 30px;
+
+            color: #e4ebf3;
+
+            font-size: 1.08rem;
+
+            line-height: 1.9;
+        }
+
+
+        /* =========================================================
+           HERO SIDE PANEL
+           ========================================================= */
+
+        .hero-glass {
+
+            padding: 35px;
+
+            border-radius: 24px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.14),
+                    rgba(255,255,255,0.045)
+                );
+
+            border:
+                1px solid rgba(255,255,255,0.22);
+
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            box-shadow:
+                0 30px 70px rgba(0,0,0,0.25);
+        }
+
+        .hero-glass-number {
+            color: var(--gold-light);
+
+            font-size: 4rem;
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-weight: 900;
+
+            line-height: 1;
+        }
+
+        .hero-glass h3 {
+            margin-top: 18px;
+
+            color: white;
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 2rem;
+        }
+
+        .hero-glass p {
+            margin-top: 15px;
+
+            color: #d6e0eb;
+
+            line-height: 1.8;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 25px;
+        }
+
+        .hero-tag {
+            padding: 7px 11px;
+
+            border-radius: 30px;
+
+            background: rgba(255,255,255,0.09);
+
+            border: 1px solid rgba(255,255,255,0.13);
+
+            color: white;
+
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+           FEATURED ARTICLE
+           IMAGE 2
+           ========================================================= */
+
+        .featured-blog {
+
+            min-height: 590px;
+
+            display: flex;
+            align-items: center;
+
+            background-image:
+                url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png");
+
+            background-position: center;
+        }
+
+        .featured-inner {
+
+            width: min(1200px, 92%);
+            margin: auto;
+
+            padding: 95px 0;
+
+            display: grid;
+
+            grid-template-columns: 100px minmax(0, 850px);
+
+            gap: 40px;
+
+            align-items: start;
+        }
+
+        .featured-number {
+
+            color: var(--gold-light);
+
+            font-size: 4rem;
+
+            font-weight: 900;
+
+            line-height: 1;
+        }
+
+        .featured-content {
+
+            padding: 42px;
+
+            border-radius: 26px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(5,18,35,0.89),
+                    rgba(8,26,47,0.73)
+                );
+
+            border:
+                1px solid rgba(255,255,255,0.15);
+
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+
+            box-shadow:
+                0 35px 80px rgba(0,0,0,0.30);
+        }
+
+        .featured-content h2 {
+
+            color: white;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(2.3rem, 5vw, 4.2rem);
+
+            line-height: 1.04;
+
+            letter-spacing: -0.035em;
+        }
+
+        .article-date {
+
+            margin-top: 18px;
+
+            color: var(--gold-light);
+
+            font-weight: 800;
+
+            letter-spacing: 0.04em;
+        }
+
+        .featured-content p:not(.blog-label):not(.article-date) {
+
+            margin-top: 20px;
+
+            color: #dce5ee;
+
+            line-height: 1.9;
+
+            font-size: 1.02rem;
+        }
+
+        .blog-read-link {
+
+            display: inline-flex;
+            align-items: center;
+
+            gap: 10px;
+
+            margin-top: 25px;
+
+            padding: 12px 18px;
+
+            color: white;
+
+            background: var(--red);
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-weight: 800;
+
+            box-shadow:
+                0 12px 30px rgba(166,27,41,0.28);
+        }
+
+        .blog-read-link:hover {
+
+            background: var(--gold);
+
+            color: var(--navy);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================================
+           MUSIC ARTICLE
+           IMAGE 3
+           ========================================================= */
+
+        .music-story {
+
+            min-height: 650px;
+
+            background-image:
+                url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_00000000782081f486b26a47a83586ad.png");
+        }
+
+        .music-story::before {
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(7,20,38,0.92),
+                    rgba(7,20,38,0.66),
+                    rgba(7,20,38,0.38)
+                );
+        }
+
+        .story-inner {
+
+            width: min(1200px, 92%);
+            margin: auto;
+
+            padding: 105px 0;
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                minmax(280px, 0.7fr);
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+        .story-content {
+
+            max-width: 730px;
+        }
+
+        .story-content h2 {
+
+            color: white;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(2.6rem, 5vw, 4.5rem);
+
+            line-height: 1.02;
+
+            letter-spacing: -0.04em;
+        }
+
+        .story-content p {
+
+            margin-top: 22px;
+
+            color: #e2e9f0;
+
+            line-height: 1.9;
+
+            font-size: 1.03rem;
+        }
+
+        .story-content .blog-label {
+            color: var(--gold-light);
+        }
+
+
+        /* =========================================================
+           MUSIC SIDE CARD
+           ========================================================= */
+
+        .music-card {
+
+            padding: 45px;
+
+            min-height: 330px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            border-radius: 28px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(23,107,69,0.92),
+                    rgba(7,45,31,0.82)
+                );
+
+            border:
+                1px solid rgba(255,255,255,0.17);
+
+            box-shadow:
+                0 35px 75px rgba(0,0,0,0.30);
+
+            backdrop-filter: blur(8px);
+        }
+
+        .art-note {
+
+            color: var(--gold-light);
+
+            font-size: 6rem;
+
+            line-height: 1;
+        }
+
+        .art-word {
+
+            margin-top: 15px;
+
+            color: white;
+
+            font-size: 0.95rem;
+
+            font-weight: 900;
+
+            letter-spacing: 0.25em;
+        }
+
+        .music-card p {
+
+            margin-top: 18px;
+
+            color: #d9eee4;
+
+            line-height: 1.7;
+
+            font-size: 0.9rem;
+        }
+
+
+        /* =========================================================
+           ENVIRONMENT ARTICLE
+           IMAGE 4
+           ========================================================= */
+
+        .environment-story {
+
+            min-height: 650px;
+
+            background-image:
+                url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20250320-WA0160.jpg");
+
+            background-position: center 35%;
+        }
+
+        .environment-story::before {
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(7,20,38,0.44),
+                    rgba(7,20,38,0.77),
+                    rgba(7,20,38,0.94)
+                );
+        }
+
+        .environment-inner {
+
+            width: min(1200px, 92%);
+            margin: auto;
+
+            padding: 110px 0;
+
+            display: flex;
+
+            justify-content: flex-end;
+        }
+
+        .environment-content {
+
+            max-width: 690px;
+
+            padding: 48px;
+
+            border-radius: 28px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(166,27,41,0.86),
+                    rgba(83,14,24,0.79)
+                );
+
+            border:
+                1px solid rgba(255,255,255,0.17);
+
+            box-shadow:
+                0 40px 90px rgba(0,0,0,0.34);
+
+            backdrop-filter: blur(8px);
+        }
+
+        .environment-content h2 {
+
+            color: white;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(2.5rem, 5vw, 4.3rem);
+
+            line-height: 1.02;
+        }
+
+        .environment-content p {
+
+            margin-top: 20px;
+
+            color: #f9e9eb;
+
+            line-height: 1.9;
+
+            font-size: 1.02rem;
+        }
+
+
+        /* =========================================================
+           PERSONAL JOURNAL
+           IMAGE 5
+           ========================================================= */
+
+        .visual-journal {
+
+            min-height: 700px;
+
+            display: flex;
+            align-items: center;
+
+            background-image:
+                url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260308-WA0121.jpg");
+
+            background-position: center;
+        }
+
+        .visual-journal::before {
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(7,20,38,0.90),
+                    rgba(7,20,38,0.62),
+                    rgba(7,20,38,0.72)
+                );
+        }
+
+        .visual-inner {
+
+            width: min(1200px, 92%);
+            margin: auto;
+
+            padding: 105px 0;
+        }
+
+        .visual-heading {
+
+            max-width: 750px;
+        }
+
+        .visual-heading h2 {
+
+            color: white;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(2.6rem, 5vw, 4.5rem);
+
+            line-height: 1.03;
+
+            letter-spacing: -0.04em;
+        }
+
+        .visual-heading p:not(.blog-label) {
+
+            margin-top: 20px;
+
+            color: #e0e8f1;
+
+            line-height: 1.9;
+        }
+
+
+        /* =========================================================
+           PHOTO MINI CARDS
+           ========================================================= */
+
+        .photo-grid {
+
+            margin-top: 50px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, minmax(0, 1fr));
+
+            gap: 15px;
+        }
+
+        .personal-photo {
+
+            position: relative;
+
+            aspect-ratio: 1 / 1;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            border:
+                1px solid rgba(255,255,255,0.25);
+
+            background: rgba(0,0,0,0.3);
+
+            box-shadow:
+                0 20px 40px rgba(0,0,0,0.30);
+
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+        }
+
+        .personal-photo:hover {
+
+            transform:
+                translateY(-8px)
+                scale(1.02);
+
+            box-shadow:
+                0 30px 60px rgba(0,0,0,0.42);
+        }
+
+        .personal-photo img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform 0.6s ease;
+        }
+
+        .personal-photo:hover img {
+            transform: scale(1.08);
+        }
+
+        .personal-photo::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    transparent 45%,
+                    rgba(0,0,0,0.82)
+                );
+        }
+
+        .photo-caption {
+
+            position: absolute;
+
+            z-index: 3;
+
+            left: 12px;
+            right: 12px;
+            bottom: 12px;
+
+            color: white;
+
+            font-size: 0.72rem;
+
+            font-weight: 800;
+
+            text-align: center;
+
+            letter-spacing: 0.04em;
+        }
+
+
+        /* =========================================================
+           BIGGER PICTURE
+           IMAGE 6
+           ========================================================= */
+
+        .bigger-picture {
+
+            min-height: 620px;
+
+            display: flex;
+            align-items: center;
+
+            background-image:
+                url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260327-WA0071.jpg");
+
+            background-position: center;
+        }
+
+        .bigger-picture::before {
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(7,20,38,0.90),
+                    rgba(7,20,38,0.70),
+                    rgba(7,20,38,0.48)
+                );
+        }
+
+        .bigger-inner {
+
+            width: min(1000px, 92%);
+            margin: auto;
+
+            padding: 100px 0;
+
+            text-align: center;
+        }
+
+        .bigger-inner h2 {
+
+            color: white;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(2.8rem, 6vw, 5rem);
+
+            line-height: 1;
+
+            letter-spacing: -0.045em;
+        }
+
+        .bigger-inner p {
+
+            max-width: 760px;
+
+            margin:
+                25px auto 0;
+
+            color: #dfe7ef;
+
+            line-height: 1.9;
+
+            font-size: 1.05rem;
+        }
+
+        .bigger-inner .blog-label {
+            justify-content: center;
+        }
+
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        .blog-footer {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #071426,
+                    #0d223d
+                );
+
+            color: white;
+
+            border-top:
+                5px solid var(--gold);
+        }
+
+        .footer-content {
+
+            width: min(1200px, 92%);
+            margin: auto;
+
+            padding: 70px 0 40px;
+
+            display: grid;
+
+            grid-template-columns:
+                1.3fr
+                0.7fr
+                1fr;
+
+            gap: 60px;
+        }
+
+        .footer-brand h2 {
+
+            color: white;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 2.1rem;
+        }
+
+        .footer-brand p {
+
+            max-width: 440px;
+
+            margin-top: 15px;
+
+            color: #c7d3df;
+
+            line-height: 1.8;
+        }
+
+        .footer-title {
+
+            margin-bottom: 20px;
+
+            color: var(--gold-light);
+
+            font-size: 0.78rem;
+
+            font-weight: 900;
+
+            letter-spacing: 0.16em;
+
+            text-transform: uppercase;
+        }
+
+        .footer-links {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+        }
+
+        .footer-links a {
+
+            color: #e4ebf2;
+
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+
+            color: var(--gold-light);
+
+            transform: translateX(4px);
+        }
+
+        .footer-connect p {
+
+            margin: 10px 0;
+
+            color: #c7d3df;
+        }
+
+        .footer-connect a {
+
+            color: #edf3f8;
+
+            text-decoration: none;
+        }
+
+        .footer-connect a:hover {
+            color: var(--gold-light);
+        }
+
+        .footer-bottom {
+
+            width: min(1200px, 92%);
+            margin: auto;
+
+            padding: 22px 0;
+
+            border-top:
+                1px solid rgba(255,255,255,0.12);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            color: #9eafc0;
+
+            font-size: 0.82rem;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE — TABLET
+           ========================================================= */
+
+        @media (max-width: 950px) {
+
+            .header-content {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .main-nav {
+
+                justify-content: center;
+            }
+
+            .hero-inner {
+
+                grid-template-columns: 1fr;
+
+                padding: 80px 0;
+            }
+
+            .hero-content {
+
+                text-align: center;
+
+                margin: auto;
+            }
+
+            .blog-label {
+
+                justify-content: center;
+            }
+
+            .blog-intro {
+
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-glass {
+
+                max-width: 600px;
+
+                width: 100%;
+
+                margin: auto;
+
+                text-align: center;
+            }
+
+            .hero-tags {
+
+                justify-content: center;
+            }
+
+            .featured-inner {
+
+                grid-template-columns: 1fr;
+
+                padding: 80px 0;
+            }
+
+            .featured-number {
+
+                font-size: 2.5rem;
+            }
+
+            .story-inner {
+
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+
+                padding: 85px 0;
+            }
+
+            .story-content {
+
+                text-align: center;
+
+                margin: auto;
+            }
+
+            .music-card {
+
+                max-width: 500px;
+
+                width: 100%;
+
+                margin: auto;
+            }
+
+            .environment-inner {
+
+                justify-content: center;
+
+                padding: 85px 0;
+            }
+
+            .environment-content {
+
+                max-width: 700px;
+
+                text-align: center;
+            }
+
+            .photo-grid {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .footer-content {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+            .footer-brand {
+
+                grid-column: 1 / -1;
+            }
+        }
+
+
+        /* =========================================================
+           RESPONSIVE — MOBILE
+           ========================================================= */
+
+        @media (max-width: 600px) {
+
+            .header-content {
+
+                width: 94%;
+
+                padding: 18px 0;
+            }
+
+            .site-name {
+                font-size: 1.65rem;
+            }
+
+            .brand-block p {
+                font-size: 0.78rem;
+            }
+
+            .main-nav {
+                gap: 2px;
+            }
+
+            .nav-link {
+
+                padding:
+                    8px 8px;
+
+                font-size:
+                    0.76rem;
+            }
+
+            .blog-hero {
+
+                min-height: 650px;
+
+                background-position:
+                    60% center;
+            }
+
+            .hero-inner {
+
+                width: 90%;
+
+                padding:
+                    70px 0;
+            }
+
+            .blog-hero h2 {
+
+                font-size:
+                    clamp(3rem, 14vw, 4.2rem);
+            }
+
+            .blog-intro {
+
+                font-size: 0.96rem;
+
+                line-height: 1.75;
+            }
+
+            .hero-glass {
+
+                padding: 28px 22px;
+
+                border-radius: 20px;
+            }
+
+            .hero-glass-number {
+                font-size: 3rem;
+            }
+
+            .hero-glass h3 {
+                font-size: 1.7rem;
+            }
+
+            .featured-blog {
+
+                min-height:
+                    650px;
+            }
+
+            .featured-inner {
+
+                width: 90%;
+
+                padding:
+                    70px 0;
+            }
+
+            .featured-content {
+
+                padding:
+                    30px 23px;
+
+                border-radius:
+                    20px;
+            }
+
+            .featured-content h2 {
+
+                font-size:
+                    2.35rem;
+            }
+
+            .featured-content p:not(.blog-label):not(.article-date) {
+
+                font-size:
+                    0.95rem;
+
+                line-height:
+                    1.75;
+            }
+
+            .music-story,
+            .environment-story,
+            .visual-journal,
+            .bigger-picture {
+
+                min-height:
+                    650px;
+            }
+
+            .story-inner {
+
+                width: 90%;
+
+                padding:
+                    75px 0;
+            }
+
+            .story-content h2 {
+
+                font-size:
+                    2.5rem;
+            }
+
+            .story-content p {
+
+                font-size:
+                    0.95rem;
+            }
+
+            .music-card {
+
+                padding:
+                    35px 22px;
+
+                min-height:
+                    260px;
+            }
+
+            .environment-inner {
+
+                width: 90%;
+
+                padding:
+                    75px 0;
+            }
+
+            .environment-content {
+
+                padding:
+                    30px 23px;
+
+                border-radius:
+                    20px;
+            }
+
+            .environment-content h2 {
+
+                font-size:
+                    2.45rem;
+            }
+
+            .visual-inner {
+
+                width: 90%;
+
+                padding:
+                    75px 0;
+            }
+
+            .visual-heading h2 {
+
+                font-size:
+                    2.5rem;
+            }
+
+            .photo-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap:
+                    10px;
+
+                margin-top:
+                    35px;
+            }
+
+            .personal-photo {
+
+                border-radius:
+                    14px;
+            }
+
+            .bigger-inner {
+
+                width: 90%;
+
+                padding:
+                    75px 0;
+            }
+
+            .bigger-inner h2 {
+
+                font-size:
+                    2.8rem;
+            }
+
+            .bigger-inner p {
+
+                font-size:
+                    0.95rem;
+
+                line-height:
+                    1.8;
+            }
+
+            .footer-content {
+
+                width: 90%;
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    40px;
+
+                padding:
+                    55px 0 35px;
+            }
+
+            .footer-brand {
+
+                grid-column:
+                    auto;
+            }
+
+            .footer-bottom {
+
+                width: 90%;
+
+                flex-direction:
+                    column;
+
+                text-align:
+                    center;
+
+                line-height:
+                    1.6;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="site-header">
+
+    <div class="header-content">
+
+        <div class="brand-block">
+
+            <h1 class="site-name">
+                Nketia Marfo
+            </h1>
+
+            <p>
+                Thinking deeply. Creating freely. Sharing ideas.
+            </p>
+
+        </div>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html" class="nav-link">
+                Home
+            </a>
+
+            <a href="about.html" class="nav-link">
+                About
+            </a>
+
+            <a href="blog.html" class="nav-link active">
+                Blog
+            </a>
+
+            <a href="Students-Voice.html" class="nav-link">
+                Student Voices
+            </a>
+
+            <a href="contact.html" class="nav-link">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<div class="color-stripe"></div>
+
+
+
+<!-- =========================================================
+     BLOG HERO
+     ========================================================= -->
+
+<main>
+
+
+<section class="blog-hero photo-section">
+
+    <div class="hero-inner">
+
+        <div class="hero-content">
+
+            <p class="blog-label">
+                The Nketia Marfo Journal
+            </p>
+
+            <h2>
+                Ideas worth
+                <span>thinking about.</span>
+            </h2>
+
+            <p class="blog-intro">
+                A collection of questions, observations, stories,
+                and ideas about education, economics, music,
+                creativity, society, and the world around me.
+            </p>
+
+        </div>
+
+
+        <div class="hero-glass">
+
+            <div class="hero-glass-number">
+                01
+            </div>
+
+            <h3>
+                Think beyond the obvious.
+            </h3>
+
+            <p>
+                This is a space for curiosity — where everyday
+                experiences become questions and questions become
+                ideas worth exploring.
+            </p>
+
+            <div class="hero-tags">
+
+                <span class="hero-tag">
+                    EDUCATION
+                </span>
+
+                <span class="hero-tag">
+                    ECONOMICS
+                </span>
+
+                <span class="hero-tag">
+                    MUSIC
+                </span>
+
+                <span class="hero-tag">
+                    SOCIETY
+                </span>
+
+                <span class="hero-tag">
+                    CREATIVITY
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FEATURED ARTICLE
+     ========================================================= -->
+
+<section class="featured-blog photo-section">
+
+    <div class="featured-inner">
+
+        <div class="featured-number">
+            02
+        </div>
+
+
+        <div class="featured-content">
+
+            <p class="blog-label">
+                Featured Thought
+            </p>
+
+            <h2>
+                Why Education Should
+                Create Opportunities
+            </h2>
+
+            <p class="article-date">
+                Education · Economics · Young People
+            </p>
+
+            <p>
+                Education is often described as the pathway to
+                a better future. But what happens when completing
+                school does not lead to meaningful opportunities?
+            </p>
+
+            <p>
+                I keep thinking about the connection between
+                education, skills, employment, investment, and
+                the opportunities available to young people.
+            </p>
+
+            <p>
+                For me, this is not simply a question about
+                classrooms. It is a question about what happens
+                after the classroom.
+            </p>
+
+            <a
+                href="#environment"
+                class="blog-read-link"
+            >
+                Explore the idea →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MUSIC
+     ========================================================= -->
+
+<section class="music-story photo-section">
+
+    <div class="story-inner">
+
+        <div class="story-content">
+
+            <p class="blog-label">
+                Music & Creativity
+            </p>
+
+            <h2>
+                Music, Creativity
+                and the Economy
+            </h2>
+
+            <p>
+                Music is more than entertainment. It can be a
+                source of creativity, identity, employment,
+                community, and economic activity.
+            </p>
+
+            <p>
+                Behind every performance is a network of people,
+                skills, decisions, resources, and opportunities.
+            </p>
+
+            <p>
+                I am interested in what happens when creative
+                talent is combined with knowledge about money,
+                planning, entrepreneurship, and the wider economy.
+            </p>
+
+            <a
+                href="#environment"
+                class="blog-read-link"
+            >
+                Read the story →
+            </a>
+
+        </div>
+
+
+        <div class="music-card">
+
+            <div class="art-note">
+                ♪
+            </div>
+
+            <div class="art-word">
+                MUSIC
+            </div>
+
+            <p>
+                Creativity can be more than expression.
+                It can become opportunity.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ENVIRONMENT
+     ========================================================= -->
+
+<section
+    class="environment-story photo-section"
+    id="environment"
+>
+
+    <div class="environment-inner">
+
+        <div class="environment-content">
+
+            <p class="blog-label">
+                Environment & Society
+            </p>
+
+            <h2>
+                The Questions
+                Beneath the Surface
+            </h2>
+
+            <p>
+                Some of the biggest questions begin with things
+                we see around us every day.
+            </p>
+
+            <p>
+                Environmental challenges can lead us to think
+                more deeply about communities, responsibility,
+                development, and the choices we make.
+            </p>
+
+            <p>
+                Sometimes the most important question is not
+                simply <em>what happened?</em>
+            </p>
+
+            <a
+                href="#visual-journal"
+                class="blog-read-link"
+            >
+                Continue exploring →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PERSONAL VISUAL JOURNAL
+     ========================================================= -->
+
+<section
+    class="visual-journal photo-section"
+    id="visual-journal"
+>
+
+    <div class="visual-inner">
+
+        <div class="visual-heading">
+
+            <p class="blog-label">
+                Nketia Marfo • Visual Journal
+            </p>
+
+            <h2>
+                A Few Frames
+                From My Journey
+            </h2>
+
+            <p>
+                Beyond the ideas I write about, there are
+                moments, places and memories that become part
+                of the journey. These photographs are part of
+                my personal visual collection.
+            </p>
+
+        </div>
+
+
+        <div class="photo-grid">
+
+
+            <!-- PHOTO 1 -->
+
+            <div class="personal-photo">
+
+                <img
+                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000012c871fdbce691f44f2fc891.png"
+                    alt="Nketia Marfo personal visual journal"
+                    loading="lazy"
+                >
+
+                <div class="photo-caption">
+                    Nketia Marfo
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 2 -->
+
+            <div class="personal-photo">
+
+                <img
+                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png"
+                    alt="Nketia Marfo personal visual journal"
+                    loading="lazy"
+                >
+
+                <div class="photo-caption">
+                    Personal Journey
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 3 -->
+
+            <div class="personal-photo">
+
+                <img
+                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_00000000782081f486b26a47a83586ad.png"
+                    alt="Nketia Marfo personal visual journal"
+                    loading="lazy"
+                >
+
+                <div class="photo-caption">
+                    Moments & Memories
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 4 -->
+
+            <div class="personal-photo">
+
+                <img
+                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20250320-WA0160.jpg"
+                    alt="Nketia Marfo personal visual journal"
+                    loading="lazy"
+                >
+
+                <div class="photo-caption">
+                    Life Beyond the Page
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 5 -->
+
+            <div class="personal-photo">
+
+                <img
+                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260308-WA0121.jpg"
+                    alt="Nketia Marfo personal visual journal"
+                    loading="lazy"
+                >
+
+                <div class="photo-caption">
+                    A Moment in Time
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BIGGER PICTURE
+     ========================================================= -->
+
+<section class="bigger-picture photo-section">
+
+    <div class="bigger-inner">
+
+        <p class="blog-label">
+            The Bigger Picture
+        </p>
+
+        <h2>
+            Think. Question.
+            Create. Share.
+        </h2>
+
+        <p>
+            I believe that ideas become more meaningful when
+            we are willing to question what we see, listen to
+            different perspectives, learn from experience, and
+            turn curiosity into something useful.
+        </p>
+
+        <p>
+            This journal is a place for those thoughts —
+            education, economics, music, creativity, society,
+            personal growth, and the questions that continue
+            to shape how I see the world.
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="blog-footer">
+
+    <div class="footer-content">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+            <h2>
+                Nketia Marfo
+            </h2>
+
+            <p>
+                Ideas, music, education, stories and
+                conversations that connect people and
+                create possibilities.
+            </p>
+
+        </div>
+
+
+        <!-- EXPLORE -->
+
+        <div>
+
+            <h3 class="footer-title">
+                Explore
+            </h3>
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="blog.html">
+                    Blog
+                </a>
+
+                <a href="Students-Voice.html">
+                    Student Voices
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONNECT -->
+
+        <div class="footer-connect">
+
+            <h3 class="footer-title">
+                Connect
+            </h3>
+
+            <p>
+                <a href="mailto:nketiamarfo157@gmail.com">
+                    nketiamarfo157@gmail.com
+                </a>
+            </p>
+
+            <p>
+                TikTok:
+                <a href="#">
+                    Nketia Marfo
+                </a>
+            </p>
+
+            <p>
+                Instagram:
+                <a href="#">
+                    Affectionate_Music
+                </a>
+            </p>
+
+            <p>
+                Facebook:
+                <a href="#">
+                    Nketia Marfo
+                </a>
+            </p>
+
+            <p>
+                X:
+                <a href="#">
+                    Nketia
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Nketia Marfo. All rights reserved.
+        </span>
+
+        <span>
+            Stories that deserve to be heard.
+        </span>
+
+    </div>
+
+</footer>
+
+
+</body>
+  </html>
