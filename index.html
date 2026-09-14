@@ -24,51 +24,54 @@ rel="stylesheet"
 
 /* =========================================================
    NKETIA MARFO
-   COMPLETE HOME PAGE REDESIGN
-   PHOTO-BACKGROUND EDITION
+   COMPLETE HOME PAGE
+   PREMIUM PHOTO BACKGROUND EDITION
 ========================================================= */
 
 
 /* =========================================================
-   YOUR THREE MAIN BACKGROUND PHOTOS
-=========================================================
-
-   TOP:
-   Leg crossed + hand on wooden surface
-
-   MIDDLE:
-   Blue hoodie
-
-   BOTTOM:
-   White shirt + standing near the sea
-
-   If your actual filenames are different,
-   change ONLY these three lines.
+   ROOT
 ========================================================= */
 
 :root{
 
-    --bg-top:
-    url("IMG_20260222_125912_662.jpg");
+    /* =====================================================
+       YOUR SIX NEW WEBSITE PHOTOS
+       Converted from GitHub /blob/ URLs to raw images
+    ===================================================== */
 
-    --bg-middle:
-    url("IMG_20260319_160228_606.jpg");
+    --photo-1:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_00000000f8a871f4bb452ab5ea523124.png");
 
-    --bg-bottom:
-    url("IMG-20260802-WA0445.jpg");
+    --photo-2:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000099e471f48092d9c598859a2a.png");
+
+    --photo-3:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png");
+
+    --photo-4:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg");
+
+    --photo-5:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000095b471fdb0797eacb26bb28d.png");
+
+    --photo-6:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_000000007ac471f4af129031a9ca9168.png");
 
 
-    /* MAIN COLORS */
+    /* =====================================================
+       BRAND COLORS
+    ===================================================== */
 
-    --navy:#071A35;
-    --navy-2:#0B2445;
-    --navy-3:#102F55;
+    --navy:#06162D;
+    --navy-2:#081F3D;
+    --navy-3:#0D2B50;
 
     --gold:#F2C94C;
     --gold-light:#FFE58A;
 
     --red:#B51F32;
-    --red-dark:#871528;
+    --red-dark:#841426;
 
     --green:#176B45;
     --magenta:#A6266E;
@@ -77,27 +80,25 @@ rel="stylesheet"
     --cream:#FFFDF8;
     --soft:#F4F6F8;
 
-    --text:#18232E;
-    --muted:#68737E;
+    --text:#172431;
+    --muted:#65727E;
 
-    --line:rgba(7,26,53,.13);
-
-    --glass:
-    rgba(255,255,255,.10);
-
-    --glass-dark:
-    rgba(4,15,31,.66);
-
-    --shadow:
-    0 20px 60px rgba(0,0,0,.16);
-
-    --sans:
-    "Inter","Segoe UI",Roboto,Arial,sans-serif;
-
-    --serif:
-    "Playfair Display",Georgia,"Times New Roman",serif;
+    --line:rgba(7,26,53,.12);
 
     --max:1240px;
+
+    --sans:
+    "Inter",
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+    --serif:
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
 }
 
 
@@ -170,17 +171,21 @@ a{
     background:
     linear-gradient(
         90deg,
-        rgba(5,18,37,.98),
-        rgba(7,26,53,.94),
-        rgba(10,31,55,.97)
+        rgba(3,14,29,.98),
+        rgba(6,23,45,.97),
+        rgba(8,29,54,.96)
     );
 
     color:white;
 
-    border-bottom:2px solid var(--gold);
+    border-bottom:1px solid
+    rgba(242,201,76,.65);
 
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
+    box-shadow:
+    0 8px 35px rgba(0,0,0,.18);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 }
 
 .header-content{
@@ -222,9 +227,9 @@ a{
 
     margin:2px 0 0;
 
-    color:#CBD6E2;
+    color:#C9D4DF;
 
-    font-size:.70rem;
+    font-size:.69rem;
 
     line-height:1.4;
 }
@@ -248,14 +253,17 @@ a{
 
     border-radius:999px;
 
-    font-size:.80rem;
+    font-size:.79rem;
     font-weight:600;
 
     transition:.25s ease;
 }
 
 .nav-link:hover{
-    background:rgba(181,31,50,.9);
+
+    background:rgba(181,31,50,.88);
+
+    transform:translateY(-1px);
 }
 
 .nav-link.active{
@@ -265,7 +273,7 @@ a{
     color:var(--navy);
 
     box-shadow:
-    0 5px 18px rgba(242,201,76,.18);
+    0 5px 20px rgba(242,201,76,.20);
 }
 
 
@@ -307,7 +315,7 @@ a{
 
     color:white;
 
-    border-radius:7px;
+    border-radius:8px;
 
     font-size:.84rem;
     font-weight:700;
@@ -351,14 +359,14 @@ a{
 
 /* =========================================================
    HERO
-   TOP BACKGROUND PHOTO
+   PHOTO 1
 ========================================================= */
 
 .hero-section{
 
     position:relative;
 
-    min-height:760px;
+    min-height:780px;
 
     display:flex;
     align-items:center;
@@ -369,21 +377,28 @@ a{
 
     background-image:
 
+    /*
+       PRIMARY DARK READABILITY OVERLAY
+    */
     linear-gradient(
         90deg,
-        rgba(3,14,29,.94) 0%,
-        rgba(4,17,35,.83) 38%,
-        rgba(7,26,53,.54) 66%,
-        rgba(7,26,53,.36) 100%
+        rgba(2,11,24,.97) 0%,
+        rgba(3,14,30,.91) 28%,
+        rgba(5,19,39,.76) 52%,
+        rgba(6,22,43,.53) 76%,
+        rgba(6,22,43,.38) 100%
     ),
 
+    /*
+       PREMIUM BLUE TINT
+    */
     linear-gradient(
         180deg,
-        rgba(7,26,53,.18),
-        rgba(7,26,53,.68)
+        rgba(4,17,35,.25),
+        rgba(5,18,37,.78)
     ),
 
-    var(--bg-top);
+    var(--photo-1);
 
     background-size:cover;
     background-position:center;
@@ -391,7 +406,7 @@ a{
 }
 
 
-/* gold atmospheric glow */
+/* Premium light around image */
 
 .hero-section::before{
 
@@ -399,26 +414,27 @@ a{
 
     position:absolute;
 
-    width:480px;
-    height:480px;
+    width:600px;
+    height:600px;
 
-    right:-140px;
-    top:-140px;
+    right:-200px;
+    top:-210px;
 
     border-radius:50%;
 
     background:
     radial-gradient(
         circle,
-        rgba(242,201,76,.22),
-        transparent 68%
+        rgba(242,201,76,.20),
+        rgba(242,201,76,.06) 38%,
+        transparent 70%
     );
 
     pointer-events:none;
 }
 
 
-/* bottom fade */
+/* Bottom cinematic fade */
 
 .hero-section::after{
 
@@ -430,13 +446,13 @@ a{
     right:0;
     bottom:0;
 
-    height:170px;
+    height:190px;
 
     background:
     linear-gradient(
         to bottom,
         transparent,
-        rgba(7,26,53,.95)
+        rgba(6,22,43,.98)
     );
 
     pointer-events:none;
@@ -457,7 +473,7 @@ a{
 
     align-items:center;
 
-    padding:100px 0 135px;
+    padding:100px 0 140px;
 }
 
 .hero-text{
@@ -485,7 +501,7 @@ a{
     font-weight:600;
 
     text-shadow:
-    0 8px 30px rgba(0,0,0,.28);
+    0 8px 30px rgba(0,0,0,.42);
 }
 
 .hero-text .lead-text{
@@ -494,11 +510,14 @@ a{
 
     margin:28px 0 14px;
 
-    color:#F4F7FA;
+    color:#F5F8FB;
 
     font-size:1.04rem;
 
     line-height:1.8;
+
+    text-shadow:
+    0 2px 10px rgba(0,0,0,.25);
 }
 
 .hero-text > p:not(.small-heading):not(.lead-text){
@@ -507,7 +526,7 @@ a{
 
     margin:0;
 
-    color:#D2DCE6;
+    color:#D8E1E9;
 
     font-size:.92rem;
 
@@ -528,7 +547,9 @@ a{
 }
 
 .hero-actions .text-link{
+
     color:white;
+
     border-color:var(--gold);
 }
 
@@ -539,27 +560,43 @@ a{
 
 .hero-side-card{
 
-    padding:30px;
+    padding:32px;
 
     border:
-
     1px solid
-    rgba(255,255,255,.25);
+    rgba(255,255,255,.28);
 
-    border-radius:18px;
+    border-radius:20px;
 
     background:
+
     linear-gradient(
         145deg,
-        rgba(255,255,255,.15),
-        rgba(255,255,255,.05)
+        rgba(255,255,255,.17),
+        rgba(255,255,255,.055)
     );
 
-    backdrop-filter:blur(13px);
-    -webkit-backdrop-filter:blur(13px);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
 
     box-shadow:
-    0 25px 70px rgba(0,0,0,.28);
+    0 30px 90px rgba(0,0,0,.34);
+}
+
+.hero-side-card::before{
+
+    content:"";
+
+    display:block;
+
+    width:48px;
+    height:3px;
+
+    margin-bottom:20px;
+
+    background:var(--gold);
+
+    border-radius:10px;
 }
 
 .hero-side-card .mini-label{
@@ -589,7 +626,7 @@ a{
 
     margin:0;
 
-    color:#DCE4EB;
+    color:#E0E7ED;
 
     font-size:.86rem;
 
@@ -611,13 +648,33 @@ a{
 
     linear-gradient(
         120deg,
-        rgba(7,26,53,.98),
-        rgba(10,42,74,.96)
+        #06162D,
+        #0B2445 55%,
+        #102F55
     );
 
     color:white;
 
     overflow:hidden;
+}
+
+.statement-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:380px;
+    height:380px;
+
+    right:-170px;
+    top:-170px;
+
+    border-radius:50%;
+
+    border:
+    1px solid
+    rgba(242,201,76,.22);
 }
 
 .statement-section::after{
@@ -626,18 +683,26 @@ a{
 
     position:absolute;
 
-    width:340px;
-    height:340px;
+    width:300px;
+    height:300px;
 
-    right:-110px;
-    bottom:-150px;
+    left:-180px;
+    bottom:-190px;
 
     border-radius:50%;
 
-    border:1px solid rgba(242,201,76,.25);
+    background:
+    radial-gradient(
+        circle,
+        rgba(181,31,50,.16),
+        transparent 70%
+    );
 }
 
 .statement-inner{
+
+    position:relative;
+    z-index:2;
 
     width:min(1050px,100%);
 
@@ -703,16 +768,27 @@ a{
     padding:105px 0;
 
     background:var(--cream);
+
+    overflow:hidden;
 }
 
-.editorial-section:nth-of-type(even){
+.editorial-section::before{
 
-    background:
-    linear-gradient(
-        180deg,
-        #FFFDF8,
-        #F7F8F9
-    );
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    right:-160px;
+    top:-150px;
+
+    border-radius:50%;
+
+    border:
+    1px solid
+    rgba(242,201,76,.18);
 }
 
 .editorial-grid{
@@ -773,13 +849,29 @@ a{
     position:relative;
 
     width:100%;
-
     max-width:530px;
 
     margin:auto;
+
+    padding:10px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(242,201,76,.9),
+        rgba(255,255,255,.7)
+    );
+
+    border-radius:18px;
+
+    box-shadow:
+    0 25px 60px rgba(7,26,53,.15);
 }
 
 .editorial-photo img{
+
+    position:relative;
+    z-index:1;
 
     width:100%;
     height:430px;
@@ -788,45 +880,9 @@ a{
 
     background:white;
 
-    border:5px solid white;
+    border:4px solid white;
 
-    outline:1px solid var(--line);
-
-    border-radius:14px;
-
-    box-shadow:
-    0 20px 50px rgba(7,26,53,.14);
-}
-
-.editorial-photo::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:64px;
-    height:64px;
-
-    right:-14px;
-    bottom:-14px;
-
-    border-radius:50%;
-
-    border:2px solid var(--gold);
-
-    z-index:0;
-}
-
-.editorial-photo.green-ring::after{
-    border-color:var(--green);
-}
-
-.editorial-photo.magenta-ring::after{
-    border-color:var(--magenta);
-}
-
-.editorial-photo.red-ring::after{
-    border-color:var(--red);
+    border-radius:11px;
 }
 
 
@@ -835,9 +891,7 @@ a{
 ========================================================= */
 
 .writing-photo{
-
     padding:0 0 100px;
-
 }
 
 .writing-photo-card{
@@ -859,9 +913,9 @@ a{
     border-left:5px solid var(--green);
 
     box-shadow:
-    0 15px 40px rgba(7,26,53,.08);
+    0 18px 50px rgba(7,26,53,.09);
 
-    border-radius:0 12px 12px 0;
+    border-radius:0 14px 14px 0;
 
     overflow:hidden;
 }
@@ -872,19 +926,19 @@ a{
 
     position:absolute;
 
-    width:180px;
-    height:180px;
+    width:230px;
+    height:230px;
 
-    right:-70px;
-    top:-80px;
+    right:-100px;
+    top:-110px;
 
     border-radius:50%;
 
     background:
     radial-gradient(
         circle,
-        rgba(242,201,76,.15),
-        transparent 68%
+        rgba(242,201,76,.16),
+        transparent 70%
     );
 }
 
@@ -895,9 +949,9 @@ a{
 
     object-fit:cover;
 
-    border-radius:9px;
+    border-radius:10px;
 
-    border:2px solid white;
+    border:3px solid white;
 
     outline:1px solid var(--line);
 }
@@ -1036,7 +1090,6 @@ a{
     color:var(--gold);
 
     font-size:.67rem;
-
     font-weight:800;
 
     letter-spacing:.12em;
@@ -1068,59 +1121,15 @@ a{
 
 
 /* =========================================================
-   INTEREST MINI PHOTOS
-========================================================= */
-
-.interest-card::after{
-
-    content:"";
-
-    display:block;
-
-    width:92px;
-    height:92px;
-
-    margin:24px auto 0;
-
-    border-radius:50%;
-
-    background-size:cover;
-    background-position:center;
-
-    border:3px solid white;
-
-    outline:1px solid var(--line);
-
-    box-shadow:
-    0 8px 20px rgba(7,26,53,.12);
-}
-
-.interest-card:nth-child(1)::after{
-    background-image:url("IMG_20260210_225825_521.jpg");
-}
-
-.interest-card:nth-child(2)::after{
-    background-image:url("IMG_20260210_225842_806.jpg");
-}
-
-.interest-card:nth-child(3)::after{
-    background-image:url("IMG-20260614-WA0187.jpg");
-}
-
-.interest-card:nth-child(4)::after{
-    background-image:url("IMG-20260614-WA0155.jpg");
-}
-
-
-/* =========================================================
-   ECONOMICS / MIDDLE PHOTO SECTION
+   ECONOMICS PHOTO SECTION
+   PHOTO 2
 ========================================================= */
 
 .economics-feature{
 
     position:relative;
 
-    min-height:680px;
+    min-height:700px;
 
     display:flex;
 
@@ -1130,20 +1139,27 @@ a{
 
     background-image:
 
+    /*
+       STRONG LEFT READABILITY
+    */
     linear-gradient(
         90deg,
-        rgba(4,16,32,.93),
-        rgba(7,26,53,.76) 45%,
-        rgba(7,26,53,.48)
+        rgba(2,11,25,.96) 0%,
+        rgba(3,15,32,.90) 32%,
+        rgba(5,21,42,.76) 58%,
+        rgba(6,24,47,.48) 100%
     ),
 
+    /*
+       DARK TOP/BOTTOM
+    */
     linear-gradient(
         180deg,
-        rgba(7,26,53,.22),
-        rgba(7,26,53,.78)
+        rgba(5,18,37,.22),
+        rgba(5,18,37,.72)
     ),
 
-    var(--bg-middle);
+    var(--photo-2);
 
     background-size:cover;
 
@@ -1163,10 +1179,17 @@ a{
     inset:0;
 
     background:
+
     radial-gradient(
-        circle at 90% 20%,
-        rgba(23,107,69,.22),
-        transparent 30%
+        circle at 90% 15%,
+        rgba(242,201,76,.18),
+        transparent 27%
+    ),
+
+    linear-gradient(
+        to bottom,
+        transparent 60%,
+        rgba(3,14,29,.40)
     );
 
     pointer-events:none;
@@ -1189,20 +1212,23 @@ a{
     padding:44px;
 
     background:
-    rgba(4,17,34,.70);
+    linear-gradient(
+        145deg,
+        rgba(3,14,29,.82),
+        rgba(5,22,42,.63)
+    );
 
     border:
-
     1px solid
-    rgba(255,255,255,.20);
+    rgba(255,255,255,.25);
 
-    border-radius:17px;
+    border-radius:18px;
 
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
 
     box-shadow:
-    0 30px 80px rgba(0,0,0,.25);
+    0 30px 80px rgba(0,0,0,.34);
 }
 
 .economics-card .small-heading{
@@ -1222,7 +1248,7 @@ a{
 
 .economics-card p{
 
-    color:#D7E0E9;
+    color:#DCE5EC;
 
     font-size:.94rem;
 
@@ -1261,7 +1287,9 @@ a{
 
     border-radius:50%;
 
-    border:1px solid rgba(242,201,76,.22);
+    border:
+    1px solid
+    rgba(242,201,76,.22);
 }
 
 .opportunity-grid{
@@ -1313,34 +1341,42 @@ a{
     max-width:510px;
 
     margin:auto;
+
+    padding:8px;
+
+    background:
+    linear-gradient(
+        145deg,
+        var(--gold),
+        rgba(255,255,255,.6)
+    );
+
+    border-radius:17px;
 }
 
 .opportunity-photo img{
 
     width:100%;
-
     height:400px;
 
     object-fit:cover;
 
     border:4px solid white;
 
-    outline:1px solid rgba(242,201,76,.7);
-
-    border-radius:13px;
-
-    box-shadow:
-    0 25px 55px rgba(0,0,0,.25);
+    border-radius:10px;
 }
 
 
 /* =========================================================
    MUSIC & CREATIVITY
+   PHOTO 3 USED AS LARGE ATMOSPHERIC BACKGROUND
 ========================================================= */
 
 .latter-section{
 
-    padding:105px 0;
+    position:relative;
+
+    padding:110px 0;
 
     display:grid;
 
@@ -1351,6 +1387,52 @@ a{
     gap:70px;
 
     align-items:center;
+
+    overflow:hidden;
+}
+
+.latter-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:-2;
+
+    background-image:
+    linear-gradient(
+        90deg,
+        rgba(255,253,248,.97) 0%,
+        rgba(255,253,248,.93) 45%,
+        rgba(255,253,248,.72) 100%
+    ),
+    var(--photo-3);
+
+    background-size:cover;
+    background-position:center;
+}
+
+.latter-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    z-index:-1;
+
+    width:450px;
+    height:450px;
+
+    right:-220px;
+    top:-180px;
+
+    border-radius:50%;
+
+    border:
+    1px solid
+    rgba(166,38,110,.16);
 }
 
 .latter-text{
@@ -1400,12 +1482,12 @@ a{
 
     overflow:hidden;
 
-    border:3px solid white;
+    border:4px solid white;
 
     outline:1px solid var(--line);
 
     box-shadow:
-    0 15px 35px rgba(7,26,53,.11);
+    0 15px 35px rgba(7,26,53,.15);
 
     background:#ddd;
 }
@@ -1436,14 +1518,14 @@ a{
 }
 
 .latter-photo-2{
-    border-radius:10px;
+    border-radius:14px;
 }
 
 .latter-photo-3{
 
     grid-column:1 / -1;
 
-    border-radius:10px;
+    border-radius:14px;
 }
 
 .latter-photo-3 img{
@@ -1506,6 +1588,7 @@ a{
 
 /* =========================================================
    GALLERY
+   USES PHOTO 1–6
 ========================================================= */
 
 .home-gallery{
@@ -1574,7 +1657,7 @@ a{
 
     outline:1px solid var(--line);
 
-    border-radius:9px;
+    border-radius:10px;
 
     box-shadow:
     0 9px 25px rgba(7,26,53,.09);
@@ -1583,12 +1666,14 @@ a{
 .home-gallery-item:nth-child(2),
 .home-gallery-item:nth-child(6),
 .home-gallery-item:nth-child(9){
+
     border-radius:50%;
 }
 
 .home-gallery-item:nth-child(4),
 .home-gallery-item:nth-child(8){
-    border-radius:12px;
+
+    border-radius:14px;
 }
 
 .home-gallery-item img{
@@ -1618,7 +1703,8 @@ a{
     background:
     linear-gradient(
         to top,
-        rgba(7,26,53,.91),
+        rgba(3,14,29,.94),
+        rgba(3,14,29,.30),
         transparent
     );
 
@@ -1630,7 +1716,6 @@ a{
     color:var(--gold);
 
     font-size:.61rem;
-
     font-weight:800;
 
     letter-spacing:.12em;
@@ -1653,7 +1738,8 @@ a{
 
 
 /* =========================================================
-   BOTTOM BACKGROUND / PHOTO STORY
+   BOTTOM PHOTO STORY
+   PHOTO 5
 ========================================================= */
 
 .photo-story-section{
@@ -1674,18 +1760,19 @@ a{
 
     linear-gradient(
         90deg,
-        rgba(5,18,35,.91),
-        rgba(7,26,53,.67) 50%,
-        rgba(7,26,53,.42)
+        rgba(2,11,24,.96) 0%,
+        rgba(3,15,31,.87) 34%,
+        rgba(5,21,41,.67) 60%,
+        rgba(6,22,43,.40) 100%
     ),
 
     linear-gradient(
         180deg,
-        rgba(7,26,53,.30),
-        rgba(7,26,53,.76)
+        rgba(5,18,37,.25),
+        rgba(5,18,37,.76)
     ),
 
-    var(--bg-bottom);
+    var(--photo-5);
 
     background-size:cover;
 
@@ -1705,10 +1792,17 @@ a{
     inset:0;
 
     background:
+
     radial-gradient(
         circle at 15% 80%,
         rgba(181,31,50,.22),
         transparent 28%
+    ),
+
+    linear-gradient(
+        to bottom,
+        transparent 60%,
+        rgba(2,11,24,.45)
     );
 
     pointer-events:none;
@@ -1717,7 +1811,6 @@ a{
 .photo-story-grid{
 
     position:relative;
-
     z-index:2;
 
     display:grid;
@@ -1739,19 +1832,19 @@ a{
 .photo-story-main img{
 
     width:100%;
-
     height:470px;
 
     object-fit:cover;
 
     border:4px solid white;
 
-    outline:1px solid rgba(242,201,76,.65);
+    outline:1px solid
+    rgba(242,201,76,.65);
 
     border-radius:14px;
 
     box-shadow:
-    0 25px 65px rgba(0,0,0,.27);
+    0 25px 65px rgba(0,0,0,.35);
 }
 
 .photo-story-text{
@@ -1761,17 +1854,23 @@ a{
     padding:40px;
 
     background:
-    rgba(4,17,34,.63);
+    linear-gradient(
+        145deg,
+        rgba(3,14,29,.78),
+        rgba(4,18,36,.58)
+    );
 
     border:
-
     1px solid
-    rgba(255,255,255,.22);
+    rgba(255,255,255,.24);
 
-    border-radius:16px;
+    border-radius:18px;
 
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.28);
 }
 
 .photo-story-text .small-heading{
@@ -1887,19 +1986,40 @@ a{
 
 
 /* =========================================================
-   FINAL COMMUNITY SECTION
+   COMMUNITY & SOCIETY
+   PHOTO 6 ATMOSPHERE
 ========================================================= */
 
 .community-section{
 
+    position:relative;
+
     padding:105px 0;
 
-    background:
+    overflow:hidden;
+
+    background-image:
+
     linear-gradient(
-        135deg,
-        #F3F5F7,
-        #FFFDF8
-    );
+        90deg,
+        rgba(255,253,248,.96),
+        rgba(255,253,248,.91)
+    ),
+
+    var(--photo-6);
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+
+/* =========================================================
+   FINAL WRITING CARD
+========================================================= */
+
+.final-writing{
+    border-left-color:var(--red);
 }
 
 
@@ -1911,7 +2031,7 @@ a{
 
     position:relative;
 
-    padding:85px 7%;
+    padding:90px 7%;
 
     display:grid;
 
@@ -1924,10 +2044,15 @@ a{
     background:
 
     linear-gradient(
-        120deg,
-        rgba(181,31,50,.98),
-        rgba(166,38,110,.96)
-    );
+        90deg,
+        rgba(181,31,50,.97),
+        rgba(166,38,110,.95)
+    ),
+
+    var(--photo-6);
+
+    background-size:cover;
+    background-position:center;
 
     color:white;
 
@@ -1940,19 +2065,40 @@ a{
 
     position:absolute;
 
-    width:400px;
-    height:400px;
+    inset:0;
 
-    right:-160px;
+    background:
+    linear-gradient(
+        90deg,
+        rgba(181,31,50,.84),
+        rgba(166,38,110,.88)
+    );
+
+    pointer-events:none;
+}
+
+.final-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    right:-170px;
     top:-190px;
 
     border-radius:50%;
 
-    border:1px solid rgba(255,255,255,.16);
+    border:
+    1px solid
+    rgba(255,255,255,.20);
 }
 
 .final-text,
 .final-action{
+
     position:relative;
     z-index:2;
 }
@@ -1999,7 +2145,7 @@ a{
 
 footer{
 
-    background:#0B0B0C;
+    background:#080B10;
 
     color:white;
 }
@@ -2130,6 +2276,7 @@ footer h3{
     .latter-section,
     .opportunity-grid,
     .photo-story-grid{
+
         grid-template-columns:1fr;
     }
 
@@ -2137,12 +2284,14 @@ footer h3{
     .latter-text,
     .opportunity-text,
     .photo-story-text{
+
         max-width:760px;
     }
 
     .editorial-photo,
     .opportunity-photo,
     .photo-story-main{
+
         max-width:650px;
     }
 
@@ -2159,6 +2308,7 @@ footer h3{
     }
 
     .creative-gallery-item:last-child{
+
         grid-column:1 / -1;
 
         max-width:50%;
@@ -2216,9 +2366,23 @@ footer h3{
         justify-content:flex-start;
 
         gap:3px;
+
+        overflow-x:auto;
+
+        flex-wrap:nowrap;
+
+        padding-bottom:2px;
+
+        scrollbar-width:none;
+    }
+
+    .main-nav::-webkit-scrollbar{
+        display:none;
     }
 
     .nav-link{
+
+        flex-shrink:0;
 
         padding:7px 9px;
 
@@ -2230,9 +2394,11 @@ footer h3{
 
     .hero-section{
 
-        min-height:750px;
+        min-height:780px;
 
         background-attachment:scroll;
+
+        background-position:center;
     }
 
     .hero-inner{
@@ -2305,6 +2471,7 @@ footer h3{
 
     .editorial-text h2,
     .latter-text h2{
+
         font-size:2.25rem;
     }
 
@@ -2357,13 +2524,15 @@ footer h3{
     }
 
 
-    /* MIDDLE BACKGROUND */
+    /* ECONOMICS */
 
     .economics-feature{
 
-        min-height:700px;
+        min-height:720px;
 
         background-attachment:scroll;
+
+        background-position:center;
     }
 
     .economics-card{
@@ -2440,11 +2609,11 @@ footer h3{
     }
 
 
-    /* BOTTOM PHOTO */
+    /* PHOTO STORY */
 
     .photo-story-section{
 
-        min-height:780px;
+        min-height:800px;
 
         padding:75px 6%;
 
@@ -2490,6 +2659,8 @@ footer h3{
         padding:65px 7%;
 
         gap:22px;
+
+        background-attachment:scroll;
     }
 
 
@@ -2558,6 +2729,31 @@ footer h3{
     }
 }
 
+
+/* =========================================================
+   ACCESSIBILITY / REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        transition-duration:.01ms !important;
+
+        scroll-behavior:auto !important;
+    }
+}
+
 </style>
 </head>
 
@@ -2621,8 +2817,7 @@ footer h3{
 
 <!-- =========================================================
      HERO
-     TOP BACKGROUND:
-     LEG CROSSED + HAND ON WOOD
+     PHOTO 1
 ========================================================= -->
 
 <section class="hero-section">
@@ -2734,6 +2929,7 @@ footer h3{
 
 <!-- =========================================================
      EDUCATION
+     PHOTO 2
 ========================================================= -->
 
 <section class="editorial-section">
@@ -2777,8 +2973,8 @@ footer h3{
             <div class="editorial-photo">
 
                 <img
-                    src="IMG_20260210_225825_521.jpg"
-                    alt="Nketia Marfo and learning"
+                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000099e471f48092d9c598859a2a.png"
+                    alt="Nketia Marfo"
                     loading="lazy"
                 >
 
@@ -2794,6 +2990,7 @@ footer h3{
 
 <!-- =========================================================
      LEARNING SUPPORT
+     PHOTO 2
 ========================================================= -->
 
 <section class="writing-photo">
@@ -2801,8 +2998,8 @@ footer h3{
     <div class="writing-photo-card">
 
         <img
-            src="IMG_20260210_225833_813.jpg"
-            alt="A moment from Nketia Marfo's journey"
+            src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000099e471f48092d9c598859a2a.png"
+            alt="Nketia Marfo"
             loading="lazy"
         >
 
@@ -2931,8 +3128,7 @@ footer h3{
 
 <!-- =========================================================
      ECONOMICS
-     MIDDLE BACKGROUND:
-     BLUE HOODIE
+     PHOTO 3
 ========================================================= -->
 
 <section class="economics-feature">
@@ -2981,6 +3177,7 @@ footer h3{
 
 <!-- =========================================================
      ECONOMICS SUPPORT
+     PHOTO 3
 ========================================================= -->
 
 <section class="writing-photo">
@@ -2988,8 +3185,8 @@ footer h3{
     <div class="writing-photo-card">
 
         <img
-            src="IMG_20260210_230240_251.jpg"
-            alt="A moment connected to ideas and opportunity"
+            src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png"
+            alt="Nketia Marfo"
             loading="lazy"
         >
 
@@ -3021,6 +3218,7 @@ footer h3{
 
 <!-- =========================================================
      OPPORTUNITY
+     PHOTO 3
 ========================================================= -->
 
 <section class="opportunity-section">
@@ -3058,7 +3256,7 @@ footer h3{
             <div class="opportunity-photo">
 
                 <img
-                    src="IMG_20260222_125912_662.jpg"
+                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png"
                     alt="Nketia Marfo"
                     loading="lazy"
                 >
@@ -3075,6 +3273,7 @@ footer h3{
 
 <!-- =========================================================
      MUSIC & CREATIVITY
+     PHOTO 4
 ========================================================= -->
 
 <section class="latter-section">
@@ -3114,8 +3313,8 @@ footer h3{
         <div class="latter-photo latter-photo-1">
 
             <img
-                src="IMG-20260614-WA0187.jpg"
-                alt="Nketia Marfo and creativity"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg"
+                alt="Nketia Marfo"
                 loading="lazy"
             >
 
@@ -3125,8 +3324,8 @@ footer h3{
         <div class="latter-photo latter-photo-2">
 
             <img
-                src="IMG-20260614-WA0191.jpg"
-                alt="Nketia Marfo creative interests"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg"
+                alt="Nketia Marfo"
                 loading="lazy"
             >
 
@@ -3136,8 +3335,8 @@ footer h3{
         <div class="latter-photo latter-photo-3">
 
             <img
-                src="IMG-20260628-WA0080.jpg"
-                alt="Nketia Marfo and music"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg"
+                alt="Nketia Marfo"
                 loading="lazy"
             >
 
@@ -3151,6 +3350,7 @@ footer h3{
 
 <!-- =========================================================
      MUSIC SUPPORT
+     PHOTO 4
 ========================================================= -->
 
 <section class="writing-photo">
@@ -3158,8 +3358,8 @@ footer h3{
     <div class="writing-photo-card">
 
         <img
-            src="IMG_20260301_181413_373.jpg"
-            alt="Nketia Marfo creative journey"
+            src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg"
+            alt="Nketia Marfo"
             loading="lazy"
         >
 
@@ -3228,6 +3428,7 @@ footer h3{
 
 <!-- =========================================================
      JOURNEY GALLERY
+     SIX NEW PHOTOS USED
 ========================================================= -->
 
 <section class="home-gallery">
@@ -3259,7 +3460,7 @@ footer h3{
         <div class="home-gallery-item">
 
             <img
-                src="IMG-20260308-WA0121.jpg"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_00000000f8a871f4bb452ab5ea523124.png"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3275,7 +3476,7 @@ footer h3{
         <div class="home-gallery-item">
 
             <img
-                src="IMG-20260327-WA0071.jpg"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000099e471f48092d9c598859a2a.png"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3291,7 +3492,7 @@ footer h3{
         <div class="home-gallery-item">
 
             <img
-                src="IMG-20260328-WA0182.jpg"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3307,23 +3508,7 @@ footer h3{
         <div class="home-gallery-item">
 
             <img
-                src="IMG-20260607-WA0126.jpg"
-                alt="Nketia Marfo"
-                loading="lazy"
-            >
-
-            <div class="home-gallery-caption">
-                <span>Community</span>
-                <strong>People, places and stories</strong>
-            </div>
-
-        </div>
-
-
-        <div class="home-gallery-item">
-
-            <img
-                src="IMG-20260802-WA0445.jpg"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3339,39 +3524,7 @@ footer h3{
         <div class="home-gallery-item">
 
             <img
-                src="IMG_20260303_195951_662.jpg"
-                alt="Nketia Marfo"
-                loading="lazy"
-            >
-
-            <div class="home-gallery-caption">
-                <span>Memory</span>
-                <strong>Moments worth remembering</strong>
-            </div>
-
-        </div>
-
-
-        <div class="home-gallery-item">
-
-            <img
-                src="IMG_20260304_172957_144.jpg"
-                alt="Nketia Marfo"
-                loading="lazy"
-            >
-
-            <div class="home-gallery-caption">
-                <span>Life</span>
-                <strong>The journey continues</strong>
-            </div>
-
-        </div>
-
-
-        <div class="home-gallery-item">
-
-            <img
-                src="IMG_4250.jpg"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000095b471fdb0797eacb26bb28d.png"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3387,14 +3540,14 @@ footer h3{
         <div class="home-gallery-item">
 
             <img
-                src="_MG_3125-Copy.JPG"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_000000007ac471f4af129031a9ca9168.png"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
 
             <div class="home-gallery-caption">
-                <span>Experience</span>
-                <strong>Another chapter of the journey</strong>
+                <span>Memory</span>
+                <strong>Moments worth remembering</strong>
             </div>
 
         </div>
@@ -3403,14 +3556,30 @@ footer h3{
         <div class="home-gallery-item">
 
             <img
-                src="IMG_20260319_182740_279.jpg"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_00000000f8a871f4bb452ab5ea523124.png"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
 
             <div class="home-gallery-caption">
-                <span>Creativity</span>
-                <strong>Expression and imagination</strong>
+                <span>Life</span>
+                <strong>The journey continues</strong>
+            </div>
+
+        </div>
+
+
+        <div class="home-gallery-item">
+
+            <img
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg"
+                alt="Nketia Marfo"
+                loading="lazy"
+            >
+
+            <div class="home-gallery-caption">
+                <span>Expression</span>
+                <strong>Creativity and imagination</strong>
             </div>
 
         </div>
@@ -3423,8 +3592,8 @@ footer h3{
 
 
 <!-- =========================================================
-     BOTTOM BACKGROUND
-     WHITE SHIRT + SEA
+     BOTTOM PHOTO STORY
+     PHOTO 5
 ========================================================= -->
 
 <section class="photo-story-section">
@@ -3434,7 +3603,7 @@ footer h3{
         <div class="photo-story-main">
 
             <img
-                src="IMG_20260319_160228_606.jpg"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000095b471fdb0797eacb26bb28d.png"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3487,6 +3656,7 @@ footer h3{
 
 <!-- =========================================================
      CREATIVE COLLECTION
+     PHOTO 4
 ========================================================= -->
 
 <section class="creative-section">
@@ -3516,7 +3686,7 @@ footer h3{
         <div class="creative-gallery-item">
 
             <img
-                src="IMG_20260319_182732_442.jpg"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg"
                 alt="Nketia Marfo creative journey"
                 loading="lazy"
             >
@@ -3527,7 +3697,7 @@ footer h3{
         <div class="creative-gallery-item">
 
             <img
-                src="IMG_20260319_182734_616.jpg"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3538,7 +3708,7 @@ footer h3{
         <div class="creative-gallery-item">
 
             <img
-                src="IMG_20260319_182737_286.jpg"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_000000007ac471f4af129031a9ca9168.png"
                 alt="Nketia Marfo music and creativity"
                 loading="lazy"
             >
@@ -3553,6 +3723,7 @@ footer h3{
 
 <!-- =========================================================
      COMMUNITY & SOCIETY
+     PHOTO 6
 ========================================================= -->
 
 <section class="community-section">
@@ -3591,11 +3762,11 @@ footer h3{
             </div>
 
 
-            <div class="editorial-photo magenta-ring">
+            <div class="editorial-photo">
 
                 <img
-                    src="IMG-20260614-WA0155.jpg"
-                    alt="Nketia Marfo and community"
+                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_000000007ac471f4af129031a9ca9168.png"
+                    alt="Nketia Marfo"
                     loading="lazy"
                 >
 
@@ -3611,14 +3782,15 @@ footer h3{
 
 <!-- =========================================================
      FINAL WRITING CARD
+     PHOTO 6
 ========================================================= -->
 
 <section class="writing-photo">
 
-    <div class="writing-photo-card">
+    <div class="writing-photo-card final-writing">
 
         <img
-            src="IMG_20260319_182737_286.jpg"
+            src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_000000007ac471f4af129031a9ca9168.png"
             alt="Nketia Marfo"
             loading="lazy"
         >
@@ -3651,6 +3823,7 @@ footer h3{
 
 <!-- =========================================================
      FINAL CTA
+     PHOTO 6
 ========================================================= -->
 
 <section class="final-section">
