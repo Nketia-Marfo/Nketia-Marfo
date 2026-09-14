@@ -24,8 +24,8 @@ rel="stylesheet"
 
 /* =========================================================
    NKETIA MARFO
-   COMPLETE HOME PAGE
-   PREMIUM PHOTO BACKGROUND EDITION
+   PREMIUM HOME PAGE
+   FULL PHOTOGRAPHIC BACKGROUND EDITION
 ========================================================= */
 
 
@@ -34,34 +34,6 @@ rel="stylesheet"
 ========================================================= */
 
 :root{
-
-    /* =====================================================
-       YOUR SIX NEW WEBSITE PHOTOS
-       Converted from GitHub /blob/ URLs to raw images
-    ===================================================== */
-
-    --photo-1:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_00000000f8a871f4bb452ab5ea523124.png");
-
-    --photo-2:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000099e471f48092d9c598859a2a.png");
-
-    --photo-3:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png");
-
-    --photo-4:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg");
-
-    --photo-5:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000095b471fdb0797eacb26bb28d.png");
-
-    --photo-6:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_000000007ac471f4af129031a9ca9168.png");
-
-
-    /* =====================================================
-       BRAND COLORS
-    ===================================================== */
 
     --navy:#06162D;
     --navy-2:#081F3D;
@@ -85,6 +57,12 @@ rel="stylesheet"
 
     --line:rgba(7,26,53,.12);
 
+    --glass:
+    rgba(4,16,34,.72);
+
+    --glass-light:
+    rgba(255,255,255,.12);
+
     --max:1240px;
 
     --sans:
@@ -99,6 +77,71 @@ rel="stylesheet"
     Georgia,
     "Times New Roman",
     serif;
+}
+
+
+/* =========================================================
+   PHOTO LIBRARY
+========================================================= */
+
+:root{
+
+    --photo-old-1:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_00000000f8a871f4bb452ab5ea523124.png");
+
+    --photo-old-2:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000099e471f48092d9c598859a2a.png");
+
+    --photo-old-3:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png");
+
+    --photo-old-4:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg");
+
+    --photo-old-5:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000095b471fdb0797eacb26bb28d.png");
+
+    --photo-old-6:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_000000007ac471f4af129031a9ca9168.png");
+
+
+    /* NEW PHOTOS */
+
+    --photo-new-1:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png");
+
+    --photo-new-2:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225842_806.jpg");
+
+    --photo-new-3:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225825_521.jpg");
+
+    --photo-new-4:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260628-WA0080.jpg");
+
+    --photo-new-5:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260614-WA0155.jpg");
+
+    --photo-new-6:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260607-WA0126.jpg");
+
+    --photo-new-7:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260328-WA0182.jpg");
+
+    --photo-new-8:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_4250.jpg");
+
+    --photo-new-9:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/_MG_3125-Copy.JPG");
+
+    --photo-new-10:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/1744567769378.jpg");
+
+    --photo-new-11:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225833_813.jpg");
+
+    --photo-new-12:
+    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/1789335324322.jpg");
 }
 
 
@@ -140,7 +183,7 @@ a{
 
 
 /* =========================================================
-   GLOBAL CONTAINERS
+   GLOBAL
 ========================================================= */
 
 .header-content,
@@ -153,6 +196,7 @@ a{
 .photo-story-grid,
 .creative-section,
 .footer-content{
+
     width:min(var(--max),92%);
     margin:auto;
 }
@@ -178,11 +222,11 @@ a{
 
     color:white;
 
-    border-bottom:1px solid
-    rgba(242,201,76,.65);
+    border-bottom:
+    1px solid rgba(242,201,76,.65);
 
     box-shadow:
-    0 8px 35px rgba(0,0,0,.18);
+    0 8px 35px rgba(0,0,0,.22);
 
     backdrop-filter:blur(18px);
     -webkit-backdrop-filter:blur(18px);
@@ -230,7 +274,6 @@ a{
     color:#C9D4DF;
 
     font-size:.69rem;
-
     line-height:1.4;
 }
 
@@ -241,7 +284,6 @@ a{
     justify-content:flex-end;
 
     flex-wrap:wrap;
-
     gap:5px;
 }
 
@@ -271,14 +313,11 @@ a{
     background:var(--gold);
 
     color:var(--navy);
-
-    box-shadow:
-    0 5px 20px rgba(242,201,76,.20);
 }
 
 
 /* =========================================================
-   SMALL LABEL
+   LABELS
 ========================================================= */
 
 .small-heading{
@@ -297,7 +336,7 @@ a{
 
 
 /* =========================================================
-   BUTTONS
+   BUTTON
 ========================================================= */
 
 .button{
@@ -331,9 +370,6 @@ a{
     background:var(--green);
 
     transform:translateY(-3px);
-
-    box-shadow:
-    0 13px 30px rgba(23,107,69,.25);
 }
 
 .text-link{
@@ -359,14 +395,14 @@ a{
 
 /* =========================================================
    HERO
-   PHOTO 1
+   NEW PHOTO 1
 ========================================================= */
 
 .hero-section{
 
     position:relative;
 
-    min-height:780px;
+    min-height:790px;
 
     display:flex;
     align-items:center;
@@ -377,64 +413,50 @@ a{
 
     background-image:
 
-    /*
-       PRIMARY DARK READABILITY OVERLAY
-    */
     linear-gradient(
         90deg,
-        rgba(2,11,24,.97) 0%,
-        rgba(3,14,30,.91) 28%,
-        rgba(5,19,39,.76) 52%,
-        rgba(6,22,43,.53) 76%,
-        rgba(6,22,43,.38) 100%
+        rgba(2,9,21,.97) 0%,
+        rgba(3,13,28,.91) 30%,
+        rgba(4,17,35,.73) 58%,
+        rgba(5,20,40,.44) 100%
     ),
 
-    /*
-       PREMIUM BLUE TINT
-    */
     linear-gradient(
         180deg,
-        rgba(4,17,35,.25),
-        rgba(5,18,37,.78)
+        rgba(4,17,35,.18),
+        rgba(3,12,27,.82)
     ),
 
-    var(--photo-1);
+    var(--photo-new-2);
 
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
 }
 
-
-/* Premium light around image */
-
 .hero-section::before{
 
     content:"";
 
     position:absolute;
-
-    width:600px;
-    height:600px;
-
-    right:-200px;
-    top:-210px;
-
-    border-radius:50%;
+    inset:0;
 
     background:
+
     radial-gradient(
-        circle,
+        circle at 82% 20%,
         rgba(242,201,76,.20),
-        rgba(242,201,76,.06) 38%,
-        transparent 70%
+        transparent 23%
+    ),
+
+    radial-gradient(
+        circle at 15% 80%,
+        rgba(181,31,50,.20),
+        transparent 28%
     );
 
     pointer-events:none;
 }
-
-
-/* Bottom cinematic fade */
 
 .hero-section::after{
 
@@ -446,13 +468,13 @@ a{
     right:0;
     bottom:0;
 
-    height:190px;
+    height:220px;
 
     background:
     linear-gradient(
         to bottom,
         transparent,
-        rgba(6,22,43,.98)
+        rgba(6,22,43,1)
     );
 
     pointer-events:none;
@@ -473,11 +495,11 @@ a{
 
     align-items:center;
 
-    padding:100px 0 140px;
+    padding:100px 0 145px;
 }
 
 .hero-text{
-    max-width:690px;
+    max-width:700px;
 }
 
 .hero-text .small-heading{
@@ -494,43 +516,37 @@ a{
 
     font-size:clamp(3.2rem,6vw,6rem);
 
-    line-height:1.00;
+    line-height:1;
 
     letter-spacing:-.055em;
 
     font-weight:600;
 
     text-shadow:
-    0 8px 30px rgba(0,0,0,.42);
+    0 8px 35px rgba(0,0,0,.5);
 }
 
 .hero-text .lead-text{
 
-    max-width:640px;
+    max-width:650px;
 
     margin:28px 0 14px;
 
     color:#F5F8FB;
 
     font-size:1.04rem;
-
     line-height:1.8;
-
-    text-shadow:
-    0 2px 10px rgba(0,0,0,.25);
 }
 
 .hero-text > p:not(.small-heading):not(.lead-text){
 
-    max-width:600px;
+    max-width:610px;
 
     margin:0;
 
     color:#D8E1E9;
 
     font-size:.92rem;
-
-    line-height:1.85;
 }
 
 .hero-actions{
@@ -538,49 +554,37 @@ a{
     margin-top:30px;
 
     display:flex;
-
     align-items:center;
 
     flex-wrap:wrap;
-
     gap:20px;
 }
 
 .hero-actions .text-link{
-
     color:white;
-
-    border-color:var(--gold);
 }
-
-
-/* =========================================================
-   HERO GLASS PANEL
-========================================================= */
 
 .hero-side-card{
 
-    padding:32px;
+    padding:34px;
 
     border:
-    1px solid
-    rgba(255,255,255,.28);
+    1px solid rgba(255,255,255,.28);
 
     border-radius:20px;
 
     background:
-
     linear-gradient(
         145deg,
-        rgba(255,255,255,.17),
-        rgba(255,255,255,.055)
+        rgba(255,255,255,.16),
+        rgba(255,255,255,.045)
     );
 
-    backdrop-filter:blur(16px);
-    -webkit-backdrop-filter:blur(16px);
+    backdrop-filter:blur(17px);
+    -webkit-backdrop-filter:blur(17px);
 
     box-shadow:
-    0 30px 90px rgba(0,0,0,.34);
+    0 30px 90px rgba(0,0,0,.4);
 }
 
 .hero-side-card::before{
@@ -605,7 +609,6 @@ a{
 
     font-size:.64rem;
     font-weight:800;
-
     letter-spacing:.16em;
 }
 
@@ -629,33 +632,37 @@ a{
     color:#E0E7ED;
 
     font-size:.86rem;
-
     line-height:1.8;
 }
 
 
 /* =========================================================
    STATEMENT
+   NEW PHOTO 3
 ========================================================= */
 
 .statement-section{
 
     position:relative;
 
-    padding:90px 7%;
-
-    background:
-
-    linear-gradient(
-        120deg,
-        #06162D,
-        #0B2445 55%,
-        #102F55
-    );
+    padding:100px 7%;
 
     color:white;
 
     overflow:hidden;
+
+    background-image:
+
+    linear-gradient(
+        90deg,
+        rgba(3,13,29,.96),
+        rgba(5,20,42,.83)
+    ),
+
+    var(--photo-new-3);
+
+    background-size:cover;
+    background-position:center;
 }
 
 .statement-section::before{
@@ -663,40 +670,16 @@ a{
     content:"";
 
     position:absolute;
-
-    width:380px;
-    height:380px;
-
-    right:-170px;
-    top:-170px;
-
-    border-radius:50%;
-
-    border:
-    1px solid
-    rgba(242,201,76,.22);
-}
-
-.statement-section::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:300px;
-    height:300px;
-
-    left:-180px;
-    bottom:-190px;
-
-    border-radius:50%;
+    inset:0;
 
     background:
     radial-gradient(
-        circle,
-        rgba(181,31,50,.16),
-        transparent 70%
+        circle at 85% 20%,
+        rgba(242,201,76,.20),
+        transparent 26%
     );
+
+    pointer-events:none;
 }
 
 .statement-inner{
@@ -722,8 +705,6 @@ a{
     font-family:var(--serif);
 
     font-size:2.8rem;
-
-    line-height:1;
 }
 
 .statement-content .small-heading{
@@ -739,8 +720,6 @@ a{
     font-size:clamp(2.1rem,4vw,3.8rem);
 
     line-height:1.08;
-
-    font-weight:600;
 }
 
 .statement-content p:last-child{
@@ -752,46 +731,60 @@ a{
     color:#D3DDE7;
 
     font-size:.96rem;
-
-    line-height:1.85;
 }
 
 
 /* =========================================================
-   GENERAL EDITORIAL SECTION
+   EDUCATION
+   NEW PHOTO 4
 ========================================================= */
 
 .editorial-section{
 
     position:relative;
 
-    padding:105px 0;
+    padding:110px 0;
 
-    background:var(--cream);
+    color:white;
 
     overflow:hidden;
+
+    background-image:
+
+    linear-gradient(
+        90deg,
+        rgba(3,12,26,.95),
+        rgba(4,17,35,.86) 55%,
+        rgba(5,20,40,.66)
+    ),
+
+    var(--photo-new-4);
+
+    background-size:cover;
+    background-position:center;
 }
 
-.editorial-section::before{
+.editorial-section::after{
 
     content:"";
 
     position:absolute;
+    inset:0;
 
-    width:300px;
-    height:300px;
+    background:
+    radial-gradient(
+        circle at 85% 20%,
+        rgba(242,201,76,.16),
+        transparent 25%
+    );
 
-    right:-160px;
-    top:-150px;
-
-    border-radius:50%;
-
-    border:
-    1px solid
-    rgba(242,201,76,.18);
+    pointer-events:none;
 }
 
 .editorial-grid{
+
+    position:relative;
+    z-index:2;
 
     display:grid;
 
@@ -808,41 +801,40 @@ a{
     max-width:610px;
 }
 
+.editorial-text .small-heading{
+    color:var(--gold);
+}
+
 .editorial-text h2{
 
     margin:8px 0 20px;
 
-    color:var(--navy);
+    color:white;
 
     font-family:var(--serif);
 
     font-size:clamp(2.3rem,4vw,4rem);
 
     line-height:1.06;
-
-    letter-spacing:-.03em;
 }
 
 .editorial-text p{
 
     margin:0 0 17px;
 
-    color:var(--muted);
+    color:#D6DFE8;
 
     font-size:.93rem;
-
     line-height:1.85;
 }
 
 .editorial-text .lead-text{
-    color:#293640;
-    font-size:1rem;
+    color:#F2F5F7;
 }
 
-
-/* =========================================================
-   PHOTO FRAME
-========================================================= */
+.editorial-text .text-link{
+    color:white;
+}
 
 .editorial-photo{
 
@@ -853,45 +845,56 @@ a{
 
     margin:auto;
 
-    padding:10px;
+    padding:9px;
 
     background:
     linear-gradient(
         145deg,
         rgba(242,201,76,.9),
-        rgba(255,255,255,.7)
+        rgba(255,255,255,.65)
     );
 
     border-radius:18px;
 
     box-shadow:
-    0 25px 60px rgba(7,26,53,.15);
+    0 25px 70px rgba(0,0,0,.35);
 }
 
 .editorial-photo img{
-
-    position:relative;
-    z-index:1;
 
     width:100%;
     height:430px;
 
     object-fit:cover;
 
-    background:white;
-
     border:4px solid white;
-
     border-radius:11px;
 }
 
 
 /* =========================================================
-   WRITING PHOTO CARDS
+   LEARNING PHOTO STRIP
+   NEW PHOTO 5
 ========================================================= */
 
 .writing-photo{
-    padding:0 0 100px;
+
+    position:relative;
+
+    padding:95px 0;
+
+    background-image:
+
+    linear-gradient(
+        90deg,
+        rgba(4,16,34,.94),
+        rgba(5,21,43,.76)
+    ),
+
+    var(--photo-new-5);
+
+    background-size:cover;
+    background-position:center;
 }
 
 .writing-photo-card{
@@ -908,38 +911,27 @@ a{
 
     padding:27px;
 
-    background:white;
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.14),
+        rgba(255,255,255,.055)
+    );
+
+    border:
+    1px solid rgba(255,255,255,.23);
 
     border-left:5px solid var(--green);
 
     box-shadow:
-    0 18px 50px rgba(7,26,53,.09);
+    0 25px 65px rgba(0,0,0,.28);
 
-    border-radius:0 14px 14px 0;
+    border-radius:0 18px 18px 0;
+
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
 
     overflow:hidden;
-}
-
-.writing-photo-card::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:230px;
-    height:230px;
-
-    right:-100px;
-    top:-110px;
-
-    border-radius:50%;
-
-    background:
-    radial-gradient(
-        circle,
-        rgba(242,201,76,.16),
-        transparent 70%
-    );
 }
 
 .writing-photo-card img{
@@ -952,15 +944,13 @@ a{
     border-radius:10px;
 
     border:3px solid white;
-
-    outline:1px solid var(--line);
 }
 
 .writing-photo-card h3{
 
     margin:5px 0 13px;
 
-    color:var(--navy);
+    color:white;
 
     font-family:var(--serif);
 
@@ -969,34 +959,69 @@ a{
     line-height:1.18;
 }
 
-.writing-photo-card p{
+.writing-photo-card p:not(.small-heading){
 
-    color:var(--muted);
+    color:#D7E0E8;
 
     font-size:.91rem;
-
     line-height:1.8;
+}
+
+.writing-photo-card .small-heading{
+    color:var(--gold);
 }
 
 
 /* =========================================================
    INTERESTS
+   NEW PHOTO 6
 ========================================================= */
 
 .interests-section{
 
-    padding:100px 6%;
+    position:relative;
 
-    background:
+    padding:110px 6%;
+
+    color:white;
+
+    overflow:hidden;
+
+    background-image:
 
     linear-gradient(
         135deg,
-        #F1F4F7,
-        #FFFDF8
+        rgba(3,13,28,.94),
+        rgba(6,25,48,.82)
+    ),
+
+    var(--photo-new-6);
+
+    background-size:cover;
+    background-position:center;
+}
+
+.interests-section::after{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at 15% 20%,
+        rgba(242,201,76,.13),
+        transparent 25%
     );
+
+    pointer-events:none;
 }
 
 .section-intro{
+
+    position:relative;
+    z-index:2;
 
     width:min(760px,100%);
 
@@ -1005,11 +1030,15 @@ a{
     text-align:center;
 }
 
+.section-intro .small-heading{
+    color:var(--gold);
+}
+
 .section-intro h2{
 
     margin:5px 0 15px;
 
-    color:var(--navy);
+    color:white;
 
     font-family:var(--serif);
 
@@ -1020,18 +1049,15 @@ a{
 
 .section-intro p:not(.small-heading){
 
-    max-width:650px;
-
-    margin:auto;
-
-    color:var(--muted);
+    color:#D7E0E8;
 
     font-size:.94rem;
-
-    line-height:1.8;
 }
 
 .interest-grid{
+
+    position:relative;
+    z-index:2;
 
     width:min(var(--max),100%);
 
@@ -1047,30 +1073,36 @@ a{
 
 .interest-card{
 
-    position:relative;
-
     min-width:0;
 
     padding:27px 23px 25px;
 
-    background:white;
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.15),
+        rgba(255,255,255,.055)
+    );
 
-    border-top:4px solid var(--navy);
+    border:
+    1px solid rgba(255,255,255,.20);
 
-    box-shadow:
-    0 10px 30px rgba(7,26,53,.07);
+    border-top:4px solid var(--gold);
+
+    border-radius:12px;
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
 
     transition:.3s ease;
-
-    overflow:hidden;
 }
 
 .interest-card:hover{
 
     transform:translateY(-7px);
 
-    box-shadow:
-    0 20px 40px rgba(7,26,53,.12);
+    background:
+    rgba(255,255,255,.19);
 }
 
 .interest-card:nth-child(2){
@@ -1091,80 +1123,58 @@ a{
 
     font-size:.67rem;
     font-weight:800;
-
-    letter-spacing:.12em;
 }
 
 .interest-card h3{
 
     margin:18px 0 10px;
 
-    color:var(--navy);
+    color:white;
 
     font-family:var(--serif);
 
     font-size:1.4rem;
-
-    line-height:1.15;
 }
 
 .interest-card p{
 
     margin:0;
 
-    color:var(--muted);
+    color:#D4DEE7;
 
     font-size:.84rem;
-
-    line-height:1.7;
 }
 
 
 /* =========================================================
-   ECONOMICS PHOTO SECTION
-   PHOTO 2
+   ECONOMICS
+   NEW PHOTO 7
 ========================================================= */
 
 .economics-feature{
 
     position:relative;
 
-    min-height:700px;
+    min-height:720px;
 
     display:flex;
-
     align-items:center;
 
     color:white;
 
     background-image:
 
-    /*
-       STRONG LEFT READABILITY
-    */
     linear-gradient(
         90deg,
-        rgba(2,11,25,.96) 0%,
-        rgba(3,15,32,.90) 32%,
-        rgba(5,21,42,.76) 58%,
-        rgba(6,24,47,.48) 100%
+        rgba(2,10,22,.97),
+        rgba(3,15,32,.87) 42%,
+        rgba(5,21,42,.55)
     ),
 
-    /*
-       DARK TOP/BOTTOM
-    */
-    linear-gradient(
-        180deg,
-        rgba(5,18,37,.22),
-        rgba(5,18,37,.72)
-    ),
-
-    var(--photo-2);
+    var(--photo-new-7);
 
     background-size:cover;
-
     background-position:center;
-
     background-attachment:fixed;
 
     overflow:hidden;
@@ -1175,21 +1185,13 @@ a{
     content:"";
 
     position:absolute;
-
     inset:0;
 
     background:
-
     radial-gradient(
-        circle at 90% 15%,
+        circle at 85% 15%,
         rgba(242,201,76,.18),
-        transparent 27%
-    ),
-
-    linear-gradient(
-        to bottom,
-        transparent 60%,
-        rgba(3,14,29,.40)
+        transparent 25%
     );
 
     pointer-events:none;
@@ -1214,21 +1216,20 @@ a{
     background:
     linear-gradient(
         145deg,
-        rgba(3,14,29,.82),
-        rgba(5,22,42,.63)
+        rgba(3,14,29,.84),
+        rgba(5,22,42,.61)
     );
 
     border:
-    1px solid
-    rgba(255,255,255,.25);
+    1px solid rgba(255,255,255,.25);
 
     border-radius:18px;
 
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
 
     box-shadow:
-    0 30px 80px rgba(0,0,0,.34);
+    0 30px 80px rgba(0,0,0,.4);
 }
 
 .economics-card .small-heading{
@@ -1251,45 +1252,37 @@ a{
     color:#DCE5EC;
 
     font-size:.94rem;
-
     line-height:1.85;
 }
 
 
 /* =========================================================
-   OPPORTUNITY SECTION
+   OPPORTUNITY
+   NEW PHOTO 8
 ========================================================= */
 
 .opportunity-section{
 
     position:relative;
 
-    padding:100px 6%;
-
-    background:var(--navy);
+    padding:110px 6%;
 
     color:white;
 
     overflow:hidden;
-}
 
-.opportunity-section::before{
+    background-image:
 
-    content:"";
+    linear-gradient(
+        90deg,
+        rgba(3,13,29,.94),
+        rgba(5,21,43,.82)
+    ),
 
-    position:absolute;
+    var(--photo-new-8);
 
-    width:450px;
-    height:450px;
-
-    left:-220px;
-    bottom:-220px;
-
-    border-radius:50%;
-
-    border:
-    1px solid
-    rgba(242,201,76,.22);
+    background-size:cover;
+    background-position:center;
 }
 
 .opportunity-grid{
@@ -1332,8 +1325,6 @@ a{
     color:#D7E0E9;
 
     font-size:.94rem;
-
-    line-height:1.85;
 }
 
 .opportunity-photo{
@@ -1369,14 +1360,14 @@ a{
 
 /* =========================================================
    MUSIC & CREATIVITY
-   PHOTO 3 USED AS LARGE ATMOSPHERIC BACKGROUND
+   NEW PHOTO 9
 ========================================================= */
 
 .latter-section{
 
     position:relative;
 
-    padding:110px 0;
+    padding:115px 0;
 
     display:grid;
 
@@ -1388,6 +1379,8 @@ a{
 
     align-items:center;
 
+    color:white;
+
     overflow:hidden;
 }
 
@@ -1396,19 +1389,19 @@ a{
     content:"";
 
     position:absolute;
-
     inset:0;
 
     z-index:-2;
 
     background-image:
+
     linear-gradient(
         90deg,
-        rgba(255,253,248,.97) 0%,
-        rgba(255,253,248,.93) 45%,
-        rgba(255,253,248,.72) 100%
+        rgba(3,12,27,.94),
+        rgba(5,19,39,.80)
     ),
-    var(--photo-3);
+
+    var(--photo-new-9);
 
     background-size:cover;
     background-position:center;
@@ -1422,28 +1415,29 @@ a{
 
     z-index:-1;
 
-    width:450px;
-    height:450px;
+    inset:0;
 
-    right:-220px;
-    top:-180px;
-
-    border-radius:50%;
-
-    border:
-    1px solid
-    rgba(166,38,110,.16);
+    background:
+    radial-gradient(
+        circle at 80% 25%,
+        rgba(166,38,110,.20),
+        transparent 25%
+    );
 }
 
 .latter-text{
     max-width:580px;
 }
 
+.latter-text .small-heading{
+    color:var(--gold);
+}
+
 .latter-text h2{
 
     margin:8px 0 20px;
 
-    color:var(--navy);
+    color:white;
 
     font-family:var(--serif);
 
@@ -1454,15 +1448,17 @@ a{
 
 .latter-text p:not(.small-heading){
 
-    color:var(--muted);
+    color:#D5DEE7;
 
     font-size:.94rem;
-
-    line-height:1.85;
 }
 
 .latter-text .lead-text{
-    color:#293640;
+    color:#F2F5F7;
+}
+
+.latter-text .text-link{
+    color:white;
 }
 
 .latter-photo-group{
@@ -1484,10 +1480,8 @@ a{
 
     border:4px solid white;
 
-    outline:1px solid var(--line);
-
     box-shadow:
-    0 15px 35px rgba(7,26,53,.15);
+    0 15px 40px rgba(0,0,0,.3);
 
     background:#ddd;
 }
@@ -1509,7 +1503,6 @@ a{
 .latter-photo-1{
 
     border-radius:50%;
-
     aspect-ratio:1;
 }
 
@@ -1535,11 +1528,14 @@ a{
 
 /* =========================================================
    FEATURED THOUGHT
+   NEW PHOTO 10
 ========================================================= */
 
 .featured-section{
 
-    padding:90px 0;
+    position:relative;
+
+    padding:105px 0;
 
     display:grid;
 
@@ -1548,24 +1544,66 @@ a{
     gap:35px;
 
     align-items:start;
+
+    color:white;
+
+    overflow:hidden;
+}
+
+.featured-section::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    z-index:-2;
+
+    background-image:
+
+    linear-gradient(
+        90deg,
+        rgba(3,12,27,.95),
+        rgba(5,21,42,.82)
+    ),
+
+    var(--photo-new-10);
+
+    background-size:cover;
+    background-position:center;
+}
+
+.featured-section::after{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    z-index:-1;
+
+    background:
+    radial-gradient(
+        circle at 90% 50%,
+        rgba(242,201,76,.13),
+        transparent 25%
+    );
 }
 
 .featured-number{
 
-    color:var(--magenta);
+    color:var(--gold);
 
     font-family:var(--serif);
 
     font-size:2.8rem;
-
-    line-height:1;
 }
 
 .featured-text h2{
 
     margin:8px 0 18px;
 
-    color:var(--navy);
+    color:white;
 
     font-family:var(--serif);
 
@@ -1574,31 +1612,57 @@ a{
     line-height:1.08;
 }
 
+.featured-text .small-heading{
+    color:var(--gold);
+}
+
 .featured-text p:not(.small-heading){
 
     max-width:690px;
 
-    color:var(--muted);
+    color:#D5DEE7;
 
     font-size:.94rem;
+}
 
-    line-height:1.85;
+.featured-text .text-link{
+    color:white;
 }
 
 
 /* =========================================================
    GALLERY
-   USES PHOTO 1–6
+   NEW PHOTO 11
 ========================================================= */
 
 .home-gallery{
 
-    padding:100px 6%;
+    position:relative;
 
-    background:white;
+    padding:110px 6%;
+
+    color:white;
+
+    overflow:hidden;
+
+    background-image:
+
+    linear-gradient(
+        135deg,
+        rgba(3,12,27,.94),
+        rgba(5,21,42,.78)
+    ),
+
+    var(--photo-new-11);
+
+    background-size:cover;
+    background-position:center;
 }
 
 .home-gallery-header{
+
+    position:relative;
+    z-index:2;
 
     width:min(720px,100%);
 
@@ -1607,29 +1671,32 @@ a{
     text-align:center;
 }
 
+.home-gallery-header .small-heading{
+    color:var(--gold);
+}
+
 .home-gallery-header h2{
 
     margin:6px 0 16px;
 
-    color:var(--navy);
+    color:white;
 
     font-family:var(--serif);
 
     font-size:clamp(2.3rem,4vw,3.9rem);
-
-    line-height:1.08;
 }
 
 .home-gallery-header p:not(.small-heading){
 
-    color:var(--muted);
+    color:#D5DEE7;
 
     font-size:.94rem;
-
-    line-height:1.8;
 }
 
 .home-gallery-grid{
+
+    position:relative;
+    z-index:2;
 
     width:min(var(--max),100%);
 
@@ -1651,16 +1718,14 @@ a{
 
     overflow:hidden;
 
-    background:#ddd;
+    background:#222;
 
-    border:3px solid white;
-
-    outline:1px solid var(--line);
+    border:3px solid rgba(255,255,255,.85);
 
     border-radius:10px;
 
     box-shadow:
-    0 9px 25px rgba(7,26,53,.09);
+    0 15px 35px rgba(0,0,0,.25);
 }
 
 .home-gallery-item:nth-child(2),
@@ -1687,7 +1752,7 @@ a{
 }
 
 .home-gallery-item:hover img{
-    transform:scale(1.06);
+    transform:scale(1.07);
 }
 
 .home-gallery-caption{
@@ -1703,8 +1768,8 @@ a{
     background:
     linear-gradient(
         to top,
-        rgba(3,14,29,.94),
-        rgba(3,14,29,.30),
+        rgba(3,14,29,.96),
+        rgba(3,14,29,.25),
         transparent
     );
 
@@ -1719,7 +1784,6 @@ a{
     font-weight:800;
 
     letter-spacing:.12em;
-
     text-transform:uppercase;
 }
 
@@ -1732,14 +1796,12 @@ a{
     font-family:var(--serif);
 
     font-size:.9rem;
-
-    line-height:1.3;
 }
 
 
 /* =========================================================
    BOTTOM PHOTO STORY
-   PHOTO 5
+   NEW PHOTO 12
 ========================================================= */
 
 .photo-story-section{
@@ -1749,7 +1811,6 @@ a{
     min-height:720px;
 
     display:flex;
-
     align-items:center;
 
     padding:110px 6%;
@@ -1760,24 +1821,15 @@ a{
 
     linear-gradient(
         90deg,
-        rgba(2,11,24,.96) 0%,
-        rgba(3,15,31,.87) 34%,
-        rgba(5,21,41,.67) 60%,
-        rgba(6,22,43,.40) 100%
+        rgba(2,9,21,.96),
+        rgba(3,15,32,.86) 42%,
+        rgba(5,21,42,.53)
     ),
 
-    linear-gradient(
-        180deg,
-        rgba(5,18,37,.25),
-        rgba(5,18,37,.76)
-    ),
-
-    var(--photo-5);
+    var(--photo-new-12);
 
     background-size:cover;
-
     background-position:center;
-
     background-attachment:fixed;
 
     overflow:hidden;
@@ -1788,21 +1840,13 @@ a{
     content:"";
 
     position:absolute;
-
     inset:0;
 
     background:
-
     radial-gradient(
         circle at 15% 80%,
-        rgba(181,31,50,.22),
+        rgba(181,31,50,.23),
         transparent 28%
-    ),
-
-    linear-gradient(
-        to bottom,
-        transparent 60%,
-        rgba(2,11,24,.45)
     );
 
     pointer-events:none;
@@ -1838,13 +1882,12 @@ a{
 
     border:4px solid white;
 
-    outline:1px solid
-    rgba(242,201,76,.65);
+    outline:1px solid rgba(242,201,76,.65);
 
     border-radius:14px;
 
     box-shadow:
-    0 25px 65px rgba(0,0,0,.35);
+    0 25px 65px rgba(0,0,0,.4);
 }
 
 .photo-story-text{
@@ -1856,13 +1899,12 @@ a{
     background:
     linear-gradient(
         145deg,
-        rgba(3,14,29,.78),
+        rgba(3,14,29,.82),
         rgba(4,18,36,.58)
     );
 
     border:
-    1px solid
-    rgba(255,255,255,.24);
+    1px solid rgba(255,255,255,.24);
 
     border-radius:18px;
 
@@ -1870,7 +1912,7 @@ a{
     -webkit-backdrop-filter:blur(15px);
 
     box-shadow:
-    0 30px 80px rgba(0,0,0,.28);
+    0 30px 80px rgba(0,0,0,.35);
 }
 
 .photo-story-text .small-heading{
@@ -1893,8 +1935,6 @@ a{
     color:#D8E1E8;
 
     font-size:.94rem;
-
-    line-height:1.85;
 }
 
 .photo-story-text .lead-text{
@@ -1904,11 +1944,58 @@ a{
 
 /* =========================================================
    CREATIVE COLLECTION
+   NEW PHOTO 1 + NEW PHOTO 9
 ========================================================= */
 
 .creative-section{
 
-    padding:105px 0;
+    position:relative;
+
+    padding:110px 0;
+
+    color:white;
+
+    overflow:hidden;
+}
+
+.creative-section::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    z-index:-2;
+
+    background-image:
+
+    linear-gradient(
+        90deg,
+        rgba(3,12,27,.94),
+        rgba(5,20,40,.80)
+    ),
+
+    var(--photo-new-1);
+
+    background-size:cover;
+    background-position:center;
+}
+
+.creative-section::after{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    z-index:-1;
+
+    background:
+    radial-gradient(
+        circle at 85% 25%,
+        rgba(166,38,110,.18),
+        transparent 25%
+    );
 }
 
 .creative-header{
@@ -1918,11 +2005,15 @@ a{
     margin-bottom:48px;
 }
 
+.creative-header .small-heading{
+    color:var(--gold);
+}
+
 .creative-header h2{
 
     margin:7px 0 16px;
 
-    color:var(--navy);
+    color:white;
 
     font-family:var(--serif);
 
@@ -1933,11 +2024,9 @@ a{
 
 .creative-header p:not(.small-heading){
 
-    color:var(--muted);
+    color:#D5DEE7;
 
     font-size:.94rem;
-
-    line-height:1.8;
 }
 
 .creative-gallery{
@@ -1958,12 +2047,10 @@ a{
 
     border:3px solid white;
 
-    outline:1px solid var(--line);
-
     border-radius:10px;
 
     box-shadow:
-    0 12px 30px rgba(7,26,53,.09);
+    0 15px 35px rgba(0,0,0,.3);
 }
 
 .creative-gallery-item:nth-child(2){
@@ -1986,15 +2073,17 @@ a{
 
 
 /* =========================================================
-   COMMUNITY & SOCIETY
-   PHOTO 6 ATMOSPHERE
+   COMMUNITY
+   NEW PHOTO 5
 ========================================================= */
 
 .community-section{
 
     position:relative;
 
-    padding:105px 0;
+    padding:110px 0;
+
+    color:white;
 
     overflow:hidden;
 
@@ -2002,36 +2091,62 @@ a{
 
     linear-gradient(
         90deg,
-        rgba(255,253,248,.96),
-        rgba(255,253,248,.91)
+        rgba(3,12,27,.94),
+        rgba(5,20,40,.79)
     ),
 
-    var(--photo-6);
+    var(--photo-new-5);
 
     background-size:cover;
-
     background-position:center;
+}
+
+.community-section::after{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at 82% 25%,
+        rgba(242,201,76,.15),
+        transparent 25%
+    );
+
+    pointer-events:none;
 }
 
 
 /* =========================================================
-   FINAL WRITING CARD
+   FINAL WRITING
+   NEW PHOTO 6
 ========================================================= */
 
 .final-writing{
+
     border-left-color:var(--red);
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(181,31,50,.24),
+        rgba(255,255,255,.07)
+    );
 }
 
 
 /* =========================================================
    FINAL CTA
+   NEW PHOTO 7
 ========================================================= */
 
 .final-section{
 
     position:relative;
 
-    padding:90px 7%;
+    padding:105px 7%;
 
     display:grid;
 
@@ -2041,22 +2156,22 @@ a{
 
     align-items:center;
 
-    background:
-
-    linear-gradient(
-        90deg,
-        rgba(181,31,50,.97),
-        rgba(166,38,110,.95)
-    ),
-
-    var(--photo-6);
-
-    background-size:cover;
-    background-position:center;
-
     color:white;
 
     overflow:hidden;
+
+    background-image:
+
+    linear-gradient(
+        90deg,
+        rgba(110,10,27,.94),
+        rgba(105,21,75,.88)
+    ),
+
+    var(--photo-new-7);
+
+    background-size:cover;
+    background-position:center;
 }
 
 .final-section::before{
@@ -2064,14 +2179,13 @@ a{
     content:"";
 
     position:absolute;
-
     inset:0;
 
     background:
-    linear-gradient(
-        90deg,
-        rgba(181,31,50,.84),
-        rgba(166,38,110,.88)
+    radial-gradient(
+        circle at 85% 25%,
+        rgba(242,201,76,.22),
+        transparent 25%
     );
 
     pointer-events:none;
@@ -2092,8 +2206,7 @@ a{
     border-radius:50%;
 
     border:
-    1px solid
-    rgba(255,255,255,.20);
+    1px solid rgba(255,255,255,.20);
 }
 
 .final-text,
@@ -2121,8 +2234,6 @@ a{
     color:#FFEFF3;
 
     font-size:.94rem;
-
-    line-height:1.8;
 }
 
 .final-action .button{
@@ -2178,8 +2289,6 @@ footer{
     color:#BFC7CF;
 
     font-size:.87rem;
-
-    line-height:1.8;
 }
 
 footer h3{
@@ -2251,21 +2360,10 @@ footer h3{
 
 @media(max-width:1050px){
 
-    .header-content{
-        width:94%;
-    }
-
     .hero-inner{
-
         grid-template-columns:1fr;
-
         gap:40px;
-
         padding:90px 0 120px;
-    }
-
-    .hero-text{
-        max-width:800px;
     }
 
     .hero-side-card{
@@ -2355,10 +2453,6 @@ footer h3{
         gap:15px;
     }
 
-    .site-name{
-        font-size:1.45rem;
-    }
-
     .main-nav{
 
         width:100%;
@@ -2370,8 +2464,6 @@ footer h3{
         overflow-x:auto;
 
         flex-wrap:nowrap;
-
-        padding-bottom:2px;
 
         scrollbar-width:none;
     }
@@ -2397,8 +2489,6 @@ footer h3{
         min-height:780px;
 
         background-attachment:scroll;
-
-        background-position:center;
     }
 
     .hero-inner{
@@ -2418,10 +2508,6 @@ footer h3{
         font-size:.94rem;
     }
 
-    .hero-text > p:not(.small-heading):not(.lead-text){
-        font-size:.86rem;
-    }
-
     .hero-side-card{
         padding:25px;
     }
@@ -2430,7 +2516,7 @@ footer h3{
     /* STATEMENT */
 
     .statement-section{
-        padding:65px 7%;
+        padding:70px 7%;
     }
 
     .statement-inner{
@@ -2440,16 +2526,12 @@ footer h3{
         gap:12px;
     }
 
-    .statement-number{
-        font-size:2.3rem;
-    }
-
     .statement-content h2{
         font-size:2.2rem;
     }
 
 
-    /* EDITORIAL */
+    /* GENERAL */
 
     .editorial-section,
     .latter-section,
@@ -2484,9 +2566,9 @@ footer h3{
 
     .writing-photo{
 
-        width:88%;
+        width:100%;
 
-        padding:0 0 75px;
+        padding:70px 6%;
     }
 
     .writing-photo-card{
@@ -2510,17 +2592,8 @@ footer h3{
         padding:75px 6%;
     }
 
-    .section-intro h2,
-    .home-gallery-header h2{
-        font-size:2.35rem;
-    }
-
     .interest-grid{
         grid-template-columns:1fr;
-    }
-
-    .interest-card{
-        padding:24px;
     }
 
 
@@ -2531,8 +2604,6 @@ footer h3{
         min-height:720px;
 
         background-attachment:scroll;
-
-        background-position:center;
     }
 
     .economics-card{
@@ -2584,10 +2655,6 @@ footer h3{
         grid-template-columns:1fr;
 
         gap:12px;
-    }
-
-    .featured-number{
-        font-size:2.3rem;
     }
 
     .featured-text h2{
@@ -2650,17 +2717,15 @@ footer h3{
     }
 
 
-    /* FINAL CTA */
+    /* FINAL */
 
     .final-section{
 
         grid-template-columns:1fr;
 
-        padding:65px 7%;
+        padding:70px 7%;
 
         gap:22px;
-
-        background-attachment:scroll;
     }
 
 
@@ -2689,10 +2754,6 @@ footer h3{
 
 @media(max-width:400px){
 
-    .main-nav{
-        gap:2px;
-    }
-
     .nav-link{
 
         padding:6px 7px;
@@ -2712,14 +2773,6 @@ footer h3{
         height:175px;
     }
 
-    .home-gallery-caption{
-        padding:30px 10px 10px;
-    }
-
-    .home-gallery-caption strong{
-        font-size:.75rem;
-    }
-
     .latter-photo img{
         height:155px;
     }
@@ -2731,7 +2784,7 @@ footer h3{
 
 
 /* =========================================================
-   ACCESSIBILITY / REDUCED MOTION
+   ACCESSIBILITY
 ========================================================= */
 
 @media(prefers-reduced-motion:reduce){
@@ -2811,13 +2864,11 @@ footer h3{
 </header>
 
 
-
 <main>
 
 
 <!-- =========================================================
      HERO
-     PHOTO 1
 ========================================================= -->
 
 <section class="hero-section">
@@ -2889,7 +2940,6 @@ footer h3{
 </section>
 
 
-
 <!-- =========================================================
      STATEMENT
 ========================================================= -->
@@ -2926,10 +2976,8 @@ footer h3{
 </section>
 
 
-
 <!-- =========================================================
      EDUCATION
-     PHOTO 2
 ========================================================= -->
 
 <section class="editorial-section">
@@ -2973,7 +3021,7 @@ footer h3{
             <div class="editorial-photo">
 
                 <img
-                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000099e471f48092d9c598859a2a.png"
+                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225825_521.jpg"
                     alt="Nketia Marfo"
                     loading="lazy"
                 >
@@ -2987,10 +3035,8 @@ footer h3{
 </section>
 
 
-
 <!-- =========================================================
      LEARNING SUPPORT
-     PHOTO 2
 ========================================================= -->
 
 <section class="writing-photo">
@@ -2998,7 +3044,7 @@ footer h3{
     <div class="writing-photo-card">
 
         <img
-            src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000099e471f48092d9c598859a2a.png"
+            src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260628-WA0080.jpg"
             alt="Nketia Marfo"
             loading="lazy"
         >
@@ -3026,7 +3072,6 @@ footer h3{
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -3125,10 +3170,8 @@ footer h3{
 </section>
 
 
-
 <!-- =========================================================
      ECONOMICS
-     PHOTO 3
 ========================================================= -->
 
 <section class="economics-feature">
@@ -3159,11 +3202,7 @@ footer h3{
                 skills into meaningful work.
             </p>
 
-            <a
-                href="blog.html"
-                class="button"
-                style="margin-top:12px;"
-            >
+            <a href="blog.html" class="button" style="margin-top:12px;">
                 Explore my thinking →
             </a>
 
@@ -3174,51 +3213,8 @@ footer h3{
 </section>
 
 
-
-<!-- =========================================================
-     ECONOMICS SUPPORT
-     PHOTO 3
-========================================================= -->
-
-<section class="writing-photo">
-
-    <div class="writing-photo-card">
-
-        <img
-            src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png"
-            alt="Nketia Marfo"
-            loading="lazy"
-        >
-
-        <div>
-
-            <p class="small-heading">
-                IDEAS & WORK
-            </p>
-
-            <h3>
-                Skills become more powerful
-                when opportunities meet them.
-            </h3>
-
-            <p>
-                I think about how young people can move
-                from learning skills to finding ways to
-                use those skills, serve others and create
-                sustainable opportunities.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
 <!-- =========================================================
      OPPORTUNITY
-     PHOTO 3
 ========================================================= -->
 
 <section class="opportunity-section">
@@ -3256,7 +3252,7 @@ footer h3{
             <div class="opportunity-photo">
 
                 <img
-                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png"
+                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_4250.jpg"
                     alt="Nketia Marfo"
                     loading="lazy"
                 >
@@ -3270,10 +3266,8 @@ footer h3{
 </section>
 
 
-
 <!-- =========================================================
      MUSIC & CREATIVITY
-     PHOTO 4
 ========================================================= -->
 
 <section class="latter-section">
@@ -3313,7 +3307,7 @@ footer h3{
         <div class="latter-photo latter-photo-1">
 
             <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/_MG_3125-Copy.JPG"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3324,7 +3318,7 @@ footer h3{
         <div class="latter-photo latter-photo-2">
 
             <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/1744567769378.jpg"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3335,7 +3329,7 @@ footer h3{
         <div class="latter-photo latter-photo-3">
 
             <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225833_813.jpg"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3345,47 +3339,6 @@ footer h3{
     </div>
 
 </section>
-
-
-
-<!-- =========================================================
-     MUSIC SUPPORT
-     PHOTO 4
-========================================================= -->
-
-<section class="writing-photo">
-
-    <div class="writing-photo-card">
-
-        <img
-            src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg"
-            alt="Nketia Marfo"
-            loading="lazy"
-        >
-
-        <div>
-
-            <p class="small-heading">
-                CREATIVE EXPRESSION
-            </p>
-
-            <h3>
-                Creativity gives ideas
-                another language.
-            </h3>
-
-            <p>
-                Through music and creative expression,
-                I continue exploring how people communicate,
-                preserve culture and connect with one another.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
 
 
 <!-- =========================================================
@@ -3425,10 +3378,8 @@ footer h3{
 </section>
 
 
-
 <!-- =========================================================
      JOURNEY GALLERY
-     SIX NEW PHOTOS USED
 ========================================================= -->
 
 <section class="home-gallery">
@@ -3456,11 +3407,10 @@ footer h3{
 
     <div class="home-gallery-grid">
 
-
         <div class="home-gallery-item">
 
             <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_00000000f8a871f4bb452ab5ea523124.png"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3476,7 +3426,7 @@ footer h3{
         <div class="home-gallery-item">
 
             <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000099e471f48092d9c598859a2a.png"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225842_806.jpg"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3492,7 +3442,7 @@ footer h3{
         <div class="home-gallery-item">
 
             <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225825_521.jpg"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3508,7 +3458,7 @@ footer h3{
         <div class="home-gallery-item">
 
             <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260628-WA0080.jpg"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3524,7 +3474,7 @@ footer h3{
         <div class="home-gallery-item">
 
             <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000095b471fdb0797eacb26bb28d.png"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260614-WA0155.jpg"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3540,7 +3490,7 @@ footer h3{
         <div class="home-gallery-item">
 
             <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_000000007ac471f4af129031a9ca9168.png"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260607-WA0126.jpg"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3556,7 +3506,7 @@ footer h3{
         <div class="home-gallery-item">
 
             <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_00000000f8a871f4bb452ab5ea523124.png"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260328-WA0182.jpg"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3572,7 +3522,7 @@ footer h3{
         <div class="home-gallery-item">
 
             <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_4250.jpg"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3584,16 +3534,13 @@ footer h3{
 
         </div>
 
-
     </div>
 
 </section>
 
 
-
 <!-- =========================================================
      BOTTOM PHOTO STORY
-     PHOTO 5
 ========================================================= -->
 
 <section class="photo-story-section">
@@ -3603,7 +3550,7 @@ footer h3{
         <div class="photo-story-main">
 
             <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000095b471fdb0797eacb26bb28d.png"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/1789335324322.jpg"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3638,11 +3585,9 @@ footer h3{
                 disappear.
             </p>
 
-            <a
-                href="about.html"
-                class="text-link"
-                style="color:white;"
-            >
+            <a href="about.html"
+               class="text-link"
+               style="color:white;">
                 Learn more about me →
             </a>
 
@@ -3653,10 +3598,8 @@ footer h3{
 </section>
 
 
-
 <!-- =========================================================
      CREATIVE COLLECTION
-     PHOTO 4
 ========================================================= -->
 
 <section class="creative-section">
@@ -3686,7 +3629,7 @@ footer h3{
         <div class="creative-gallery-item">
 
             <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/1744567769378.jpg"
                 alt="Nketia Marfo creative journey"
                 loading="lazy"
             >
@@ -3697,7 +3640,7 @@ footer h3{
         <div class="creative-gallery-item">
 
             <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225833_813.jpg"
                 alt="Nketia Marfo"
                 loading="lazy"
             >
@@ -3708,7 +3651,7 @@ footer h3{
         <div class="creative-gallery-item">
 
             <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_000000007ac471f4af129031a9ca9168.png"
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/1789335324322.jpg"
                 alt="Nketia Marfo music and creativity"
                 loading="lazy"
             >
@@ -3720,10 +3663,8 @@ footer h3{
 </section>
 
 
-
 <!-- =========================================================
      COMMUNITY & SOCIETY
-     PHOTO 6
 ========================================================= -->
 
 <section class="community-section">
@@ -3765,7 +3706,7 @@ footer h3{
             <div class="editorial-photo">
 
                 <img
-                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_000000007ac471f4af129031a9ca9168.png"
+                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260614-WA0155.jpg"
                     alt="Nketia Marfo"
                     loading="lazy"
                 >
@@ -3779,10 +3720,8 @@ footer h3{
 </section>
 
 
-
 <!-- =========================================================
      FINAL WRITING CARD
-     PHOTO 6
 ========================================================= -->
 
 <section class="writing-photo">
@@ -3790,7 +3729,7 @@ footer h3{
     <div class="writing-photo-card final-writing">
 
         <img
-            src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_000000007ac471f4af129031a9ca9168.png"
+            src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260607-WA0126.jpg"
             alt="Nketia Marfo"
             loading="lazy"
         >
@@ -3820,10 +3759,8 @@ footer h3{
 </section>
 
 
-
 <!-- =========================================================
      FINAL CTA
-     PHOTO 6
 ========================================================= -->
 
 <section class="final-section">
@@ -3863,7 +3800,6 @@ footer h3{
 </main>
 
 
-
 <!-- =========================================================
      FOOTER
 ========================================================= -->
@@ -3871,7 +3807,6 @@ footer h3{
 <footer>
 
     <div class="footer-content">
-
 
         <div class="footer-brand">
 
@@ -3894,25 +3829,11 @@ footer h3{
                 Explore
             </h3>
 
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="blog.html">
-                Blog
-            </a>
-
-            <a href="Students-Voice.html">
-                Student Voices
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="Students-Voice.html">Student Voices</a>
+            <a href="contact.html">Contact</a>
 
         </div>
 
