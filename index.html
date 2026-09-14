@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,67 +17,56 @@ content="Nketia Marfo — thinking deeply, creating freely, and sharing ideas ab
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
 rel="stylesheet"
 >
 
 <style>
 
 /* =========================================================
-   NKETIA MARFO
-   PREMIUM HOME PAGE
-   FULL PHOTOGRAPHIC BACKGROUND EDITION
-========================================================= */
-
-
-/* =========================================================
-   ROOT
+   NKETIA MARFO — PREMIUM EDITORIAL HOME
 ========================================================= */
 
 :root{
 
-    --navy:#06162D;
-    --navy-2:#081F3D;
-    --navy-3:#0D2B50;
+    --navy:#06152b;
+    --navy-deep:#020b18;
+    --navy-soft:#0c2747;
 
-    --gold:#F2C94C;
-    --gold-light:#FFE58A;
+    --gold:#f2c94c;
+    --gold-light:#ffe79a;
 
-    --red:#B51F32;
-    --red-dark:#841426;
+    --red:#b51f32;
+    --red-dark:#821426;
 
-    --green:#176B45;
-    --magenta:#A6266E;
+    --green:#176b45;
+    --magenta:#a6266e;
 
-    --white:#FFFFFF;
-    --cream:#FFFDF8;
-    --soft:#F4F6F8;
+    --white:#fff;
+    --cream:#fbfaf7;
 
-    --text:#172431;
-    --muted:#65727E;
+    --text:#172331;
+    --muted:#66727e;
 
-    --line:rgba(7,26,53,.12);
+    --line:rgba(255,255,255,.14);
 
-    --glass:
-    rgba(4,16,34,.72);
-
-    --glass-light:
-    rgba(255,255,255,.12);
-
-    --max:1240px;
-
-    --sans:
-    "Inter",
-    "Segoe UI",
-    Roboto,
-    Arial,
-    sans-serif;
+    --max:1280px;
 
     --serif:
-    "Playfair Display",
-    Georgia,
-    "Times New Roman",
-    serif;
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    --sans:
+        "Inter",
+        "DM Sans",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    --shadow:
+        0 30px 90px rgba(0,0,0,.28);
+
 }
 
 
@@ -86,62 +76,54 @@ rel="stylesheet"
 
 :root{
 
-    --photo-old-1:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_00000000f8a871f4bb452ab5ea523124.png");
+    --photo-1:url(
+        "https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225842_806.jpg"
+    );
 
-    --photo-old-2:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000099e471f48092d9c598859a2a.png");
+    --photo-2:url(
+        "https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png"
+    );
 
-    --photo-old-3:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png");
+    --photo-3:url(
+        "https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225825_521.jpg"
+    );
 
-    --photo-old-4:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260124-WA0015.jpg");
+    --photo-4:url(
+        "https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260628-WA0080.jpg"
+    );
 
-    --photo-old-5:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000095b471fdb0797eacb26bb28d.png");
+    --photo-5:url(
+        "https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260614-WA0155.jpg"
+    );
 
-    --photo-old-6:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_000000007ac471f4af129031a9ca9168.png");
+    --photo-6:url(
+        "https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260607-WA0126.jpg"
+    );
 
+    --photo-7:url(
+        "https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260328-WA0182.jpg"
+    );
 
-    /* NEW PHOTOS */
+    --photo-8:url(
+        "https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_4250.jpg"
+    );
 
-    --photo-new-1:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png");
+    --photo-9:url(
+        "https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/_MG_3125-Copy.JPG"
+    );
 
-    --photo-new-2:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225842_806.jpg");
+    --photo-10:url(
+        "https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/1744567769378.jpg"
+    );
 
-    --photo-new-3:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225825_521.jpg");
+    --photo-11:url(
+        "https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225833_813.jpg"
+    );
 
-    --photo-new-4:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260628-WA0080.jpg");
+    --photo-12:url(
+        "https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/1789335324322.jpg"
+    );
 
-    --photo-new-5:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260614-WA0155.jpg");
-
-    --photo-new-6:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260607-WA0126.jpg");
-
-    --photo-new-7:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260328-WA0182.jpg");
-
-    --photo-new-8:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_4250.jpg");
-
-    --photo-new-9:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/_MG_3125-Copy.JPG");
-
-    --photo-new-10:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/1744567769378.jpg");
-
-    --photo-new-11:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225833_813.jpg");
-
-    --photo-new-12:
-    url("https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/1789335324322.jpg");
 }
 
 
@@ -158,12 +140,17 @@ html{
 }
 
 body{
+
     margin:0;
+
     background:var(--cream);
+
     color:var(--text);
+
     font-family:var(--sans);
-    font-size:16px;
-    line-height:1.7;
+
+    line-height:1.75;
+
     overflow-x:hidden;
 }
 
@@ -174,6 +161,7 @@ img{
 
 a{
     text-decoration:none;
+    color:inherit;
 }
 
 button,
@@ -183,21 +171,13 @@ a{
 
 
 /* =========================================================
-   GLOBAL
+   GLOBAL CONTAINERS
 ========================================================= */
 
-.header-content,
-.hero-inner,
-.editorial-section-inner,
-.writing-photo,
-.opportunity-inner,
-.latter-section,
-.featured-section,
-.photo-story-grid,
-.creative-section,
-.footer-content{
+.container{
 
     width:min(var(--max),92%);
+
     margin:auto;
 }
 
@@ -209,93 +189,96 @@ a{
 .site-header{
 
     position:sticky;
+
     top:0;
-    z-index:1000;
+
+    z-index:9999;
 
     background:
-    linear-gradient(
-        90deg,
-        rgba(3,14,29,.98),
-        rgba(6,23,45,.97),
-        rgba(8,29,54,.96)
-    );
-
-    color:white;
+        rgba(3,13,27,.94);
 
     border-bottom:
-    1px solid rgba(242,201,76,.65);
+        1px solid rgba(242,201,76,.45);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
 
     box-shadow:
-    0 8px 35px rgba(0,0,0,.22);
-
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
+        0 12px 40px rgba(0,0,0,.18);
 }
 
-.header-content{
+.header-inner{
 
-    min-height:78px;
+    width:min(var(--max),92%);
+
+    min-height:80px;
+
+    margin:auto;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
-    gap:30px;
+    gap:35px;
 }
 
-.brand-block{
+.brand{
+
+    display:flex;
+
+    flex-direction:column;
+
     flex-shrink:0;
 }
 
-.site-name{
-
-    display:block;
+.brand-name{
 
     color:white;
 
     font-family:var(--serif);
 
     font-size:1.55rem;
+
     font-weight:700;
 
-    letter-spacing:-.025em;
+    line-height:1;
 
-    transition:.25s ease;
+    letter-spacing:-.03em;
 }
 
-.site-name:hover{
-    color:var(--gold);
-}
+.brand-tagline{
 
-.brand-block p{
+    margin-top:6px;
 
-    margin:2px 0 0;
+    color:#b8c4d0;
 
-    color:#C9D4DF;
+    font-size:.64rem;
 
-    font-size:.69rem;
-    line-height:1.4;
+    letter-spacing:.02em;
 }
 
 .main-nav{
 
     display:flex;
-    align-items:center;
-    justify-content:flex-end;
 
-    flex-wrap:wrap;
-    gap:5px;
+    align-items:center;
+
+    gap:4px;
 }
 
 .nav-link{
 
-    color:#F5F7FA;
-
-    padding:8px 13px;
+    padding:9px 14px;
 
     border-radius:999px;
 
-    font-size:.79rem;
+    color:#eef2f6;
+
+    font-size:.78rem;
+
     font-weight:600;
 
     transition:.25s ease;
@@ -303,7 +286,7 @@ a{
 
 .nav-link:hover{
 
-    background:rgba(181,31,50,.88);
+    background:rgba(181,31,50,.85);
 
     transform:translateY(-1px);
 }
@@ -317,50 +300,72 @@ a{
 
 
 /* =========================================================
-   LABELS
+   COMMON TYPOGRAPHY
 ========================================================= */
 
-.small-heading{
+.eyebrow{
 
-    margin:0 0 12px;
+    margin:0 0 15px;
 
-    color:var(--red);
+    color:var(--gold);
 
-    font-size:.67rem;
+    font-size:.66rem;
+
     font-weight:800;
 
-    letter-spacing:.17em;
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
 
     line-height:1.4;
 }
 
+.display-title{
 
-/* =========================================================
-   BUTTON
-========================================================= */
+    margin:0;
+
+    font-family:var(--serif);
+
+    font-weight:600;
+
+    letter-spacing:-.045em;
+
+    line-height:1.02;
+}
+
+.body-copy{
+
+    color:#d7e0e8;
+
+    font-size:.94rem;
+
+    line-height:1.9;
+}
 
 .button{
 
     display:inline-flex;
 
     align-items:center;
+
     justify-content:center;
 
-    min-height:46px;
+    min-height:48px;
 
-    padding:11px 21px;
+    padding:12px 22px;
+
+    border-radius:7px;
 
     background:var(--red);
 
     color:white;
 
-    border-radius:8px;
+    font-size:.8rem;
 
-    font-size:.84rem;
     font-weight:700;
 
     box-shadow:
-    0 10px 28px rgba(181,31,50,.24);
+        0 12px 30px rgba(181,31,50,.25);
 
     transition:.25s ease;
 }
@@ -372,39 +377,50 @@ a{
     transform:translateY(-3px);
 }
 
-.text-link{
+.editorial-link{
 
-    display:inline-block;
+    display:inline-flex;
 
-    color:var(--navy);
+    align-items:center;
 
-    font-size:.86rem;
-    font-weight:800;
+    gap:8px;
 
-    border-bottom:2px solid var(--gold);
+    margin-top:10px;
 
-    padding-bottom:2px;
+    color:white;
 
-    transition:.2s ease;
+    font-size:.82rem;
+
+    font-weight:700;
+
+    border-bottom:1px solid var(--gold);
+
+    padding-bottom:4px;
+
+    transition:.25s ease;
 }
 
-.text-link:hover{
-    color:var(--magenta);
+.editorial-link:hover{
+
+    color:var(--gold);
+
+    gap:12px;
 }
 
 
 /* =========================================================
    HERO
-   NEW PHOTO 1
 ========================================================= */
 
-.hero-section{
+.hero{
 
     position:relative;
 
-    min-height:790px;
+    min-height:
+        calc(100vh - 80px);
 
     display:flex;
+
     align-items:center;
 
     overflow:hidden;
@@ -413,208 +429,204 @@ a{
 
     background-image:
 
-    linear-gradient(
-        90deg,
-        rgba(2,9,21,.97) 0%,
-        rgba(3,13,28,.91) 30%,
-        rgba(4,17,35,.73) 58%,
-        rgba(5,20,40,.44) 100%
-    ),
+        linear-gradient(
+            90deg,
+            rgba(2,8,19,.98) 0%,
+            rgba(3,13,28,.94) 32%,
+            rgba(4,17,35,.73) 58%,
+            rgba(4,17,35,.28) 100%
+        ),
 
-    linear-gradient(
-        180deg,
-        rgba(4,17,35,.18),
-        rgba(3,12,27,.82)
-    ),
+        linear-gradient(
+            180deg,
+            rgba(2,9,20,.05),
+            rgba(2,9,20,.75)
+        ),
 
-    var(--photo-new-2);
+        var(--photo-1);
 
     background-size:cover;
+
     background-position:center;
+
     background-attachment:fixed;
 }
 
-.hero-section::before{
+.hero::before{
 
     content:"";
 
     position:absolute;
+
     inset:0;
 
     background:
 
-    radial-gradient(
-        circle at 82% 20%,
-        rgba(242,201,76,.20),
-        transparent 23%
-    ),
+        radial-gradient(
+            circle at 78% 18%,
+            rgba(242,201,76,.18),
+            transparent 23%
+        ),
 
-    radial-gradient(
-        circle at 15% 80%,
-        rgba(181,31,50,.20),
-        transparent 28%
-    );
-
-    pointer-events:none;
+        linear-gradient(
+            135deg,
+            rgba(181,31,50,.10),
+            transparent 40%
+        );
 }
 
-.hero-section::after{
+.hero::after{
 
     content:"";
 
     position:absolute;
 
     left:0;
+
     right:0;
+
     bottom:0;
 
-    height:220px;
+    height:180px;
 
     background:
-    linear-gradient(
-        to bottom,
-        transparent,
-        rgba(6,22,43,1)
-    );
-
-    pointer-events:none;
+        linear-gradient(
+            to bottom,
+            transparent,
+            var(--navy)
+        );
 }
 
 .hero-inner{
 
     position:relative;
+
     z-index:2;
+
+    width:min(var(--max),92%);
+
+    margin:auto;
 
     display:grid;
 
     grid-template-columns:
-    minmax(0,1.04fr)
-    minmax(330px,.72fr);
-
-    gap:70px;
+        minmax(0,1.05fr)
+        minmax(300px,.55fr);
 
     align-items:center;
 
-    padding:100px 0 145px;
+    gap:80px;
+
+    padding:120px 0 160px;
 }
 
-.hero-text{
-    max-width:700px;
+.hero-content{
+
+    max-width:760px;
 }
 
-.hero-text .small-heading{
-    color:var(--gold);
-}
+.hero-title{
 
-.hero-text h1{
-
-    margin:0;
-
-    color:white;
-
-    font-family:var(--serif);
-
-    font-size:clamp(3.2rem,6vw,6rem);
-
-    line-height:1;
-
-    letter-spacing:-.055em;
-
-    font-weight:600;
+    font-size:
+        clamp(3.4rem,7vw,6.9rem);
 
     text-shadow:
-    0 8px 35px rgba(0,0,0,.5);
+        0 15px 45px rgba(0,0,0,.45);
 }
 
-.hero-text .lead-text{
+.hero-description{
 
-    max-width:650px;
+    max-width:690px;
 
-    margin:28px 0 14px;
+    margin:30px 0 0;
 
-    color:#F5F8FB;
+    color:#f1f5f8;
 
-    font-size:1.04rem;
-    line-height:1.8;
+    font-size:1rem;
+
+    line-height:1.9;
 }
 
-.hero-text > p:not(.small-heading):not(.lead-text){
+.hero-subdescription{
 
-    max-width:610px;
+    max-width:620px;
 
-    margin:0;
+    margin:15px 0 0;
 
-    color:#D8E1E9;
+    color:#bdc9d4;
 
-    font-size:.92rem;
+    font-size:.88rem;
 }
 
 .hero-actions{
 
-    margin-top:30px;
-
     display:flex;
+
     align-items:center;
 
     flex-wrap:wrap;
-    gap:20px;
+
+    gap:22px;
+
+    margin-top:32px;
 }
 
-.hero-actions .text-link{
-    color:white;
-}
+.hero-note{
 
-.hero-side-card{
+    position:relative;
 
-    padding:34px;
-
-    border:
-    1px solid rgba(255,255,255,.28);
+    padding:32px;
 
     border-radius:20px;
 
     background:
-    linear-gradient(
-        145deg,
-        rgba(255,255,255,.16),
-        rgba(255,255,255,.045)
-    );
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.15),
+            rgba(255,255,255,.045)
+        );
 
-    backdrop-filter:blur(17px);
-    -webkit-backdrop-filter:blur(17px);
+    border:
+        1px solid rgba(255,255,255,.25);
 
-    box-shadow:
-    0 30px 90px rgba(0,0,0,.4);
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:var(--shadow);
 }
 
-.hero-side-card::before{
+.hero-note::before{
 
     content:"";
 
     display:block;
 
-    width:48px;
+    width:45px;
+
     height:3px;
 
     margin-bottom:20px;
 
     background:var(--gold);
 
-    border-radius:10px;
+    border-radius:20px;
 }
 
-.hero-side-card .mini-label{
+.hero-note-label{
 
     color:var(--gold);
 
-    font-size:.64rem;
+    font-size:.62rem;
+
     font-weight:800;
-    letter-spacing:.16em;
+
+    letter-spacing:.18em;
 }
 
-.hero-side-card h3{
+.hero-note h2{
 
-    margin:14px 0 12px;
+    margin:15px 0 13px;
 
     color:white;
 
@@ -622,113 +634,160 @@ a{
 
     font-size:2rem;
 
-    line-height:1.1;
+    line-height:1.15;
 }
 
-.hero-side-card p{
+.hero-note p{
 
     margin:0;
 
-    color:#E0E7ED;
+    color:#d7e0e8;
 
-    font-size:.86rem;
-    line-height:1.8;
+    font-size:.84rem;
+
+    line-height:1.85;
+}
+
+
+/* =========================================================
+   TRANSITION STRIP
+========================================================= */
+
+.identity-strip{
+
+    position:relative;
+
+    z-index:5;
+
+    margin-top:-1px;
+
+    background:var(--navy);
+
+    color:white;
+
+    border-top:
+        1px solid rgba(242,201,76,.2);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+}
+
+.identity-inner{
+
+    width:min(1100px,88%);
+
+    min-height:100px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px 32px;
+
+    text-align:center;
+}
+
+.identity-inner span{
+
+    color:#dbe3ea;
+
+    font-size:.69rem;
+
+    font-weight:700;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+}
+
+.identity-inner i{
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    background:var(--gold);
 }
 
 
 /* =========================================================
    STATEMENT
-   NEW PHOTO 3
 ========================================================= */
 
-.statement-section{
+.statement{
 
     position:relative;
 
-    padding:100px 7%;
+    overflow:hidden;
+
+    padding:125px 0;
 
     color:white;
 
-    overflow:hidden;
+    background:
 
-    background-image:
+        linear-gradient(
+            105deg,
+            rgba(3,12,27,.98),
+            rgba(5,21,43,.86)
+        ),
 
-    linear-gradient(
-        90deg,
-        rgba(3,13,29,.96),
-        rgba(5,20,42,.83)
-    ),
-
-    var(--photo-new-3);
+        var(--photo-3);
 
     background-size:cover;
+
     background-position:center;
-}
-
-.statement-section::before{
-
-    content:"";
-
-    position:absolute;
-    inset:0;
-
-    background:
-    radial-gradient(
-        circle at 85% 20%,
-        rgba(242,201,76,.20),
-        transparent 26%
-    );
-
-    pointer-events:none;
 }
 
 .statement-inner{
 
-    position:relative;
-    z-index:2;
-
-    width:min(1050px,100%);
+    width:min(1060px,88%);
 
     margin:auto;
 
     display:grid;
 
-    grid-template-columns:90px 1fr;
+    grid-template-columns:100px 1fr;
 
-    gap:35px;
+    gap:40px;
+
+    align-items:start;
 }
 
-.statement-number{
+.section-number{
 
     color:var(--gold);
 
     font-family:var(--serif);
 
-    font-size:2.8rem;
+    font-size:2.7rem;
+
+    line-height:1;
 }
 
-.statement-content .small-heading{
-    color:var(--gold);
+.statement-title{
+
+    max-width:850px;
+
+    font-size:
+        clamp(2.5rem,5vw,4.6rem);
 }
 
-.statement-content h2{
-
-    margin:0 0 20px;
-
-    font-family:var(--serif);
-
-    font-size:clamp(2.1rem,4vw,3.8rem);
-
-    line-height:1.08;
-}
-
-.statement-content p:last-child{
+.statement-copy{
 
     max-width:700px;
 
-    margin:0;
+    margin:25px 0 0;
 
-    color:#D3DDE7;
+    color:#d0dae3;
 
     font-size:.96rem;
 }
@@ -736,471 +795,407 @@ a{
 
 /* =========================================================
    EDUCATION
-   NEW PHOTO 4
 ========================================================= */
 
-.editorial-section{
+.education{
 
     position:relative;
-
-    padding:110px 0;
-
-    color:white;
 
     overflow:hidden;
 
-    background-image:
+    padding:135px 0;
 
-    linear-gradient(
-        90deg,
-        rgba(3,12,26,.95),
-        rgba(4,17,35,.86) 55%,
-        rgba(5,20,40,.66)
-    ),
+    color:white;
 
-    var(--photo-new-4);
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(2,10,22,.97),
+            rgba(4,18,37,.88) 53%,
+            rgba(4,18,37,.56)
+        ),
+
+        var(--photo-4);
 
     background-size:cover;
+
     background-position:center;
 }
 
-.editorial-section::after{
+.education-grid{
 
-    content:"";
+    width:min(var(--max),92%);
 
-    position:absolute;
-    inset:0;
-
-    background:
-    radial-gradient(
-        circle at 85% 20%,
-        rgba(242,201,76,.16),
-        transparent 25%
-    );
-
-    pointer-events:none;
-}
-
-.editorial-grid{
-
-    position:relative;
-    z-index:2;
+    margin:auto;
 
     display:grid;
 
     grid-template-columns:
-    minmax(0,1fr)
-    minmax(0,1fr);
+        minmax(0,1fr)
+        minmax(360px,.72fr);
 
-    gap:70px;
+    gap:90px;
 
     align-items:center;
 }
 
-.editorial-text{
-    max-width:610px;
+.education-copy{
+
+    max-width:650px;
 }
 
-.editorial-text .small-heading{
-    color:var(--gold);
-}
+.section-title{
 
-.editorial-text h2{
-
-    margin:8px 0 20px;
+    margin:0;
 
     color:white;
 
     font-family:var(--serif);
 
-    font-size:clamp(2.3rem,4vw,4rem);
+    font-size:
+        clamp(2.7rem,5vw,4.7rem);
 
-    line-height:1.06;
+    line-height:1.04;
+
+    letter-spacing:-.045em;
 }
 
-.editorial-text p{
+.education-copy .body-copy{
 
-    margin:0 0 17px;
+    margin:26px 0 14px;
 
-    color:#D6DFE8;
-
-    font-size:.93rem;
-    line-height:1.85;
+    max-width:650px;
 }
 
-.editorial-text .lead-text{
-    color:#F2F5F7;
-}
-
-.editorial-text .text-link{
-    color:white;
-}
-
-.editorial-photo{
+.education-image{
 
     position:relative;
-
-    width:100%;
-    max-width:530px;
-
-    margin:auto;
 
     padding:9px;
 
     background:
-    linear-gradient(
-        145deg,
-        rgba(242,201,76,.9),
-        rgba(255,255,255,.65)
-    );
+        linear-gradient(
+            135deg,
+            var(--gold),
+            rgba(255,255,255,.65)
+        );
 
     border-radius:18px;
 
-    box-shadow:
-    0 25px 70px rgba(0,0,0,.35);
+    box-shadow:var(--shadow);
+
+    transform:rotate(1.2deg);
 }
 
-.editorial-photo img{
+.education-image img{
 
     width:100%;
-    height:430px;
+
+    height:460px;
 
     object-fit:cover;
 
     border:4px solid white;
+
     border-radius:11px;
 }
 
 
 /* =========================================================
-   LEARNING PHOTO STRIP
-   NEW PHOTO 5
+   LEARNING FEATURE
 ========================================================= */
 
-.writing-photo{
+.learning{
 
     position:relative;
 
-    padding:95px 0;
+    padding:100px 0;
 
-    background-image:
+    color:white;
 
-    linear-gradient(
-        90deg,
-        rgba(4,16,34,.94),
-        rgba(5,21,43,.76)
-    ),
+    background:
 
-    var(--photo-new-5);
+        linear-gradient(
+            110deg,
+            rgba(2,10,22,.95),
+            rgba(4,18,36,.79)
+        ),
+
+        var(--photo-5);
 
     background-size:cover;
+
     background-position:center;
 }
 
-.writing-photo-card{
+.learning-card{
 
-    position:relative;
+    width:min(1080px,92%);
+
+    margin:auto;
 
     display:grid;
 
-    grid-template-columns:300px minmax(0,1fr);
-
-    gap:38px;
+    grid-template-columns:330px 1fr;
 
     align-items:center;
 
-    padding:27px;
+    gap:50px;
+
+    padding:28px;
+
+    border-left:
+        5px solid var(--green);
+
+    border-radius:0 20px 20px 0;
 
     background:
-    linear-gradient(
-        145deg,
-        rgba(255,255,255,.14),
-        rgba(255,255,255,.055)
-    );
+        rgba(255,255,255,.085);
 
-    border:
-    1px solid rgba(255,255,255,.23);
+    border-top:
+        1px solid rgba(255,255,255,.18);
 
-    border-left:5px solid var(--green);
+    border-right:
+        1px solid rgba(255,255,255,.12);
 
-    box-shadow:
-    0 25px 65px rgba(0,0,0,.28);
+    border-bottom:
+        1px solid rgba(255,255,255,.12);
 
-    border-radius:0 18px 18px 0;
+    backdrop-filter:blur(16px);
 
-    backdrop-filter:blur(15px);
-    -webkit-backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(16px);
 
-    overflow:hidden;
+    box-shadow:var(--shadow);
 }
 
-.writing-photo-card img{
+.learning-card img{
 
     width:100%;
-    height:250px;
+
+    height:260px;
 
     object-fit:cover;
 
-    border-radius:10px;
+    border-radius:12px;
 
     border:3px solid white;
 }
 
-.writing-photo-card h3{
+.learning-card h2{
 
-    margin:5px 0 13px;
-
-    color:white;
+    margin:5px 0 15px;
 
     font-family:var(--serif);
 
-    font-size:1.8rem;
+    font-size:2.25rem;
 
-    line-height:1.18;
+    line-height:1.15;
 }
 
-.writing-photo-card p:not(.small-heading){
+.learning-card p:not(.eyebrow){
 
-    color:#D7E0E8;
+    margin:0;
 
-    font-size:.91rem;
-    line-height:1.8;
-}
+    color:#d3dde5;
 
-.writing-photo-card .small-heading{
-    color:var(--gold);
+    font-size:.89rem;
+
+    line-height:1.85;
 }
 
 
 /* =========================================================
    INTERESTS
-   NEW PHOTO 6
 ========================================================= */
 
-.interests-section{
+.interests{
 
     position:relative;
 
-    padding:110px 6%;
-
-    color:white;
+    padding:135px 0;
 
     overflow:hidden;
 
-    background-image:
+    color:white;
 
-    linear-gradient(
-        135deg,
-        rgba(3,13,28,.94),
-        rgba(6,25,48,.82)
-    ),
+    background:
 
-    var(--photo-new-6);
+        linear-gradient(
+            135deg,
+            rgba(2,10,22,.97),
+            rgba(5,23,45,.85)
+        ),
+
+        var(--photo-6);
 
     background-size:cover;
+
     background-position:center;
 }
 
-.interests-section::after{
+.interests-header{
 
-    content:"";
+    width:min(760px,90%);
 
-    position:absolute;
-    inset:0;
-
-    background:
-    radial-gradient(
-        circle at 15% 20%,
-        rgba(242,201,76,.13),
-        transparent 25%
-    );
-
-    pointer-events:none;
-}
-
-.section-intro{
-
-    position:relative;
-    z-index:2;
-
-    width:min(760px,100%);
-
-    margin:0 auto 50px;
+    margin:0 auto 60px;
 
     text-align:center;
 }
 
-.section-intro .small-heading{
-    color:var(--gold);
+.interests-header .section-title{
+
+    font-size:
+        clamp(2.7rem,5vw,4.5rem);
 }
 
-.section-intro h2{
+.interests-header p:last-child{
 
-    margin:5px 0 15px;
+    margin:22px auto 0;
 
-    color:white;
+    max-width:650px;
 
-    font-family:var(--serif);
+    color:#d1dbe4;
 
-    font-size:clamp(2.3rem,4vw,3.9rem);
-
-    line-height:1.08;
-}
-
-.section-intro p:not(.small-heading){
-
-    color:#D7E0E8;
-
-    font-size:.94rem;
+    font-size:.92rem;
 }
 
 .interest-grid{
 
-    position:relative;
-    z-index:2;
-
-    width:min(var(--max),100%);
+    width:min(var(--max),92%);
 
     margin:auto;
 
     display:grid;
 
     grid-template-columns:
-    repeat(4,minmax(0,1fr));
+        repeat(4,1fr);
 
-    gap:18px;
+    gap:16px;
 }
 
 .interest-card{
 
-    min-width:0;
+    position:relative;
 
-    padding:27px 23px 25px;
+    min-height:280px;
 
-    background:
-    linear-gradient(
-        145deg,
-        rgba(255,255,255,.15),
-        rgba(255,255,255,.055)
-    );
+    padding:30px 25px;
 
     border:
-    1px solid rgba(255,255,255,.20);
+        1px solid rgba(255,255,255,.18);
 
-    border-top:4px solid var(--gold);
+    border-top:
+        4px solid var(--gold);
 
-    border-radius:12px;
+    border-radius:14px;
 
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
+    background:
+        linear-gradient(
+            150deg,
+            rgba(255,255,255,.13),
+            rgba(255,255,255,.045)
+        );
+
+    backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
 
     transition:.3s ease;
 }
 
 .interest-card:hover{
 
-    transform:translateY(-7px);
+    transform:translateY(-8px);
 
     background:
-    rgba(255,255,255,.19);
+        rgba(255,255,255,.16);
 }
 
 .interest-card:nth-child(2){
+
     border-top-color:var(--green);
 }
 
 .interest-card:nth-child(3){
+
     border-top-color:var(--magenta);
 }
 
 .interest-card:nth-child(4){
+
     border-top-color:var(--red);
 }
 
-.interest-card span{
+.interest-number{
 
     color:var(--gold);
 
-    font-size:.67rem;
+    font-size:.64rem;
+
     font-weight:800;
+
+    letter-spacing:.16em;
 }
 
 .interest-card h3{
 
-    margin:18px 0 10px;
-
-    color:white;
+    margin:28px 0 12px;
 
     font-family:var(--serif);
 
-    font-size:1.4rem;
+    font-size:1.65rem;
 }
 
 .interest-card p{
 
     margin:0;
 
-    color:#D4DEE7;
+    color:#d2dce4;
 
-    font-size:.84rem;
+    font-size:.82rem;
+
+    line-height:1.75;
 }
 
 
 /* =========================================================
    ECONOMICS
-   NEW PHOTO 7
 ========================================================= */
 
-.economics-feature{
+.economics{
 
     position:relative;
 
-    min-height:720px;
+    min-height:750px;
 
     display:flex;
+
     align-items:center;
+
+    overflow:hidden;
 
     color:white;
 
-    background-image:
+    background:
 
-    linear-gradient(
-        90deg,
-        rgba(2,10,22,.97),
-        rgba(3,15,32,.87) 42%,
-        rgba(5,21,42,.55)
-    ),
+        linear-gradient(
+            90deg,
+            rgba(1,7,16,.98),
+            rgba(3,14,30,.92) 40%,
+            rgba(4,17,35,.48)
+        ),
 
-    var(--photo-new-7);
+        var(--photo-7);
 
     background-size:cover;
+
     background-position:center;
+
     background-attachment:fixed;
-
-    overflow:hidden;
 }
 
-.economics-feature::after{
-
-    content:"";
-
-    position:absolute;
-    inset:0;
-
-    background:
-    radial-gradient(
-        circle at 85% 15%,
-        rgba(242,201,76,.18),
-        transparent 25%
-    );
-
-    pointer-events:none;
-}
-
-.economics-feature-inner{
-
-    position:relative;
-    z-index:2;
+.economics-content{
 
     width:min(var(--max),92%);
 
@@ -1209,146 +1204,132 @@ a{
 
 .economics-card{
 
-    max-width:650px;
+    max-width:700px;
 
-    padding:44px;
+    padding:50px;
+
+    border-radius:20px;
 
     background:
-    linear-gradient(
-        145deg,
-        rgba(3,14,29,.84),
-        rgba(5,22,42,.61)
-    );
+        linear-gradient(
+            145deg,
+            rgba(3,13,27,.88),
+            rgba(5,23,44,.62)
+        );
 
     border:
-    1px solid rgba(255,255,255,.25);
+        1px solid rgba(255,255,255,.22);
 
-    border-radius:18px;
+    backdrop-filter:blur(17px);
 
-    backdrop-filter:blur(15px);
-    -webkit-backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(17px);
 
-    box-shadow:
-    0 30px 80px rgba(0,0,0,.4);
-}
-
-.economics-card .small-heading{
-    color:var(--gold);
+    box-shadow:var(--shadow);
 }
 
 .economics-card h2{
 
-    margin:8px 0 20px;
+    margin:8px 0 22px;
 
     font-family:var(--serif);
 
-    font-size:clamp(2.5rem,5vw,4.5rem);
+    font-size:
+        clamp(2.8rem,5vw,5rem);
 
-    line-height:1.04;
+    line-height:1.02;
+
+    letter-spacing:-.045em;
 }
 
 .economics-card p{
 
-    color:#DCE5EC;
+    margin:0 0 16px;
 
-    font-size:.94rem;
-    line-height:1.85;
+    color:#d4dfe8;
+
+    font-size:.92rem;
+
+    line-height:1.9;
 }
 
 
 /* =========================================================
    OPPORTUNITY
-   NEW PHOTO 8
 ========================================================= */
 
-.opportunity-section{
+.opportunity{
 
     position:relative;
 
-    padding:110px 6%;
+    padding:135px 0;
 
     color:white;
 
-    overflow:hidden;
+    background:
 
-    background-image:
+        linear-gradient(
+            100deg,
+            rgba(3,12,27,.96),
+            rgba(5,22,43,.82)
+        ),
 
-    linear-gradient(
-        90deg,
-        rgba(3,13,29,.94),
-        rgba(5,21,43,.82)
-    ),
-
-    var(--photo-new-8);
+        var(--photo-8);
 
     background-size:cover;
+
     background-position:center;
 }
 
 .opportunity-grid{
 
-    position:relative;
-    z-index:2;
+    width:min(var(--max),92%);
+
+    margin:auto;
 
     display:grid;
 
     grid-template-columns:
-    minmax(0,1fr)
-    minmax(0,1fr);
+        minmax(0,1fr)
+        minmax(350px,.78fr);
 
-    gap:65px;
+    gap:90px;
 
     align-items:center;
 }
 
-.opportunity-text{
-    max-width:620px;
+.opportunity-copy{
+
+    max-width:650px;
 }
 
-.opportunity-text .small-heading{
-    color:var(--gold);
+.opportunity-copy .body-copy{
+
+    margin:24px 0 0;
 }
 
-.opportunity-text h2{
+.opportunity-image{
 
-    margin:8px 0 20px;
+    padding:9px;
 
-    font-family:var(--serif);
-
-    font-size:clamp(2.4rem,4vw,4rem);
-
-    line-height:1.06;
-}
-
-.opportunity-text p{
-
-    color:#D7E0E9;
-
-    font-size:.94rem;
-}
-
-.opportunity-photo{
-
-    max-width:510px;
-
-    margin:auto;
-
-    padding:8px;
+    border-radius:18px;
 
     background:
-    linear-gradient(
-        145deg,
-        var(--gold),
-        rgba(255,255,255,.6)
-    );
+        linear-gradient(
+            135deg,
+            var(--gold),
+            rgba(255,255,255,.55)
+        );
 
-    border-radius:17px;
+    box-shadow:var(--shadow);
+
+    transform:rotate(-1deg);
 }
 
-.opportunity-photo img{
+.opportunity-image img{
 
     width:100%;
-    height:400px;
+
+    height:440px;
 
     object-fit:cover;
 
@@ -1359,136 +1340,96 @@ a{
 
 
 /* =========================================================
-   MUSIC & CREATIVITY
-   NEW PHOTO 9
+   MUSIC
 ========================================================= */
 
-.latter-section{
+.music{
 
     position:relative;
 
-    padding:115px 0;
-
-    display:grid;
-
-    grid-template-columns:
-    minmax(0,.9fr)
-    minmax(0,1.1fr);
-
-    gap:70px;
-
-    align-items:center;
+    padding:140px 0;
 
     color:white;
 
     overflow:hidden;
-}
 
-.latter-section::before{
+    background:
 
-    content:"";
+        linear-gradient(
+            90deg,
+            rgba(2,9,20,.97),
+            rgba(5,19,39,.84)
+        ),
 
-    position:absolute;
-    inset:0;
-
-    z-index:-2;
-
-    background-image:
-
-    linear-gradient(
-        90deg,
-        rgba(3,12,27,.94),
-        rgba(5,19,39,.80)
-    ),
-
-    var(--photo-new-9);
+        var(--photo-9);
 
     background-size:cover;
+
     background-position:center;
 }
 
-.latter-section::after{
+.music-grid{
 
-    content:"";
+    width:min(var(--max),92%);
 
-    position:absolute;
-
-    z-index:-1;
-
-    inset:0;
-
-    background:
-    radial-gradient(
-        circle at 80% 25%,
-        rgba(166,38,110,.20),
-        transparent 25%
-    );
-}
-
-.latter-text{
-    max-width:580px;
-}
-
-.latter-text .small-heading{
-    color:var(--gold);
-}
-
-.latter-text h2{
-
-    margin:8px 0 20px;
-
-    color:white;
-
-    font-family:var(--serif);
-
-    font-size:clamp(2.3rem,4vw,4rem);
-
-    line-height:1.06;
-}
-
-.latter-text p:not(.small-heading){
-
-    color:#D5DEE7;
-
-    font-size:.94rem;
-}
-
-.latter-text .lead-text{
-    color:#F2F5F7;
-}
-
-.latter-text .text-link{
-    color:white;
-}
-
-.latter-photo-group{
+    margin:auto;
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:
+        .9fr 1.1fr;
 
-    gap:18px;
+    gap:90px;
 
-    max-width:580px;
-
-    margin:auto;
+    align-items:center;
 }
 
-.latter-photo{
+.music-copy{
+
+    max-width:610px;
+}
+
+.music-copy h2{
+
+    margin:0;
+
+    font-family:var(--serif);
+
+    font-size:
+        clamp(2.7rem,5vw,4.7rem);
+
+    line-height:1.04;
+}
+
+.music-copy .body-copy{
+
+    margin:26px 0 12px;
+}
+
+.music-gallery{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:16px;
+}
+
+.music-image{
 
     overflow:hidden;
 
     border:4px solid white;
 
     box-shadow:
-    0 15px 40px rgba(0,0,0,.3);
-
-    background:#ddd;
+        0 20px 55px rgba(0,0,0,.32);
 }
 
-.latter-photo img{
+.music-image img{
 
     width:100%;
+
     height:250px;
 
     object-fit:cover;
@@ -1496,302 +1437,260 @@ a{
     transition:.5s ease;
 }
 
-.latter-photo:hover img{
-    transform:scale(1.05);
+.music-image:hover img{
+
+    transform:scale(1.06);
 }
 
-.latter-photo-1{
+.music-image.round{
 
     border-radius:50%;
+
     aspect-ratio:1;
 }
 
-.latter-photo-1 img{
+.music-image.round img{
+
     height:100%;
 }
 
-.latter-photo-2{
-    border-radius:14px;
-}
-
-.latter-photo-3{
+.music-image.wide{
 
     grid-column:1 / -1;
 
     border-radius:14px;
 }
 
-.latter-photo-3 img{
-    height:260px;
+.music-image.wide img{
+
+    height:275px;
 }
 
 
 /* =========================================================
    FEATURED THOUGHT
-   NEW PHOTO 10
 ========================================================= */
 
-.featured-section{
+.featured{
 
     position:relative;
 
-    padding:105px 0;
-
-    display:grid;
-
-    grid-template-columns:75px minmax(0,850px);
-
-    gap:35px;
-
-    align-items:start;
+    padding:120px 0;
 
     color:white;
 
     overflow:hidden;
-}
 
-.featured-section::before{
+    background:
 
-    content:"";
+        linear-gradient(
+            105deg,
+            rgba(2,9,20,.97),
+            rgba(5,20,40,.84)
+        ),
 
-    position:absolute;
-    inset:0;
-
-    z-index:-2;
-
-    background-image:
-
-    linear-gradient(
-        90deg,
-        rgba(3,12,27,.95),
-        rgba(5,21,42,.82)
-    ),
-
-    var(--photo-new-10);
+        var(--photo-10);
 
     background-size:cover;
+
     background-position:center;
 }
 
-.featured-section::after{
+.featured-inner{
 
-    content:"";
+    width:min(1050px,88%);
 
-    position:absolute;
-    inset:0;
+    margin:auto;
 
-    z-index:-1;
+    display:grid;
 
-    background:
-    radial-gradient(
-        circle at 90% 50%,
-        rgba(242,201,76,.13),
-        transparent 25%
-    );
+    grid-template-columns:90px 1fr;
+
+    gap:40px;
 }
 
-.featured-number{
+.featured-copy{
 
-    color:var(--gold);
+    max-width:780px;
+}
+
+.featured-copy h2{
+
+    margin:0;
 
     font-family:var(--serif);
 
-    font-size:2.8rem;
+    font-size:
+        clamp(2.6rem,5vw,4.5rem);
+
+    line-height:1.04;
 }
 
-.featured-text h2{
+.featured-copy p:not(.eyebrow){
 
-    margin:8px 0 18px;
+    max-width:680px;
 
-    color:white;
+    margin:24px 0;
 
-    font-family:var(--serif);
-
-    font-size:clamp(2.2rem,4vw,3.8rem);
-
-    line-height:1.08;
-}
-
-.featured-text .small-heading{
-    color:var(--gold);
-}
-
-.featured-text p:not(.small-heading){
-
-    max-width:690px;
-
-    color:#D5DEE7;
+    color:#d2dce5;
 
     font-size:.94rem;
-}
-
-.featured-text .text-link{
-    color:white;
 }
 
 
 /* =========================================================
-   GALLERY
-   NEW PHOTO 11
+   JOURNEY GALLERY
 ========================================================= */
 
-.home-gallery{
+.journey{
 
     position:relative;
 
-    padding:110px 6%;
-
-    color:white;
+    padding:140px 0;
 
     overflow:hidden;
 
-    background-image:
+    color:white;
 
-    linear-gradient(
-        135deg,
-        rgba(3,12,27,.94),
-        rgba(5,21,42,.78)
-    ),
+    background:
 
-    var(--photo-new-11);
+        linear-gradient(
+            135deg,
+            rgba(2,9,20,.96),
+            rgba(5,22,43,.82)
+        ),
+
+        var(--photo-11);
 
     background-size:cover;
+
     background-position:center;
 }
 
-.home-gallery-header{
+.journey-heading{
 
-    position:relative;
-    z-index:2;
+    width:min(760px,90%);
 
-    width:min(720px,100%);
-
-    margin:0 auto 50px;
+    margin:0 auto 60px;
 
     text-align:center;
 }
 
-.home-gallery-header .small-heading{
-    color:var(--gold);
-}
+.journey-heading h2{
 
-.home-gallery-header h2{
-
-    margin:6px 0 16px;
-
-    color:white;
+    margin:0;
 
     font-family:var(--serif);
 
-    font-size:clamp(2.3rem,4vw,3.9rem);
+    font-size:
+        clamp(2.7rem,5vw,4.5rem);
+
+    line-height:1.05;
 }
 
-.home-gallery-header p:not(.small-heading){
+.journey-heading p:last-child{
 
-    color:#D5DEE7;
+    margin:22px auto 0;
 
-    font-size:.94rem;
+    color:#d0dae3;
+
+    max-width:680px;
+
+    font-size:.91rem;
 }
 
-.home-gallery-grid{
+.journey-grid{
 
-    position:relative;
-    z-index:2;
-
-    width:min(var(--max),100%);
+    width:min(var(--max),92%);
 
     margin:auto;
 
     display:grid;
 
     grid-template-columns:
-    repeat(4,minmax(0,1fr));
+        repeat(4,1fr);
 
-    gap:16px;
+    gap:15px;
 }
 
-.home-gallery-item{
+.journey-item{
 
     position:relative;
 
-    height:270px;
+    height:300px;
 
     overflow:hidden;
 
-    background:#222;
+    border:3px solid white;
 
-    border:3px solid rgba(255,255,255,.85);
-
-    border-radius:10px;
+    border-radius:12px;
 
     box-shadow:
-    0 15px 35px rgba(0,0,0,.25);
+        0 18px 45px rgba(0,0,0,.25);
 }
 
-.home-gallery-item:nth-child(2),
-.home-gallery-item:nth-child(6),
-.home-gallery-item:nth-child(9){
+.journey-item:nth-child(2),
+.journey-item:nth-child(6){
 
     border-radius:50%;
 }
 
-.home-gallery-item:nth-child(4),
-.home-gallery-item:nth-child(8){
-
-    border-radius:14px;
-}
-
-.home-gallery-item img{
+.journey-item img{
 
     width:100%;
+
     height:100%;
 
     object-fit:cover;
 
-    transition:.5s ease;
+    transition:.6s ease;
 }
 
-.home-gallery-item:hover img{
-    transform:scale(1.07);
+.journey-item:hover img{
+
+    transform:scale(1.08);
 }
 
-.home-gallery-caption{
+.journey-overlay{
 
     position:absolute;
 
     left:0;
+
     right:0;
+
     bottom:0;
 
-    padding:42px 16px 13px;
+    padding:60px 17px 15px;
 
     background:
-    linear-gradient(
-        to top,
-        rgba(3,14,29,.96),
-        rgba(3,14,29,.25),
-        transparent
-    );
-
-    color:white;
+        linear-gradient(
+            to top,
+            rgba(2,9,20,.96),
+            transparent
+        );
 }
 
-.home-gallery-caption span{
+.journey-overlay span{
 
     color:var(--gold);
 
-    font-size:.61rem;
+    font-size:.58rem;
+
     font-weight:800;
 
-    letter-spacing:.12em;
+    letter-spacing:.14em;
+
     text-transform:uppercase;
 }
 
-.home-gallery-caption strong{
+.journey-overlay strong{
 
     display:block;
 
-    margin-top:3px;
+    margin-top:4px;
+
+    color:white;
 
     font-family:var(--serif);
 
@@ -1800,443 +1699,500 @@ a{
 
 
 /* =========================================================
-   BOTTOM PHOTO STORY
-   NEW PHOTO 12
+   PHOTO STORY
 ========================================================= */
 
-.photo-story-section{
+.story{
 
     position:relative;
 
-    min-height:720px;
-
-    display:flex;
-    align-items:center;
-
-    padding:110px 6%;
+    padding:140px 0;
 
     color:white;
 
-    background-image:
-
-    linear-gradient(
-        90deg,
-        rgba(2,9,21,.96),
-        rgba(3,15,32,.86) 42%,
-        rgba(5,21,42,.53)
-    ),
-
-    var(--photo-new-12);
-
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-
     overflow:hidden;
-}
-
-.photo-story-section::after{
-
-    content:"";
-
-    position:absolute;
-    inset:0;
 
     background:
-    radial-gradient(
-        circle at 15% 80%,
-        rgba(181,31,50,.23),
-        transparent 28%
-    );
 
-    pointer-events:none;
+        linear-gradient(
+            90deg,
+            rgba(2,8,18,.98),
+            rgba(4,17,35,.84)
+        ),
+
+        var(--photo-12);
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
 }
 
-.photo-story-grid{
+.story-grid{
 
-    position:relative;
-    z-index:2;
+    width:min(var(--max),92%);
+
+    margin:auto;
 
     display:grid;
 
     grid-template-columns:
-    minmax(0,1fr)
-    minmax(0,1fr);
+        minmax(0,1fr)
+        minmax(0,1fr);
 
-    gap:65px;
+    gap:80px;
 
     align-items:center;
 }
 
-.photo-story-main{
-
-    max-width:550px;
-}
-
-.photo-story-main img{
+.story-image img{
 
     width:100%;
-    height:470px;
+
+    height:510px;
 
     object-fit:cover;
 
     border:4px solid white;
 
-    outline:1px solid rgba(242,201,76,.65);
+    outline:
+        1px solid rgba(242,201,76,.7);
 
-    border-radius:14px;
+    border-radius:15px;
 
-    box-shadow:
-    0 25px 65px rgba(0,0,0,.4);
+    box-shadow:var(--shadow);
 }
 
-.photo-story-text{
+.story-copy{
 
-    max-width:590px;
+    padding:45px;
 
-    padding:40px;
+    border-radius:20px;
 
     background:
-    linear-gradient(
-        145deg,
-        rgba(3,14,29,.82),
-        rgba(4,18,36,.58)
-    );
+        linear-gradient(
+            145deg,
+            rgba(3,13,27,.86),
+            rgba(4,20,39,.58)
+        );
 
     border:
-    1px solid rgba(255,255,255,.24);
+        1px solid rgba(255,255,255,.21);
 
-    border-radius:18px;
+    backdrop-filter:blur(17px);
 
-    backdrop-filter:blur(15px);
-    -webkit-backdrop-filter:blur(15px);
-
-    box-shadow:
-    0 30px 80px rgba(0,0,0,.35);
+    -webkit-backdrop-filter:blur(17px);
 }
 
-.photo-story-text .small-heading{
-    color:var(--gold);
-}
+.story-copy h2{
 
-.photo-story-text h2{
-
-    margin:8px 0 20px;
+    margin:0;
 
     font-family:var(--serif);
 
-    font-size:clamp(2.3rem,4vw,3.8rem);
+    font-size:
+        clamp(2.6rem,5vw,4.4rem);
 
-    line-height:1.07;
+    line-height:1.04;
 }
 
-.photo-story-text p{
+.story-copy .body-copy{
 
-    color:#D8E1E8;
-
-    font-size:.94rem;
-}
-
-.photo-story-text .lead-text{
-    color:#F3F6F8;
+    margin:24px 0 15px;
 }
 
 
 /* =========================================================
    CREATIVE COLLECTION
-   NEW PHOTO 1 + NEW PHOTO 9
 ========================================================= */
 
-.creative-section{
+.creative{
 
     position:relative;
 
-    padding:110px 0;
+    padding:135px 0;
 
     color:white;
 
-    overflow:hidden;
-}
+    background:
 
-.creative-section::before{
+        linear-gradient(
+            90deg,
+            rgba(2,9,20,.97),
+            rgba(5,20,40,.82)
+        ),
 
-    content:"";
-
-    position:absolute;
-    inset:0;
-
-    z-index:-2;
-
-    background-image:
-
-    linear-gradient(
-        90deg,
-        rgba(3,12,27,.94),
-        rgba(5,20,40,.80)
-    ),
-
-    var(--photo-new-1);
+        var(--photo-2);
 
     background-size:cover;
+
     background-position:center;
-}
-
-.creative-section::after{
-
-    content:"";
-
-    position:absolute;
-    inset:0;
-
-    z-index:-1;
-
-    background:
-    radial-gradient(
-        circle at 85% 25%,
-        rgba(166,38,110,.18),
-        transparent 25%
-    );
 }
 
 .creative-header{
 
-    width:min(720px,100%);
+    width:min(760px,92%);
 
-    margin-bottom:48px;
-}
+    margin:0 auto 55px;
 
-.creative-header .small-heading{
-    color:var(--gold);
+    text-align:center;
 }
 
 .creative-header h2{
 
-    margin:7px 0 16px;
-
-    color:white;
+    margin:0;
 
     font-family:var(--serif);
 
-    font-size:clamp(2.3rem,4vw,3.9rem);
+    font-size:
+        clamp(2.7rem,5vw,4.6rem);
 
-    line-height:1.08;
+    line-height:1.04;
 }
 
-.creative-header p:not(.small-heading){
+.creative-header p:last-child{
 
-    color:#D5DEE7;
+    max-width:650px;
 
-    font-size:.94rem;
+    margin:22px auto 0;
+
+    color:#d0dbe4;
+
+    font-size:.92rem;
 }
 
-.creative-gallery{
+.creative-grid{
+
+    width:min(var(--max),92%);
+
+    margin:auto;
 
     display:grid;
 
     grid-template-columns:
-    repeat(3,minmax(0,1fr));
+        repeat(3,1fr);
 
     gap:18px;
 }
 
-.creative-gallery-item{
+.creative-item{
 
-    height:340px;
+    height:370px;
 
     overflow:hidden;
 
-    border:3px solid white;
+    border:4px solid white;
 
-    border-radius:10px;
-
-    box-shadow:
-    0 15px 35px rgba(0,0,0,.3);
+    border-radius:12px;
 }
 
-.creative-gallery-item:nth-child(2){
+.creative-item:nth-child(2){
+
     border-radius:50%;
 }
 
-.creative-gallery-item img{
+.creative-item img{
 
     width:100%;
+
     height:100%;
 
     object-fit:cover;
 
-    transition:.5s ease;
+    transition:.6s ease;
 }
 
-.creative-gallery-item:hover img{
+.creative-item:hover img{
+
     transform:scale(1.06);
 }
 
 
 /* =========================================================
    COMMUNITY
-   NEW PHOTO 5
 ========================================================= */
 
-.community-section{
+.community{
 
     position:relative;
 
-    padding:110px 0;
+    padding:135px 0;
 
     color:white;
 
-    overflow:hidden;
+    background:
 
-    background-image:
+        linear-gradient(
+            90deg,
+            rgba(2,9,20,.97),
+            rgba(5,20,40,.82)
+        ),
 
-    linear-gradient(
-        90deg,
-        rgba(3,12,27,.94),
-        rgba(5,20,40,.79)
-    ),
-
-    var(--photo-new-5);
+        var(--photo-5);
 
     background-size:cover;
+
     background-position:center;
 }
 
-.community-section::after{
+.community-grid{
 
-    content:"";
+    width:min(var(--max),92%);
 
-    position:absolute;
-    inset:0;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        minmax(350px,.75fr);
+
+    gap:90px;
+
+    align-items:center;
+}
+
+.community-copy{
+
+    max-width:650px;
+}
+
+.community-copy h2{
+
+    margin:0;
+
+    font-family:var(--serif);
+
+    font-size:
+        clamp(2.7rem,5vw,4.7rem);
+
+    line-height:1.04;
+}
+
+.community-copy .body-copy{
+
+    margin:25px 0 12px;
+}
+
+.community-image{
+
+    padding:9px;
+
+    border-radius:18px;
 
     background:
-    radial-gradient(
-        circle at 82% 25%,
-        rgba(242,201,76,.15),
-        transparent 25%
-    );
+        linear-gradient(
+            135deg,
+            var(--gold),
+            rgba(255,255,255,.55)
+        );
+}
 
-    pointer-events:none;
+.community-image img{
+
+    width:100%;
+
+    height:440px;
+
+    object-fit:cover;
+
+    border:4px solid white;
+
+    border-radius:10px;
 }
 
 
 /* =========================================================
    FINAL WRITING
-   NEW PHOTO 6
 ========================================================= */
 
-.final-writing{
+.keep-exploring{
 
-    border-left-color:var(--red);
+    position:relative;
+
+    padding:100px 0;
+
+    color:white;
 
     background:
-    linear-gradient(
-        145deg,
-        rgba(181,31,50,.24),
-        rgba(255,255,255,.07)
-    );
+
+        linear-gradient(
+            110deg,
+            rgba(2,10,22,.95),
+            rgba(5,19,39,.82)
+        ),
+
+        var(--photo-6);
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+.keep-card{
+
+    width:min(1080px,92%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:330px 1fr;
+
+    align-items:center;
+
+    gap:50px;
+
+    padding:28px;
+
+    border-left:
+        5px solid var(--red);
+
+    border-radius:0 20px 20px 0;
+
+    background:
+        rgba(181,31,50,.15);
+
+    border-top:
+        1px solid rgba(255,255,255,.15);
+
+    border-right:
+        1px solid rgba(255,255,255,.1);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.1);
+
+    backdrop-filter:blur(16px);
+
+    -webkit-backdrop-filter:blur(16px);
+}
+
+.keep-card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border:3px solid white;
+
+    border-radius:12px;
+}
+
+.keep-card h2{
+
+    margin:0 0 15px;
+
+    font-family:var(--serif);
+
+    font-size:2.3rem;
+
+    line-height:1.12;
+}
+
+.keep-card p:not(.eyebrow){
+
+    margin:0;
+
+    color:#d4dee7;
+
+    font-size:.9rem;
 }
 
 
 /* =========================================================
    FINAL CTA
-   NEW PHOTO 7
 ========================================================= */
 
-.final-section{
+.final-cta{
 
     position:relative;
-
-    padding:105px 7%;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:50px;
-
-    align-items:center;
-
-    color:white;
 
     overflow:hidden;
 
-    background-image:
+    padding:120px 0;
 
-    linear-gradient(
-        90deg,
-        rgba(110,10,27,.94),
-        rgba(105,21,75,.88)
-    ),
+    color:white;
 
-    var(--photo-new-7);
+    background:
+
+        linear-gradient(
+            100deg,
+            rgba(112,13,31,.96),
+            rgba(89,17,66,.91)
+        ),
+
+        var(--photo-7);
 
     background-size:cover;
+
     background-position:center;
 }
 
-.final-section::before{
-
-    content:"";
-
-    position:absolute;
-    inset:0;
-
-    background:
-    radial-gradient(
-        circle at 85% 25%,
-        rgba(242,201,76,.22),
-        transparent 25%
-    );
-
-    pointer-events:none;
-}
-
-.final-section::after{
+.final-cta::before{
 
     content:"";
 
     position:absolute;
 
-    width:420px;
-    height:420px;
+    width:480px;
 
-    right:-170px;
-    top:-190px;
+    height:480px;
 
-    border-radius:50%;
+    right:-190px;
+
+    top:-230px;
 
     border:
-    1px solid rgba(255,255,255,.20);
+        1px solid rgba(255,255,255,.2);
+
+    border-radius:50%;
 }
 
-.final-text,
-.final-action{
+.final-inner{
 
-    position:relative;
-    z-index:2;
+    width:min(1100px,90%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
 }
 
-.final-text h2{
+.final-inner h2{
 
-    margin:5px 0;
+    margin:0;
 
     font-family:var(--serif);
 
-    font-size:clamp(2.6rem,4vw,4.5rem);
+    font-size:
+        clamp(3rem,6vw,5.2rem);
 
-    line-height:1.02;
+    line-height:1.01;
+
+    letter-spacing:-.05em;
 }
 
 .final-action p{
 
-    max-width:500px;
+    max-width:510px;
 
-    color:#FFEFF3;
+    color:#f8e9ed;
 
     font-size:.94rem;
 }
 
 .final-action .button{
+
+    margin-top:8px;
 
     background:var(--gold);
 
@@ -2246,6 +2202,7 @@ a{
 }
 
 .final-action .button:hover{
+
     background:white;
 }
 
@@ -2256,26 +2213,30 @@ a{
 
 footer{
 
-    background:#080B10;
+    background:#06090e;
 
     color:white;
 }
 
-.footer-content{
+.footer-inner{
 
-    padding:65px 0;
+    width:min(var(--max),92%);
+
+    margin:auto;
+
+    padding:75px 0;
 
     display:grid;
 
     grid-template-columns:
-    1.2fr .8fr 1fr;
+        1.3fr .7fr 1fr;
 
-    gap:50px;
+    gap:70px;
 }
 
 .footer-brand h2{
 
-    margin:0 0 12px;
+    margin:0 0 15px;
 
     font-family:var(--serif);
 
@@ -2286,20 +2247,20 @@ footer{
 
     margin:0;
 
-    color:#BFC7CF;
+    color:#adb8c2;
 
-    font-size:.87rem;
+    font-size:.84rem;
 }
 
-footer h3{
+.footer-column h3{
 
-    margin:0 0 16px;
+    margin:0 0 18px;
 
     color:var(--gold);
 
-    font-size:.67rem;
+    font-size:.65rem;
 
-    letter-spacing:.14em;
+    letter-spacing:.16em;
 
     text-transform:uppercase;
 }
@@ -2315,14 +2276,15 @@ footer h3{
 
 .footer-links a{
 
-    color:#D7DCE1;
+    color:#cdd5dc;
 
-    font-size:.83rem;
+    font-size:.8rem;
 
     transition:.2s ease;
 }
 
 .footer-links a:hover{
+
     color:var(--gold);
 }
 
@@ -2330,16 +2292,17 @@ footer h3{
 
     margin:7px 0;
 
-    color:#C8CED4;
+    color:#bfc8d0;
 
-    font-size:.82rem;
+    font-size:.79rem;
 }
 
 .footer-bottom{
 
-    padding:19px 6%;
+    border-top:
+        1px solid rgba(255,255,255,.1);
 
-    border-top:1px solid #303030;
+    padding:20px 6%;
 
     text-align:center;
 }
@@ -2348,9 +2311,9 @@ footer h3{
 
     margin:0;
 
-    color:#858C94;
+    color:#747e88;
 
-    font-size:.71rem;
+    font-size:.68rem;
 }
 
 
@@ -2361,51 +2324,56 @@ footer h3{
 @media(max-width:1050px){
 
     .hero-inner{
+
         grid-template-columns:1fr;
-        gap:40px;
-        padding:90px 0 120px;
+
+        gap:45px;
     }
 
-    .hero-side-card{
-        max-width:570px;
+    .hero-note{
+
+        max-width:620px;
     }
 
-    .editorial-grid,
-    .latter-section,
+    .education-grid,
     .opportunity-grid,
-    .photo-story-grid{
+    .music-grid,
+    .story-grid,
+    .community-grid{
 
         grid-template-columns:1fr;
+
+        gap:55px;
     }
 
-    .editorial-text,
-    .latter-text,
-    .opportunity-text,
-    .photo-story-text{
-
-        max-width:760px;
-    }
-
-    .editorial-photo,
-    .opportunity-photo,
-    .photo-story-main{
+    .education-image,
+    .opportunity-image,
+    .community-image{
 
         max-width:650px;
+
+        margin:auto;
     }
 
     .interest-grid{
-        grid-template-columns:repeat(2,1fr);
+
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
-    .home-gallery-grid{
-        grid-template-columns:repeat(2,1fr);
+    .journey-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
-    .creative-gallery{
-        grid-template-columns:repeat(2,1fr);
+    .creative-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
-    .creative-gallery-item:last-child{
+    .creative-item:last-child{
 
         grid-column:1 / -1;
 
@@ -2416,11 +2384,19 @@ footer h3{
         justify-self:center;
     }
 
-    .footer-content{
-        grid-template-columns:1fr 1fr;
+    .final-inner{
+
+        grid-template-columns:1fr;
+    }
+
+    .footer-inner{
+
+        grid-template-columns:
+            1fr 1fr;
     }
 
     .footer-brand{
+
         grid-column:1 / -1;
     }
 }
@@ -2433,14 +2409,16 @@ footer h3{
 @media(max-width:700px){
 
     body{
+
         font-size:15px;
     }
 
     .site-header{
+
         position:relative;
     }
 
-    .header-content{
+    .header-inner{
 
         width:92%;
 
@@ -2457,18 +2435,17 @@ footer h3{
 
         width:100%;
 
-        justify-content:flex-start;
-
-        gap:3px;
-
         overflow-x:auto;
 
         flex-wrap:nowrap;
+
+        justify-content:flex-start;
 
         scrollbar-width:none;
     }
 
     .main-nav::-webkit-scrollbar{
+
         display:none;
     }
 
@@ -2476,17 +2453,14 @@ footer h3{
 
         flex-shrink:0;
 
-        padding:7px 9px;
+        padding:7px 10px;
 
-        font-size:.71rem;
+        font-size:.7rem;
     }
 
+    .hero{
 
-    /* HERO */
-
-    .hero-section{
-
-        min-height:780px;
+        min-height:auto;
 
         background-attachment:scroll;
     }
@@ -2495,111 +2469,112 @@ footer h3{
 
         width:88%;
 
-        padding:65px 0 120px;
-    }
-
-    .hero-text h1{
-
-        font-size:
-        clamp(2.75rem,12vw,4.2rem);
-    }
-
-    .hero-text .lead-text{
-        font-size:.94rem;
-    }
-
-    .hero-side-card{
-        padding:25px;
-    }
-
-
-    /* STATEMENT */
-
-    .statement-section{
-        padding:70px 7%;
-    }
-
-    .statement-inner{
-
-        grid-template-columns:1fr;
-
-        gap:12px;
-    }
-
-    .statement-content h2{
-        font-size:2.2rem;
-    }
-
-
-    /* GENERAL */
-
-    .editorial-section,
-    .latter-section,
-    .featured-section,
-    .creative-section{
-
-        width:88%;
-
-        padding:75px 0;
-    }
-
-    .editorial-grid,
-    .latter-section,
-    .opportunity-grid,
-    .photo-story-grid{
+        padding:75px 0 120px;
 
         gap:40px;
     }
 
-    .editorial-text h2,
-    .latter-text h2{
+    .hero-title{
 
-        font-size:2.25rem;
+        font-size:
+            clamp(2.75rem,13vw,4.2rem);
     }
 
-    .editorial-photo img{
-        height:340px;
+    .hero-description{
+
+        font-size:.91rem;
     }
 
+    .hero-note{
 
-    /* WRITING */
-
-    .writing-photo{
-
-        width:100%;
-
-        padding:70px 6%;
+        padding:25px;
     }
 
-    .writing-photo-card{
+    .identity-inner{
+
+        min-height:120px;
+
+        gap:13px 20px;
+    }
+
+    .identity-inner span{
+
+        font-size:.58rem;
+    }
+
+    .statement,
+    .education,
+    .interests,
+    .opportunity,
+    .music,
+    .featured,
+    .journey,
+    .story,
+    .creative,
+    .community{
+
+        padding:85px 0;
+    }
+
+    .statement-inner,
+    .featured-inner{
 
         grid-template-columns:1fr;
 
-        padding:19px;
-
-        gap:22px;
+        gap:15px;
     }
 
-    .writing-photo-card img{
-        height:250px;
+    .section-number{
+
+        font-size:2rem;
     }
 
+    .section-title{
 
-    /* INTERESTS */
+        font-size:2.5rem;
+    }
 
-    .interests-section,
-    .home-gallery{
-        padding:75px 6%;
+    .education-image img,
+    .opportunity-image img,
+    .community-image img{
+
+        height:350px;
+    }
+
+    .learning{
+
+        padding:70px 0;
+    }
+
+    .learning-card,
+    .keep-card{
+
+        width:88%;
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+        padding:20px;
+    }
+
+    .learning-card img,
+    .keep-card img{
+
+        height:240px;
     }
 
     .interest-grid{
+
         grid-template-columns:1fr;
     }
 
+    .interest-card{
 
-    /* ECONOMICS */
+        min-height:auto;
+    }
 
-    .economics-feature{
+    .economics{
 
         min-height:720px;
 
@@ -2607,177 +2582,160 @@ footer h3{
     }
 
     .economics-card{
+
         padding:29px;
+
+        border-radius:15px;
     }
 
     .economics-card h2{
-        font-size:2.45rem;
+
+        font-size:2.55rem;
     }
 
+    .music-grid{
 
-    /* OPPORTUNITY */
-
-    .opportunity-section{
-        padding:75px 7%;
+        gap:50px;
     }
 
-    .opportunity-text h2{
-        font-size:2.35rem;
+    .music-gallery{
+
+        gap:10px;
     }
 
-    .opportunity-photo img{
-        height:340px;
+    .music-image img{
+
+        height:180px;
     }
 
+    .music-image.wide img{
 
-    /* MUSIC */
-
-    .latter-photo-group{
-
-        grid-template-columns:1fr 1fr;
-
-        gap:12px;
-    }
-
-    .latter-photo img{
-        height:190px;
-    }
-
-    .latter-photo-3 img{
         height:210px;
     }
 
+    .journey-grid{
 
-    /* FEATURED */
+        grid-template-columns:
+            1fr 1fr;
 
-    .featured-section{
-
-        grid-template-columns:1fr;
-
-        gap:12px;
+        gap:10px;
     }
 
-    .featured-text h2{
-        font-size:2.3rem;
-    }
+    .journey-item{
 
-
-    /* GALLERY */
-
-    .home-gallery-grid{
-
-        grid-template-columns:1fr 1fr;
-
-        gap:11px;
-    }
-
-    .home-gallery-item{
         height:205px;
     }
 
+    .creative-grid{
 
-    /* PHOTO STORY */
-
-    .photo-story-section{
-
-        min-height:800px;
-
-        padding:75px 6%;
-
-        background-attachment:scroll;
-    }
-
-    .photo-story-main img{
-        height:340px;
-    }
-
-    .photo-story-text{
-        padding:28px;
-    }
-
-    .photo-story-text h2{
-        font-size:2.3rem;
-    }
-
-
-    /* CREATIVE */
-
-    .creative-gallery{
         grid-template-columns:1fr;
     }
 
-    .creative-gallery-item,
-    .creative-gallery-item:last-child{
+    .creative-item,
+    .creative-item:last-child{
 
         grid-column:auto;
 
         max-width:none;
 
-        height:310px;
+        height:320px;
     }
 
+    .story{
 
-    /* FINAL */
-
-    .final-section{
-
-        grid-template-columns:1fr;
-
-        padding:70px 7%;
-
-        gap:22px;
+        background-attachment:scroll;
     }
 
+    .story-image img{
 
-    /* FOOTER */
+        height:350px;
+    }
 
-    .footer-content{
+    .story-copy{
+
+        padding:28px;
+    }
+
+    .final-cta{
+
+        padding:85px 0;
+    }
+
+    .final-inner{
+
+        width:88%;
+
+        gap:25px;
+    }
+
+    .final-inner h2{
+
+        font-size:3rem;
+    }
+
+    .footer-inner{
 
         width:88%;
 
         grid-template-columns:1fr;
 
-        padding:54px 0;
+        gap:35px;
 
-        gap:32px;
+        padding:55px 0;
     }
 
     .footer-brand{
+
         grid-column:auto;
     }
 }
 
 
 /* =========================================================
-   VERY SMALL PHONES
+   SMALL PHONES
 ========================================================= */
 
 @media(max-width:400px){
 
-    .nav-link{
+    .brand-name{
 
-        padding:6px 7px;
-
-        font-size:.67rem;
+        font-size:1.4rem;
     }
 
-    .hero-text h1{
+    .nav-link{
+
+        padding:6px 8px;
+
+        font-size:.65rem;
+    }
+
+    .hero-title{
+
         font-size:2.6rem;
     }
 
-    .hero-section{
-        min-height:720px;
-    }
+    .journey-item{
 
-    .home-gallery-item{
         height:175px;
     }
 
-    .latter-photo img{
-        height:155px;
+    .journey-overlay{
+
+        padding:45px 10px 9px;
     }
 
-    .latter-photo-3 img{
+    .journey-overlay strong{
+
+        font-size:.75rem;
+    }
+
+    .music-image img{
+
+        height:150px;
+    }
+
+    .music-image.wide img{
+
         height:180px;
     }
 }
@@ -2790,6 +2748,7 @@ footer h3{
 @media(prefers-reduced-motion:reduce){
 
     html{
+
         scroll-behavior:auto;
     }
 
@@ -2808,6 +2767,7 @@ footer h3{
 }
 
 </style>
+
 </head>
 
 
@@ -2820,17 +2780,17 @@ footer h3{
 
 <header class="site-header">
 
-    <div class="header-content">
+    <div class="header-inner">
 
-        <div class="brand-block">
+        <div class="brand">
 
-            <a href="index.html" class="site-name">
+            <a href="index.html" class="brand-name">
                 Nketia Marfo
             </a>
 
-            <p>
+            <span class="brand-tagline">
                 Thinking deeply. Creating freely. Sharing ideas.
-            </p>
+            </span>
 
         </div>
 
@@ -2864,6 +2824,7 @@ footer h3{
 </header>
 
 
+
 <main>
 
 
@@ -2871,33 +2832,37 @@ footer h3{
      HERO
 ========================================================= -->
 
-<section class="hero-section">
+<section class="hero">
 
     <div class="hero-inner">
 
-        <div class="hero-text">
+        <div class="hero-content">
 
-            <p class="small-heading">
-                WELCOME TO MY PERSONAL BLOG SITE
+            <p class="eyebrow">
+                Welcome to my personal blog
             </p>
 
-            <h1>
+            <h1 class="display-title hero-title">
                 Thinking deeply.<br>
                 Creating freely.<br>
                 Sharing ideas.
             </h1>
 
-            <p class="lead-text">
-                I’m Nketia Marfo. This is my personal space for
-                sharing ideas, stories, projects, and perspectives
-                on education, economics, music, society, culture,
-                and opportunities.
+            <p class="hero-description">
+
+                I’m Nketia Marfo. This is my personal space
+                for sharing ideas, stories, projects, and
+                perspectives on education, economics, music,
+                society, culture, and opportunities.
+
             </p>
 
-            <p>
+            <p class="hero-subdescription">
+
                 I am curious about how ideas become opportunities,
                 how creativity can create possibilities, and how
                 knowledge can make a meaningful difference.
+
             </p>
 
             <div class="hero-actions">
@@ -2906,7 +2871,7 @@ footer h3{
                     Discover More →
                 </a>
 
-                <a href="blog.html" class="text-link">
+                <a href="blog.html" class="editorial-link">
                     Explore my ideas →
                 </a>
 
@@ -2915,58 +2880,97 @@ footer h3{
         </div>
 
 
-        <div class="hero-side-card">
+        <aside class="hero-note">
 
-            <span class="mini-label">
+            <span class="hero-note-label">
                 NKETIA MARFO
             </span>
 
-            <h3>
+            <h2>
                 Ideas, creativity
                 and possibility.
-            </h3>
+            </h2>
 
             <p>
+
                 A personal space for thoughts about
                 education, economics, music, culture,
                 society and the opportunities that
                 connect them.
+
             </p>
 
-        </div>
+        </aside>
 
     </div>
 
 </section>
+
+
+
+<!-- =========================================================
+     IDENTITY STRIP
+========================================================= -->
+
+<section class="identity-strip">
+
+    <div class="identity-inner">
+
+        <span>Education</span>
+        <i></i>
+
+        <span>Economics</span>
+        <i></i>
+
+        <span>Music</span>
+        <i></i>
+
+        <span>Creativity</span>
+        <i></i>
+
+        <span>Culture</span>
+        <i></i>
+
+        <span>Ideas</span>
+        <i></i>
+
+        <span>Community</span>
+
+    </div>
+
+</section>
+
 
 
 <!-- =========================================================
      STATEMENT
 ========================================================= -->
 
-<section class="statement-section">
+<section class="statement">
 
     <div class="statement-inner">
 
-        <div class="statement-number">
+        <div class="section-number">
             01
         </div>
 
-        <div class="statement-content">
+        <div>
 
-            <p class="small-heading">
-                A PLACE FOR IDEAS
+            <p class="eyebrow">
+                A place for ideas
             </p>
 
-            <h2>
+            <h2 class="display-title statement-title">
                 Curiosity is where
                 meaningful ideas begin.
             </h2>
 
-            <p>
+            <p class="statement-copy">
+
                 I enjoy learning, asking questions, creating,
                 and finding connections between ideas that may
                 initially seem unrelated.
+
             </p>
 
         </div>
@@ -2974,59 +2978,60 @@ footer h3{
     </div>
 
 </section>
+
 
 
 <!-- =========================================================
      EDUCATION
 ========================================================= -->
 
-<section class="editorial-section">
+<section class="education">
 
-    <div class="editorial-section-inner">
+    <div class="education-grid">
 
-        <div class="editorial-grid">
+        <div class="education-copy">
 
-            <div class="editorial-text">
+            <p class="eyebrow">
+                Education
+            </p>
 
-                <p class="small-heading">
-                    EDUCATION
-                </p>
+            <h2 class="section-title">
+                Education should
+                open doors.
+            </h2>
 
-                <h2>
-                    Education should
-                    open doors.
-                </h2>
+            <p class="body-copy">
 
-                <p class="lead-text">
-                    Education is not simply about collecting
-                    certificates. It should help people develop
-                    knowledge, useful skills, confidence and
-                    the ability to see possibilities.
-                </p>
+                Education is not simply about collecting
+                certificates. It should help people develop
+                knowledge, useful skills, confidence and
+                the ability to see possibilities.
 
-                <p>
-                    I am interested in how teaching and learning
-                    can connect classroom knowledge with real
-                    opportunities. I also care about the questions
-                    students carry with them beyond the classroom.
-                </p>
+            </p>
 
-                <a href="blog.html" class="text-link">
-                    Read more ideas →
-                </a>
+            <p class="body-copy">
 
-            </div>
+                I am interested in how teaching and learning
+                can connect classroom knowledge with real
+                opportunities. I also care about the questions
+                students carry with them beyond the classroom.
+
+            </p>
+
+            <a href="blog.html" class="editorial-link">
+                Read more ideas →
+            </a>
+
+        </div>
 
 
-            <div class="editorial-photo">
+        <div class="education-image">
 
-                <img
-                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225825_521.jpg"
-                    alt="Nketia Marfo"
-                    loading="lazy"
-                >
-
-            </div>
+            <img
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225825_521.jpg"
+                alt="Nketia Marfo"
+                loading="lazy"
+            >
 
         </div>
 
@@ -3035,13 +3040,14 @@ footer h3{
 </section>
 
 
+
 <!-- =========================================================
-     LEARNING SUPPORT
+     LEARNING
 ========================================================= -->
 
-<section class="writing-photo">
+<section class="learning">
 
-    <div class="writing-photo-card">
+    <div class="learning-card">
 
         <img
             src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260628-WA0080.jpg"
@@ -3051,20 +3057,22 @@ footer h3{
 
         <div>
 
-            <p class="small-heading">
-                LEARNING
+            <p class="eyebrow">
+                Learning
             </p>
 
-            <h3>
+            <h2>
                 Every experience can
                 become a lesson.
-            </h3>
+            </h2>
 
             <p>
+
                 Some lessons come from books. Others come
                 from conversations, people, challenges and
                 everyday experiences. I believe all of them
                 can shape the way we understand the world.
+
             </p>
 
         </div>
@@ -3074,26 +3082,29 @@ footer h3{
 </section>
 
 
+
 <!-- =========================================================
      WHAT I WRITE ABOUT
 ========================================================= -->
 
-<section class="interests-section">
+<section class="interests">
 
-    <div class="section-intro">
+    <div class="interests-header">
 
-        <p class="small-heading">
-            EXPLORE
+        <p class="eyebrow">
+            Explore
         </p>
 
-        <h2>
+        <h2 class="section-title">
             What I Write About
         </h2>
 
         <p>
+
             My interests move across different areas that
             shape how people learn, create, work, and build
             their futures.
+
         </p>
 
     </div>
@@ -3103,16 +3114,20 @@ footer h3{
 
         <article class="interest-card">
 
-            <span>01</span>
+            <span class="interest-number">
+                01
+            </span>
 
             <h3>
                 Education
             </h3>
 
             <p>
+
                 Learning, teaching, skills, opportunity,
                 and the role education plays in shaping
                 people's futures.
+
             </p>
 
         </article>
@@ -3120,15 +3135,19 @@ footer h3{
 
         <article class="interest-card">
 
-            <span>02</span>
+            <span class="interest-number">
+                02
+            </span>
 
             <h3>
                 Economics
             </h3>
 
             <p>
+
                 Work, money, development, investment,
                 entrepreneurship, and opportunity.
+
             </p>
 
         </article>
@@ -3136,15 +3155,19 @@ footer h3{
 
         <article class="interest-card">
 
-            <span>03</span>
+            <span class="interest-number">
+                03
+            </span>
 
             <h3>
                 Music & Culture
             </h3>
 
             <p>
+
                 Music, performance, creativity, culture,
                 and artistic expression.
+
             </p>
 
         </article>
@@ -3152,15 +3175,19 @@ footer h3{
 
         <article class="interest-card">
 
-            <span>04</span>
+            <span class="interest-number">
+                04
+            </span>
 
             <h3>
                 Society & Environment
             </h3>
 
             <p>
+
                 Questions about society, communities,
                 the environment, and the world around us.
+
             </p>
 
         </article>
@@ -3170,18 +3197,19 @@ footer h3{
 </section>
 
 
+
 <!-- =========================================================
      ECONOMICS
 ========================================================= -->
 
-<section class="economics-feature">
+<section class="economics">
 
-    <div class="economics-feature-inner">
+    <div class="economics-content">
 
         <div class="economics-card">
 
-            <p class="small-heading">
-                ECONOMICS & OPPORTUNITY
+            <p class="eyebrow">
+                Economics & Opportunity
             </p>
 
             <h2>
@@ -3190,19 +3218,27 @@ footer h3{
             </h2>
 
             <p>
+
                 I am fascinated by the relationship between
                 education, skills, money, investment and work.
+
             </p>
 
             <p>
+
                 Economics helps us ask deeper questions about
                 how people make decisions, why businesses grow,
                 why some communities struggle to access
                 opportunities, and how young people can turn
                 skills into meaningful work.
+
             </p>
 
-            <a href="blog.html" class="button" style="margin-top:12px;">
+            <a
+                href="blog.html"
+                class="button"
+                style="margin-top:10px;"
+            >
                 Explore my thinking →
             </a>
 
@@ -3213,46 +3249,131 @@ footer h3{
 </section>
 
 
+
 <!-- =========================================================
      OPPORTUNITY
 ========================================================= -->
 
-<section class="opportunity-section">
+<section class="opportunity">
 
-    <div class="opportunity-inner">
+    <div class="opportunity-grid">
 
-        <div class="opportunity-grid">
+        <div class="opportunity-copy">
 
-            <div class="opportunity-text">
+            <p class="eyebrow">
+                The bigger question
+            </p>
 
-                <p class="small-heading">
-                    THE BIGGER QUESTION
-                </p>
+            <h2 class="section-title">
+                What happens when
+                knowledge meets opportunity?
+            </h2>
 
-                <h2>
-                    What happens when
-                    knowledge meets opportunity?
-                </h2>
+            <p class="body-copy">
 
-                <p>
-                    This question sits at the centre of many
-                    things I enjoy thinking about — education,
-                    entrepreneurship, economics, creativity
-                    and the future of young people.
-                </p>
+                This question sits at the centre of many
+                things I enjoy thinking about — education,
+                entrepreneurship, economics, creativity
+                and the future of young people.
 
-                <p>
-                    I believe good ideas become more meaningful
-                    when they can improve someone's possibilities.
-                </p>
+            </p>
+
+            <p class="body-copy">
+
+                I believe good ideas become more meaningful
+                when they can improve someone's possibilities.
+
+            </p>
+
+        </div>
+
+
+        <div class="opportunity-image">
+
+            <img
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_4250.jpg"
+                alt="Nketia Marfo"
+                loading="lazy"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MUSIC & CREATIVITY
+========================================================= -->
+
+<section class="music">
+
+    <div class="music-grid">
+
+        <div class="music-copy">
+
+            <p class="eyebrow">
+                Music & Creativity
+            </p>
+
+            <h2>
+                Music, creativity
+                and culture.
+            </h2>
+
+            <p class="body-copy">
+
+                Music is more than entertainment. It can connect
+                people, preserve culture, educate communities,
+                and create opportunities.
+
+            </p>
+
+            <p class="body-copy">
+
+                I am interested in understanding how creativity
+                can grow into meaningful work while remaining
+                connected to culture, education and purpose.
+
+            </p>
+
+            <a href="about.html" class="editorial-link">
+                Explore my interests →
+            </a>
+
+        </div>
+
+
+        <div class="music-gallery">
+
+            <div class="music-image round">
+
+                <img
+                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/_MG_3125-Copy.JPG"
+                    alt="Nketia Marfo"
+                    loading="lazy"
+                >
 
             </div>
 
 
-            <div class="opportunity-photo">
+            <div class="music-image">
 
                 <img
-                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_4250.jpg"
+                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/1744567769378.jpg"
+                    alt="Nketia Marfo"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="music-image wide">
+
+                <img
+                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225833_813.jpg"
                     alt="Nketia Marfo"
                     loading="lazy"
                 >
@@ -3266,128 +3387,61 @@ footer h3{
 </section>
 
 
-<!-- =========================================================
-     MUSIC & CREATIVITY
-========================================================= -->
-
-<section class="latter-section">
-
-    <div class="latter-text">
-
-        <p class="small-heading">
-            MUSIC & CREATIVITY
-        </p>
-
-        <h2>
-            Music, creativity
-            and culture.
-        </h2>
-
-        <p class="lead-text">
-            Music is more than entertainment. It can connect
-            people, preserve culture, educate communities,
-            and create opportunities.
-        </p>
-
-        <p>
-            I am interested in understanding how creativity
-            can grow into meaningful work while remaining
-            connected to culture, education and purpose.
-        </p>
-
-        <a href="about.html" class="text-link">
-            Explore my interests →
-        </a>
-
-    </div>
-
-
-    <div class="latter-photo-group">
-
-        <div class="latter-photo latter-photo-1">
-
-            <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/_MG_3125-Copy.JPG"
-                alt="Nketia Marfo"
-                loading="lazy"
-            >
-
-        </div>
-
-
-        <div class="latter-photo latter-photo-2">
-
-            <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/1744567769378.jpg"
-                alt="Nketia Marfo"
-                loading="lazy"
-            >
-
-        </div>
-
-
-        <div class="latter-photo latter-photo-3">
-
-            <img
-                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225833_813.jpg"
-                alt="Nketia Marfo"
-                loading="lazy"
-            >
-
-        </div>
-
-    </div>
-
-</section>
-
 
 <!-- =========================================================
      FEATURED THOUGHT
 ========================================================= -->
 
-<section class="featured-section">
+<section class="featured">
 
-    <div class="featured-number">
-        03
-    </div>
+    <div class="featured-inner">
 
-    <div class="featured-text">
+        <div class="section-number">
+            03
+        </div>
 
-        <p class="small-heading">
-            LATEST THOUGHT
-        </p>
+        <div class="featured-copy">
 
-        <h2>
-            Why Education Should
-            Create Opportunities
-        </h2>
+            <p class="eyebrow">
+                Latest thought
+            </p>
 
-        <p>
-            Education should be more than simply completing
-            school. It should help people develop useful
-            skills, understand their environment, and
-            discover meaningful opportunities.
-        </p>
+            <h2>
+                Why Education Should
+                Create Opportunities
+            </h2>
 
-        <a href="blog.html" class="text-link">
-            Read the story →
-        </a>
+            <p>
+
+                Education should be more than simply completing
+                school. It should help people develop useful
+                skills, understand their environment, and
+                discover meaningful opportunities.
+
+            </p>
+
+            <a href="blog.html" class="editorial-link">
+                Read the story →
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
 
+
 <!-- =========================================================
-     JOURNEY GALLERY
+     JOURNEY
 ========================================================= -->
 
-<section class="home-gallery">
+<section class="journey">
 
-    <div class="home-gallery-header">
+    <div class="journey-heading">
 
-        <p class="small-heading">
-            MOMENTS & JOURNEY
+        <p class="eyebrow">
+            Moments & Journey
         </p>
 
         <h2>
@@ -3396,18 +3450,20 @@ footer h3{
         </h2>
 
         <p>
+
             Beyond writing and ideas, this space captures
             some of the moments, experiences, creativity,
             learning and memories that continue to shape
             my journey.
+
         </p>
 
     </div>
 
 
-    <div class="home-gallery-grid">
+    <div class="journey-grid">
 
-        <div class="home-gallery-item">
+        <div class="journey-item">
 
             <img
                 src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/file_0000000037bc8210ba33c13682e0591b.png"
@@ -3415,7 +3471,7 @@ footer h3{
                 loading="lazy"
             >
 
-            <div class="home-gallery-caption">
+            <div class="journey-overlay">
                 <span>Journey</span>
                 <strong>Learning through experience</strong>
             </div>
@@ -3423,7 +3479,7 @@ footer h3{
         </div>
 
 
-        <div class="home-gallery-item">
+        <div class="journey-item">
 
             <img
                 src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225842_806.jpg"
@@ -3431,7 +3487,7 @@ footer h3{
                 loading="lazy"
             >
 
-            <div class="home-gallery-caption">
+            <div class="journey-overlay">
                 <span>Growth</span>
                 <strong>Becoming through every experience</strong>
             </div>
@@ -3439,7 +3495,7 @@ footer h3{
         </div>
 
 
-        <div class="home-gallery-item">
+        <div class="journey-item">
 
             <img
                 src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225825_521.jpg"
@@ -3447,7 +3503,7 @@ footer h3{
                 loading="lazy"
             >
 
-            <div class="home-gallery-caption">
+            <div class="journey-overlay">
                 <span>Ideas</span>
                 <strong>Curiosity in motion</strong>
             </div>
@@ -3455,7 +3511,7 @@ footer h3{
         </div>
 
 
-        <div class="home-gallery-item">
+        <div class="journey-item">
 
             <img
                 src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260628-WA0080.jpg"
@@ -3463,7 +3519,7 @@ footer h3{
                 loading="lazy"
             >
 
-            <div class="home-gallery-caption">
+            <div class="journey-overlay">
                 <span>Creativity</span>
                 <strong>Creating with purpose</strong>
             </div>
@@ -3471,7 +3527,7 @@ footer h3{
         </div>
 
 
-        <div class="home-gallery-item">
+        <div class="journey-item">
 
             <img
                 src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260614-WA0155.jpg"
@@ -3479,7 +3535,7 @@ footer h3{
                 loading="lazy"
             >
 
-            <div class="home-gallery-caption">
+            <div class="journey-overlay">
                 <span>Perspective</span>
                 <strong>Seeing things differently</strong>
             </div>
@@ -3487,7 +3543,7 @@ footer h3{
         </div>
 
 
-        <div class="home-gallery-item">
+        <div class="journey-item">
 
             <img
                 src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260607-WA0126.jpg"
@@ -3495,7 +3551,7 @@ footer h3{
                 loading="lazy"
             >
 
-            <div class="home-gallery-caption">
+            <div class="journey-overlay">
                 <span>Memory</span>
                 <strong>Moments worth remembering</strong>
             </div>
@@ -3503,7 +3559,7 @@ footer h3{
         </div>
 
 
-        <div class="home-gallery-item">
+        <div class="journey-item">
 
             <img
                 src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260328-WA0182.jpg"
@@ -3511,7 +3567,7 @@ footer h3{
                 loading="lazy"
             >
 
-            <div class="home-gallery-caption">
+            <div class="journey-overlay">
                 <span>Life</span>
                 <strong>The journey continues</strong>
             </div>
@@ -3519,7 +3575,7 @@ footer h3{
         </div>
 
 
-        <div class="home-gallery-item">
+        <div class="journey-item">
 
             <img
                 src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_4250.jpg"
@@ -3527,7 +3583,7 @@ footer h3{
                 loading="lazy"
             >
 
-            <div class="home-gallery-caption">
+            <div class="journey-overlay">
                 <span>Expression</span>
                 <strong>Creativity and imagination</strong>
             </div>
@@ -3539,15 +3595,16 @@ footer h3{
 </section>
 
 
+
 <!-- =========================================================
-     BOTTOM PHOTO STORY
+     PHOTO STORY
 ========================================================= -->
 
-<section class="photo-story-section">
+<section class="story">
 
-    <div class="photo-story-grid">
+    <div class="story-grid">
 
-        <div class="photo-story-main">
+        <div class="story-image">
 
             <img
                 src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/1789335324322.jpg"
@@ -3558,10 +3615,10 @@ footer h3{
         </div>
 
 
-        <div class="photo-story-text">
+        <div class="story-copy">
 
-            <p class="small-heading">
-                BEYOND THE SCREEN
+            <p class="eyebrow">
+                Beyond the screen
             </p>
 
             <h2>
@@ -3570,24 +3627,26 @@ footer h3{
                 and listening.
             </h2>
 
-            <p class="lead-text">
+            <p class="body-copy">
+
                 The ideas I share are connected to the world
                 around me — the people I meet, the questions
                 I ask, the things I learn, and the experiences
                 that make me think more deeply.
+
             </p>
 
-            <p>
+            <p class="body-copy">
+
                 I believe meaningful ideas do not always begin
                 in a classroom. Sometimes they begin with a
                 conversation, a song, a community, a challenge,
                 a book, or a simple question that refuses to
                 disappear.
+
             </p>
 
-            <a href="about.html"
-               class="text-link"
-               style="color:white;">
+            <a href="about.html" class="editorial-link">
                 Learn more about me →
             </a>
 
@@ -3598,16 +3657,17 @@ footer h3{
 </section>
 
 
+
 <!-- =========================================================
      CREATIVE COLLECTION
 ========================================================= -->
 
-<section class="creative-section">
+<section class="creative">
 
     <div class="creative-header">
 
-        <p class="small-heading">
-            MUSIC • CREATIVITY • CULTURE
+        <p class="eyebrow">
+            Music • Creativity • Culture
         </p>
 
         <h2>
@@ -3616,17 +3676,19 @@ footer h3{
         </h2>
 
         <p>
+
             Music and creativity remain an important part of
             how I express myself, connect with people, and
             understand culture.
+
         </p>
 
     </div>
 
 
-    <div class="creative-gallery">
+    <div class="creative-grid">
 
-        <div class="creative-gallery-item">
+        <div class="creative-item">
 
             <img
                 src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/1744567769378.jpg"
@@ -3637,7 +3699,7 @@ footer h3{
         </div>
 
 
-        <div class="creative-gallery-item">
+        <div class="creative-item">
 
             <img
                 src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG_20260210_225833_813.jpg"
@@ -3648,7 +3710,7 @@ footer h3{
         </div>
 
 
-        <div class="creative-gallery-item">
+        <div class="creative-item">
 
             <img
                 src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/1789335324322.jpg"
@@ -3663,55 +3725,56 @@ footer h3{
 </section>
 
 
+
 <!-- =========================================================
-     COMMUNITY & SOCIETY
+     COMMUNITY
 ========================================================= -->
 
-<section class="community-section">
+<section class="community">
 
-    <div class="editorial-section-inner">
+    <div class="community-grid">
 
-        <div class="editorial-grid">
+        <div class="community-copy">
 
-            <div class="editorial-text">
+            <p class="eyebrow">
+                Community & Society
+            </p>
 
-                <p class="small-heading">
-                    COMMUNITY & SOCIETY
-                </p>
+            <h2>
+                The world around us
+                gives us questions.
+            </h2>
 
-                <h2>
-                    The world around us
-                    gives us questions.
-                </h2>
+            <p class="body-copy">
 
-                <p class="lead-text">
-                    I am interested in the issues that affect
-                    communities and the people who live in them.
-                </p>
+                I am interested in the issues that affect
+                communities and the people who live in them.
 
-                <p>
-                    Questions about education, work, the environment,
-                    culture and society often connect with one another.
-                    Understanding those connections can help us think
-                    about better possibilities.
-                </p>
+            </p>
 
-                <a href="blog.html" class="text-link">
-                    Visit the blog →
-                </a>
+            <p class="body-copy">
 
-            </div>
+                Questions about education, work, the environment,
+                culture and society often connect with one another.
+                Understanding those connections can help us think
+                about better possibilities.
+
+            </p>
+
+            <a href="blog.html" class="editorial-link">
+                Visit the blog →
+            </a>
+
+        </div>
 
 
-            <div class="editorial-photo">
+        <div class="community-image">
 
-                <img
-                    src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260614-WA0155.jpg"
-                    alt="Nketia Marfo"
-                    loading="lazy"
-                >
-
-            </div>
+            <img
+                src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260614-WA0155.jpg"
+                alt="Nketia Marfo"
+                loading="lazy"
+            >
 
         </div>
 
@@ -3720,13 +3783,14 @@ footer h3{
 </section>
 
 
+
 <!-- =========================================================
-     FINAL WRITING CARD
+     KEEP EXPLORING
 ========================================================= -->
 
-<section class="writing-photo">
+<section class="keep-exploring">
 
-    <div class="writing-photo-card final-writing">
+    <div class="keep-card">
 
         <img
             src="https://raw.githubusercontent.com/Nketia-Marfo/Nketia-Marfo/main/IMG-20260607-WA0126.jpg"
@@ -3736,20 +3800,22 @@ footer h3{
 
         <div>
 
-            <p class="small-heading">
-                KEEP EXPLORING
+            <p class="eyebrow">
+                Keep exploring
             </p>
 
-            <h3>
+            <h2>
                 There is always another
                 idea worth discovering.
-            </h3>
+            </h2>
 
             <p>
+
                 This website is a growing collection of
                 thoughts, stories, interests, experiences
                 and conversations. There is always more
                 to learn, create and share.
+
             </p>
 
         </div>
@@ -3759,45 +3825,51 @@ footer h3{
 </section>
 
 
+
 <!-- =========================================================
      FINAL CTA
 ========================================================= -->
 
-<section class="final-section">
+<section class="final-cta">
 
-    <div class="final-text">
+    <div class="final-inner">
 
-        <p
-            class="small-heading"
-            style="color:#F2C94C;"
-        >
-            LET'S CONNECT
-        </p>
+        <div>
 
-        <h2>
-            There is always
-            more to explore.
-        </h2>
+            <p class="eyebrow">
+                Let's connect
+            </p>
 
-    </div>
+            <h2>
+                There is always
+                more to explore.
+            </h2>
+
+        </div>
 
 
-    <div class="final-action">
+        <div class="final-action">
 
-        <p>
-            Have an idea, question, opportunity, or something
-            interesting to discuss?
-        </p>
+            <p>
 
-        <a href="contact.html" class="button">
-            Contact Me →
-        </a>
+                Have an idea, question, opportunity, or something
+                interesting to discuss?
+
+            </p>
+
+            <a href="contact.html" class="button">
+                Contact Me →
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
+
 </main>
+
 
 
 <!-- =========================================================
@@ -3806,7 +3878,7 @@ footer h3{
 
 <footer>
 
-    <div class="footer-content">
+    <div class="footer-inner">
 
         <div class="footer-brand">
 
@@ -3823,22 +3895,34 @@ footer h3{
         </div>
 
 
-        <div class="footer-links">
+        <div class="footer-column">
 
             <h3>
                 Explore
             </h3>
 
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="blog.html">Blog</a>
-            <a href="Students-Voice.html">Student Voices</a>
-            <a href="contact.html">Contact</a>
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About</a>
+
+                <a href="blog.html">Blog</a>
+
+                <a href="Students-Voice.html">
+                    Student Voices
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
 
         </div>
 
 
-        <div class="footer-contact">
+        <div class="footer-column footer-contact">
 
             <h3>
                 Connect
